@@ -5,13 +5,23 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "start": "npx serve out",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "check:placeholders": "node scripts/check-placeholders.mjs",
+    "images": "node scripts/optimize-images.mjs",
+    "brand-images": "node scripts/make-brand-images.mjs"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.104.3",
+    "axios": "^1.20.0",
+    "formik": "^2.4.9",
     "next": "16.4.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "react-hot-toast": "^2.6.1",
+    "server-only": "^0.0.1",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
@@ -20,6 +30,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.1",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

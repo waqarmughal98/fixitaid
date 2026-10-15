@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+// Static export: `next build` writes plain HTML to `out/`, which is uploaded to the
+// LiteSpeed host. public/.htaccess handles clean URLs, redirects and headers there.
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  images: { unoptimized: true },
+  poweredByHeader: false,
   turbopack: {
     rules: {
       "*.css": {
