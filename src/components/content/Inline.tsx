@@ -9,7 +9,7 @@ import { Rating } from "@/components/sections/Sections";
 //   **bold**  *italic*  [placeholder]  (link: /url)
 // "(link: /url)" links "the words just before it" (copy file rule). We link the phrase back
 // to the last comma, colon or sentence end; when the link follows a full stop, it becomes
-// a separate "Page name →" link instead.
+// a separate link with the page name instead.
 
 const TOKEN = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[[^\]]+\]|\s*\(link:\s*\/[^)]*\))/g;
 
@@ -47,8 +47,8 @@ export function Inline({ text }: { text: string }) {
       out.push(
         <Fragment key={i}>
           {" "}
-          <Link href={href} className="more-link">
-            {routeLabel(href)} →
+          <Link href={href} className="text-link">
+            {routeLabel(href)}
           </Link>
         </Fragment>,
       );

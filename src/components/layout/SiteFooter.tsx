@@ -7,7 +7,7 @@ import { LogoImage } from "./Logo";
 
 const columns = [
   {
-    title: "Mold & water",
+    title: "Mold and water",
     links: [routes.moldWater, routes.moldInspection, routes.moldRemoval, routes.waterDamage, routes.floodedBasement],
   },
   {
@@ -15,28 +15,32 @@ const columns = [
     links: [routes.roofing, routes.freeRoofCheck, routes.roofRepair, routes.flatRoof, routes.roofReplacement, routes.roofCare],
   },
   {
-    title: "Heating & cooling",
+    title: "Heating and cooling",
     links: [routes.hvac, routes.furnace, routes.ac, routes.hvacInstall],
   },
 ];
+
+function PhotoNotice() {
+  return <p>Photos on this site are examples from Unsplash, not Fix It Aid jobs.</p>;
+}
 
 export function SiteFooter() {
   return (
     <footer className="footer">
       <div className="wrap">
         <div>
-          <Link className="logo footer-logo" href="/" aria-label="Fix It Aid, home">
+          <Link className="logo" href="/" aria-label="Fix It Aid, home">
             <LogoImage />
           </Link>
-          <p style={{ marginTop: 10 }}>Mold, water damage, roofing and HVAC for Chicago homes, condos and 2-flats.</p>
-          <p style={{ marginTop: 10 }}>
+          <p style={{ marginTop: 16 }}>Mold, water damage, roofing and HVAC for Chicago homes, condos and 2-flats.</p>
+          <p style={{ marginTop: 12 }}>
             <a href={site.phoneHref}>{site.phone}</a>
             <br />
             <a href={`mailto:${site.email}`}>{site.email}</a>
             <br />
             <Fact value={site.owner.address} label="Address to show" />
           </p>
-          <ul style={{ marginTop: 12 }}>
+          <ul style={{ marginTop: 16 }}>
             <li>
               <Link href={routes.areas.href}>Areas we serve</Link>
             </li>
@@ -50,7 +54,7 @@ export function SiteFooter() {
         </div>
         {columns.map((col) => (
           <div key={col.title}>
-            <h4>{col.title}</h4>
+            <h2>{col.title}</h2>
             <ul>
               {col.links.map((l) => (
                 <li key={l.href}>
@@ -60,24 +64,34 @@ export function SiteFooter() {
             </ul>
           </div>
         ))}
-        <p className="legal">
-          <LicenceLine /> · © {new Date().getFullYear()} {site.legalName} ·{" "}
-          <Link href={routes.privacy.href}>Privacy</Link>
-        </p>
+        <div className="legal">
+          <p>
+            <LicenceLine />
+          </p>
+          <p>
+            © {new Date().getFullYear()} {site.legalName}. <Link href={routes.privacy.href}>Privacy</Link>
+          </p>
+          <PhotoNotice />
+        </div>
       </div>
     </footer>
   );
 }
 
-// Ad pages: one line, no menu links except the privacy policy (needed for Google Ads).
+// Ad pages: licences, phone and the privacy policy (needed for Google Ads). No menu.
 export function LandingFooter({ licences }: { licences: ("gc" | "roofing" | "mold" | "hvac")[] }) {
   return (
     <footer className="footer">
-      <div className="wrap">
-        <p className="legal" style={{ border: 0, padding: 0 }}>
-          {site.legalName} · <LicenceLine show={licences} /> · <a href={site.phoneHref}>{site.phone}</a> ·{" "}
-          <Link href={routes.privacy.href}>Privacy</Link>
-        </p>
+      <div className="wrap" style={{ display: "block", paddingBlock: 32 }}>
+        <div className="legal" style={{ borderTop: 0, paddingTop: 0 }}>
+          <p>
+            {site.legalName}. <LicenceLine show={licences} />
+          </p>
+          <p>
+            <a href={site.phoneHref}>{site.phone}</a>. <Link href={routes.privacy.href}>Privacy</Link>
+          </p>
+          <PhotoNotice />
+        </div>
       </div>
     </footer>
   );

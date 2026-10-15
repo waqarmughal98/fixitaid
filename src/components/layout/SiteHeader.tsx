@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { mainNav, routes } from "@/lib/routes";
 import { site } from "@/config/site";
+import { Icon } from "@/components/ui/Icon";
 import { Logo } from "./Logo";
 
 export function SiteHeader() {
@@ -25,25 +26,29 @@ export function SiteHeader() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  const isCurrent = (href: string) => pathname === href || mainNav.some((n) => n.href === href && n.children.some((c) => c.href === pathname));
+  const isCurrent = (href: string) =>
+    pathname === href || mainNav.some((n) => n.href === href && n.children.some((c) => c.href === pathname));
 
   return (
-    <header className="header">
+    <header className={`header${open ? " menu-open" : ""}`}>
       <div className="wrap">
         <Logo />
         <nav className="nav" aria-label="Main">
-          {mainNav.slice(0, 5).map((item) => (
+          {mainNav.map((item) => (
             <Link key={item.href} href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>
               {item.label}
             </Link>
           ))}
         </nav>
-        <div className="right">
-          <a className="tel" href={site.phoneHref}>
-            <small>Call{site.owner.acceptsTexts ? " or text" : ""}</small>
-            {site.phone}
+        <div className="header-right">
+          <a className="header-tel" href={site.phoneHref}>
+            <Icon name="phone" />
+            <span>
+              <span className="t">Call </span>
+              {site.phone}
+            </span>
           </a>
-          <Link className="btn gold free" href={`${routes.contact.href}`}>
+          <Link className="btn btn-gold" href={routes.contact.href}>
             Free estimate
           </Link>
           <button

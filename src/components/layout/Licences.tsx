@@ -11,7 +11,7 @@ export function LicenceLine({ show = ["gc", "roofing", "mold", "hvac"] }: { show
   if (show.includes("roofing"))
     parts.push(
       <>
-        Illinois roofing licences {licences.illinoisRoofing} /{" "}
+        Illinois roofing licences {licences.illinoisRoofing} and{" "}
         {licences.illinoisRoofing2Confirmed ? licences.illinoisRoofing2 : <Placeholder>{licences.illinoisRoofing2} (confirm)</Placeholder>}
       </>,
     );
@@ -31,8 +31,8 @@ export function LicenceLine({ show = ["gc", "roofing", "mold", "hvac"] }: { show
     <>
       {parts.map((p, i) => (
         <span key={i}>
-          {i > 0 && " · "}
           {p}
+          {". "}
         </span>
       ))}
     </>

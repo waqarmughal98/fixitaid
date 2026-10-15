@@ -27,82 +27,92 @@ export default function ContactPage() {
         }}
       />
 
-      <section className="hero">
-        <div className="wrap grid">
-          <div>
-            <h1 className="display lp">{seo.h1}</h1>
-            <p className="lead">
+      <section className="page-top">
+        <div className="wrap grid-12" style={{ alignItems: "start" }}>
+          <div className="span-6">
+            <h1 className="display" data-split>
+              {seo.h1}
+            </h1>
+            <p className="lead" style={{ marginTop: 24 }}>
               Tell us what&apos;s going on. A real person from our Chicago team will get back to you. If it&apos;s urgent, call.
             </p>
-            <p style={{ marginTop: 22 }}>
-              <a className="tel" href={site.phoneHref} style={{ fontSize: "clamp(34px,5vw,52px)", fontFamily: "var(--f-display)", color: "var(--gold)" }}>
-                {site.phone}
-              </a>
-            </p>
+            <a className="big-tel" href={site.phoneHref} data-magnetic>
+              {site.phone}
+            </a>
             {owner.phone247 === true && <p className="lead">Active leak, flooding or no heat? Call any time.</p>}
 
-            <ul className="proofs" style={{ marginTop: 26, gridTemplateColumns: "1fr" }}>
-              <li>
-                <span>
-                  <strong>Phone:</strong> <a href={site.phoneHref}>{site.phone}</a>
+            <dl className="rows" style={{ marginTop: 48 }}>
+              <div>
+                <dt>Phone</dt>
+                <dd>
+                  <a href={site.phoneHref}>{site.phone}</a>
                   {owner.acceptsTexts === null ? (
                     <>
                       {" "}
                       <Placeholder>Can this number take texts?</Placeholder>
                     </>
                   ) : owner.acceptsTexts ? (
-                    " (call or text)"
+                    ", call or text"
                   ) : null}
-                </span>
-              </li>
-              <li>
-                <span>
-                  <strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <strong>Hours:</strong> <Fact value={owner.hours} label="hours" />
-                </span>
-              </li>
-              <li>
-                <span>
-                  <strong>Address:</strong> <Fact value={owner.address} label="Address to show" />
-                </span>
-              </li>
-              <li>
-                <span>
-                  <strong>Area:</strong> City of Chicago. <Link href={routes.areas.href}>See neighborhoods</Link>
-                </span>
-              </li>
-            </ul>
-            <p className="soft" style={{ marginTop: 18, fontSize: 13.5 }}>
+                </dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd>
+                  <a href={`mailto:${site.email}`}>{site.email}</a>
+                </dd>
+              </div>
+              <div>
+                <dt>Hours</dt>
+                <dd>
+                  <Fact value={owner.hours} label="hours" />
+                </dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd>
+                  <Fact value={owner.address} label="Address to show" />
+                </dd>
+              </div>
+              <div>
+                <dt>Area</dt>
+                <dd>
+                  City of Chicago.{" "}
+                  <Link className="text-link" href={routes.areas.href}>
+                    See neighborhoods
+                  </Link>
+                </dd>
+              </div>
+            </dl>
+            <p className="small muted" style={{ marginTop: 24 }}>
               <LicenceLine show={["gc", "roofing"]} />
             </p>
           </div>
 
-          <LeadForm
-            id="lead-form"
-            variant="full"
-            title="Tell us what's happening"
-            intro={
-              <>
-                We&apos;ll call you back <Fact value={owner.responseTime} label='Response time, for example "within one business hour"' />. We
-                only use your number to reply to you.
-              </>
-            }
-            options={[
-              "Roof leak or roof repair",
-              "Free roof check",
-              "Mold",
-              "Water damage or flooded basement",
-              "Heating (furnace or boiler)",
-              "Cooling (AC or mini split)",
-              "New system or replacement",
-              "Something else",
-            ]}
-            submitLabel="Send my request"
-          />
+          <div className="span-6">
+            <LeadForm
+              id="lead-form"
+              variant="full"
+              title="Tell us what's happening"
+              intro={
+                <>
+                  We&apos;ll call you back <Fact value={owner.responseTime} label='Response time, for example "within one business hour"' />. We
+                  only use your number to reply to you.
+                </>
+              }
+              options={[
+                "Roof leak or roof repair",
+                "Free roof check",
+                "Mold",
+                "Water damage or flooded basement",
+                "Heating (furnace or boiler)",
+                "Cooling (AC or mini split)",
+                "New system or replacement",
+                "Something else",
+              ]}
+              submitLabel="Send my request"
+            />
+          </div>
         </div>
       </section>
     </>

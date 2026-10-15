@@ -13,9 +13,11 @@
     "brand-images": "node scripts/make-brand-images.mjs"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@tanstack/react-query": "^5.104.3",
     "axios": "^1.20.0",
     "formik": "^2.4.9",
+    "gsap": "^3.15.0",
     "next": "16.4.1",
     "react": "19.3.0",
     "react-dom": "19.3.0",

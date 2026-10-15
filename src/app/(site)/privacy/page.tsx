@@ -15,16 +15,18 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <section className="hero">
-        <div className="wrap" style={{ maxWidth: 860 }}>
-          <h1 className="display lp">Privacy policy</h1>
-          <p className="lead">
+      <section className="page-top">
+        <div className="wrap">
+          <h1 className="display" data-split>
+            Privacy policy
+          </h1>
+          <p className="lead" style={{ marginTop: 16 }}>
             <Placeholder>Draft: owner to review before launch. Last updated date</Placeholder>
           </p>
         </div>
       </section>
-      <section className="band white">
-        <div className="wrap legal-page" style={{ maxWidth: 860 }}>
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap legal-page">
           <p>
             This policy explains what {site.legalName} (&quot;Fix It Aid&quot;, &quot;we&quot;) collects through fixitaid.com and what we do
             with it.

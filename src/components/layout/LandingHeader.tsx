@@ -1,4 +1,5 @@
 import { site } from "@/config/site";
+import { Icon } from "@/components/ui/Icon";
 import { LogoImage } from "./Logo";
 
 // Ad pages: no menu, only the logo and the phone number, so visitors call or use the form.
@@ -10,10 +11,13 @@ export function LandingHeader() {
         <span className="logo">
           <LogoImage priority />
         </span>
-        <div className="right">
-          <a className="tel" href={site.phoneHref}>
-            <small>Talk to a real person</small>
-            {site.phone}
+        <div className="header-right">
+          <a className="header-tel" href={site.phoneHref}>
+            <Icon name="phone" />
+            <span>
+              <span className="t">Call </span>
+              {site.phone}
+            </span>
           </a>
         </div>
       </div>

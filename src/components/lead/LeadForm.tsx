@@ -59,11 +59,9 @@ export function LeadForm({ id, title, intro, options, submitLabel, variant = "ba
   };
 
   return (
-    <div className={full ? `formcard ${className ?? ""}` : `formbar ${className ?? ""}`} id={id}>
-      <div className={full ? undefined : "fb-head"}>
-        <h2>{title}</h2>
-        {intro && <p className={full ? "soft" : undefined}>{intro}</p>}
-      </div>
+    <div className={`form-card ${className ?? ""}`} id={id}>
+      <h2>{title}</h2>
+      {intro && <p className="intro">{intro}</p>}
 
       <Formik
         initialValues={initialValues}
@@ -75,7 +73,7 @@ export function LeadForm({ id, title, intro, options, submitLabel, variant = "ba
         }}
       >
         {({ isSubmitting, touched, errors }) => (
-          <Form className={full ? "fields" : "fb-fields"} noValidate>
+          <Form className="form-grid" noValidate>
             <TextField name="name" label="Name" id={`${id}-name`} autoComplete="name" placeholder="Maria Lopez" />
             <TextField
               name="phone"
@@ -116,7 +114,7 @@ export function LeadForm({ id, title, intro, options, submitLabel, variant = "ba
             {full && (
               <>
                 <label className="full">
-                  What&apos;s happening? <span className="soft">(optional)</span>
+                  What&apos;s happening? <span className="muted">(optional)</span>
                   <Field
                     as="textarea"
                     name="details"
@@ -124,8 +122,8 @@ export function LeadForm({ id, title, intro, options, submitLabel, variant = "ba
                     placeholder="For example: water stain on the ceiling after the rain, or the furnace runs but blows cold air."
                   />
                 </label>
-                <fieldset className="full" style={{ border: 0, padding: 0, margin: 0 }}>
-                  <legend style={{ fontSize: 13, fontWeight: 600, marginBottom: 6 }}>Is this urgent?</legend>
+                <fieldset className="full">
+                  <legend>Is this urgent?</legend>
                   <div className="radios" role="radiogroup">
                     <label>
                       <Field type="radio" name="urgent" value="yes" /> Yes
@@ -146,8 +144,14 @@ export function LeadForm({ id, title, intro, options, submitLabel, variant = "ba
               </label>
             </div>
 
-            <button className={`btn gold${full ? " full" : ""}`} type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Sending..." : submitLabel}
+            <button className="btn btn-gold" type="submit" disabled={isSubmitting} aria-busy={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <span className="spinner" aria-hidden="true" /> Sending
+                </>
+              ) : (
+                submitLabel
+              )}
             </button>
             {submit.isError && (
               <p className="err full wide" role="alert" style={{ gridColumn: "1/-1", margin: 0 }}>

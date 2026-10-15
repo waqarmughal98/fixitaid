@@ -1,21 +1,27 @@
 import { site, reviewsReady } from "@/config/site";
 import { metadataFor, seoFor } from "@/lib/seo/meta";
 import { service } from "@/lib/seo/schema";
+import { sentenceCase } from "@/lib/text";
 import { JsonLd } from "@/components/ui/JsonLd";
-import { Icon } from "@/components/ui/Icon";
-import { Art } from "@/components/ui/Art";
+import type { Note } from "@/components/ui/PhotoNotes";
 import { Fact, Placeholder } from "@/components/ui/Placeholder";
 import { LeadForm } from "@/components/lead/LeadForm";
-import { TopBar } from "@/components/layout/TopBar";
 import { LandingHeader } from "@/components/layout/LandingHeader";
 import { LandingFooter } from "@/components/layout/SiteFooter";
 import { CallBar } from "@/components/layout/CallBar";
-import { Bridge, SectionHead, Ticks, TrustStrip, Quotes, Steps, Answers, Rating, Reviews, Faq, FinalCta } from "@/components/sections/Sections";
+import { Hero } from "@/components/sections/Hero";
+import { Report } from "@/components/sections/Report";
+import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head } from "@/components/sections/Sections";
 
 // Ad page, noindex (the SEO version is /hvac-chicago). Heating first in the cold months;
 // switch the hook to AC around May.
 const URL = "/hvac-repair-chicago";
 export const metadata = metadataFor(URL);
+
+const notes: Note[] = [
+  { x: 64, y: 47, r: 10, title: "Cold at the top", text: "Air trapped in a steam or hot water system. Often a quick fix." },
+  { x: 45, y: 80, r: 9, title: "Cold all over", text: "The boiler, a pump or a valve is the cause. We find which one." },
+];
 
 export default function HvacRepairPage() {
   const seo = seoFor(URL);
@@ -24,152 +30,111 @@ export default function HvacRepairPage() {
   return (
     <>
       <JsonLd data={service("Furnace and HVAC repair in Chicago", URL, "HVAC repair")} />
-      <TopBar>
-        No heat? Call now.
-        {owner.phone247 === true ? " We answer day and night." : owner.phone247 === null ? <> <Placeholder>If 24/7: &quot;We answer day and night.&quot;</Placeholder></> : null}
-      </TopBar>
       <LandingHeader />
 
       <main id="main" className="page">
-        {/* 1. Hook */}
-        <section className="hero v-cold">
-          <div className="wrap grid">
-            <div>
-              <p className="eyebrow">No heat? Furnace keeps shutting off? Radiators cold?</p>
-              <h1 className="display lp">{seo.h1}</h1>
-              <p className="lead">
-                A local Chicago tech finds the problem, shows you, and gives you the price before any work starts. You say yes, then
-                we fix it. No sales pitch for a new furnace you don&apos;t need.
-              </p>
-              <div className="ctas">
-                <a className="btn gold" href={site.phoneHref}>
-                  Call {site.phone}
-                </a>
-                <a className="btn ghost" href="#hvac-form">
-                  Book a visit
-                </a>
-              </div>
-              <Ticks
-                items={[
-                  <>
-                    Licensed HVAC {licences.hvac ?? <Placeholder>licence no.</Placeholder>}
-                  </>,
-                  "Price before we start",
-                  "Furnaces, boilers and radiators",
-                  <Fact key="same-day" value={owner.responseTime} label="Same-day, if true" />,
-                ]}
-              />
-            </div>
-            <div className="visual after-form">
-              <Art
-                name="cold"
-                viewBox="0 0 600 520"
-                slice
-                className="art lift"
-                label="Illustration: a frosted window, a cold radiator and a thermostat reading 55 degrees inside"
-              />
-              <div className="float-chip">
-                <Icon name="flame" />
-                <span>
-                  <b>Price before any work</b>You say yes, then we fix it
-                </span>
-              </div>
-            </div>
+        <Hero
+          photo="furnace"
+          title={sentenceCase(seo.h1)}
+          lead={
+            <>
+              <strong>No heat? Furnace keeps shutting off? Radiators cold?</strong> A local Chicago tech finds the problem, shows you, and
+              gives you the price before any work starts. No sales pitch for a new furnace you don&apos;t need.
+            </>
+          }
+          actions={
+            <>
+              <a className="btn btn-gold" href={site.phoneHref}>
+                Call {site.phone}
+              </a>
+              <a className="btn btn-ghost" href="#hvac-form">
+                Book a visit
+              </a>
+            </>
+          }
+          facts={[
+            { big: licences.hvac ?? <Placeholder>licence no.</Placeholder>, small: "Licensed HVAC" },
+            { big: "Price first", small: "You approve it before we start" },
+            { big: "Boilers too", small: "Steam and hot water, old and new" },
+          ]}
+          form={
             <LeadForm
               id="hvac-form"
               title="Book a heating repair"
               intro="Tell us what's happening. We call back to set a time."
-              options={[
-                "No heat at all",
-                "Furnace keeps shutting off",
-                "Boiler or radiators not heating",
-                "Strange noise or smell",
-                "Tune-up before winter",
-                "AC problem",
-              ]}
+              options={["No heat at all", "Furnace keeps shutting off", "Boiler or radiators not heating", "Strange noise or smell", "Tune-up before winter", "AC problem"]}
               submitLabel="Book my repair"
             />
-          </div>
-        </section>
-
-        <TrustStrip
-          items={[
-            { title: "Price first", text: "You approve it before we start" },
-            { title: "Boilers too", text: "Steam and hot water, old and new" },
-            {
-              title: owner.googleRating ? `★ ${owner.googleRating.rating.toFixed(1)}` : <Placeholder>★ 4.9</Placeholder>,
-              text: owner.googleRating ? `${owner.googleRating.count} Google reviews` : <Placeholder>Google reviews</Placeholder>,
-            },
-            { title: <Fact value={owner.furnaceTuneUp} label="$X" />, text: "Furnace tune-up" },
-          ]}
+          }
         />
 
-        {/* 2. Pain */}
-        <section className="band">
-          <div className="wrap">
-            <SectionHead
-              eyebrow="Sound familiar?"
-              title="The house is getting colder"
-              aside={<p className="soft">And the last person you called didn&apos;t make it easier.</p>}
-            />
-            <Quotes
-              items={[
-                { icon: "cold", text: "It's 55 in the house and dropping. The kids are in coats." },
-                { icon: "price", text: "The first company quoted a new furnace in ten minutes." },
-                { icon: "house", text: "They gave us an 8 to 5 window and never showed." },
-                { icon: "phone", text: "I called a number online and got a call center in another state." },
-              ]}
-            />
-            <Bridge>You don&apos;t need a sales pitch. You need heat.</Bridge>
-          </div>
-        </section>
+        <Report heading="Many no-heat calls are one failed part" photo="radiators" notes={notes} caption="Example photo. Steam and hot water radiators are everyday work for us.">
+          <p className="lead">
+            Not a dead furnace. A flame sensor, an igniter, a pressure switch, a thermostat, or a low-water cutoff on a boiler. Those are
+            repairs, not replacements. We find the part, show it to you, and give you the price.
+          </p>
+        </Report>
 
-        {/* 3. Turning point */}
-        <section className="band ink">
-          <div className="wrap split">
-            <div>
-              <p className="eyebrow">What&apos;s usually wrong</p>
-              <h2 className="display turn" style={{ fontSize: "clamp(38px,5.6vw,64px)" }}>
-                Many no-heat calls are <em>one failed part.</em>
-              </h2>
-              <p className="lead">
-                Not a dead furnace. A flame sensor, an igniter, a pressure switch, a thermostat, or a low-water cutoff on a boiler.
-                Those are repairs, not replacements. We find the part, show it to you, and give you the price.
-              </p>
-            </div>
-            <div>
-              <p className="eyebrow" style={{ marginBottom: 12 }}>
+        <section className="section surface">
+          <div className="wrap grid-12">
+            <div className="span-5">
+              <h2 className="h2" data-split>
                 Before you call: three quick checks
-              </p>
-              <ul className="list">
-                <li>Is the thermostat set to heat, with fresh batteries?</li>
-                <li>Is the furnace switch on and the breaker not tripped?</li>
-                <li>Is the filter clogged? A dirty filter can shut a furnace down.</li>
-              </ul>
-              <p className="soft" style={{ marginTop: 14 }}>
-                Still no heat? Call us. If you smell gas, leave the house and call your gas company first.
+              </h2>
+              <ol className="process">
+                <li>
+                  <span>Is the thermostat set to heat, with fresh batteries?</span>
+                </li>
+                <li>
+                  <span>Is the furnace switch on and the breaker not tripped?</span>
+                </li>
+                <li>
+                  <span>Is the filter clogged? A dirty filter can shut a furnace down.</span>
+                </li>
+              </ol>
+              <p className="muted" style={{ marginTop: 20 }}>
+                Still no heat? Call us. <strong style={{ color: "var(--text)" }}>If you smell gas, leave the house and call your gas company first.</strong>
               </p>
             </div>
-          </div>
-          <div className="wrap">
-            <Bridge>Here&apos;s what happens when you call.</Bridge>
+            <div className="span-7">
+              <h2 className="h2" data-split>
+                What we work on
+              </h2>
+              <div style={{ marginTop: 28 }}>
+                <Rows
+                  items={[
+                    { worry: "Furnaces", answer: "Won't start, short-cycling, blowing cold air, noises, ignition and flame sensor problems." },
+                    { worry: "Boilers and radiators", answer: "Steam and hot water boilers, cold radiators, pressure and water level problems." },
+                    {
+                      worry: "Tune-ups",
+                      answer: (
+                        <>
+                          A full check and clean before winter. <Fact value={owner.furnaceTuneUp} label="$X" />
+                        </>
+                      ),
+                    },
+                    {
+                      worry: "Install and replace",
+                      answer: (
+                        <>
+                          When repair is no longer worth it: a furnace, boiler or AC sized for your home.{" "}
+                          {owner.financing === null ? <Placeholder>Financing: yes or no</Placeholder> : owner.financing ? "Financing available." : null}
+                        </>
+                      ),
+                    },
+                  ]}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* 4. Solution */}
-        <section className="band">
+        <section className="section">
           <div className="wrap">
-            <SectionHead
-              eyebrow="How it works"
-              title="Heat back on, no surprises"
-              aside={<p className="soft">You know the price before we touch anything.</p>}
-            />
+            <Head title="Heat back on, no surprises" intro="You know the price before we touch anything." />
             <Steps
-              four
-              style={{ borderColor: "var(--line)" }}
               items={[
                 {
-                  icon: "phone",
                   title: "Call or book",
                   text: (
                     <>
@@ -177,132 +142,74 @@ export default function HvacRepairPage() {
                     </>
                   ),
                 },
-                { icon: "search", title: "Find the problem", text: "The tech checks the system and shows you what's wrong." },
-                { icon: "price", title: "Price first", key: true, text: "You get the exact price. Nothing starts until you say yes." },
-                { icon: "flame", title: "Fix and test", text: "We repair it, test it, and check the vent and gas safety before we leave." },
+                { title: "Find the problem", text: "The tech checks the system and shows you what's wrong." },
+                { title: "Price first", key: true, text: "You get the exact price. Nothing starts until you say yes." },
+                { title: "Fix and test", text: "We repair it, test it, and check the vent and gas safety before we leave." },
               ]}
             />
-            <div className="cards" style={{ marginTop: 34 }}>
-              <div className="card">
-                <Icon name="flame" className="ci" />
-                <h3>Furnace repair</h3>
-                <p className="soft">Won&apos;t start, short-cycling, blowing cold air, noises, ignition and flame sensor problems.</p>
-              </div>
-              <div className="card">
-                <Icon name="drop" className="ci" />
-                <h3>Boiler &amp; radiators</h3>
-                <p className="soft">Steam and hot water boilers, cold radiators, pressure and water level problems.</p>
-              </div>
-              <div className="card">
-                <Icon name="wrench" className="ci" />
-                <h3>Tune-ups</h3>
-                <p className="soft">
-                  A full check and clean before winter, so it doesn&apos;t quit on the coldest night. <Fact value={owner.furnaceTuneUp} label="$X" />
-                </p>
-              </div>
-              <div className="card">
-                <Icon name="house" className="ci" />
-                <h3>Install &amp; replace</h3>
-                <p className="soft">
-                  When repair is no longer worth it: a furnace, boiler or AC sized for your home.{" "}
-                  {site.owner.financing === null ? <Placeholder>Financing: yes or no</Placeholder> : site.owner.financing ? "Financing available." : null}
-                </p>
-              </div>
+          </div>
+        </section>
+
+        <section className="section surface">
+          <div className="wrap grid-12">
+            <div className="span-5">
+              <h2 className="h2" data-split>
+                What you can count on
+              </h2>
+              <p className="lead" style={{ marginTop: 20 }}>
+                <Rating />
+              </p>
             </div>
-            <Bridge>Here&apos;s what that means for you.</Bridge>
-          </div>
-        </section>
-
-        {/* 5. Benefits */}
-        <section className="band white">
-          <div className="wrap">
-            <SectionHead
-              eyebrow="What you get"
-              title="Each one answers a worry"
-              aside={<p className="soft">The four things people tell us they&apos;re tired of.</p>}
-            />
-            <Answers
-              items={[
-                { fear: "A surprise bill", title: "Price first", text: "The exact price before any work. You say yes or no." },
-                {
-                  fear: "Being upsold",
-                  title: "Repair first",
-                  text: "If a part fixes it, we replace the part. We give you both prices only when replacing really makes sense.",
-                },
-                {
-                  fear: "An old boiler nobody wants",
-                  title: "Boilers too",
-                  text: "Steam and hot water boilers are common in Chicago 2-flats and bungalows. We work on them.",
-                },
-                { fear: "A call center", title: "A local team", text: "You talk to our Chicago team, and our own tech comes to the house." },
-              ]}
-            />
-            <Bridge>{reviewsReady ? "Don't just take our word for it." : "You probably still have a few questions."}</Bridge>
-          </div>
-        </section>
-
-        {/* 6. Proof: needs real reviews; the "tech at work" photo waits for a real photo. */}
-        {reviewsReady && (
-          <section className="band ink">
-            <div className="wrap">
-              <SectionHead
-                eyebrow="Proof"
-                title="From Chicago homeowners"
-                aside={
-                  <p className="lead">
-                    <Rating />
-                  </p>
-                }
+            <div className="span-7">
+              <Rows
+                items={[
+                  { worry: "A surprise bill", answer: "The exact price before any work. You say yes or no." },
+                  { worry: "Being upsold", answer: "If a part fixes it, we replace the part. You only hear about replacement when it really makes sense." },
+                  { worry: "An old boiler nobody wants", answer: "Steam and hot water boilers are common in Chicago 2-flats and bungalows. We work on them." },
+                  { worry: "A call center", answer: "You talk to our Chicago team, and our own tech comes to the house." },
+                ]}
               />
-              <Reviews service="hvac" />
-              <Bridge>You probably still have a few questions.</Bridge>
             </div>
-          </section>
-        )}
-
-        {/* 7. Objections */}
-        <section className="band">
-          <Faq
-            title="Heating questions"
-            items={[
-              {
-                q: "How much does furnace repair cost?",
-                a: (
-                  <p>
-                    Most repairs in Chicago fall between <Placeholder>$X and $Y</Placeholder>. It depends on the part and how old the
-                    furnace is. You get the exact price before we start.
-                  </p>
-                ),
-              },
-              {
-                q: "Repair or replace my furnace?",
-                a: "If the furnace is under about 15 years old and the repair is a small part of the cost of a new one, repairing usually makes sense. We give you both prices and let you choose.",
-              },
-              {
-                q: "How soon can you come?",
-                a: (
-                  <p>
-                    <Fact value={owner.responseTime} label="Owner: real arrival time and hours. Only say 24/7 if the phone is answered 24/7." />
-                  </p>
-                ),
-              },
-              {
-                q: "Do you work on old boilers and radiators?",
-                a: "Yes. If a part is no longer made, we tell you your options and the price of each.",
-              },
-            ]}
-          />
-          <div className="wrap" style={{ maxWidth: 860 }}>
-            <Bridge>The first step is one call.</Bridge>
           </div>
+          {reviewsReady && (
+            <div className="wrap">
+              <Reviews service="hvac" />
+            </div>
+          )}
         </section>
 
-        {/* 8. Close */}
-        <FinalCta
+        <FaqSection
+          title="Heating questions"
+          items={[
+            {
+              q: "How much does furnace repair cost?",
+              a: (
+                <p>
+                  Most repairs in Chicago fall between <Placeholder>$X and $Y</Placeholder>. It depends on the part and how old the furnace is.
+                  You get the exact price before we start.
+                </p>
+              ),
+            },
+            {
+              q: "Repair or replace my furnace?",
+              a: "If the furnace is under about 15 years old and the repair is a small part of the cost of a new one, repairing usually makes sense. We give you both prices and let you choose.",
+            },
+            {
+              q: "How soon can you come?",
+              a: (
+                <p>
+                  <Fact value={owner.responseTime} label="Owner: real arrival time and hours. Only say 24/7 if the phone is answered 24/7." />
+                </p>
+              ),
+            },
+            { q: "Do you work on old boilers and radiators?", a: "Yes. If a part is no longer made, we tell you your options and the price of each." },
+          ]}
+        />
+
+        <CloseCta
           title="No heat? Talk to us now"
           text="A local Chicago tech, the price before any work, and your heat back on."
-          primary={{ href: site.phoneHref, label: `Call ${site.phone}` }}
-          secondary={{ href: "#hvac-form", label: "Book online", ghost: true }}
+          primary={{ href: "#hvac-form", label: "Book online" }}
         />
       </main>
 

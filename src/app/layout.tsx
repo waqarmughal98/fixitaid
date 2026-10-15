@@ -1,24 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow_Condensed, Public_Sans } from "next/font/google";
+import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import { IconSprite } from "@/components/ui/IconSprite";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Analytics } from "@/components/layout/Analytics";
 import { localBusiness } from "@/lib/seo/schema";
 import { site, showPlaceholders } from "@/config/site";
 import { Providers } from "./providers";
+import { MotionRoot } from "@/components/motion/MotionRoot";
 import "./globals.css";
 
-const barlow = Barlow_Condensed({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-barlow",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const publicSans = Public_Sans({
+const hanken = Hanken_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-public-sans",
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -32,19 +34,31 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#16181b",
+  themeColor: "#101214",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${barlow.variable} ${publicSans.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${hanken.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Hide only the hero until the motion script runs, so it can animate in without a flash.
+            Falls back to showing everything after 2.5s if the script never runs. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var d=document.documentElement;if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion-pending');setTimeout(function(){d.classList.remove('motion-pending')},2500)}})();",
+          }}
+        />
+      </head>
       <body className={showPlaceholders ? undefined : "no-ph"}>
         <a className="skip" href="#main">
           Skip to content
         </a>
         <IconSprite />
         <JsonLd data={localBusiness()} />
-        <Providers>{children}</Providers>
+        <Providers>
+          <MotionRoot>{children}</MotionRoot>
+        </Providers>
         <Analytics />
       </body>
     </html>
