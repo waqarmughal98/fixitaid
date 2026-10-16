@@ -46,7 +46,7 @@ export default function MoldWaterPage() {
       />
 
       <Hero
-          photo="moldWall"
+          photo="dampWall"
           title={sentenceCase(seo.h1)}
           lead={
             <>

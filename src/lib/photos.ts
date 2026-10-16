@@ -107,6 +107,105 @@ export const photos = {
     alt: "An air conditioner mounted on a brick wall",
     credit: "Everett Pachmann",
   },
+  // Mold and water
+  dampWall: {
+    id: "1635260166178-41e20858d0d3",
+    alt: "Paint flaking off a damp wall, with green mold spots spreading",
+    credit: "Jessica Rigollot",
+  },
+  dampBasement: {
+    id: "1710964821010-cd96202b09c4",
+    alt: "Old pipes running down a damp basement wall",
+    credit: "Random Thinking",
+  },
+  gutRoom: {
+    id: "1634586648651-f1fb9ec10d90",
+    alt: "A room stripped back to the walls, with props holding the ceiling and debris on the floor",
+    credit: "Stefan Lehner",
+  },
+  peelingRoom: {
+    id: "1444419988131-046ed4e5ffd6",
+    alt: "An empty room with peeling ceiling paint and damaged flooring",
+    credit: "Nolan Issac",
+  },
+  rebuild: {
+    id: "1517581177682-a085bb7ffb15",
+    alt: "A worker on a ladder rebuilding a room, with bare brick and new walls going in",
+    credit: "Milivoj Kuhar",
+  },
+  basementDry: {
+    id: "1782353921981-bb73a53a7482",
+    alt: "A clean, dry basement with sealed walls, a painted floor and open joists",
+    credit: "Josh Lemmon",
+  },
+  // Roofing
+  roofCrew: {
+    id: "1635424709845-3a85ad5e1f5e",
+    alt: "Two roofers in safety harnesses working on a shingle roof",
+    credit: "Raze Solar",
+  },
+  roofSeal: {
+    id: "1635424824800-692767998d07",
+    alt: "A roofer in a harness sealing a shingle roof with a caulk gun",
+    credit: "Raze Solar",
+  },
+  roofTearOff: {
+    id: "1632759145351-1d592919f522",
+    alt: "A roofer tearing off old shingles on a brick house before the new roof goes on",
+    credit: "Zohair Mirza",
+  },
+  rainShingles: {
+    id: "1634853982486-c06f0e17940f",
+    alt: "Rain running off a shingle roof edge",
+    credit: "Luke Southern",
+  },
+  gutter: {
+    id: "1744044155829-610dded4cead",
+    alt: "A gutter full of moss and debris along a roof edge",
+    credit: "Aleksi Partanen",
+  },
+  roofRunoff: {
+    id: "1669295359803-5ec64b4c45d1",
+    alt: "Water pouring off the edge of a roof in heavy rain",
+    credit: "Ian Talmacs",
+  },
+  // HVAC
+  boilerPipes: {
+    id: "1751486289950-5c4898a4c773",
+    alt: "Insulated heating pipes with a pressure gauge",
+    credit: "Fabian Kleiser",
+  },
+  boilerValves: {
+    id: "1618840626133-54463084a141",
+    alt: "Valves and pipes on an old boiler",
+    credit: "Peter Herrmann",
+  },
+  thermostat: {
+    id: "1545259741-2ea3ebf61fa3",
+    alt: "A smart thermostat on a wall set to 63 degrees",
+    credit: "Dan LeFebvre",
+  },
+  thermostatWide: {
+    id: "1545259742-b4fd8fea67e4",
+    alt: "A thermostat on a plain wall set to 63 degrees",
+    credit: "Dan LeFebvre",
+    focus: "65% 50%",
+  },
+  acWall: {
+    id: "1722010811002-a772b2066890",
+    alt: "Two air conditioner units mounted on the side of a building",
+    credit: "Muhammed Faizan Hussain",
+  },
+  ductwork: {
+    id: "1615309662243-70f6df917b59",
+    alt: "Large metal ducts running along a building",
+    credit: "Compagnons",
+  },
+  acLines: {
+    id: "1564414549740-e6dab6bc6f20",
+    alt: "Ducts and refrigerant lines running to an outdoor air conditioner",
+    credit: "Tom Rumble",
+  },
 } satisfies Record<string, PhotoInfo>;
 
 export type PhotoKey = keyof typeof photos;

@@ -51,7 +51,7 @@ export default function FreeRoofCheckPage() {
 
       <main id="main" className="page">
         <Hero
-          photo="rooferHarness"
+          photo="roofRunoff"
           title={sentenceCase(seo.h1)}
           lead={
             <>

@@ -40,48 +40,40 @@ const FORM: Record<ServiceCategory, { title: string; intro: string; options: str
   },
 };
 
-const HERO_PHOTO: Record<string, PhotoKey> = {
-  "/mold-inspection-chicago": "moldWall",
-  "/mold-removal-chicago": "moldWall",
-  "/water-damage-restoration-chicago": "ceilingOpen",
-  "/flooded-basement-cleanup-chicago": "basementDark",
-  "/roofing-chicago": "roofer",
-  "/roof-repair-chicago": "rooferHarness",
-  "/flat-roof-repair-chicago": "flatRoof",
-  "/roof-replacement-chicago": "rooferDrill",
-  "/roof-care-plan": "snowRoof",
-  "/hvac-chicago": "furnace",
-  "/furnace-repair-chicago": "furnace",
-  "/ac-repair-chicago": "acUnit",
-  "/hvac-installation-chicago": "acUnit",
-  "/areas-we-serve": "chicagoAerial",
+// Each page gets its own pair: the hero photo and the photo at the turning point.
+const PAGE_PHOTOS: Record<string, { hero: PhotoKey; turning: PhotoKey }> = {
+  "/mold-inspection-chicago": { hero: "moldWall", turning: "dampBasement" },
+  "/mold-removal-chicago": { hero: "gutRoom", turning: "moldWall2" },
+  "/water-damage-restoration-chicago": { hero: "ceilingOpen", turning: "rebuild" },
+  "/flooded-basement-cleanup-chicago": { hero: "basementDark", turning: "basementDry" },
+  "/roofing-chicago": { hero: "roofer", turning: "roofCrew" },
+  "/roof-repair-chicago": { hero: "rooferHarness", turning: "roofSeal" },
+  "/flat-roof-repair-chicago": { hero: "flatRoof", turning: "snowRoof" },
+  "/roof-replacement-chicago": { hero: "rooferDrill", turning: "roofTearOff" },
+  "/roof-care-plan": { hero: "gutter", turning: "rainShingles" },
+  "/hvac-chicago": { hero: "furnace", turning: "boilerValves" },
+  "/furnace-repair-chicago": { hero: "boilerPipes", turning: "thermostat" },
+  "/ac-repair-chicago": { hero: "acUnit", turning: "acWall" },
+  "/hvac-installation-chicago": { hero: "ductwork", turning: "acLines" },
+  "/areas-we-serve": { hero: "chicagoStreet", turning: "chicagoStreet2" },
 };
 
-const REPORT: Record<ServiceCategory, { photo: PhotoKey; notes?: Note[] }> = {
-  mold: {
-    photo: "moldWall2",
-    notes: [
-      { x: 38, y: 24, r: 10, title: "Dense growth up high", text: "Where the wall stayed wet longest. The water is coming from above." },
-      { x: 82, y: 74, r: 9, title: "Spreading down and out", text: "Mold follows the moisture. Cleaning the surface won't stop it." },
-      { x: 10, y: 56, r: 7, title: "Still dry here", text: "Moisture readings show exactly how far the wet area goes." },
-    ],
-  },
-  roof: {
-    photo: "tearOff",
-    notes: [
-      { x: 22, y: 50, r: 9, title: "The wood deck, exposed", text: "Soft or rotted boards are replaced before anything new goes on." },
-      { x: 50, y: 40, r: 6, title: "Vent pipe", text: "A cracked rubber boot here is one of the most common Chicago leaks." },
-      { x: 88, y: 41, r: 7, title: "The roof edge", text: "Ice dams push water under the shingles here. Ice and water shield goes on first." },
-    ],
-  },
-  hvac: {
-    photo: "radiators",
-    notes: [
-      { x: 64, y: 47, r: 10, title: "Cold at the top", text: "Air trapped in a steam or hot water system. Often a quick fix." },
-      { x: 45, y: 80, r: 9, title: "Cold all over", text: "The boiler, a pump or a valve is the cause. We find which one." },
-    ],
-  },
-  general: { photo: "chicagoStreet2" },
+// Marked-up notes, keyed by the photo they were drawn for. A turning photo without notes shows plain.
+const PHOTO_NOTES: Partial<Record<PhotoKey, Note[]>> = {
+  moldWall2: [
+    { x: 38, y: 24, r: 10, title: "Dense growth up high", text: "Where the wall stayed wet longest. The water is coming from above." },
+    { x: 82, y: 74, r: 9, title: "Spreading down and out", text: "Mold follows the moisture. Cleaning the surface won't stop it." },
+    { x: 10, y: 56, r: 7, title: "Still dry here", text: "Moisture readings show exactly how far the wet area goes." },
+  ],
+  tearOff: [
+    { x: 22, y: 50, r: 9, title: "The wood deck, exposed", text: "Soft or rotted boards are replaced before anything new goes on." },
+    { x: 50, y: 40, r: 6, title: "Vent pipe", text: "A cracked rubber boot here is one of the most common Chicago leaks." },
+    { x: 88, y: 41, r: 7, title: "The roof edge", text: "Ice dams push water under the shingles here. Ice and water shield goes on first." },
+  ],
+  radiators: [
+    { x: 64, y: 47, r: 10, title: "Cold at the top", text: "Air trapped in a steam or hot water system. Often a quick fix." },
+    { x: 45, y: 80, r: 9, title: "Cold all over", text: "The boiler, a pump or a valve is the cause. We find which one." },
+  ],
 };
 
 // Proof lines that need real reviews or photos stay hidden until those exist.
@@ -239,7 +231,17 @@ function Heading({ text }: { text?: string }) {
   );
 }
 
-function StorySection({ section, label, category, index }: { section: Section; label: string; category: ServiceCategory; index: number }) {
+function StorySection({
+  section,
+  label,
+  turningPhoto,
+  index,
+}: {
+  section: Section;
+  label: string;
+  turningPhoto: PhotoKey;
+  index: number;
+}) {
   const { kind } = section;
   const surface = index % 2 === 1;
 
@@ -275,7 +277,7 @@ function StorySection({ section, label, category, index }: { section: Section; l
   }
 
   if (kind === "turning") {
-    const report = REPORT[category];
+    const report = { photo: turningPhoto, notes: PHOTO_NOTES[turningPhoto] };
     if (report.notes) {
       return (
         <Report heading={<Inline text={section.heading ?? ""} />} photo={report.photo} notes={report.notes} surface={surface}>
@@ -341,6 +343,7 @@ function StorySection({ section, label, category, index }: { section: Section; l
 
 export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) {
   const { hero, category } = page;
+  const photos = PAGE_PHOTOS[page.url] ?? { hero: "chicagoStreet", turning: "chicagoStreet2" };
   const form = FORM[category];
   const label = routeLabel(page.url);
   const facts = hero.trust.map(trustFact).filter((f) => f !== null).slice(0, 3);
@@ -349,7 +352,7 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
   return (
     <>
       <Hero
-        photo={HERO_PHOTO[page.url] ?? "chicagoStreet"}
+        photo={photos.hero}
         crumbs={breadcrumbsFor(page.url)}
         title={sentenceCase(h1)}
         lead={
@@ -388,7 +391,7 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
       />
 
       {page.sections.map((s, i) => (
-        <StorySection section={s} label={label} category={category} index={i} key={i} />
+        <StorySection section={s} label={label} turningPhoto={photos.turning} index={i} key={i} />
       ))}
 
       <CallBar formHref="#lead-form" formLabel={category === "roof" ? "Free check" : "Book"} />

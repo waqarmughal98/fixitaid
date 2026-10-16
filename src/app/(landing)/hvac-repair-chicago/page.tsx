@@ -33,7 +33,7 @@ export default function HvacRepairPage() {
 
       <main id="main" className="page">
         <Hero
-          photo="furnace"
+          photo="thermostatWide"
           title={sentenceCase(seo.h1)}
           lead={
             <>
