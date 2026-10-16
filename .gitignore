@@ -34,10 +34,6 @@ yarn-error.log*
 .env*
 !.env.example
 
-# Google SMTP credentials for quote.php (copy from quote.config.example.php)
-/public/quote.config.php
-/public/.quote-rate/
-
 # vercel
 .vercel
 

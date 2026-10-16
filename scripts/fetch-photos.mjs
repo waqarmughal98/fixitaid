@@ -11,6 +11,13 @@ import sharp from "sharp";
 const root = process.cwd();
 const outDir = path.join(root, "out");
 const saveDir = path.join(root, "public", "images", "photos");
+
+try {
+  await access(outDir);
+} catch {
+  console.log("No out/ directory (Next server build). Skipping photo fetch.");
+  process.exit(0);
+}
 // Highly textured photos (mold, plaster) come back large; re-encode anything over this.
 const MAX_BYTES = 300 * 1024;
 const NAME = /\/images\/photos\/([0-9]+-[0-9a-f]+)-(?:(\d+)x(\d+)(-c)?|(\d+)w)(?:-q(\d+))?\.webp/g;

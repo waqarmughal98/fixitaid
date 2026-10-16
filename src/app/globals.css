@@ -23,7 +23,6 @@
   --danger: #ef7d63;
 
   --f-display: var(--font-display), Georgia, "Times New Roman", serif;
-  --f-display-italic: var(--font-display-italic), Georgia, "Times New Roman", serif;
   --f-body: var(--font-body), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 
   --gutter: clamp(20px, 4vw, 56px);
@@ -236,13 +235,13 @@
   .marquee { overflow: hidden; border-block: 1px solid var(--line); padding-block: 24px; }
   .marquee-track { display: flex; width: max-content; animation: marquee 50s linear infinite; }
   .marquee:hover .marquee-track { animation-play-state: paused; }
-  .marquee-item { display: inline-flex; align-items: center; gap: 30px; padding-right: 30px; font-family: var(--f-display-italic); font-size: clamp(24px, 2.6vw, 38px); font-style: italic; font-weight: 400; color: rgba(242, 238, 230, 0.86); white-space: nowrap; }
+  .marquee-item { display: inline-flex; align-items: center; gap: 30px; padding-right: 30px; font-family: var(--f-display); font-size: clamp(24px, 2.6vw, 38px); font-style: italic; font-weight: 400; color: rgba(242, 238, 230, 0.86); white-space: nowrap; }
   .marquee-item svg { width: 12px; height: 12px; color: var(--gold); flex: none; }
   @keyframes marquee { to { transform: translateX(-50%); } }
 
   /* ---------- statement: words light up as you read ---------- */
   .statement { font-family: var(--f-display); font-weight: 400; font-size: clamp(32px, 4.3vw, 66px); line-height: 1.12; letter-spacing: -0.02em; max-width: 23ch; font-variation-settings: "opsz" 144, "SOFT" 50; }
-  .statement em { font-family: var(--f-display-italic); font-style: italic; color: var(--gold-hi); }
+  .statement em { font-family: var(--f-display); font-style: italic; color: var(--gold-hi); }
 
   /* ---------- horizontal service rail ---------- */
   .rail { position: relative; overflow: hidden; }

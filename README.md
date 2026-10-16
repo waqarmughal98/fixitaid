@@ -1,7 +1,7 @@
 # fixitaid.com
 
 The Fix It Aid website: mold and water damage, roofing and HVAC in Chicago.
-Next.js (App Router, TypeScript, Tailwind) exported as static HTML for the current LiteSpeed host.
+Next.js (App Router, TypeScript, Tailwind). Forms are sent by the Next.js server (`/api/lead`).
 
 The design comes from `../1-design-mockup/fixitaid-mockups.html` (V5) and the copy from `../2-page-content`.
 
@@ -10,8 +10,7 @@ The design comes from `../1-design-mockup/fixitaid-mockups.html` (V5) and the co
 ```bash
 npm install
 npm run dev          # http://localhost:3000
-npm run build        # writes the static site to out/
-npm run check:placeholders   # launch check, see below
+npm run build && npm start
 ```
 
 ## Where things live
@@ -50,33 +49,31 @@ The check lists every placeholder still on the site and fails until none are lef
 
 ## Forms and tracking
 
-Every form posts JSON to `/quote.php` on the same host (`NEXT_PUBLIC_LEAD_ENDPOINT` to change it) with
-`name, phone, zip, service, details, urgent, page, company` (`company` is a spam trap). The PHP handler
-sends the lead to `info@fixitaid.com` over **Google SMTP** (`smtp.gmail.com:587`). On success the
+Every form posts JSON to `/api/lead` (`NEXT_PUBLIC_LEAD_ENDPOINT` to change it) with
+`name, phone, zip, service, details, urgent, page, company` (`company` is a spam trap).
+The Next.js route sends the lead with **nodemailer** over Google SMTP. On success the
 visitor goes to `/thank-you`, which fires the Google Ads conversion.
 
 ### Google SMTP setup (once)
 
-1. Sign in as `info@fixitaid.com` and turn on [2-Step Verification](https://myaccount.google.com/signinoptions/two-step-verification).
+1. Sign in as the mailbox that will send (Google account or Workspace) and turn on [2-Step Verification](https://myaccount.google.com/signinoptions/two-step-verification).
 2. Create an [App password](https://myaccount.google.com/apppasswords) (app name: “Fix It Aid website”).
-3. On the server, copy `quote.config.example.php` → `quote.config.php` and paste the 16-character App Password into `smtp_pass`.
-4. Keep `quote.config.php` on the server only (it is gitignored and blocked by `.htaccess`).
+3. Copy `.env.example` to `.env.local` and set `SMTP_USER`, `SMTP_PASS` (the App Password), `MAIL_FROM`, and `MAIL_TO`.
+4. Restart `npm run dev` or `npm start`. Never commit `.env.local`.
 
-Copy `.env.example` to `.env.local` and set:
+Also set:
 
 - `NEXT_PUBLIC_GTAG_ID`: Google tag (GA4 or AW-) ID
 - `NEXT_PUBLIC_ADS_CONVERSION`: `AW-XXXXXXX/label` for the lead conversion
 
 ## Deploy
 
-1. `npm run build`
-2. Upload the contents of `out/` to the site root.
-   `out/.htaccess` gives clean URLs (`/about` serves `about.html`), redirects www and http to
-   `https://fixitaid.com`, sets security headers and caching, and serves `404.html`.
-3. If this is the first deploy (or you rotated the App Password), create `quote.config.php` next to
-   `quote.php` from `quote.config.example.php`.
-4. Submit a test form and confirm the email arrives at `info@fixitaid.com`.
-5. Submit `https://fixitaid.com/sitemap.xml` in Google Search Console.
+Forms need the Next.js server (`npm run build` then `npm start`). A static upload of `out/` cannot send mail.
+
+1. Put the same SMTP variables in the host environment.
+2. `npm run build && npm start`
+3. Submit a test form and confirm the email arrives at `MAIL_TO`.
+4. Submit `https://fixitaid.com/sitemap.xml` in Google Search Console.
 
 ## Images
 

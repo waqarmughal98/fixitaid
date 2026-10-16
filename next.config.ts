@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
-// Static export: `next build` writes plain HTML to `out/`, which is uploaded to the
-// LiteSpeed host. public/.htaccess handles clean URLs, redirects and headers there.
+// Server build so /api/lead can send mail with nodemailer. `npm start` runs `next start`.
 const nextConfig: NextConfig = {
-  output: "export",
   // Photos are pre-cut WebP files (public/images/photos); the loader maps each srcset width
   // to its file, and scripts/fetch-photos.mjs downloads any width not saved yet after the build.
   images: {

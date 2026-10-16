@@ -47,8 +47,8 @@ export const site = {
 
 export const reviewsReady = site.reviews.length >= 3;
 
-// Where the lead forms post. /quote.php emails leads via Google SMTP (see public/quote.php).
-export const leadEndpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT ?? "/quote.php";
+// Where the lead forms post. /api/lead emails leads via nodemailer (Google SMTP).
+export const leadEndpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT ?? "/api/lead";
 
 // Google Ads / GA4. Leave empty until the accounts exist; nothing loads without them.
 export const analytics = {

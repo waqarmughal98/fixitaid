@@ -9,19 +9,14 @@ import { Providers } from "./providers";
 import { MotionRoot } from "@/components/motion/MotionRoot";
 import "./globals.css";
 
+// One call for both styles: Turbopack's dev server rejects a second Fraunces() loader.
+// Not preloaded: headings paint at once in the size-matched fallback and swap in, which
+// leaves the early bandwidth to the hero photo (the LCP element on photo-led pages).
 const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   variable: "--font-display",
-  display: "swap",
-});
-
-// Italic is only used below the fold (marquee, statement), so it isn't preloaded.
-const frauncesItalic = Fraunces({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["italic"],
-  variable: "--font-display-italic",
   display: "swap",
   preload: false,
 });
@@ -48,7 +43,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${frauncesItalic.variable} ${hanken.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${fraunces.variable} ${hanken.variable}`} suppressHydrationWarning>
       <body className={showPlaceholders ? undefined : "no-ph"}>
         <a className="skip" href="#main">
           Skip to content
