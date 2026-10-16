@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { site } from "@/config/site";
 import { routes } from "@/lib/routes";
-import { Fact } from "@/components/ui/Placeholder";
 import { LicenceLine } from "./Licences";
 import { LogoImage } from "./Logo";
 
@@ -17,6 +16,10 @@ const columns = [
   {
     title: "Heating and cooling",
     links: [routes.hvac, routes.furnace, routes.ac, routes.hvacInstall],
+  },
+  {
+    title: "Company",
+    links: [routes.areas, routes.about, routes.contact],
   },
 ];
 
@@ -37,20 +40,7 @@ export function SiteFooter() {
             <a href={site.phoneHref}>{site.phone}</a>
             <br />
             <a href={`mailto:${site.email}`}>{site.email}</a>
-            <br />
-            <Fact value={site.owner.address} label="Address to show" />
           </p>
-          <ul style={{ marginTop: 16 }}>
-            <li>
-              <Link href={routes.areas.href}>Areas we serve</Link>
-            </li>
-            <li>
-              <Link href={routes.about.href}>About</Link>
-            </li>
-            <li>
-              <Link href={routes.contact.href}>Contact</Link>
-            </li>
-          </ul>
         </div>
         {columns.map((col) => (
           <div key={col.title}>
@@ -71,7 +61,7 @@ export function SiteFooter() {
           <p>
             © {new Date().getFullYear()} {site.legalName}. <Link href={routes.privacy.href}>Privacy</Link>
           </p>
-          <PhotoNotice />
+          {/* <PhotoNotice /> */}
         </div>
       </div>
     </footer>

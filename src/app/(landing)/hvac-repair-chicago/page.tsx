@@ -4,7 +4,6 @@ import { service } from "@/lib/seo/schema";
 import { sentenceCase } from "@/lib/text";
 import { JsonLd } from "@/components/ui/JsonLd";
 import type { Note } from "@/components/ui/PhotoNotes";
-import { Fact, Placeholder } from "@/components/ui/Placeholder";
 import { LeadForm } from "@/components/lead/LeadForm";
 import { LandingHeader } from "@/components/layout/LandingHeader";
 import { LandingFooter } from "@/components/layout/SiteFooter";
@@ -53,7 +52,7 @@ export default function HvacRepairPage() {
             </>
           }
           facts={[
-            { big: licences.hvac ?? <Placeholder>licence no.</Placeholder>, small: "Licensed HVAC" },
+            { big: licences.hvac ?? "Licensed", small: "HVAC" },
             { big: "Price first", small: "You approve it before we start" },
             { big: "Boilers too", small: "Steam and hot water, old and new" },
           ]}
@@ -107,20 +106,15 @@ export default function HvacRepairPage() {
                     { worry: "Boilers and radiators", answer: "Steam and hot water boilers, cold radiators, pressure and water level problems." },
                     {
                       worry: "Tune-ups",
-                      answer: (
-                        <>
-                          A full check and clean before winter. <Fact value={owner.furnaceTuneUp} label="$X" />
-                        </>
-                      ),
+                      answer: owner.furnaceTuneUp
+                        ? `A full check and clean before winter. ${owner.furnaceTuneUp}.`
+                        : "A full check and clean before winter. Ask us for this season's price.",
                     },
                     {
                       worry: "Install and replace",
-                      answer: (
-                        <>
-                          When repair is no longer worth it: a furnace, boiler or AC sized for your home.{" "}
-                          {owner.financing === null ? <Placeholder>Financing: yes or no</Placeholder> : owner.financing ? "Financing available." : null}
-                        </>
-                      ),
+                      answer: owner.financing
+                        ? "When repair is no longer worth it: a furnace, boiler or AC sized for your home. Financing available."
+                        : "When repair is no longer worth it: a furnace, boiler or AC sized for your home.",
                     },
                   ]}
                 />
@@ -136,11 +130,9 @@ export default function HvacRepairPage() {
               items={[
                 {
                   title: "Call or book",
-                  text: (
-                    <>
-                      A real person asks a few questions and sets a time. <Fact value={owner.responseTime} label="Arrival window" />
-                    </>
-                  ),
+                  text: owner.responseTime
+                    ? `A real person asks a few questions and sets a time. We aim to get back to you ${owner.responseTime}.`
+                    : "A real person asks a few questions and sets a time.",
                 },
                 { title: "Find the problem", text: "The tech checks the system and shows you what's wrong." },
                 { title: "Price first", key: true, text: "You get the exact price. Nothing starts until you say yes." },
@@ -183,12 +175,7 @@ export default function HvacRepairPage() {
           items={[
             {
               q: "How much does furnace repair cost?",
-              a: (
-                <p>
-                  Most repairs in Chicago fall between <Placeholder>$X and $Y</Placeholder>. It depends on the part and how old the furnace is.
-                  You get the exact price before we start.
-                </p>
-              ),
+              a: "It depends on the part and how old the furnace is. You get the exact price before we start.",
             },
             {
               q: "Repair or replace my furnace?",
@@ -196,11 +183,9 @@ export default function HvacRepairPage() {
             },
             {
               q: "How soon can you come?",
-              a: (
-                <p>
-                  <Fact value={owner.responseTime} label="Owner: real arrival time and hours. Only say 24/7 if the phone is answered 24/7." />
-                </p>
-              ),
+              a: owner.responseTime
+                ? `We aim to get back to you ${owner.responseTime}. If you have no heat, call and we'll tell you honestly when we can be there.`
+                : "Call and we'll tell you honestly when we can be there. If you have no heat, say so when you call.",
             },
             { q: "Do you work on old boilers and radiators?", a: "Yes. If a part is no longer made, we tell you your options and the price of each." },
           ]}

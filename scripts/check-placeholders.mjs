@@ -19,6 +19,8 @@ const decode = (s) =>
 let total = 0;
 const byFact = new Map();
 
+const SKIP = new Set(["/404", "/_not-found"]);
+
 for await (const file of htmlFiles(outDir)) {
   const html = await readFile(file, "utf8");
   const found = [...html.matchAll(/<span class="ph" data-placeholder="">([\s\S]*?)<\/span>/g)].map((m) =>
@@ -26,6 +28,8 @@ for await (const file of htmlFiles(outDir)) {
   );
   if (!found.length) continue;
   const page = "/" + path.relative(outDir, file).replace(/\.html$/, "").replace(/(^|\/)index$/, "");
+  // 404 pages are not launch content; their chrome shouldn't pad the report.
+  if (SKIP.has(page)) continue;
   total += found.length;
   for (const f of found) byFact.set(f, (byFact.get(f) ?? new Set()).add(page));
 }

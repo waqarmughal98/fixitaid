@@ -20,17 +20,18 @@ npm run check:placeholders   # launch check, see below
 |---|---|
 | Business facts, licences, owner facts still missing, reviews | `src/config/site.ts` |
 | Titles, descriptions, H1s, robots, canonical (from the SEO sheet) | `content/seo-meta.csv` |
-| Copy for the 14 service pages and Areas | `content/*.md` (copies of `2-page-content/5b, 5c, 5d`) |
-| Home and the 3 ad pages (mockup designs) | `src/app/(site)/page.tsx`, `src/app/(landing)/*` |
-| About, Contact, Thank you, Privacy | `src/app/(site)/*` |
-| Copy parser and page renderer | `src/lib/content/story-pages.ts`, `src/components/content/` |
+| Home and mold main page | `src/app/(site)/page.tsx`, `mold-water-damage-chicago/` |
+| Ad-only landing pages (no menu) | `src/app/(landing)/free-roof-check`, `hvac-repair-chicago` |
+| About, Contact, Thank you, Privacy | `src/app/(site)/about`, `contact`, `thank-you`, `privacy` |
+| Service pages and Areas (copy in the route file) | `src/app/(site)/<slug>/page.tsx` (`content` object) |
+| Page renderer | `src/components/content/StoryRoute.tsx`, `StoryPage.tsx` |
 | Lead form (Formik + Yup, React Query, axios) | `src/components/lead/LeadForm.tsx`, `src/services/lead`, `src/hooks/lead` |
 | Mockup styles | `src/app/globals.css` |
 | Drawings from the mockup | `public/art.svg` (icons in `src/components/ui/IconSprite.tsx`) |
 
-To change a service page, edit its markdown in `content/` and rebuild. The parser understands the
-copywriter's conventions: bridge lines, `(link: /url)`, `[placeholders]`, FAQ blocks and team-only notes
-(which are never published).
+To change a service page, edit the `content` object in `src/app/(site)/<slug>/page.tsx` and rebuild.
+The original copywriter files stay in `content/` as reference; re-run `node scripts/export-story-copy.mjs`
+only if you need to re-import from those markdown files.
 
 ## Owner facts and placeholders
 
@@ -50,8 +51,16 @@ The check lists every placeholder still on the site and fails until none are lef
 ## Forms and tracking
 
 Every form posts JSON to `/quote.php` on the same host (`NEXT_PUBLIC_LEAD_ENDPOINT` to change it) with
-`name, phone, zip, service, details, urgent, page, company` (`company` is a spam trap). On success the visitor
-goes to `/thank-you`, which fires the Google Ads conversion.
+`name, phone, zip, service, details, urgent, page, company` (`company` is a spam trap). The PHP handler
+sends the lead to `info@fixitaid.com` over **Google SMTP** (`smtp.gmail.com:587`). On success the
+visitor goes to `/thank-you`, which fires the Google Ads conversion.
+
+### Google SMTP setup (once)
+
+1. Sign in as `info@fixitaid.com` and turn on [2-Step Verification](https://myaccount.google.com/signinoptions/two-step-verification).
+2. Create an [App password](https://myaccount.google.com/apppasswords) (app name: “Fix It Aid website”).
+3. On the server, copy `quote.config.example.php` → `quote.config.php` and paste the 16-character App Password into `smtp_pass`.
+4. Keep `quote.config.php` on the server only (it is gitignored and blocked by `.htaccess`).
 
 Copy `.env.example` to `.env.local` and set:
 
@@ -61,10 +70,13 @@ Copy `.env.example` to `.env.local` and set:
 ## Deploy
 
 1. `npm run build`
-2. Upload the contents of `out/` to the site root, keeping `quote.php` in place.
+2. Upload the contents of `out/` to the site root.
    `out/.htaccess` gives clean URLs (`/about` serves `about.html`), redirects www and http to
    `https://fixitaid.com`, sets security headers and caching, and serves `404.html`.
-3. Submit `https://fixitaid.com/sitemap.xml` in Google Search Console.
+3. If this is the first deploy (or you rotated the App Password), create `quote.config.php` next to
+   `quote.php` from `quote.config.example.php`.
+4. Submit a test form and confirm the email arrives at `info@fixitaid.com`.
+5. Submit `https://fixitaid.com/sitemap.xml` in Google Search Console.
 
 ## Images
 

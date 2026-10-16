@@ -1,4 +1,4 @@
-// A service page parsed from the copy files in content/*.md.
+// A service page's copy, co-located as the `content` object in its route page.tsx.
 // Inline strings keep their markdown (**bold**, [placeholder], (link: /url)) and are
 // rendered by components/content/Inline.
 

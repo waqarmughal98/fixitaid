@@ -1,23 +1,15 @@
-import "server-only";
-import { readFileSync } from "node:fs";
+/**
+ * One-shot: parse content/*.md and write StoryPageContent into each
+ * src/app/(site)/<slug>/page.tsx (copy lives in the route file).
+ */
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
-import type { Block, CtaButton, Hero, Section, SectionKind, ServiceCategory, StoryPageContent } from "@/types/content.types";
 
-// Reads the copywriter's files in content/ (copies of 2-page-content/5b, 5c, 5d) and turns
-// each "## Page" into structured content. The copy stays the single source of truth:
-// to change a page, edit the markdown and rebuild.
-//
-// The three files use slightly different conventions; all of them are handled here:
-//   section headings  "### 2 Pain and stakes: H2: ..." | "### H2: ... (2. Pain and stakes)" | "### 2. Pain and stakes" + "**Heading:**"
-//   bridges           "*Italic line*" | "**Bridge:** ..."
-//   team-only notes   "Owner note: ..." | "*Note: ...*" | "**Note for the owner:** ..."  (never published)
-
+const ROOT = path.resolve(import.meta.dirname, "..");
 const FILES = ["mold-water-areas.md", "roofing.md", "hvac-about-contact.md"];
-
-// Pages built by hand (mockup designs or bespoke layouts) are not parsed.
 const HAND_BUILT = new Set(["/about", "/contact", "/mold-water-damage-chicago", "/free-roof-check", "/hvac-repair-chicago"]);
 
-const CATEGORY: Record<string, ServiceCategory> = {
+const CATEGORY = {
   "/mold-inspection-chicago": "mold",
   "/mold-removal-chicago": "mold",
   "/water-damage-restoration-chicago": "mold",
@@ -36,7 +28,7 @@ const CATEGORY: Record<string, ServiceCategory> = {
 
 const KNOWN_LABELS = ["Eyebrow", "H1", "Subheadline", "Buttons", "Trust line", "Form send button", "Bridge", "Heading", "Headline", "Text"];
 
-function kindOf(heading: string): SectionKind | "hero" | null {
+function kindOf(heading) {
   const h = heading.toLowerCase();
   if (h.includes("hero") || h.includes("hook")) return "hero";
   if (h.includes("pain")) return "pain";
@@ -49,25 +41,25 @@ function kindOf(heading: string): SectionKind | "hero" | null {
   return null;
 }
 
-function headingFrom(line: string): string | undefined {
+function headingFrom(line) {
   const m = line.match(/H2:\s*(.+?)\s*(?:\(\d\.[^)]*\))?\s*$/);
   return m ? stripQuotes(m[1]) : undefined;
 }
 
-function stripQuotes(s: string) {
+function stripQuotes(s) {
   return s.replace(/^"(.*)"$/, "$1").trim();
 }
 
-function isNote(p: string) {
+function isNote(p) {
   return /^(Owner note:|\*Note|\*\*Note for the owner:\*\*|\|)/.test(p);
 }
 
-function isBridgeItalic(p: string) {
+function isBridgeItalic(p) {
   return /^\*[^*].*[^*]\*$/.test(p) && !p.startsWith("*Note");
 }
 
-export function parseButtons(raw: string, ownUrl: string): CtaButton[] {
-  const buttons: CtaButton[] = [];
+function parseButtons(raw, ownUrl) {
+  const buttons = [];
   const re = /\[([^\]]*?)(?:\s*\(link:\s*(\/[^)]*)\))?\]\s*(?:\(link:\s*(\/[^)]*)\))?/g;
   for (const m of raw.matchAll(re)) {
     const label = m[1].trim();
@@ -79,27 +71,24 @@ export function parseButtons(raw: string, ownUrl: string): CtaButton[] {
   return buttons;
 }
 
-function labelled(line: string): { label: string; value: string } | null {
+function labelled(line) {
   const m = line.match(/^\*\*([^*]+?):\*\*\s*(.*)$/);
   if (!m || !KNOWN_LABELS.includes(m[1])) return null;
   return { label: m[1], value: m[2].trim() };
 }
 
-/** Turns one paragraph (consecutive non-empty lines) into blocks. */
-function paragraphBlocks(lines: string[], kind: SectionKind): Block[] {
-  const blocks: Block[] = [];
+function paragraphBlocks(lines, kind) {
+  const blocks = [];
   const first = lines[0];
 
-  // FAQ: "**Question?**" then the answer lines.
   if (kind === "faq" && /^\*\*[^*]+\?\*\*$/.test(first)) {
     return [{ type: "faq", q: first.slice(2, -2), a: lines.slice(1).join(" ") }];
   }
 
-  // "**H3: Title.** text (link: /url)"
   const h3 = first.match(/^\*\*H3:\s*(.+?)\*\*\s*(.*)$/);
   if (h3) {
     let text = [h3[2], ...lines.slice(1)].join(" ").trim();
-    let link: string | undefined;
+    let link;
     const lm = text.match(/\s*\(link:\s*(\/[^)]*)\)\s*$/);
     if (lm) {
       link = lm[1];
@@ -108,14 +97,13 @@ function paragraphBlocks(lines: string[], kind: SectionKind): Block[] {
     return [{ type: "h3", title: h3[1].replace(/[.:]$/, ""), text, link }];
   }
 
-  // Neighborhood group: "**North Side:** Rogers Park, ... [confirm list]" + a description line.
   const group = first.match(/^\*\*([^*]+?):\*\*\s+(.+)$/);
   if (group && lines.length > 1 && !lines[1].startsWith("- ") && !/^\d+\.\s/.test(lines[1])) {
     return [{ type: "group", name: group[1], places: group[2], text: lines.slice(1).join(" ") }];
   }
 
-  let list: { type: "ul" | "ol"; items: string[] } | null = null;
-  let para: string[] = [];
+  let list = null;
+  let para = [];
   const flushPara = () => {
     if (!para.length) return;
     const text = para.join(" ");
@@ -138,7 +126,7 @@ function paragraphBlocks(lines: string[], kind: SectionKind): Block[] {
         flushList();
         list = { type, items: [] };
       }
-      list.items.push((ul ?? ol)![1]);
+      list.items.push((ul ?? ol)[1]);
     } else {
       flushList();
       para.push(line);
@@ -149,10 +137,10 @@ function paragraphBlocks(lines: string[], kind: SectionKind): Block[] {
   return blocks;
 }
 
-function parsePage(body: string, url: string): StoryPageContent {
-  const hero: Hero = { h1: "", buttons: [], trust: [] };
-  const sections: Section[] = [];
-  let formButton: string | undefined;
+function parsePage(body, url) {
+  const hero = { h1: "", buttons: [], trust: [] };
+  const sections = [];
+  let formButton;
 
   const parts = body.split(/^### /m).slice(1);
   for (const part of parts) {
@@ -160,7 +148,7 @@ function parsePage(body: string, url: string): StoryPageContent {
     const kind = kindOf(headingLine);
     if (!kind) continue;
 
-    const section: Section | null = kind === "hero" ? null : { kind, heading: headingFrom(headingLine), blocks: [] };
+    const section = kind === "hero" ? null : { kind, heading: headingFrom(headingLine), blocks: [] };
     const paragraphs = rest
       .join("\n")
       .split(/\n\s*\n/)
@@ -171,32 +159,28 @@ function parsePage(body: string, url: string): StoryPageContent {
       const joined = lines.join(" ");
       if (isNote(joined)) continue;
 
-      // Bridge in italics.
       if (lines.length === 1 && isBridgeItalic(joined)) {
         if (section) section.bridge = joined.slice(1, -1);
         else hero.bridge = joined.slice(1, -1);
         continue;
       }
 
-      // "**(24/7 line)** ..." only shows once the owner confirms 24/7.
       if (joined.startsWith("**(24/7 line)**")) {
         if (!section) hero.line247 = joined.replace("**(24/7 line)**", "").trim();
         continue;
       }
 
-      // "**H2: Heading**" on its own line (close sections in roofing.md).
       const h2 = joined.match(/^\*\*H2:\s*(.+?)\*\*$/);
       if (h2 && section) {
         section.heading = stripQuotes(h2[1]);
         continue;
       }
 
-      // Labelled lines can share a paragraph ("**Buttons:**" then "**Form send button:**").
-      const rest: string[] = [];
+      const leftover = [];
       for (const line of lines) {
         const l = labelled(line);
         if (!l) {
-          rest.push(line);
+          leftover.push(line);
           continue;
         }
         switch (l.label) {
@@ -228,16 +212,15 @@ function parsePage(body: string, url: string): StoryPageContent {
             if (section) section.heading = stripQuotes(l.value);
             break;
           case "Text":
-            rest.push(l.value);
+            leftover.push(l.value);
             break;
         }
       }
-      if (rest.length && section) section.blocks.push(...paragraphBlocks(rest, section.kind));
+      if (leftover.length && section) section.blocks.push(...paragraphBlocks(leftover, section.kind));
     }
 
     if (section) {
-      // A question whose answer sits in the next paragraph (blank line between them).
-      section.blocks = section.blocks.reduce<Block[]>((out, b) => {
+      section.blocks = section.blocks.reduce((out, b) => {
         const prev = out[out.length - 1];
         if (b.type === "p" && prev?.type === "faq" && !prev.a) prev.a = b.text;
         else out.push(b);
@@ -250,25 +233,54 @@ function parsePage(body: string, url: string): StoryPageContent {
   return { url, slug: url.slice(1), category: CATEGORY[url] ?? "general", hero, sections, formButton };
 }
 
-let cache: Map<string, StoryPageContent> | null = null;
-
-export function storyPages(): Map<string, StoryPageContent> {
-  if (cache) return cache;
-  cache = new Map();
-  for (const file of FILES) {
-    const text = readFileSync(path.join(process.cwd(), "content", file), "utf8");
-    for (const chunk of text.split(/^## Page /m).slice(1)) {
-      const url =
-        chunk.match(/\*\*URL:\*\*\s*(\/[a-z0-9-]*)/)?.[1] ??
-        chunk.match(/\|\s*URL\s*\|\s*(\/[a-z0-9-]*)/)?.[1] ??
-        chunk.match(/^[^\n]*?(\/[a-z0-9-]+)/)?.[1];
-      if (!url || HAND_BUILT.has(url)) continue;
-      cache.set(url, parsePage(chunk, url));
-    }
+function toTs(value, indent = 0) {
+  const pad = "  ".repeat(indent);
+  const pad1 = "  ".repeat(indent + 1);
+  if (value === undefined) return "undefined";
+  if (value === null) return "null";
+  if (typeof value === "string") return JSON.stringify(value);
+  if (typeof value === "number" || typeof value === "boolean") return String(value);
+  if (Array.isArray(value)) {
+    if (!value.length) return "[]";
+    return `[\n${value.map((v) => `${pad1}${toTs(v, indent + 1)},`).join("\n")}\n${pad}]`;
   }
-  return cache;
+  const keys = Object.keys(value).filter((k) => value[k] !== undefined);
+  if (!keys.length) return "{}";
+  return `{\n${keys.map((k) => `${pad1}${/^[A-Za-z_$][\w$]*$/.test(k) ? k : JSON.stringify(k)}: ${toTs(value[k], indent + 1)},`).join("\n")}\n${pad}}`;
 }
 
-export function storyPage(slug: string) {
-  return storyPages().get(`/${slug}`);
+const pages = new Map();
+for (const file of FILES) {
+  const text = readFileSync(path.join(ROOT, "content", file), "utf8");
+  for (const chunk of text.split(/^## Page /m).slice(1)) {
+    const url =
+      chunk.match(/\*\*URL:\*\*\s*(\/[a-z0-9-]*)/)?.[1] ??
+      chunk.match(/\|\s*URL\s*\|\s*(\/[a-z0-9-]*)/)?.[1] ??
+      chunk.match(/^[^\n]*?(\/[a-z0-9-]+)/)?.[1];
+    if (!url || HAND_BUILT.has(url)) continue;
+    pages.set(url, parsePage(chunk, url));
+  }
 }
+
+for (const [url, page] of pages) {
+  const dir = path.join(ROOT, "src/app/(site)", page.slug);
+  mkdirSync(dir, { recursive: true });
+
+  const pageTsx = `import type { StoryPageContent } from "@/types/content.types";
+import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
+
+const URL = "${url}";
+export const metadata = storyMetadata(URL);
+
+/** Page copy for ${url}. Edit the content object below. */
+export const content: StoryPageContent = ${toTs(page)};
+
+export default function Page() {
+  return <StoryRoute content={content} />;
+}
+`;
+  writeFileSync(path.join(dir, "page.tsx"), pageTsx);
+  console.log("wrote", page.slug);
+}
+
+console.log("done", pages.size);

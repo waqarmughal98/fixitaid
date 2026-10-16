@@ -53,7 +53,7 @@ export function service(name: string, url: string, serviceType: string) {
     serviceType,
     url: `${site.url}${url}`,
     provider: { "@id": businessId },
-    areaServed: { "@type": "City", name: "Chicago" },
+    areaServed: { "@type": "City", name: "Chicago", containedInPlace: { "@type": "State", name: "Illinois" } },
   };
 }
 

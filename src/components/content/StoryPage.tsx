@@ -10,11 +10,11 @@ import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
 import { Rows, Checks, Reviews, FaqSection, CloseCta, Rating } from "@/components/sections/Sections";
-import { Inline } from "./Inline";
+import { Inline, hasPlaceholder } from "./Inline";
 import type { Block, CtaButton, Section, ServiceCategory, StoryPageContent } from "@/types/content.types";
 
-// Renders a service page from the copy files in the dark premium system: full-bleed hero with
-// the form on it, a marked-up photo at the turning point, and layouts chosen by content type.
+// Renders a service page from the co-located content.ts: full-bleed hero with the form on it,
+// a marked-up photo at the turning point, and layouts chosen by content type.
 // Bridge lines from the copy are not shown (they read as scripted).
 
 const FORM: Record<ServiceCategory, { title: string; intro: string; options: string[] }> = {
@@ -34,7 +34,7 @@ const FORM: Record<ServiceCategory, { title: string; intro: string; options: str
     options: ["No heat at all", "Furnace keeps shutting off", "Boiler or radiators not heating", "AC not cooling", "Tune-up", "New system or replacement"],
   },
   general: {
-    title: "Get a free estimate",
+    title: "Get your free Inspection",
     intro: "Four fields. We call you back to set up a visit.",
     options: ["Mold or musty smell", "Water damage or flooded basement", "Roof leak or roof check", "No heat, furnace or boiler", "AC or other HVAC"],
   },
@@ -90,7 +90,18 @@ const WAITS_FOR_REAL_CONTENT = /^\[(Real review|Real job photos|Sample photo rep
 function trustFact(t: string): { big: React.ReactNode; small: React.ReactNode } | null {
   if (/^\[24\/7 phone/i.test(t)) {
     if (site.owner.phone247 === true) return { big: "24/7", small: "Phone answered" };
-    if (site.owner.phone247 === false) return null;
+    return null;
+  }
+  if (/^\[Google rating/i.test(t)) return { big: <Rating />, small: null };
+  // Unconfirmed bracket facts: omit (do not invent).
+  if (/\[[^\]]+\]/.test(t) && !/^Licensed for mold|^Licensed for HVAC/i.test(t)) {
+    // Keep "Licensed for mold remediation [Mold licence number]" as a licensed claim without the number.
+    if (/Mold licence number|HVAC licence number/i.test(t)) {
+      const clean = t.replace(/\s*\[[^\]]+\]/g, "").trim();
+      if (!clean) return null;
+      return { big: <Inline text={clean} />, small: null };
+    }
+    return null;
   }
   // "Illinois roofing licence 104.021107" -> big number, small label
   const m = t.match(/^(.*?)\s+([A-Z]{0,3}\d[\d.]{4,})$/);
@@ -167,13 +178,16 @@ function Blocks({ blocks, kind }: { blocks: Block[]; kind: Section["kind"] }) {
       case "ol":
         out.push(
           <ol className="process" key={i}>
-            {b.items.map((it) => (
-              <li key={it}>
-                <span>
-                  <Inline text={it} />
-                </span>
-              </li>
-            ))}
+            {b.items
+              .map((it) => it.replace(/\s*\[[^\]]+\]/g, "").replace(/\s{2,}/g, " ").trim())
+              .filter(Boolean)
+              .map((it) => (
+                <li key={it}>
+                  <span>
+                    <Inline text={it} />
+                  </span>
+                </li>
+              ))}
           </ol>,
         );
         return;
@@ -191,16 +205,22 @@ function Blocks({ blocks, kind }: { blocks: Block[]; kind: Section["kind"] }) {
           return;
         }
         if (kind === "proof") {
-          out.push(<Checks key={i} items={b.items.filter((it) => !WAITS_FOR_REAL_CONTENT.test(it)).map((it) => <Inline key={it} text={it} />)} />);
+          const items = b.items
+            .filter((it) => !WAITS_FOR_REAL_CONTENT.test(it))
+            .filter((it) => !hasPlaceholder(it) || /licence number|Google rating/i.test(it))
+            .map((it) => <Inline key={it} text={it} />);
+          if (items.length) out.push(<Checks key={i} items={items} />);
           return;
         }
         out.push(
           <ul className="prose" key={i} style={{ marginTop: 16 }}>
-            {b.items.map((it) => (
-              <li key={it}>
-                <Inline text={it} />
-              </li>
-            ))}
+            {b.items
+              .filter((it) => !hasPlaceholder(it) || /\(link:/.test(it))
+              .map((it) => (
+                <li key={it}>
+                  <Inline text={it} />
+                </li>
+              ))}
           </ul>,
         );
         return;
@@ -224,8 +244,17 @@ function StorySection({ section, label, category, index }: { section: Section; l
   const surface = index % 2 === 1;
 
   if (kind === "faq") {
-    const items = section.blocks.filter((b): b is Extract<Block, { type: "faq" }> => b.type === "faq");
-    return <FaqSection surface={surface} title={section.heading ?? `${label} questions`} items={items.map((f) => ({ q: f.q, a: <p><Inline text={f.a} /></p> }))} />;
+    const items = section.blocks
+      .filter((b): b is Extract<Block, { type: "faq" }> => b.type === "faq")
+      .filter((f) => !hasPlaceholder(f.a));
+    if (!items.length) return null;
+    return (
+      <FaqSection
+        surface={surface}
+        title={section.heading ?? `${label} questions`}
+        items={items.map((f) => ({ q: f.q, a: <p><Inline text={f.a} /></p> }))}
+      />
+    );
   }
 
   if (kind === "close") {

@@ -1,5 +1,6 @@
 # Fix It Aid: LiteSpeed / Apache config for the static export in out/.
-# Upload the contents of out/ (including this file) to the site root, next to quote.php.
+# Upload the contents of out/ to the site root. Create quote.config.php from
+# quote.config.example.php (Google SMTP App Password) — that file is not in git.
 
 Options -MultiViews -Indexes
 DirectoryIndex index.html
@@ -7,6 +8,26 @@ ErrorDocument 404 /404.html
 # The export has both about.html and an about/ folder (Next.js navigation data).
 # Don't let the server add a slash and look inside the folder.
 DirectorySlash Off
+
+# Keep SMTP credentials and rate-limit files off the public web.
+<Files "quote.config.php">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</Files>
+<Files "quote.config.example.php">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</Files>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -24,6 +45,9 @@ DirectorySlash Off
   # Clean URLs: /about serves about.html (checked before the about/ folder).
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+)$ /$1.html [L]
+
+  # Hide the rate-limit store directory.
+  RewriteRule ^\.quote-rate(/|$) - [F,L]
 </IfModule>
 
 <IfModule mod_headers.c>

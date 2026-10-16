@@ -54,9 +54,21 @@ const REVEAL = [
 export function MotionRoot({ children }: { children: React.ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const ctxRef = useRef<gsap.Context | null>(null);
+  const pathRef = useRef(pathname);
+
+  // SplitText rewrites heading DOM. useGSAP's revert runs in a layout-effect cleanup,
+  // which is after React has already tried to removeChild the old route — that throws
+  // NotFoundError on soft navigations. Revert during render, before commit.
+  if (pathRef.current !== pathname) {
+    pathRef.current = pathname;
+    ctxRef.current?.revert();
+    ctxRef.current = null;
+  }
 
   useGSAP(
-    (_ctx, contextSafe) => {
+    (ctx, contextSafe) => {
+      ctxRef.current = ctx;
       const html = document.documentElement;
       const el = root.current;
       if (!el) return;
@@ -191,12 +203,14 @@ export function MotionRoot({ children }: { children: React.ReactNode }) {
 
           // ---------- batched fade-up reveals ----------
           const targets = gsap.utils.toArray<HTMLElement>(REVEAL, el).filter((t) => !t.closest("[data-hero], .page-top, .form-card"));
-          gsap.set(targets, { opacity: 0, y: 28 });
-          ScrollTrigger.batch(targets, {
-            start: "top 90%",
-            once: true,
-            onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 0.8, stagger: 0.07, ease: EASE, overwrite: true }),
-          });
+          if (targets.length) {
+            gsap.set(targets, { opacity: 0, y: 28 });
+            ScrollTrigger.batch(targets, {
+              start: "top 90%",
+              once: true,
+              onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 0.8, stagger: 0.07, ease: EASE, overwrite: true }),
+            });
+          }
 
           // process steps: connector lines grow after each number
           $$("[data-steps]").forEach((list) => {
@@ -330,6 +344,7 @@ export function MotionRoot({ children }: { children: React.ReactNode }) {
         cleanups.forEach((c) => c());
         headerTrigger?.kill();
         mm.revert();
+        if (ctxRef.current === ctx) ctxRef.current = null;
       };
     },
     { scope: root, dependencies: [pathname], revertOnUpdate: true },

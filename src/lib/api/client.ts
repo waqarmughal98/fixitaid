@@ -1,7 +1,7 @@
 import axios from "axios";
 import toast from "react-hot-toast";
 
-// The only axios instance. Lead forms post to the PHP handler on the same host,
+// The only axios instance. Lead forms post to /quote.php (Google SMTP) on the same host,
 // so there is no base URL by default.
 export const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || undefined,

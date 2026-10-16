@@ -2,7 +2,7 @@ import Link from "next/link";
 import { site } from "@/config/site";
 import { routes } from "@/lib/routes";
 import { SiteHeader } from "@/components/layout/SiteHeader";
-import { SiteFooter } from "@/components/layout/SiteFooter";
+import { LicenceLine } from "@/components/layout/Licences";
 
 export const metadata = { title: { absolute: "Page not found | Fix It Aid" }, robots: { index: false } };
 
@@ -35,7 +35,18 @@ export default function NotFound() {
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <footer className="footer">
+        <div className="wrap" style={{ display: "block", paddingBlock: 32 }}>
+          <div className="legal" style={{ borderTop: 0, paddingTop: 0 }}>
+            <p>
+              {site.legalName}. <LicenceLine show={["gc"]} />
+            </p>
+            <p>
+              <a href={site.phoneHref}>{site.phone}</a>. <Link href={routes.privacy.href}>Privacy</Link>
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

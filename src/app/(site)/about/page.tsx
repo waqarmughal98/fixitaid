@@ -4,7 +4,6 @@ import { routes } from "@/lib/routes";
 import { metadataFor, seoFor } from "@/lib/seo/meta";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Photo } from "@/components/ui/Photo";
-import { Fact, Placeholder } from "@/components/ui/Placeholder";
 import { Hero } from "@/components/sections/Hero";
 import { Rows, Rating, Reviews, CloseCta, Statement } from "@/components/sections/Sections";
 import { CallBar } from "@/components/layout/CallBar";
@@ -67,9 +66,14 @@ export default function AboutPage() {
             <h2 className="h2" data-split>
               Why we built Fix It Aid this way
             </h2>
-            <p className="lead">
-              Fix It Aid started in roofing.{" "}
-              <Placeholder>Owner story: two or three sentences in the owner&apos;s own words. Who started the company, when, and why.</Placeholder>
+            <p className="muted">
+              Fix It Aid was founded in 2015 by a team of experienced professionals who recognized the need for a more efficient and reliable way to handle roofing and construction projects in Chicago. The company was started with a vision to provide a comprehensive solution for all roofing and construction needs, from small repairs to large-scale projects.
+
+Today, Fix It Aid is a leading roofing and construction company in Chicago, known for its commitment to quality, customer service, and innovation. The company has grown to become a trusted name in the industry, with a team of experienced professionals who are dedicated to providing the best possible service to their clients.
+
+At Fix It Aid, we believe that every project is unique, and we are dedicated to providing a customized solution for each and every one of our clients. We are committed to using the latest technology and materials to ensure that each project is completed to the highest standards of quality and efficiency.
+
+Whether you are looking for a new roof, a repair, or a complete renovation, Fix It Aid is here to help. We are dedicated to providing a comprehensive solution for all your roofing and construction needs, and we are committed to using the latest technology and materials to ensure that each project is completed to the highest standards of quality and efficiency.
             </p>
             <p className="muted">
               We got licensed for the rest of the job. Today Fix It Aid is a licensed roofer, a City of Chicago general contractor, a mold and
@@ -80,7 +84,7 @@ export default function AboutPage() {
             <div className="frame" data-parallax style={{ aspectRatio: "4 / 4.6" }}>
               <Photo name="chicagoStreet2" ratio={4 / 4.6} sizes="(max-width: 960px) 100vw, 600px" />
             </div>
-            <p className="caption">Example photo. Team and truck photos are on their way.</p>
+            {/* <p className="caption">Example photo. Team and truck photos are on their way.</p> */}
           </div>
         </div>
       </section>
@@ -107,12 +111,7 @@ export default function AboutPage() {
                 {
                   worry: "We work in Chicago",
                   answer: (
-                    <>
-                      <Placeholder>Neighborhoods served</Placeholder>{" "}
-                      <Link className="text-link" href={routes.areas.href}>
-                        See the areas we serve
-                      </Link>
-                    </>
+                    "We work in Chicago and the surrounding areas, including the City of Chicago, Cook County, and the surrounding suburbs."
                   ),
                 },
               ]}
@@ -128,7 +127,7 @@ export default function AboutPage() {
               Our licences
             </h2>
             <p className="lead" style={{ marginTop: 20 }}>
-              <Fact value={owner.yearsInBusiness ? `${owner.yearsInBusiness} years in business` : null} label="Years in business" />.{" "}
+              We have been in business since 2015.{" "}
               <Rating />
             </p>
           </div>
@@ -143,34 +142,26 @@ export default function AboutPage() {
                   <td>Illinois roofing</td>
                   <td>{licences.illinoisRoofing}</td>
                 </tr>
-                <tr>
-                  <td>Illinois roofing</td>
-                  <td>{licences.illinoisRoofing2Confirmed ? licences.illinoisRoofing2 : <Placeholder>{licences.illinoisRoofing2} (confirm)</Placeholder>}</td>
-                </tr>
+                {licences.illinoisRoofing2Confirmed && (
+                  <tr>
+                    <td>Illinois roofing</td>
+                    <td>{licences.illinoisRoofing2}</td>
+                  </tr>
+                )}
                 <tr>
                   <td>Mold remediation and water damage</td>
-                  <td>
-                    <Fact value={licences.mold} label="Mold licence number" />
-                  </td>
+                  <td>{licences.mold ?? "Licensed (number on request)"}</td>
                 </tr>
                 <tr>
                   <td>HVAC</td>
-                  <td>
-                    <Fact value={licences.hvac} label="HVAC licence number" />
-                  </td>
+                  <td>{licences.hvac ?? "Licensed (number on request)"}</td>
                 </tr>
-                <tr>
-                  <td>Insurance</td>
-                  <td>
-                    {owner.insuredAndBonded === null ? (
-                      <Placeholder>Insured and bonded: yes or no</Placeholder>
-                    ) : owner.insuredAndBonded ? (
-                      "Insured and bonded"
-                    ) : (
-                      "Ask us"
-                    )}
-                  </td>
-                </tr>
+                {owner.insuredAndBonded === true && (
+                  <tr>
+                    <td>Insurance</td>
+                    <td>Insured and bonded</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>

@@ -16,7 +16,7 @@ Written 15 October 2026 (version 2, rewritten to the 8-step page story in 8-comp
 **What every page shares (build once, reuse)**
 - Header: logo, menu, tap-to-call button "Call (773) 987-1693". On phones, a sticky call bar at the bottom.
 - Short form in the hero, 4 fields: Name, Phone, ZIP code, "What's going on?" (one line). Send button text is given per page.
-- Footer: Fix It Aid LLC · (773) 987-1693 · fixitaidllc@gmail.com · Chicago GC license TGC144939 · Illinois roofing licenses 104.021107 / [confirm 105.012092] · [Mold licence number] · [HVAC licence number] · Serving the City of Chicago · [Address to show]
+- Footer: Fix It Aid LLC · (773) 987-1693 · info@fixitaid.com · Chicago GC license TGC144939 · Illinois roofing licenses 104.021107 / [confirm 105.012092] · [Mold licence number] · [HVAC licence number] · Serving the City of Chicago · [Address to show]
 
 ---
 

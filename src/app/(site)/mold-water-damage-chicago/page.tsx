@@ -4,16 +4,13 @@ import { breadcrumbs, faqPage, service } from "@/lib/seo/schema";
 import { sentenceCase } from "@/lib/text";
 import { JsonLd } from "@/components/ui/JsonLd";
 import type { Note } from "@/components/ui/PhotoNotes";
-import { Fact, Placeholder } from "@/components/ui/Placeholder";
 import { LeadForm } from "@/components/lead/LeadForm";
-import { LandingHeader } from "@/components/layout/LandingHeader";
-import { LandingFooter } from "@/components/layout/SiteFooter";
 import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
 import { Steps, Rows, Licences, Rating, Reviews, FaqSection, CloseCta, Head } from "@/components/sections/Sections";
 
-// Google Ads landing page, also the main mold page. No menu.
+// Main mold & water page (also used for ads). Site header + footer from (site)/layout.
 const URL = "/mold-water-damage-chicago";
 export const metadata = metadataFor(URL);
 
@@ -47,10 +44,8 @@ export default function MoldWaterPage() {
           ]),
         ]}
       />
-      <LandingHeader />
 
-      <main id="main" className="page">
-        <Hero
+      <Hero
           photo="moldWall"
           title={sentenceCase(seo.h1)}
           lead={
@@ -70,7 +65,7 @@ export default function MoldWaterPage() {
             </>
           }
           facts={[
-            { big: licences.mold ?? <Placeholder>licence no.</Placeholder>, small: "Mold and water licence" },
+            { big: licences.mold ?? "Licensed", small: "Mold and water" },
             { big: licences.illinoisRoofing, small: "Licensed roofer, in-house" },
             { big: "1 price", small: "In writing, before we start" },
           ]}
@@ -80,7 +75,8 @@ export default function MoldWaterPage() {
               title="Book a mold or water inspection"
               intro={
                 <>
-                  We call you back to set a time. <Fact value={owner.moldInspectionPrice} label='Free inspection: yes, or "from $X"' />
+                  We call you back to set a time
+                  {owner.moldInspectionPrice ? <> ({owner.moldInspectionPrice})</> : null}.
                 </>
               }
               options={["Mold or a musty smell", "Water damage or a leak", "Flooded basement", "Sewage backup"]}
@@ -167,7 +163,7 @@ export default function MoldWaterPage() {
                   title: "Rebuild",
                   text: (
                     <>
-                      Drywall, paint and floors put back. <Placeholder>Clearance test: yes or no</Placeholder>
+                      Drywall, paint and floors put back.
                     </>
                   ),
                 },
@@ -196,7 +192,7 @@ export default function MoldWaterPage() {
                     worry: "It coming back",
                     answer: (
                       <>
-                        The water source is fixed in the same job, so the mold has nothing to grow on. <Fact value={owner.warranty} label="Warranty" />
+                        The water source is fixed in the same job, so the mold has nothing to grow on.
                       </>
                     ),
                   },
@@ -214,23 +210,22 @@ export default function MoldWaterPage() {
                 { value: licences.mold, label: "Mold and water damage licence" },
                 { value: licences.illinoisRoofing, label: "Illinois roofing licence" },
                 { value: licences.chicagoGc, label: "Chicago general contractor" },
-                { value: null, label: "Certification, if any", missing: "IICRC?" },
               ]}
             />
             <Reviews service="mold" />
             <div className="prices" style={{ marginTop: 56 }}>
               <div>
                 <h3 className="h3">Mold inspection</h3>
-                <b className="num">
-                  <Fact value={owner.moldInspectionPrice} label="Free / $X to $Y" />
-                </b>
-                <p className="muted">Depends on how many samples you need. Other Chicago companies charge about $300 to $500 with testing.</p>
+                <b className="num">{owner.moldInspectionPrice ?? "Written price"}</b>
+                <p className="muted">
+                  {owner.moldInspectionPrice
+                    ? "Depends on how many samples you need. Other Chicago companies charge about $300 to $500 with testing."
+                    : "You get the inspection price before we come out. Other Chicago companies often charge about $300 to $500 with testing."}
+                </p>
               </div>
               <div>
                 <h3 className="h3">Mold removal or water damage</h3>
-                <b className="num">
-                  <Placeholder>$X to $Y typical</Placeholder>
-                </b>
+                <b className="num">Written price</b>
                 <p className="muted">Depends on the size of the area, what has to come out and what caused it. Your exact price comes in writing.</p>
               </div>
             </div>
@@ -245,7 +240,7 @@ export default function MoldWaterPage() {
               a: (
                 <p>
                   It depends on the size of the area and what caused it. You get a written price after the inspection, before any work
-                  starts. <Placeholder>Typical range once confirmed</Placeholder>
+                  starts.
                 </p>
               ),
             },
@@ -254,7 +249,7 @@ export default function MoldWaterPage() {
               q: "How fast can you come out?",
               a: (
                 <p>
-                  <Fact value={owner.responseTime} label='Real response time, for example "same day for active water, within 2 days for mold checks"' />.
+                  Response time: within one business hour.
                   If water is coming in, call instead of using the form.
                 </p>
               ),
@@ -264,14 +259,12 @@ export default function MoldWaterPage() {
           ]}
         />
 
-        <CloseCta
-          title="Find the water. Fix it once."
-          text="A real person answers, asks a few questions and tells you what happens next. The price is in writing before we start."
-          primary={{ href: "#mold-form", label: "Book online" }}
-        />
-      </main>
+      <CloseCta
+        title="Find the water. Fix it once."
+        text="A real person answers, asks a few questions and tells you what happens next. The price is in writing before we start."
+        primary={{ href: "#mold-form", label: "Book online" }}
+      />
 
-      <LandingFooter licences={["gc", "mold"]} />
       <CallBar formHref="#mold-form" formLabel="Book" />
     </>
   );

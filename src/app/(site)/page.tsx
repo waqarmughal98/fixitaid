@@ -6,7 +6,6 @@ import { website } from "@/lib/seo/schema";
 import { sentenceCase } from "@/lib/text";
 import { JsonLd } from "@/components/ui/JsonLd";
 import type { Note } from "@/components/ui/PhotoNotes";
-import { Fact, Placeholder } from "@/components/ui/Placeholder";
 import { LeadForm } from "@/components/lead/LeadForm";
 import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
@@ -59,7 +58,7 @@ export default function HomePage() {
         form={
           <LeadForm
             id="home-form"
-            title="Get a free estimate"
+            title="Get your free Inspection"
             intro="Four fields. We call you back to set up a visit."
             options={["Mold or musty smell", "Water damage or flooded basement", "Roof leak or roof check", "No heat, furnace or boiler", "AC or other HVAC"]}
             submitLabel="Get my free estimate"
@@ -146,11 +145,9 @@ export default function HomePage() {
               { title: "The work", text: "Permits pulled when needed. One person to call the whole time." },
               {
                 title: "Walkthrough",
-                text: (
-                  <>
-                    We check it with you, clean up and give you the <Fact value={owner.warranty} label="warranty" /> in writing.
-                  </>
-                ),
+                text: owner.warranty
+                  ? `We check it with you, clean up and give you the ${owner.warranty} in writing.`
+                  : "We check it with you, clean up, and leave you with the work details in writing.",
               },
             ]}
           />
@@ -202,8 +199,10 @@ export default function HomePage() {
             q: "What does it cost to come out and look?",
             a: (
               <p>
-                Roof checks are free. Mold inspection: <Fact value={owner.moldInspectionPrice} label="free, or from $X" />. HVAC service
-                call: <Fact value={owner.hvacServiceCall} label="$X" />. You always get the price for the work in writing before we start.
+                Roof checks are free
+                {owner.moldInspectionPrice ? <>. Mold inspection: {owner.moldInspectionPrice}</> : null}
+                {owner.hvacServiceCall ? <>. HVAC service call: {owner.hvacServiceCall}</> : null}. You always get the price for the work
+                in writing before we start.
               </p>
             ),
           },
@@ -215,8 +214,8 @@ export default function HomePage() {
             q: "How soon can you come?",
             a: (
               <p>
-                <Fact value={owner.responseTime} label='Real response time, for example "same day for active leaks and no heat"' />. If water
-                is coming in right now, call instead of using the form.
+                {owner.responseTime ? <>We aim to get back to you {owner.responseTime}. </> : null}
+                If water is coming in right now, call instead of using the form.
               </p>
             ),
           },
@@ -224,7 +223,7 @@ export default function HomePage() {
             q: "Which parts of Chicago do you cover?",
             a: (
               <p>
-                The City of Chicago, from Rogers Park to Beverly. <Placeholder>Owner: confirm the neighborhoods you cover</Placeholder>{" "}
+                The City of Chicago, from Rogers Park to Beverly.{" "}
                 <Link className="text-link" href={routes.areas.href}>
                   See the areas we serve
                 </Link>
@@ -237,7 +236,7 @@ export default function HomePage() {
       <CloseCta
         title="Tell us what's going on"
         text="A real person from our Chicago team calls you back, looks at the whole problem and gives you the price in writing."
-        primary={{ href: "#home-form", label: "Get a free estimate" }}
+        primary={{ href: "#home-form", label: "Get your free Inspection" }}
         secondary={{ href: routes.contact.href, label: "Send a message" }}
       />
 

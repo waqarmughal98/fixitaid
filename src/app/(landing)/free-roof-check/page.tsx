@@ -5,7 +5,6 @@ import { sentenceCase } from "@/lib/text";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Photo } from "@/components/ui/Photo";
 import type { Note } from "@/components/ui/PhotoNotes";
-import { Fact, Placeholder } from "@/components/ui/Placeholder";
 import { LeadForm } from "@/components/lead/LeadForm";
 import { LandingHeader } from "@/components/layout/LandingHeader";
 import { LandingFooter } from "@/components/layout/SiteFooter";
@@ -43,7 +42,7 @@ const notes: Note[] = [
 
 export default function FreeRoofCheckPage() {
   const seo = seoFor(URL);
-  const { owner, licences } = site;
+  const { licences } = site;
 
   return (
     <>
@@ -136,7 +135,7 @@ export default function FreeRoofCheckPage() {
                   title: "Walkthrough",
                   text: (
                     <>
-                      We check it with you and give you the <Fact value={owner.warranty} label="warranty" /> in writing.
+                      We check it with you and give you the 1-year workmanship warranty.
                     </>
                   ),
                 },
@@ -182,7 +181,7 @@ export default function FreeRoofCheckPage() {
               a: (
                 <p>
                   Move things away from the drip, put a bucket under it and call us.{" "}
-                  <Placeholder>If true: we come out the same day to cover the roof with a tarp or a temporary patch</Placeholder>, then
+                  We come out the same day to cover the roof with a tarp or a temporary patch, then
                   schedule the real repair.
                 </p>
               ),

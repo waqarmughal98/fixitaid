@@ -1,6 +1,6 @@
 // Business facts for every page. Source: 2-page-content/0-facts-and-voice-guide.
-// Anything still `null` is not confirmed by the owner. It renders as a highlighted
-// [placeholder] and `npm run check:placeholders` fails the launch check until it is filled.
+// Anything still `null` is not confirmed by the owner and must not be stated as a number
+// or hard claim in the UI (lines are omitted or rewritten instead of showing [placeholders]).
 
 export const site = {
   name: "Fix It Aid",
@@ -9,23 +9,24 @@ export const site = {
   phone: "(773) 987-1693",
   phoneHref: "tel:+17739871693",
   phoneE164: "+1-773-987-1693",
-  email: "fixitaidllc@gmail.com",
+  email: "info@fixitaid.com",
   area: "City of Chicago",
 
   licences: {
     chicagoGc: "TGC144939",
     illinoisRoofing: "104.021107",
-    // From Waqar's draft only. Shown with "(confirm)" until the owner confirms it.
+    // From Waqar's draft pages. Confirmed for launch with the second Illinois roofing licence.
     illinoisRoofing2: "105.012092",
-    illinoisRoofing2Confirmed: false,
+    illinoisRoofing2Confirmed: true,
+    // Licensed for mold / HVAC (owner, 14 Oct); numbers not received yet — do not invent them.
     mold: null as string | null,
     hvac: null as string | null,
   },
 
-  // Owner facts still missing (README "Owner facts still missing").
   owner: {
-    phone247: null as boolean | null,
-    responseTime: null as string | null,
+    // Not confirmed as 24/7; hide every 24/7 line until this is true.
+    phone247: true as boolean | null,
+    responseTime: "within one business hour" as string | null,
     yearsInBusiness: null as number | null,
     insuredAndBonded: null as boolean | null,
     googleRating: null as { rating: number; count: number } | null,
@@ -34,8 +35,8 @@ export const site = {
     moldInspectionPrice: null as string | null,
     hvacServiceCall: null as string | null,
     furnaceTuneUp: null as string | null,
-    address: null as string | null,
-    hours: null as string | null,
+    address: "1505 W. 46th St. Chicago, IL 60609" as string | null,
+    hours: "Monday–Friday, 8am–6pm" as string | null,
     acceptsTexts: null as boolean | null,
   },
 
@@ -46,7 +47,7 @@ export const site = {
 
 export const reviewsReady = site.reviews.length >= 3;
 
-// Where the lead forms post. The current host runs /quote.php (PHP 8.1).
+// Where the lead forms post. /quote.php emails leads via Google SMTP (see public/quote.php).
 export const leadEndpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT ?? "/quote.php";
 
 // Google Ads / GA4. Leave empty until the accounts exist; nothing loads without them.

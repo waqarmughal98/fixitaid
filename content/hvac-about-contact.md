@@ -422,7 +422,7 @@ Yes. Single head and multi head ductless systems.
 - **H1:** Furnace and AC Installation in Chicago
 - **Primary keyword:** furnace replacement chicago. Secondaries used: ac installation chicago, boiler installation chicago, mini split installation chicago, central air installation chicago, new furnace cost chicago, how much does a new furnace cost, what size ac do i need, install central air in old house chicago, furnace financing chicago.
 
-*Note: the meta description promises a free estimate. Confirm that installs get a free estimate, or change the meta and the buttons below.*
+*Note: the meta description promises a free estimate. Confirm that installs Get your free Inspection, or change the meta and the buttons below.*
 
 ### 1. Hook (hero)
 
@@ -665,7 +665,7 @@ See our services: roofing (link: /roofing-chicago), mold removal (link: /mold-re
 ### Other ways to reach us
 
 - **Phone:** (773) 987-1693
-- **Email:** fixitaidllc@gmail.com
+- **Email:** info@fixitaid.com
 - **Hours:** [hours]
 - **Address:** [Address to show]
 - **Area:** City of Chicago. See neighborhoods (link: /areas-we-serve)

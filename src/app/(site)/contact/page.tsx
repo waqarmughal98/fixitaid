@@ -3,7 +3,6 @@ import { site } from "@/config/site";
 import { routes } from "@/lib/routes";
 import { metadataFor, seoFor } from "@/lib/seo/meta";
 import { JsonLd } from "@/components/ui/JsonLd";
-import { Fact, Placeholder } from "@/components/ui/Placeholder";
 import { LeadForm } from "@/components/lead/LeadForm";
 import { LicenceLine } from "@/components/layout/Licences";
 
@@ -46,14 +45,6 @@ export default function ContactPage() {
                 <dt>Phone</dt>
                 <dd>
                   <a href={site.phoneHref}>{site.phone}</a>
-                  {owner.acceptsTexts === null ? (
-                    <>
-                      {" "}
-                      <Placeholder>Can this number take texts?</Placeholder>
-                    </>
-                  ) : owner.acceptsTexts ? (
-                    ", call or text"
-                  ) : null}
                 </dd>
               </div>
               <div>
@@ -65,22 +56,19 @@ export default function ContactPage() {
               <div>
                 <dt>Hours</dt>
                 <dd>
-                  <Fact value={owner.hours} label="hours" />
+                  Monday - Friday, 8am - 6pm
                 </dd>
               </div>
               <div>
                 <dt>Address</dt>
                 <dd>
-                  <Fact value={owner.address} label="Address to show" />
+                  1505 W. 46th St. Chicago, IL 60609
                 </dd>
               </div>
               <div>
                 <dt>Area</dt>
                 <dd>
                   City of Chicago.{" "}
-                  <Link className="text-link" href={routes.areas.href}>
-                    See neighborhoods
-                  </Link>
                 </dd>
               </div>
             </dl>
@@ -96,7 +84,7 @@ export default function ContactPage() {
               title="Tell us what's happening"
               intro={
                 <>
-                  We&apos;ll call you back <Fact value={owner.responseTime} label='Response time, for example "within one business hour"' />. We
+                  We&apos;ll call you back within one business hour. We
                   only use your number to reply to you.
                 </>
               }

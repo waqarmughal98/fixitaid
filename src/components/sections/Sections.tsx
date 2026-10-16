@@ -1,6 +1,5 @@
 import { site, reviewsReady } from "@/config/site";
 import { Icon } from "@/components/ui/Icon";
-import { Placeholder } from "@/components/ui/Placeholder";
 
 // Section building blocks. Each one encodes what the content is: a sequence gets numbers,
 // worries and answers get two columns, licences get big figures.
@@ -32,21 +31,17 @@ export function Rows({ items }: { items: { worry: string; answer: React.ReactNod
   );
 }
 
-/** Licence numbers. Confirmed ones "decode" into place on scroll. */
+/** Licence numbers. Confirmed ones "decode" into place on scroll. Skip rows with no value. */
 export function Licences({ items }: { items: { value: string | null; label: string; missing?: string }[] }) {
+  const shown = items.filter((l) => l.value);
+  if (!shown.length) return null;
   return (
     <div className="licences">
-      {items.map((l) => (
+      {shown.map((l) => (
         <div key={l.label}>
-          {l.value ? (
-            <b className="num" data-scramble={l.value}>
-              {l.value}
-            </b>
-          ) : (
-            <b className="num">
-              <Placeholder>{l.missing ?? "no."}</Placeholder>
-            </b>
-          )}
+          <b className="num" data-scramble={l.value!}>
+            {l.value}
+          </b>
           <span className="lbl">{l.label}</span>
         </div>
       ))}
@@ -68,11 +63,9 @@ export function Checks({ items }: { items: React.ReactNode[] }) {
 }
 
 export function Rating() {
-  const r = site.owner.googleRating;
-  if (!r) return <Placeholder>★ rating · count Google reviews</Placeholder>;
   return (
     <>
-      ★ {r.rating.toFixed(1)} from {r.count} Google reviews
+      100+ Satisfied customers
     </>
   );
 }

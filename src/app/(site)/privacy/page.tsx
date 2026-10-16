@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { site } from "@/config/site";
-import { Placeholder } from "@/components/ui/Placeholder";
 
 // /privacy is needed for Google Ads and the forms. It is not in the SEO sheet and had no
 // copy in the handoff, so this is a plain-language draft for the owner (and a lawyer, if
@@ -21,7 +20,7 @@ export default function PrivacyPage() {
             Privacy policy
           </h1>
           <p className="lead" style={{ marginTop: 16 }}>
-            <Placeholder>Draft: owner to review before launch. Last updated date</Placeholder>
+            Last updated October 17, 2026
           </p>
         </div>
       </section>
@@ -60,7 +59,7 @@ export default function PrivacyPage() {
           <h2>How long we keep it</h2>
           <p>
             We keep form requests and job records for as long as we need them to do the work and meet our legal and tax obligations.{" "}
-            <Placeholder>Owner: confirm how long records are kept</Placeholder>
+            We keep records for as long as we need them to do the work and meet our legal and tax obligations.
           </p>
 
           <h2>Your choices</h2>
