@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
         as: "*.css",
+        condition: { not: "foreign" },
       },
     },
   },
