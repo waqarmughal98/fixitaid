@@ -263,7 +263,7 @@ function StorySection({ section, label, category, index }: { section: Section; l
             <Heading text={section.heading} />
             <Blocks blocks={section.blocks} kind={kind} />
           </div>
-          <div className="span-7">
+          <div className="span-7 stick">
             <div className="frame" data-parallax style={{ aspectRatio: "3 / 2" }}>
               <Photo name={report.photo} ratio={3 / 2} sizes="(max-width: 960px) 100vw, 760px" />
             </div>
@@ -299,7 +299,7 @@ function StorySection({ section, label, category, index }: { section: Section; l
   return (
     <section className={`section${surface ? " surface" : ""}`}>
       <div className="wrap grid-12">
-        <div className="span-5">
+        <div className="span-5 stick">
           <Heading text={section.heading} />
         </div>
         <div className="span-7">

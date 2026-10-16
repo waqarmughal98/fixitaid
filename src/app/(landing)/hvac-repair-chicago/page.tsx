@@ -152,7 +152,7 @@ export default function HvacRepairPage() {
 
         <section className="section surface">
           <div className="wrap grid-12">
-            <div className="span-5">
+            <div className="span-5 stick">
               <h2 className="h2" data-split>
                 What you can count on
               </h2>

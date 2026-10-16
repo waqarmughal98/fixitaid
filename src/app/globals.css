@@ -26,7 +26,7 @@
   --f-body: var(--font-body), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 
   --gutter: clamp(20px, 4vw, 56px);
-  --section: clamp(80px, 11vw, 160px);
+  --section: clamp(72px, 9vw, 128px);
 
   --t-fast: 160ms;
   --t-med: 300ms;
@@ -70,6 +70,8 @@
   .span-4 { grid-column: span 4; } .span-5 { grid-column: span 5; } .span-6 { grid-column: span 6; }
   .span-7 { grid-column: span 7; } .span-8 { grid-column: span 8; }
   .stack > * + * { margin-top: 20px; }
+  /* the shorter column of a two-column section travels with the reader instead of leaving a gap */
+  .grid-12 > .stick { position: sticky; top: 104px; align-self: start; }
   .measure { max-width: 62ch; }
   .head { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; margin-bottom: clamp(40px, 5vw, 72px); }
 
@@ -273,6 +275,18 @@
   .rail-progress { position: absolute; left: var(--gutter); right: var(--gutter); bottom: calc(var(--section) * 0.42); height: 1px; background: var(--line); }
   .rail-progress span { position: absolute; inset: 0; background: var(--gold); transform: scaleX(0); transform-origin: left; }
 
+  /* desktop: the pinned rail is exactly one screen tall, so panel content never falls below the fold */
+  @media (min-width: 961px) {
+    .rail { height: 100svh; min-height: 640px; display: flex; flex-direction: column; }
+    .rail-head { padding-top: 104px; }
+    .rail .head { margin-bottom: clamp(20px, 3vh, 36px); }
+    .rail .h2 { font-size: clamp(34px, 3.6vw, 56px); }
+    .rail-viewport { flex: 1; min-height: 0; }
+    .rail-track { height: 100%; padding-bottom: 56px; }
+    .rail-panel { height: 100%; }
+    .rail-progress { bottom: 28px; }
+  }
+
   /* ---------- pinned story: leak -> rebuild ---------- */
   .story-pin { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: center; min-height: 100svh; padding-block: 96px 32px; }
   .story .h2 { font-size: clamp(32px, 3.4vw, 52px); }
@@ -475,6 +489,7 @@
   @media (max-width: 960px) {
     .hero-grid, .head, .story-pin, .grid-12 { grid-template-columns: 1fr; }
     .span-4, .span-5, .span-6, .span-7, .span-8 { grid-column: 1 / -1; }
+    .grid-12 > .stick { position: static; }
     .hero { min-height: auto; padding-top: 128px; }
     .hero .display { max-width: none; }
     .scroll-cue { display: none; }

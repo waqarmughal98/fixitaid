@@ -87,7 +87,7 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="wrap grid-12">
-          <div className="span-5">
+          <div className="span-5 stick">
             <h2 className="h2" data-split>
               How we work
             </h2>
@@ -123,7 +123,7 @@ export default function AboutPage() {
 
       <section className="section surface">
         <div className="wrap grid-12">
-          <div className="span-5">
+          <div className="span-5 stick">
             <h2 className="h2" data-split>
               Our licences
             </h2>

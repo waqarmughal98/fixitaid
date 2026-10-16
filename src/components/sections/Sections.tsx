@@ -114,7 +114,7 @@ export function FaqSection({ title, items, surface }: { title: string; items: { 
   return (
     <section className={`section${surface ? " surface" : ""}`}>
       <div className="wrap grid-12">
-        <div className="span-4">
+        <div className="span-4 stick">
           <h2 className="h2" data-split>
             {title}
           </h2>

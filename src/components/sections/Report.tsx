@@ -28,7 +28,7 @@ export function Report({
           {children}
           <NoteList notes={notes} />
         </div>
-        <div className="span-7">
+        <div className="span-7 stick">
           <PhotoNotes photo={photo} notes={notes} sizes="(max-width: 960px) 100vw, 760px" />
           <p className="caption">{caption}</p>
         </div>
