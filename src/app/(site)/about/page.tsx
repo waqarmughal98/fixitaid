@@ -29,7 +29,7 @@ export default function AboutPage() {
       />
 
       <Hero
-        photo="brickFlat"
+        photo="craftsman"
         title={seo.h1}
         lead="You're about to let a contractor into your home. Here's who we are, what we're licensed to do, and how we work."
         actions={
@@ -82,7 +82,7 @@ Whether you are looking for a new roof, a repair, or a complete renovation, Fix 
           </div>
           <div className="span-6">
             <div className="frame" data-parallax style={{ aspectRatio: "4 / 4.6" }}>
-              <Photo name="chicagoStreet2" ratio={4 / 4.6} sizes="(max-width: 960px) 100vw, 600px" />
+              <Photo name="brickFlat" ratio={4 / 4.6} sizes="(max-width: 960px) 100vw, 600px" />
             </div>
             {/* <p className="caption">Example photo. Team and truck photos are on their way.</p> */}
           </div>

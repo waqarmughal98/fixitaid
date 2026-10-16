@@ -12,9 +12,18 @@ import "./globals.css";
 const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap",
+});
+
+// Italic is only used below the fold (marquee, statement), so it isn't preloaded.
+const frauncesItalic = Fraunces({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["italic"],
+  variable: "--font-display-italic",
+  display: "swap",
+  preload: false,
 });
 
 const hanken = Hanken_Grotesk({
@@ -39,17 +48,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${hanken.variable}`} suppressHydrationWarning>
-      <head>
-        {/* Hide only the hero until the motion script runs, so it can animate in without a flash.
-            Falls back to showing everything after 2.5s if the script never runs. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){var d=document.documentElement;if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('motion-pending');setTimeout(function(){d.classList.remove('motion-pending')},2500)}})();",
-          }}
-        />
-      </head>
+    <html lang="en" className={`${fraunces.variable} ${frauncesItalic.variable} ${hanken.variable}`} suppressHydrationWarning>
       <body className={showPlaceholders ? undefined : "no-ph"}>
         <a className="skip" href="#main">
           Skip to content

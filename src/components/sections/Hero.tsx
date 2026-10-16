@@ -20,7 +20,8 @@ export function Hero({ photo, title, lead, actions, facts, form, crumbs }: Props
   return (
     <section className="hero" data-hero>
       <div className="hero-media" data-hero-media>
-        <Photo name={photo} ratio={16 / 9} sizes="100vw" priority className="photo" />
+        {/* Sits under a dark gradient, so a lighter encode is invisible and speeds up LCP. */}
+        <Photo name={photo} ratio={16 / 9} sizes="100vw" priority quality={40} className="photo" />
       </div>
       <div className="wrap">
         <div className="hero-grid">

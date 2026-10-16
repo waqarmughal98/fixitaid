@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "check:placeholders": "node scripts/check-placeholders.mjs",
     "images": "node scripts/optimize-images.mjs",
-    "brand-images": "node scripts/make-brand-images.mjs"
+    "brand-images": "node scripts/make-brand-images.mjs",
+    "postbuild": "node scripts/fetch-photos.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

@@ -4,7 +4,14 @@ import type { NextConfig } from "next";
 // LiteSpeed host. public/.htaccess handles clean URLs, redirects and headers there.
 const nextConfig: NextConfig = {
   output: "export",
-  images: { unoptimized: true },
+  // Photos are pre-cut WebP files (public/images/photos); the loader maps each srcset width
+  // to its file, and scripts/fetch-photos.mjs downloads any width not saved yet after the build.
+  images: {
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
+    deviceSizes: [480, 800, 1200, 1600],
+    imageSizes: [320],
+  },
   poweredByHeader: false,
   turbopack: {
     rules: {

@@ -1,4 +1,5 @@
-import { photos, photoUrl, type PhotoKey } from "@/lib/photos";
+import Image from "next/image";
+import { photos, type PhotoKey } from "@/lib/photos";
 
 type Props = {
   name: PhotoKey;
@@ -6,30 +7,29 @@ type Props = {
   ratio?: number;
   /** `sizes` attribute: how wide the image is shown. */
   sizes?: string;
+  /** The page's LCP image: preloaded from <head>. */
   priority?: boolean;
+  /** WebP quality; default 72. Lower it for photos under a dark overlay. */
+  quality?: number;
   className?: string;
   alt?: string;
 };
 
-const WIDTHS = [480, 800, 1200, 1600];
-
-// Responsive <img> from the Unsplash CDN, cropped to `ratio`.
-export function Photo({ name, ratio = 4 / 3, sizes = "100vw", priority, className, alt }: Props) {
+// Responsive next/image from the self-hosted photo files, cropped to `ratio`.
+// lib/image-loader.ts turns each srcset width into its pre-cut file.
+export function Photo({ name, ratio = 4 / 3, sizes = "100vw", priority, quality, className, alt }: Props) {
   const p = photos[name];
-  const h = (w: number) => Math.round(w / ratio);
-  const crop = "crop" in p ? p.crop : undefined;
+  const crop = "crop" in p && p.crop === "center" ? "center" : "entropy";
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       className={className}
-      src={photoUrl(p.id, 1200, h(1200), crop)}
-      srcSet={WIDTHS.map((w) => `${photoUrl(p.id, w, h(w), crop)} ${w}w`).join(", ")}
-      sizes={sizes}
+      src={`/images/photos/${p.id}?r=${ratio}&c=${crop}${quality ? `&q=${quality}` : ""}`}
       width={1200}
-      height={h(1200)}
+      height={Math.round(1200 / ratio)}
+      sizes={sizes}
       alt={alt ?? p.alt}
-      loading={priority ? "eager" : "lazy"}
-      fetchPriority={priority ? "high" : undefined}
+      preload={priority}
+      loading={priority ? undefined : "lazy"}
       decoding="async"
       style={{ objectPosition: "focus" in p ? p.focus : undefined }}
     />

@@ -1,4 +1,4 @@
-// Example photos from Unsplash (free Unsplash License), served from Unsplash's CDN.
+// Example photos from Unsplash (free Unsplash License), self-hosted in public/images/photos.
 // They are stand-ins until Fix It Aid has its own job photos. README rule: never present
 // them as Fix It Aid jobs. Swap `id` for a local file once real photos exist.
 
@@ -107,6 +107,11 @@ export const photos = {
     alt: "An air conditioner mounted on a brick wall",
     credit: "Everett Pachmann",
   },
+  craftsman: {
+    id: "1631396328075-9c65a7406f09",
+    alt: "A tradesman at his workbench, tools laid out in front of him",
+    credit: "Bailey Alexander",
+  },
   // Mold and water
   dampWall: {
     id: "1635260166178-41e20858d0d3",
@@ -210,7 +215,14 @@ export const photos = {
 
 export type PhotoKey = keyof typeof photos;
 
-export function photoUrl(id: string, width: number, height?: number, crop: "center" | "entropy" = "entropy") {
-  const size = height ? `&h=${height}&fit=crop${crop === "entropy" ? "&crop=entropy" : ""}` : "&fit=max";
-  return `https://images.unsplash.com/photo-${id}?w=${width}${size}&q=72&auto=format`;
+/**
+ * Self-hosted copy of an Unsplash photo at one exact size, served from public/images/photos.
+ * The file name encodes everything needed to fetch it again: `<id>-<w>x<h>[-c][-q<n>].webp`
+ * (`-c` = center crop, otherwise entropy crop; `-q<n>` = quality, default 72) or `<id>-<w>w.webp`
+ * for an uncropped width. `npm run build` runs scripts/fetch-photos.mjs afterwards, which
+ * downloads any size not saved yet.
+ */
+export function photoUrl(id: string, width: number, height?: number, crop: "center" | "entropy" = "entropy", quality?: number) {
+  const size = height ? `${width}x${height}${crop === "center" ? "-c" : ""}` : `${width}w`;
+  return `/images/photos/${id}-${size}${quality ? `-q${quality}` : ""}.webp`;
 }
