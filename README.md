@@ -66,14 +66,33 @@ Also set:
 - `NEXT_PUBLIC_GTAG_ID`: Google tag (GA4 or AW-) ID
 - `NEXT_PUBLIC_ADS_CONVERSION`: `AW-XXXXXXX/label` for the lead conversion
 
-## Deploy
+## Deploy on cPanel
 
-Forms need the Next.js server (`npm run build` then `npm start`). A static upload of `out/` cannot send mail.
+The site has to run as a Node.js app. Uploading HTML into `public_html` will not send the lead emails.
 
-1. Put the same SMTP variables in the host environment.
-2. `npm run build && npm start`
-3. Submit a test form and confirm the email arrives at `MAIL_TO`.
-4. Submit `https://fixitaid.com/sitemap.xml` in Google Search Console.
+cPanel needs **Setup Node.js App** (also called Node.js Selector). Ask the host to enable it if that menu is missing. Pick **Node 20 or newer**.
+
+1. Create the app:
+   - Application root: a folder such as `fixitaid-web` (upload the project here, without `node_modules` and without `.next`)
+   - Application URL: `fixitaid.com`
+   - Application startup file: `server.js`
+   - Application mode: Production
+2. In the same screen, add the environment variables from `.env` before you build. The `NEXT_PUBLIC_…` values are baked in at build time, so set `NEXT_PUBLIC_SHOW_PLACEHOLDERS` to `false`, plus `NEXT_PUBLIC_GTAG_ID` and `NEXT_PUBLIC_ADS_CONVERSION` if you use them. `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM`, and `MAIL_TO` are read when a form is sent.
+3. Open **Terminal** in cPanel, run the command the Node.js screen shows to enter the app environment, then:
+
+```bash
+cd ~/fixitaid-web
+npm install
+npm run build
+```
+
+4. Click **Restart** on the Node.js app.
+5. Open the site, send a test lead, and confirm it arrives at `MAIL_TO`.
+6. In Google Search Console, submit `https://fixitaid.com/sitemap.xml`.
+
+If the domain folder still has the old static site, remove that copy of `.htaccess`. cPanel writes a new one that forwards the domain to this app. Do not replace it with `public/.htaccess`.
+
+If `npm run build` runs out of memory on the host, run `npm run build` on your computer, upload the `.next` folder, then restart the app. Still run `npm install` on the server so the Linux packages are the ones Node uses.
 
 ## Images
 

@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-// Server build so /api/lead can send mail with nodemailer. `npm start` runs `next start`.
+// Server build so /api/lead can send mail with nodemailer. cPanel starts server.js.
 const nextConfig: NextConfig = {
   // Photos are pre-cut WebP files (public/images/photos); the loader maps each srcset width
   // to its file, and scripts/fetch-photos.mjs downloads any width not saved yet after the build.
