@@ -38,7 +38,7 @@ export const content: StoryPageContent = {
       blocks: [
         {
           type: "p",
-          text: "A water stain on the ceiling means water is already inside the house. It soaks the decking, runs down the walls and sits in the insulation. In a Chicago winter, that wet wood freezes and thaws until the damage spreads.",
+          text: "A water stain on the ceiling means water is already inside the house. It soaks the decking, runs down the walls and sits in the insulation. In a Chicago winter, that wet wood goes through freeze-thaw cycles until the damage spreads.",
         },
         {
           type: "p",

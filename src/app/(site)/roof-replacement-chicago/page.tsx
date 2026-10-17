@@ -144,7 +144,7 @@ export const content: StoryPageContent = {
         {
           type: "faq",
           q: "Do you pull permits?",
-          a: "Where the City of Chicago requires a permit, we pull it. The permit number is on the final invoice.",
+          a: "Where the City of Chicago requires a permit, we pull it with the Chicago Department of Buildings. The permit number is on the final invoice.",
         },
         {
           type: "faq",

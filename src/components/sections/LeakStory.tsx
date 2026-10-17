@@ -40,7 +40,7 @@ export function LeakStory({ heading, intro, steps, cta }: { heading: string; int
         <div className="story-media" aria-hidden="true">
           {steps.map((s, i) => (
             <div className="shot" key={s.title} data-story-shot>
-              <Photo name={s.photo} ratio={4 / 3.3} sizes="(max-width: 960px) 100vw, 680px" alt="" />
+              <Photo name={s.photo} ratio={4 / 3.3} sizes="(max-width: 960px) 100vw, 680px" />
               <span className="stage">
                 <b>{String(i + 1).padStart(2, "0")}</b>
                 {s.title}

@@ -21,7 +21,7 @@ export const content: StoryPageContent = {
       "[Google rating and review count]",
     ],
     eyebrow: "Need a contractor who actually works in your part of the city?",
-    sub: "Fix It Aid works inside the City of Chicago, from Rogers Park to Beverly. Mold, water damage, roofing, heating and cooling, from one licensed local team.",
+    sub: "Fix It Aid works inside the City of Chicago, across Cook County, from Rogers Park to Beverly. Mold, water damage, roofing, heating and cooling, from one licensed local team.",
     bridge: "Here is why that matters.",
   },
   sections: [
