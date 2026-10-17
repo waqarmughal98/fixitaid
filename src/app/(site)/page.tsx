@@ -36,8 +36,8 @@ export default function HomePage() {
         title={sentenceCase(seo.h1)}
         lead={
           <>
-            <strong>One licensed crew for the leak, the damage and the mold behind it.</strong> Roofing, mold and water damage, and
-            heating and cooling for Chicago homes, condos and 2-flats.
+            <strong>Roof leak, mold or water damage, no heat, no AC.</strong> One licensed Chicago crew finds the cause, shows you
+            photos, and gives you the price in writing before anyone picks up a tool.
           </>
         }
         actions={
@@ -71,66 +71,66 @@ export default function HomePage() {
       <Statement
         aside={
           <p className="muted">
-            We hold a roofing licence, a Chicago general contractor licence and a mold and water licence, so one team owns the whole
-            problem.{" "}
+            We hold a roofing licence, a Chicago general contractor licence and a mold and water licence, so one team owns the
+            whole problem, start to finish.{" "}
             <Link className="text-link" href={routes.about.href}>
               About us
             </Link>
           </p>
         }
       >
-A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago homeowners call a roofer, then a mold company, then an HVAC contractor for one problem. Call one licensed team instead.
+A roof leak turns into a ceiling stain. The stain turns into mold. Most people call a roofer, then a mold company, then an HVAC contractor to fix one problem. We do all three ourselves, so you make one call and get one price.
       </Statement>
 
       <ServiceRail
         heading="What we fix"
-        intro="Three trades, one licensed team. Start with the part that's bothering you."
+        intro="Three trades, one licensed Chicago crew. Pick the one that's bothering you right now."
         items={[
           {
             photo: "moldWall",
             title: "Mold and water damage",
-            text: "Mold inspection, mold removal and water damage restoration in Chicago, plus a fix for the moisture that let it grow.",
+            text: "Mold inspection with a written report, mold removal that's actually contained, and water damage restoration that dries the house out, not just the surface. We also fix what let the water in.",
             href: routes.moldWater.href,
             links: [routes.moldInspection, routes.moldRemoval, routes.waterDamage, routes.floodedBasement],
           },
           {
             photo: "roofer",
             title: "Roofing",
-            text: "A free roof check with photos, then a straight answer on repair or replace. Roof repair, flat roof repair and replacement for Chicago homes.",
+            text: "A free roof check with photos first, then a straight answer: repair it or replace it. Roof repair, flat roof repair and full roof replacement for Chicago bungalows, 2-flats and greystones.",
             href: routes.roofing.href,
             links: [routes.freeRoofCheck, routes.roofRepair, routes.flatRoof, routes.roofReplacement, routes.roofCare],
           },
           {
             photo: "radiators",
             title: "Heating and cooling",
-            text: "Furnace repair, boiler repair and AC repair across Chicago. You get the exact price before any work starts.",
+            text: "Furnace repair, boiler repair and AC repair, on steam, hot water and forced air systems across Chicago. You get the exact price before we start, not after.",
             href: routes.hvac.href,
             links: [routes.furnace, routes.ac, routes.hvacInstall],
           },
         ]}
         cta={{
-          title: "Book one visit. We'll find it.",
-          text: "Tell us what you're seeing. We look at the whole house, not just one trade.",
+          title: "Not sure which one you need?",
+          text: "Tell us what you're seeing. We look at the whole house, not just one trade, and tell you straight what's actually wrong.",
           href: "#home-form",
           label: "Book a free inspection",
         }}
       />
 
       <LeakStory
-        heading="How a small leak becomes a rebuild"
-        intro="Water rarely stays where it gets in. This is the chain we see every week in Chicago homes."
+        heading="How a small leak turns into a big bill"
+        intro="This is the chain we see every week in Chicago homes. Catching it early is the difference between a repair and a rebuild."
         steps={[
-          { photo: "rooferHarness", title: "A gap on the roof", text: "Water gets in at one spot, often flashing around a chimney, vent or wall." },
-          { photo: "ceilingOpen", title: "It travels inside", text: "It runs along the rafters and soaks the insulation, then shows up on a ceiling feet away." },
-          { photo: "moldWall2", title: "Mold starts", text: "Wet drywall can grow mold within days, where you can't see it." },
-          { photo: "roofer", title: "One crew fixes all of it", text: "We fix the roof, dry and rebuild the inside and remove the mold. One job, one written price." },
+          { photo: "rooferHarness", title: "A gap opens on the roof", text: "Water finds one weak spot, often the flashing around a chimney, vent pipe or wall." },
+          { photo: "ceilingOpen", title: "It travels before you see it", text: "It runs along the rafters and soaks the insulation, then shows up on a ceiling feet from where it actually got in." },
+          { photo: "moldWall2", title: "Mold starts in days", text: "Wet drywall and insulation can start growing mold within 48 to 72 hours, usually somewhere you can't see it yet." },
+          { photo: "roofer", title: "One crew closes it out", text: "We fix the roof, dry and rebuild the inside, and remove the mold. One job, one written price, no handoff between contractors." },
         ]}
       />
 
-      <Report heading="The stain is rarely where the leak is" photo="ceilingDamage" notes={reportNotes} caption="What a page of our photo report looks like. Example photo; yours shows your own home.">
+      <Report heading="The stain is rarely where the leak actually is" photo="ceilingDamage" notes={reportNotes} caption="What a page of our photo report looks like. Example photo; yours shows your own home.">
         <p className="lead">
-          After every inspection you get photos like this: every problem circled and explained, so you see what we see before anyone
-          talks about price.
+          Every inspection ends with a photo report like this one: each problem marked and explained in plain language, so you
+          see exactly what we see before anyone talks about price.
         </p>
       </Report>
 
@@ -139,14 +139,14 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago 
           <Head title="How every job works" intro="You see what we see, you get the price in writing, and nothing starts until you say yes." />
           <Steps
             items={[
-              { title: "We look", text: "We inspect, take photos and show you exactly what we found." },
-              { title: "Written price", text: "Materials, labor, permits and timeline on one page." },
-              { title: "The work", text: "Permits pulled when needed. One person to call the whole time." },
+              { title: "We look", text: "We inspect the problem, take photos, and show you exactly what we found before we say a word about cost." },
+              { title: "Written price", text: "Materials, labor, permits and timeline, on one page. No verbal quotes, no surprises later." },
+              { title: "The work", text: "Permits pulled when the job needs them. One person on our team you call the whole way through." },
               {
                 title: "Walkthrough",
                 text: owner.warranty
-                  ? `We check it with you, clean up and give you the ${owner.warranty} in writing.`
-                  : "We check it with you, clean up, and leave you with the work details in writing.",
+                  ? `We walk the job with you, clean up after ourselves, and give you the ${owner.warranty} in writing.`
+                  : "We walk the job with you, clean up after ourselves, and leave you with the work details in writing.",
               },
             ]}
           />
@@ -160,16 +160,17 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago 
               What you can count on
             </h2>
             <p className="lead" style={{ marginTop: 20 }}>
-              Most people who call us have been burned by a contractor before, or know someone who has.
+              Most people who call us have been burned by a contractor before, or know someone who has. Here is what we do
+              differently.
             </p>
           </div>
           <div className="span-7">
             <Rows
               items={[
-                { worry: "Paying twice", answer: "The leak, the damage and the mold are fixed in one job. No second contractor and no repeat visit." },
-                { worry: "Surprise bills", answer: "You see the full price before we start. If something changes, you approve it first." },
-                { worry: "Being upsold", answer: "If a repair will do, that's what we quote. If you don't need anything, we tell you." },
-                { worry: "Not knowing what's wrong", answer: "You see what we see: the roof, the attic, the wall, the part. You keep the photos." },
+                { worry: "Paying twice", answer: "The leak, the damage and the mold get fixed in one job by one crew. No second contractor, no repeat visit, no blaming the other guy." },
+                { worry: "Surprise bills", answer: "You see the full written price before we touch anything. If something changes once we open the wall or the roof, you approve it first, in writing." },
+                { worry: "Being upsold", answer: "If a repair will do the job, that's what we quote. If you don't need anything done, we tell you that too, even if it costs us the sale." },
+                { worry: "Not knowing what's actually wrong", answer: "You see what we see: the roof deck, the attic, the wall cavity, the part that failed. We explain it in plain words and you keep every photo." },
               ]}
             />
           </div>
@@ -198,23 +199,23 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago 
             q: "What does it cost to come out and look?",
             a: (
               <p>
-                Roof checks are free
+                A roof check is free, no strings attached
                 {owner.moldInspectionPrice ? <>. Mold inspection: {owner.moldInspectionPrice}</> : null}
-                {owner.hvacServiceCall ? <>. HVAC service call: {owner.hvacServiceCall}</> : null}. You always get the price for the work
-                in writing before we start.
+                {owner.hvacServiceCall ? <>. HVAC service call: {owner.hvacServiceCall}</> : null}. Either way, you get the full
+                written price for any actual work before we start.
               </p>
             ),
           },
           {
             q: "Will my insurance pay for this?",
-            a: "It depends on your policy and what caused the damage. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.",
+            a: "That depends on your policy and what caused the damage, so we can't promise an answer. What we can do is document everything: photos, moisture readings, a written report, so you have a clear record to share with your insurance company if you choose to file a claim.",
           },
           {
-            q: "How soon can you come?",
+            q: "How soon can you come out?",
             a: (
               <p>
                 {owner.responseTime ? <>We aim to get back to you {owner.responseTime}. </> : null}
-                If water is coming in right now, call instead of using the form.
+                If water is actively coming in right now, call us instead of filling out the form.
               </p>
             ),
           },
@@ -222,10 +223,11 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago 
             q: "Which parts of Chicago do you cover?",
             a: (
               <p>
-                The City of Chicago, from Rogers Park to Beverly.{" "}
+                The City of Chicago only, from Rogers Park down to Beverly. We don't work the suburbs.{" "}
                 <Link className="text-link" href={routes.areas.href}>
-                  See the areas we serve
+                  See the full list of areas we serve
                 </Link>
+                .
               </p>
             ),
           },
@@ -234,7 +236,7 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago 
 
       <CloseCta
         title="Tell us what's going on"
-        text="A real person from our Chicago team calls you back, looks at the whole problem and gives you the price in writing."
+        text="A real person from our Chicago team calls you back, looks at the whole problem, not just the symptom, and gives you the price in writing before any work starts."
         primary={{ href: "#home-form", label: "Get your free Inspection" }}
         secondary={{ href: routes.contact.href, label: "Send a message" }}
       />
