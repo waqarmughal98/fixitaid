@@ -72,8 +72,8 @@ export default function AboutPage() {
               company, when, and why.]
             </p>
             <p className="muted">
-              We got licensed for the rest of the job. Today Fix It Aid is a licensed roofer, a City of Chicago general contractor, a mold and
-              water damage company and an HVAC contractor. One team, so the job doesn&apos;t get passed between contractors.
+              We got licensed for the rest of the job. Today Fix It Aid is a licensed roofing contractor in Illinois, a City of Chicago general contractor, a mold and
+              water damage company and an HVAC contractor. One team, so the job doesn&apos;t get passed between contractors. We put the price and the warranty on our work in writing before we start.
             </p>
           </div>
           <div className="span-6">

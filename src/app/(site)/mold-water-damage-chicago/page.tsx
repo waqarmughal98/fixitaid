@@ -88,7 +88,7 @@ export default function MoldWaterPage() {
         <Report heading="The mold is not the problem. The water is." photo="moldWall2" notes={notes}>
           <p className="lead">
             Clean the mold without stopping the water and it grows back. Most mold companies can clean. Very few can climb on the roof and
-            fix the flashing that&apos;s letting the water in. We can, because we&apos;re also a licensed roofer and general contractor.
+            fix the flashing that&apos;s letting the water in. As a Chicago mold remediation and water damage restoration company, we can, because we&apos;re also a licensed roofer and general contractor.
           </p>
         </Report>
 
