@@ -36,8 +36,8 @@ export default function HomePage() {
         title={sentenceCase(seo.h1)}
         lead={
           <>
-            Roof leak, mold in the basement, or a furnace that just quit. One licensed Chicago crew can handle it. We find the
-            cause, show you photos, and give you a price in writing before we start.
+            Roof leak, mold in the basement, or an HVAC system that just quit. One licensed Chicago crew can handle it. We find
+            the cause, show you photos, and give you a price in writing before we start.
           </>
         }
         actions={
