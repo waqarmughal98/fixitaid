@@ -649,3 +649,13 @@
     .header.is-hidden { transform: none; }
   }
 }
+
+/* Tap targets: contact detail links (phone/email) at least 44px tall on touch screens */
+@media (max-width: 960px) {
+  .rows dd a[href^="tel:"],
+  .rows dd a[href^="mailto:"] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
