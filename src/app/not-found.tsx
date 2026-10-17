@@ -18,7 +18,7 @@ export default function NotFound() {
             </h1>
             <p className="lead">It may have moved. Pick what you need below, or call and a real person will help.</p>
             <div className="actions">
-              <a className="btn btn-gold" href={site.phoneHref}>
+              <a className="btn btn-white" href={site.phoneHref}>
                 Call {site.phone}
               </a>
               <Link className="btn btn-ghost" href="/">

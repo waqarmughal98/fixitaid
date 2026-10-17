@@ -49,7 +49,7 @@ export function SiteHeader() {
             </span>
           </a>
           <Link className="btn btn-gold" href={routes.contact.href}>
-            Free estimate
+            Book a Free Inspection
           </Link>
           <button
             type="button"

@@ -43,11 +43,11 @@ export default function HvacRepairPage() {
           }
           actions={
             <>
-              <a className="btn btn-gold" href={site.phoneHref}>
+              <a className="btn btn-white" href={site.phoneHref}>
                 Call {site.phone}
               </a>
-              <a className="btn btn-ghost" href="#hvac-form">
-                Book a visit
+              <a className="btn btn-gold" href="#hvac-form">
+                Book a Free Inspection
               </a>
             </>
           }
@@ -62,7 +62,7 @@ export default function HvacRepairPage() {
               title="Book a heating repair"
               intro="Tell us what's happening. We call back to set a time."
               options={["No heat at all", "Furnace keeps shutting off", "Boiler or radiators not heating", "Strange noise or smell", "Tune-up before winter", "AC problem"]}
-              submitLabel="Book my repair"
+              submitLabel="Book a Free Inspection"
             />
           }
         />

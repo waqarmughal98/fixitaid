@@ -42,11 +42,6 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
                   </li>
                 ))}
               </ul>
-              <div className="actions" style={{ marginTop: 20 }}>
-                <Link className="btn btn-gold" href={it.href}>
-                  {it.ctaLabel ?? `See ${it.title.toLowerCase()}`}
-                </Link>
-              </div>
             </article>
           ))}
           <article className="rail-panel cta">
@@ -55,10 +50,10 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
               <h3>{cta.title}</h3>
               <p>{cta.text}</p>
               <div className="actions" style={{ marginTop: 24 }}>
-                <a className="btn btn-dark" href={cta.href}>
-                  {cta.label}
+                <a className="btn btn-gold" href={cta.href}>
+                  Book a Free Inspection
                 </a>
-                <a className="btn btn-dark" href={site.phoneHref}>
+                <a className="btn btn-white" href={site.phoneHref}>
                   Call {site.phone}
                 </a>
               </div>

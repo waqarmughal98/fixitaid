@@ -56,11 +56,11 @@ export default function MoldWaterPage() {
           }
           actions={
             <>
-              <a className="btn btn-gold" href={site.phoneHref}>
+              <a className="btn btn-white" href={site.phoneHref}>
                 Call {site.phone}
               </a>
-              <a className="btn btn-ghost" href="#mold-form">
-                Book an inspection
+              <a className="btn btn-gold" href="#mold-form">
+                Book a Free Inspection
               </a>
             </>
           }
@@ -80,7 +80,7 @@ export default function MoldWaterPage() {
                 </>
               }
               options={["Mold or a musty smell", "Water damage or a leak", "Flooded basement", "Sewage backup"]}
-              submitLabel="Book my inspection"
+              submitLabel="Book a Free Inspection"
             />
           }
         />

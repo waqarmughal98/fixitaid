@@ -35,11 +35,11 @@ export default function AboutPage() {
         lead="You're about to let a contractor into your home. Here's who we are, what we're licensed to do, and how we work."
         actions={
           <>
-            <a className="btn btn-gold" href={site.phoneHref}>
+            <a className="btn btn-white" href={site.phoneHref}>
               Call {site.phone}
             </a>
-            <Link className="btn btn-ghost" href={routes.contact.href}>
-              Contact us
+            <Link className="btn btn-gold" href={routes.contact.href}>
+              Book a Free Inspection
             </Link>
           </>
         }

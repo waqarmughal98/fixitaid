@@ -135,11 +135,11 @@ export function CloseCta({ title, text, primary, secondary }: { title: string; t
         </a>
         <div className="actions">
           <a className="btn btn-gold" href={primary.href}>
-            {primary.label}
+            Book a Free Inspection
           </a>
           {secondary && (
-            <a className="btn btn-ghost" href={secondary.href}>
-              {secondary.label}
+            <a className="btn btn-white" href={site.phoneHref}>
+              Call {site.phone}
             </a>
           )}
         </div>

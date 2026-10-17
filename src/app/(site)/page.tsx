@@ -43,9 +43,9 @@ export default function HomePage() {
         actions={
           <>
             <a className="btn btn-gold" href="#home-form">
-              Book a free inspection
+              Book a Free Inspection
             </a>
-            <a className="btn btn-ghost" href={site.phoneHref}>
+            <a className="btn btn-white" href={site.phoneHref}>
               Call {site.phone}
             </a>
           </>
@@ -61,7 +61,7 @@ export default function HomePage() {
             title="Get your free Inspection"
             intro="Four fields. We call you back to set up a visit."
             options={["Mold or musty smell", "Water damage or flooded basement", "Roof leak or roof check", "No heat, furnace or boiler", "AC or other HVAC"]}
-            submitLabel="Get my free estimate"
+            submitLabel="Book a Free Inspection"
           />
         }
       />
@@ -128,7 +128,7 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
           { photo: "moldWall2", title: "Mold starts in days", text: "Wet drywall and insulation can start growing mold within 48 to 72 hours, usually somewhere you can't see it yet." },
           { photo: "roofer", title: "One crew closes it out", text: "We fix the roof, dry and rebuild the inside, and remove the mold. One job, one written price, no handoff between contractors." },
         ]}
-        cta={{ label: "Catch it early: book a free roof check", href: "#home-form" }}
+        cta={{ label: "Book a Free Inspection", href: "#home-form" }}
       />
 
       <Report heading="The stain is rarely where the leak actually is" photo="ceilingDamage" notes={reportNotes} caption="What a page of our photo report looks like. Example photo; yours shows your own home.">
@@ -138,7 +138,7 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
         </p>
         <div className="actions" style={{ marginTop: 24 }}>
           <a className="btn btn-gold" href="#home-form">
-            Book your inspection
+            Book a Free Inspection
           </a>
         </div>
       </Report>

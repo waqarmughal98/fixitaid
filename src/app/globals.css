@@ -150,25 +150,27 @@
   }
   .btn:hover::before, .btn:focus-visible::before { transform: translateY(0); }
   .btn:active { transform: scale(0.97); }
-  @keyframes ctaGlow {
-    0%, 100% { box-shadow: 0 2px 12px rgba(217, 169, 78, 0.28); }
-    50%      { box-shadow: 0 4px 26px rgba(217, 169, 78, 0.60); }
-  }
+  /* Two CTA types only: gold = Book a Free Inspection, white = Call.
+     A soft shine sweeps right-to-left across each button, continuously. */
   @keyframes ctaShine {
-    0%   { transform: translateX(-120%) skewX(-18deg); }
-    100% { transform: translateX(320%) skewX(-18deg); }
+    0%   { transform: translateX(300%) skewX(-18deg); }
+    100% { transform: translateX(-180%) skewX(-18deg); }
   }
-  .btn-gold { background: var(--gold); color: var(--ink); animation: ctaGlow 2.4s ease-in-out infinite; }
-  .btn-gold::after {
-    content: ""; position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none;
-    width: 45%; height: 100%;
-    background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.55) 50%, transparent 100%);
-    animation: ctaShine 2.8s linear infinite;
-  }
+  .btn-gold { background: var(--gold); color: var(--ink); --shine: rgba(255, 255, 255, 0.55); }
   .btn-gold::before { background: var(--gold-hi); }
-  .btn-ghost { border-color: var(--line-2); color: var(--text); background: transparent; }
-  .btn-ghost::before { background: var(--text); }
-  .btn-ghost:hover, .btn-ghost:focus-visible { color: var(--ink); border-color: var(--text); }
+  .btn-white { background: #fff; color: var(--ink); --shine: rgba(217, 169, 78, 0.48); }
+  .btn-white::before { background: var(--gold); }
+  .btn-white:hover, .btn-white:focus-visible { color: var(--ink); }
+  .btn-gold::after, .btn-white::after, .btn-ghost::after {
+    content: ""; position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none;
+    width: 42%; height: 100%;
+    background: linear-gradient(100deg, transparent 0%, var(--shine) 50%, transparent 100%);
+    animation: ctaShine 3s linear infinite;
+  }
+  /* legacy alias kept so any stray usage still renders as one of the two types */
+  .btn-ghost { background: #fff; color: var(--ink); --shine: rgba(217, 169, 78, 0.48); }
+  .btn-ghost::before { background: var(--gold); }
+  .btn-ghost:hover, .btn-ghost:focus-visible { color: var(--ink); }
   .btn-dark { background: var(--ink); color: var(--text); }
   .btn-dark::before { background: var(--ink-4); }
   .btn[disabled] { opacity: 0.7; cursor: progress; }
@@ -308,10 +310,10 @@
     transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast);
   }
   .rail-links a:hover, .rail-links a:focus-visible { background: var(--gold); color: var(--ink); border-color: var(--gold); }
-  .rail-panel.cta { background: var(--gold); color: var(--ink); justify-content: space-between; }
+  .rail-panel.cta { background: var(--ink-3); color: var(--text); justify-content: space-between; }
   .rail-panel.cta::before { display: none; }
   .rail-panel.cta h3 { font-size: clamp(38px, 4.2vw, 64px); max-width: 12ch; }
-  .rail-panel.cta p { color: rgba(16, 18, 20, 0.75); }
+  .rail-panel.cta p { color: rgba(242, 238, 230, 0.82); }
   .rail-progress { position: absolute; left: var(--gutter); right: var(--gutter); bottom: calc(var(--section) * 0.42); height: 1px; background: var(--line); }
   .rail-progress span { position: absolute; inset: 0; background: var(--gold); transform: scaleX(0); transform-origin: left; }
 

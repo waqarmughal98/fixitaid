@@ -366,14 +366,14 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
             {primary &&
               (primary.kind === "link" && primary.href ? (
                 <Link className="btn btn-gold" href={primary.href}>
-                  {primary.label}
+                  Book a Free Inspection
                 </Link>
               ) : (
                 <a className="btn btn-gold" href="#lead-form">
-                  {primary.label}
+                  Book a Free Inspection
                 </a>
               ))}
-            <a className="btn btn-ghost" href={site.phoneHref}>
+            <a className="btn btn-white" href={site.phoneHref}>
               Call {site.phone}
             </a>
           </>
@@ -385,7 +385,7 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
             title={form.title}
             intro={form.intro}
             options={form.options}
-            submitLabel={page.formButton ?? (category === "roof" ? "Book my free roof check" : "Send my request")}
+            submitLabel={page.formButton ?? "Book a Free Inspection"}
           />
         }
       />

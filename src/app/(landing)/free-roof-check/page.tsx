@@ -62,9 +62,9 @@ export default function FreeRoofCheckPage() {
           actions={
             <>
               <a className="btn btn-gold" href="#roof-form">
-                Book my free roof check
+                Book a Free Inspection
               </a>
-              <a className="btn btn-ghost" href={site.phoneHref}>
+              <a className="btn btn-white" href={site.phoneHref}>
                 Call {site.phone}
               </a>
             </>
@@ -80,7 +80,7 @@ export default function FreeRoofCheckPage() {
               title="Book your free roof check"
               intro="Takes a minute. We call to set a time that works for you."
               options={["A leak or a ceiling stain", "Missing or damaged shingles", "Flat roof problem or ponding water", "Old roof, just want a check", "Buying or selling a home"]}
-              submitLabel="Book my free roof check"
+              submitLabel="Book a Free Inspection"
             />
           }
         />
