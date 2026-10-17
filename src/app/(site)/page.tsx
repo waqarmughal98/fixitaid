@@ -36,8 +36,8 @@ export default function HomePage() {
         title={sentenceCase(seo.h1)}
         lead={
           <>
-            <strong>Roof leak, mold or water damage, no heat, no AC.</strong> One licensed Chicago crew finds the cause, shows you
-            photos, and gives you the price in writing before anyone picks up a tool.
+            Roof leak, mold in the basement, or a furnace that just quit. One licensed Chicago crew can handle it. We find the
+            cause, show you photos, and give you a price in writing before we start.
           </>
         }
         actions={
@@ -79,7 +79,7 @@ export default function HomePage() {
           </p>
         }
       >
-A roof leak turns into a ceiling stain. The stain turns into mold. Most people call a roofer, then a mold company, then an HVAC contractor to fix one problem. We do all three ourselves, so you make one call and get one price.
+A small roof leak can turn into a ceiling stain, and that stain often turns into mold. Most homeowners end up calling a roofer, then a mold company, then an HVAC contractor to fix what started as one problem. We handle all three ourselves, so you make one call and get one price for the whole job.
       </Statement>
 
       <ServiceRail
@@ -92,6 +92,7 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most people c
             text: "Mold inspection with a written report, mold removal that's actually contained, and water damage restoration that dries the house out, not just the surface. We also fix what let the water in.",
             href: routes.moldWater.href,
             links: [routes.moldInspection, routes.moldRemoval, routes.waterDamage, routes.floodedBasement],
+            ctaLabel: "Get a mold inspection",
           },
           {
             photo: "roofer",
@@ -99,6 +100,7 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most people c
             text: "A free roof check with photos first, then a straight answer: repair it or replace it. Roof repair, flat roof repair and full roof replacement for Chicago bungalows, 2-flats and greystones.",
             href: routes.roofing.href,
             links: [routes.freeRoofCheck, routes.roofRepair, routes.flatRoof, routes.roofReplacement, routes.roofCare],
+            ctaLabel: "Book a free roof check",
           },
           {
             photo: "radiators",
@@ -106,6 +108,7 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most people c
             text: "Furnace repair, boiler repair and AC repair, on steam, hot water and forced air systems across Chicago. You get the exact price before we start, not after.",
             href: routes.hvac.href,
             links: [routes.furnace, routes.ac, routes.hvacInstall],
+            ctaLabel: "Get an HVAC quote",
           },
         ]}
         cta={{
@@ -125,6 +128,7 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most people c
           { photo: "moldWall2", title: "Mold starts in days", text: "Wet drywall and insulation can start growing mold within 48 to 72 hours, usually somewhere you can't see it yet." },
           { photo: "roofer", title: "One crew closes it out", text: "We fix the roof, dry and rebuild the inside, and remove the mold. One job, one written price, no handoff between contractors." },
         ]}
+        cta={{ label: "Catch it early: book a free roof check", href: "#home-form" }}
       />
 
       <Report heading="The stain is rarely where the leak actually is" photo="ceilingDamage" notes={reportNotes} caption="What a page of our photo report looks like. Example photo; yours shows your own home.">
@@ -132,6 +136,11 @@ A roof leak turns into a ceiling stain. The stain turns into mold. Most people c
           Every inspection ends with a photo report like this one: each problem marked and explained in plain language, so you
           see exactly what we see before anyone talks about price.
         </p>
+        <div className="actions" style={{ marginTop: 24 }}>
+          <a className="btn btn-gold" href="#home-form">
+            Book your inspection
+          </a>
+        </div>
       </Report>
 
       <section className="section surface">

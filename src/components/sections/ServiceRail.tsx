@@ -9,6 +9,7 @@ export type RailItem = {
   text: string;
   href: string;
   links: { href: string; label: string }[];
+  ctaLabel?: string;
 };
 
 // Services as large photo panels. On desktop the section pins and the panels slide
@@ -41,6 +42,11 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
                   </li>
                 ))}
               </ul>
+              <div className="actions" style={{ marginTop: 20 }}>
+                <Link className="btn btn-dark" href={it.href}>
+                  {it.ctaLabel ?? `See ${it.title.toLowerCase()}`}
+                </Link>
+              </div>
             </article>
           ))}
           <article className="rail-panel cta">

@@ -2,11 +2,12 @@ import { Photo } from "@/components/ui/Photo";
 import type { PhotoKey } from "@/lib/photos";
 
 export type StoryStep = { photo: PhotoKey; title: string; text: string };
+export type StoryCta = { label: string; href: string };
 
 // How a small leak becomes a rebuild, told in four frames. On desktop the section pins:
 // scrolling moves through the steps and the photo changes with them. On phones it is a
 // simple list.
-export function LeakStory({ heading, intro, steps }: { heading: string; intro: React.ReactNode; steps: StoryStep[] }) {
+export function LeakStory({ heading, intro, steps, cta }: { heading: string; intro: React.ReactNode; steps: StoryStep[]; cta?: StoryCta }) {
   return (
     <section className="story section surface" data-story style={{ paddingBlock: 0 }}>
       <div className="wrap story-pin">
@@ -28,6 +29,13 @@ export function LeakStory({ heading, intro, steps }: { heading: string; intro: R
               </li>
             ))}
           </ol>
+          {cta && (
+            <div className="actions" style={{ marginTop: 28 }}>
+              <a className="btn btn-gold" href={cta.href}>
+                {cta.label}
+              </a>
+            </div>
+          )}
         </div>
         <div className="story-media" aria-hidden="true">
           {steps.map((s, i) => (
