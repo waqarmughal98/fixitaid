@@ -79,8 +79,7 @@ export default function HomePage() {
           </p>
         }
       >
-        A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago homeowners call three companies for one
-        problem. Call one.
+A roof leak turns into a ceiling stain. The stain turns into mold. Most Chicago homeowners call a roofer, then a mold company, then an HVAC contractor for one problem. Call one licensed team instead.
       </Statement>
 
       <ServiceRail
@@ -90,21 +89,21 @@ export default function HomePage() {
           {
             photo: "moldWall",
             title: "Mold and water damage",
-            text: "Testing, safe removal and drying, plus a fix for the moisture that let the mold grow.",
+            text: "Mold inspection, mold removal and water damage restoration in Chicago, plus a fix for the moisture that let it grow.",
             href: routes.moldWater.href,
             links: [routes.moldInspection, routes.moldRemoval, routes.waterDamage, routes.floodedBasement],
           },
           {
             photo: "roofer",
             title: "Roofing",
-            text: "A free roof check with photos, then a straight answer on repair or replace. Shingle and flat roofs.",
+            text: "A free roof check with photos, then a straight answer on repair or replace. Roof repair, flat roof repair and replacement for Chicago homes.",
             href: routes.roofing.href,
             links: [routes.freeRoofCheck, routes.roofRepair, routes.flatRoof, routes.roofReplacement, routes.roofCare],
           },
           {
             photo: "radiators",
             title: "Heating and cooling",
-            text: "Furnaces, steam and hot water boilers, radiators and AC. You get the exact price before any work starts.",
+            text: "Furnace repair, boiler repair and AC repair across Chicago. You get the exact price before any work starts.",
             href: routes.hvac.href,
             links: [routes.furnace, routes.ac, routes.hvacInstall],
           },
