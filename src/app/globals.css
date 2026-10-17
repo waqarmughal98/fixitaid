@@ -314,7 +314,7 @@
   }
 
   /* ---------- pinned story: leak -> rebuild ---------- */
-  .story-pin { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: center; min-height: 100svh; padding-block: 96px 32px; }
+  .story-pin { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: center; min-height: 100svh; padding-block: clamp(40px, 6vh, 80px) 28px; }
   .story .h2 { font-size: clamp(32px, 3.4vw, 52px); }
   .story .lead { font-size: 17px; }
   .story-steps { list-style: none; padding: 0; margin: 28px 0 0; border-top: 1px solid var(--line); }
@@ -322,7 +322,7 @@
   .story-steps .num { font-size: 22px; color: var(--gold); padding-top: 3px; }
   .story-steps h3 { font-family: var(--f-display); font-weight: 500; font-size: 22px; }
   .story-steps p { margin-top: 2px; color: var(--muted); font-size: 15.5px; }
-  .story-media { position: relative; aspect-ratio: 4 / 3.3; border-radius: 16px; overflow: hidden; background: var(--ink-3); }
+  .story-media { position: relative; align-self: center; aspect-ratio: 4 / 3.3; max-height: calc(100svh - 170px); border-radius: 16px; overflow: hidden; background: var(--ink-3); }
   .story-media .shot { position: absolute; inset: 0; }
   .story-media .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .story-media .stage { position: absolute; left: 20px; bottom: 20px; padding: 9px 16px; border-radius: 999px; background: rgba(16,18,20,.82); font-size: 14px; font-weight: 600; }

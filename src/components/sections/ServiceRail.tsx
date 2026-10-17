@@ -43,7 +43,7 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
                 ))}
               </ul>
               <div className="actions" style={{ marginTop: 20 }}>
-                <Link className="btn btn-dark" href={it.href}>
+                <Link className="btn btn-gold" href={it.href}>
                   {it.ctaLabel ?? `See ${it.title.toLowerCase()}`}
                 </Link>
               </div>

@@ -79,7 +79,7 @@ export default function HomePage() {
           </p>
         }
       >
-A small roof leak can turn into a ceiling stain, and that stain often turns into mold. Most homeowners end up calling a roofer, then a mold company, then an HVAC contractor to fix what started as one problem. We handle all three ourselves, so you make one call and get one price for the whole job.
+A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a roofer, then a mold company, then an HVAC contractor for one problem. We do all three, so it is one call and one price.
       </Statement>
 
       <ServiceRail
