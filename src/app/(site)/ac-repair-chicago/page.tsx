@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/ac-repair-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /ac-repair-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/ac-repair-chicago",
   slug: "ac-repair-chicago",
@@ -12,52 +11,34 @@ export const content: StoryPageContent = {
   hero: {
     h1: "AC Repair in Chicago",
     buttons: [
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
-      {
-        label: "Book a repair online",
-        href: "#lead-form",
-        kind: "form",
-      },
+      { label: "Call (773) 987-1693", kind: "call" },
+      { label: "Book a repair online", href: "#lead-form", kind: "form" },
     ],
-    trust: [
-      "Licensed for HVAC [HVAC licence number]",
-      "Chicago GC licence TGC144939",
-      "[Google rating and review count]",
-    ],
-    eyebrow: "AC running but the house won't cool down?",
+    trust: ["[HVAC licence number]", "Chicago general contractor licence TGC144939", "[Google rating and review count]"],
+    eyebrow: "AC running but the house will not cool down?",
     sub: "Get cool air back without a surprise bill. We repair central air and ductless mini splits in Chicago houses, 2-flats and condos. All makes. You approve the exact price before we start.",
-    line247: "AC out in a heat wave? Call (773) 987-1693. A real person answers [24/7 phone: yes or no].",
-    bridge: "Here's what we usually hear first.",
+    line247: "AC out in a heat wave? Call (773) 987-1693. [24/7 phone: yes or no]",
+    bridge: "A warm house does not mean you need a new AC.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "It's running all day and it's still 82 inside",
+      heading: "\"It is running all day and it is still 82 inside\"",
       blocks: [
         {
-          type: "ul",
-          items: [
-            "\"The air from the vents is barely cool.\"",
-            "\"The outside unit hums but the fan doesn't spin.\"",
-            "\"There's ice on the copper line.\"",
-            "\"There's water around the furnace.\"",
-            "\"The mini split is blinking and won't cool.\"",
-            "\"Upstairs is ten degrees hotter than downstairs.\"",
-          ],
+          type: "p",
+          text: "\"The air from the vents is barely cool.\" \"The outside unit hums but the fan does not spin.\" \"There is ice on the copper line.\" \"There is water around the furnace.\" \"The mini split is blinking and will not cool.\" \"Upstairs is ten degrees hotter than downstairs.\"",
         },
         {
           type: "p",
-          text: "Running a struggling AC for days doesn't just make you uncomfortable. A unit working against a failed part or low refrigerant can damage the compressor, which is the most expensive part of the system. And a clogged drain can quietly soak a ceiling or a basement wall.",
+          text: "Running a struggling AC for days does not just make you uncomfortable. A unit working against a failed part or low refrigerant can damage the compressor, which is the most expensive part of the system. And a clogged drain can quietly soak a ceiling or a basement wall.",
         },
       ],
-      bridge: "Here's the part that matters before you call anyone.",
+      bridge: "A warm house does not mean you need a new AC.",
     },
     {
       kind: "turning",
-      heading: "A warm house doesn't mean you need a new AC",
+      heading: "A warm house does not mean you need a new AC",
       blocks: [
         {
           type: "p",
@@ -65,14 +46,14 @@ export const content: StoryPageContent = {
         },
         {
           type: "p",
-          text: "The risk is calling a company that guesses, adds refrigerant without finding the leak, or jumps straight to \"you need a new system\". Some ads are suburban firms or referral sites that hand your call to someone else.",
+          text: "The risk is calling a company that guesses, adds refrigerant without finding the leak, or jumps straight to \"you need a new system.\" Some ads are from companies outside the city, or referral sites that hand your call to someone else.",
         },
         {
           type: "p",
-          text: "Fix It Aid is a Chicago contractor. We find why your AC isn't cooling, show you, and price that repair.",
+          text: "Fix It Aid is a Chicago contractor. We find why your AC is not cooling, show you, and price that repair.",
         },
       ],
-      bridge: "Here's how a visit goes.",
+      bridge: "Here is how a visit goes.",
     },
     {
       kind: "solution",
@@ -88,36 +69,38 @@ export const content: StoryPageContent = {
           ],
         },
         {
-          type: "subhead",
-          text: "What we work on",
+          type: "h3",
+          title: "Central air",
+          text: "Split systems with an outdoor condenser and an indoor coil. Capacitors, contactors, fan motors, refrigerant leaks, frozen coils, drain lines, thermostats.",
         },
         {
-          type: "ul",
-          items: [
-            "**Central air.** Split systems with an outdoor condenser and an indoor coil. Capacitors, contactors, fan motors, refrigerant leaks, frozen coils, drain lines, thermostats.",
-            "**Ductless mini splits.** Common in older Chicago homes with radiator heat. Indoor heads, outdoor units, error codes and drain problems.",
-            "**AC service and tune-ups.** A spring check cleans the coils and catches worn parts before the first hot week. [AC tune-up price].",
-            "**Small commercial spaces.** [Confirm commercial AC and rooftop units: yes or no.]",
-          ],
+          type: "h3",
+          title: "Ductless mini splits",
+          text: "Common in older Chicago homes with radiator heat. Indoor heads, outdoor units, error codes and drain problems.",
+        },
+        {
+          type: "h3",
+          title: "AC service and tune-ups",
+          text: "A spring check cleans the coils and catches worn parts before the first hot week. [AC tune-up price]",
         },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "What that means once we get the AC working again.",
     },
     {
       kind: "benefits",
-      heading: "What you don't have to worry about",
+      heading: "What you do not have to worry about",
       blocks: [
         {
           type: "ul",
           items: [
             "**A surprise bill.** You approve the price first.",
             "**Paying for a guess.** We find the actual cause before we fix anything.",
-            "**Being sold a new system you don't need.** If repair makes sense, we repair. If your AC is old and the repair is big, we give you a price for a new system (link: /hvac-installation-chicago) as well, so you can compare.",
-            "**Water damage from a leaking drain.** If it has already soaked a ceiling or wall, our water damage team (link: /water-damage-restoration-chicago) and mold team (link: /mold-removal-chicago) handle it.",
+            "**Being sold a new system you do not need.** If repair makes sense, we repair. If your AC is old and the repair is big, we give you a price for a new system as well, so you can compare. (link: /hvac-installation-chicago)",
+            "**Water damage from a leaking drain.** If it has already soaked a ceiling or wall, our water damage team and mold team handle it. (link: /water-damage-restoration-chicago)",
           ],
         },
       ],
-      bridge: "Here's who's coming to your door.",
+      bridge: "Here is who is coming to your door.",
     },
     {
       kind: "proof",
@@ -130,36 +113,32 @@ export const content: StoryPageContent = {
             "City of Chicago general contractor: TGC144939",
             "[Insured and bonded: yes or no]",
             "[Warranty on work]",
+            "[Google rating and review count]",
+            "[Real review 1: AC repair, name and neighborhood]",
+            "[Real review 2: mini split repair, name and neighborhood]",
           ],
-        },
-        {
-          type: "p",
-          text: "[Google rating and review count]",
-        },
-        {
-          type: "p",
-          text: "[Real review 1: AC repair, name and neighborhood] [Real review 2: mini split repair, name and neighborhood]",
         },
       ],
       bridge: "A few questions people ask first.",
     },
     {
       kind: "faq",
+      heading: "AC repair questions",
       blocks: [
         {
           type: "faq",
           q: "How much does AC repair cost in Chicago?",
-          a: "The service call and diagnosis is [service call fee]. Repairs are priced by the part and the time, and you approve the price before we start. Rooftop condensers on 2-flats and condo buildings can take longer to reach, and we include that in the price you see.",
+          a: "[Service call fee] covers the diagnosis. Repairs are priced by the part and the time, and you approve the price before we start. Rooftop condensers on 2-flats and condo buildings can take longer to reach, and we include that in the price you see.",
         },
         {
           type: "faq",
           q: "Why is my AC not cooling?",
-          a: "The usual causes are a dirty filter, a failed capacitor, low refrigerant from a leak, or a frozen coil. Change the filter first. If it's still not cooling after an hour, turn it off and call us.",
+          a: "The usual causes are a dirty filter, a failed capacitor, low refrigerant from a leak, or a frozen coil. Change the filter first. If it is still not cooling after an hour, turn it off and call us.",
         },
         {
           type: "faq",
           q: "My AC coil is frozen. What should I do?",
-          a: "Turn the AC off and set the fan to \"on\" so the ice melts. Don't chip at it. Ice usually means low airflow or low refrigerant, and both need a proper check.",
+          a: "Turn the AC off and set the fan to \"on\" so the ice melts. Do not chip at it. Ice usually means low airflow or low refrigerant, and both need a proper check.",
         },
         {
           type: "faq",
@@ -169,34 +148,18 @@ export const content: StoryPageContent = {
         {
           type: "faq",
           q: "Do you offer emergency AC repair in Chicago?",
-          a: "[24/7 phone: yes or no]. If yes: \"Yes. Call (773) 987-1693 any time.\" If no: \"Call during [hours] and we'll get you in as soon as we can.\"",
+          a: "[24/7 phone: yes or no]",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Get your AC cooling again, at a price you agree to first.",
     },
     {
       kind: "close",
-      heading: "Get your AC cooling again, at a price you agree to first.",
-      blocks: [
-        {
-          type: "p",
-          text: "Call or book online. We'll find out why it isn't cooling and tell you the price before any work starts.",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Get your AC cooling again, at a price you agree to first",
+      blocks: [{ type: "p", text: "Call or book online. We will find out why it is not cooling and tell you the price before any work starts." }],
       buttons: [
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
-        {
-          label: "Book a repair online",
-          href: "#lead-form",
-          kind: "form",
-        },
+        { label: "Call (773) 987-1693", kind: "call" },
+        { label: "Book a repair online", href: "#lead-form", kind: "form" },
       ],
     },
   ],

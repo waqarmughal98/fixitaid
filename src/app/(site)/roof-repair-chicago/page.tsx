@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/roof-repair-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /roof-repair-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/roof-repair-chicago",
   slug: "roof-repair-chicago",
@@ -12,124 +11,120 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Roof Repair in Chicago",
     buttons: [
-      {
-        label: "Book a free roof check",
-        href: "/free-roof-check",
-        kind: "link",
-      },
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
+      { label: "Get a free roof check", href: "/free-roof-check", kind: "link" },
+      { label: "Call (773) 987-1693", kind: "call" },
     ],
-    trust: [
-      "Illinois roofing licence 104.021107",
-      "Free roof check with photos",
-      "Written price before work starts",
-      "[Response time]",
-    ],
-    eyebrow: "Roof leaking again?",
-    sub: "We find where the water actually gets in and fix it there, so you're not calling a roofer again after the next storm. Shingle roofs, flat roofs and garages.",
-    bridge: "If you're reading this, you've probably already got a bucket out.",
+    trust: ["Illinois roofing licence 104.021107", "Chicago general contractor licence TGC144939", "[Google rating and review count]"],
+    eyebrow: "Leaking roof? Storm damage? Missing shingles?",
+    sub: "We find where the water gets in and fix it. Shingle roofs and flat roofs. You see the photos and the price before we start.",
+    bridge: "Most of the time, the actual fix is smaller than you think.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "It's leaking again, and the last guy said he fixed it.",
+      heading: "Water stain on the ceiling? The leak started weeks ago.",
       blocks: [
         {
           type: "p",
-          text: "Most roof repair calls in Chicago sound like this. A brown spot on the ceiling after heavy rain. A drip that only shows up when the snow melts. A leak someone already \"fixed\" that came right back.",
+          text: "You see a brown circle on the ceiling after a heavy rain. That means water got past the roof, soaked through the decking and sat there long enough to stain drywall.",
         },
         {
           type: "p",
-          text: "Every rain, the same questions: How much water is going into the attic? Is the drywall going to come down? Is something growing up there?",
+          text: "The longer it sits, the worse it gets. Wet decking rots. Wet insulation loses its R-value. In a Chicago winter, trapped moisture freezes, expands and cracks the wood around it.",
         },
         {
           type: "p",
-          text: "Those worries are fair. A small leak left for a season can soak insulation, rot the roof boards and stain every ceiling it runs across. And Chicago winters make it worse. Water gets into a gap, freezes, expands, and the gap gets bigger.",
+          text: "Wait through storm season and a small leak turns into a section of decking that needs replacing. That is a bigger job and a bigger bill.",
         },
       ],
-      bridge: "Most repeat leaks happen for one reason.",
+      bridge: "Most of the time, the actual fix is smaller than you think.",
     },
     {
       kind: "turning",
-      heading: "The stain on your ceiling is not where the leak is",
+      heading: "A roof leak usually comes from one spot",
       blocks: [
         {
           type: "p",
-          text: "Water gets in at one spot and runs along the wood until it finds a way down. The stain can be several feet from the real entry point. Patch the roof above the stain and you've fixed the wrong spot.",
+          text: "Cracked flashing around a chimney. A pipe boot with a split rubber collar. Missing shingles from a wind storm. A nail that backed out. These are repairs, not replacements.",
         },
         {
-          type: "subhead",
-          text: "The places that actually leak on Chicago roofs",
+          type: "p",
+          text: "The problem is knowing which one. Some roofing contractors in Chicago quote a full replacement without climbing up. Others give a price over the phone without seeing the roof.",
         },
         {
-          type: "ul",
-          items: [
-            "**Flashing** around chimneys, skylights and walls, cracked or pulled loose",
-            "**Vent pipe boots**, where the rubber collar dries out and splits",
-            "**Missing or lifted shingles** after wind or hail",
-            "**The roof edge**, where ice dams push water up under the shingles",
-            "**Flat roof seams and drains** on 2-flats, 3-flats and garages (link: /flat-roof-repair-chicago)",
-          ],
+          type: "p",
+          text: "We do it the other way. We climb up, check the whole roof, take photos and show you exactly what failed. If a repair fixes it, we price the repair. If the damage is too far gone, we tell you and give you a replacement price too. (link: /roof-replacement-chicago)",
         },
       ],
-      bridge: "So we trace it first, then repair it.",
+      bridge: "Here is how a roof repair works with us.",
     },
     {
       kind: "solution",
-      heading: "How we repair your roof",
+      heading: "From leak to fixed roof, step by step",
       blocks: [
         {
           type: "ol",
           items: [
-            "**Free roof check.** We go on the roof and into the attic where we can, and follow the water back to where it starts. Photos of everything.",
-            "**Clear price.** We show you the cause and give you a written price before we start.",
-            "**The repair.** Leak repair, shingle repair, flashing repair, vent boot replacement, hail and wind damage repair, fascia repair, flat roof patching, garage roof repairs. Most repairs are done in one visit. [Confirm typical repair time]",
-            "**Photos when done.** You see the finished work and know what to keep an eye on.",
+            "**Free roof check.** We climb up and check the entire roof, not just the spot you pointed to. (link: /free-roof-check)",
+            "**Photos and findings.** We show you photos of what we found. You see the problem.",
+            "**Price before work.** You approve the price. No price, no work.",
+            "**We fix it.** The repair is done and we check the area again before we leave.",
           ],
         },
         {
-          type: "p",
-          text: "**Leaking right now?** Call (773) 987-1693. If the full repair can't be done that day, we put on a temporary cover to keep the water out, then come back for the permanent fix. [Response time] [24/7 phone: yes or no]",
+          type: "subhead",
+          text: "What we repair",
+        },
+        {
+          type: "ul",
+          items: [
+            "Missing, cracked or lifted shingles",
+            "Flashing around chimneys, walls and valleys",
+            "Pipe boots and roof vents",
+            "Storm damage from wind, hail or fallen branches",
+            "Ice dam damage along eaves",
+            "Flat roof leaks: TPO, EPDM, modified bitumen (link: /flat-roof-repair-chicago)",
+            "Gutter repairs tied to roof leaks",
+          ],
         },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "What you get with this repair.",
     },
     {
       kind: "benefits",
-      heading: "What you get with Fix It Aid",
+      heading: "No guessing. No upselling. Just the fix.",
       blocks: [
         {
           type: "ul",
           items: [
-            "**Afraid it'll leak again?** We fix the entry point, not the stain.",
-            "**Afraid of being talked into a new roof?** Plenty of leaking roofs have years left. If yours does, we repair it and say so.",
-            "**Afraid of what the water already did?** We're also licensed for water damage restoration and mold remediation, so we can dry out and repair the ceiling, insulation and walls too. One team, one job. (link: /water-damage-restoration-chicago)",
-            "**Afraid of the bill?** Written price before work starts.",
+            "**You see the problem.** Photos from the roof, not a verbal description.",
+            "**You approve the price first.** If the price does not work for you, we do not start.",
+            "**Repair when repair makes sense.** We do not push replacement unless the repair would cost more than the roof is worth. Then we show you both prices.",
+            "**Leak caused inside damage?** If water got into the ceiling, walls or attic, our water damage team dries and repairs it. If mold started, our mold team removes it. One company. (link: /water-damage-restoration-chicago)",
           ],
         },
       ],
-      bridge: "Here's who you're letting on your roof.",
+      bridge: "Our licence numbers are public.",
     },
     {
       kind: "proof",
-      heading: "Licensed, and you see everything we see",
+      heading: "A licensed Illinois roofer, not a handyman",
       blocks: [
         {
           type: "ul",
           items: [
-            "Illinois roofing licence 104.021107",
-            "Chicago general contractor licence TGC144939",
-            "Photos before and after every repair",
+            "Illinois roofing licence: 104.021107",
+            "City of Chicago general contractor: TGC144939",
+            "[Insured and bonded: yes or no]",
+            "[Warranty on work]",
             "[Google rating and review count]",
-            "[Real review 1: roof leak repair, with name and neighborhood]",
-            "[Real job photos: before and after of a leak repair]",
+            "[Real review 1: leak repair, name and neighborhood]",
+            "[Real review 2: storm damage repair, name and neighborhood]",
+            "[Real job photos: before and after roof repairs]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "What homeowners ask about roof repairs.",
     },
     {
       kind: "faq",
@@ -138,54 +133,43 @@ export const content: StoryPageContent = {
         {
           type: "faq",
           q: "How much does roof repair cost in Chicago?",
-          a: "Most repairs cost [price range]. Bigger ones, like re-flashing a chimney or replacing a section, run [price range]. It depends on what's causing the leak, how easy it is to reach, the roof type and pitch, and whether the wood underneath is wet or rotted.",
+          a: "It depends on what failed and how much area is affected. A pipe boot replacement is a different price than a valley reflash. We check the roof for free, show you what we find, and give you the price before any work starts.",
         },
         {
           type: "faq",
-          q: "Will my insurance pay for this?",
-          a: "That's between you and your insurance company, and we don't handle or promise anything on claims. We do give you clear photos of the damage and the repair, which you can share with your insurance company if you choose.",
+          q: "Can you fix a roof leak in the rain?",
+          a: "We can do a temporary patch to stop active water entry. The full repair happens when the roof is dry enough to work safely.",
         },
         {
           type: "faq",
-          q: "Is it worth repairing an old roof?",
-          a: "Often, yes. If the leak is from one spot and the rest of the roof is in fair shape, a repair can buy you years. If it's worn out everywhere or the deck is soft, replacement usually makes more sense. (link: /roof-replacement-chicago)",
+          q: "My roof was damaged in a storm. What do I do?",
+          a: "Call us for a free roof check. We document the damage with photos and a written report you can share with your insurer.",
         },
         {
           type: "faq",
-          q: "Can you repair a roof in winter?",
-          a: "Yes, most repairs. Some materials need warmer weather to seal properly, so in deep cold we may do a temporary repair and finish when the weather allows. We'll tell you up front.",
+          q: "How do I know if I need a repair or a full replacement?",
+          a: "We check the whole roof, not just the leak. If the rest of the roof is in good shape, a repair is the right call. If the shingles are worn across the board or the decking is soft in multiple spots, replacement saves money long term. We give you both prices and explain the difference.",
         },
         {
           type: "faq",
-          q: "How do I find where my roof is leaking?",
-          a: "On a rainy day, check the attic with a flashlight for wet wood or damp insulation and follow it uphill. Can't get up there? That's what the free roof check is for.",
+          q: "Do you repair flat roofs?",
+          a: "Yes. TPO, EPDM rubber and modified bitumen. See flat roof repair. (link: /flat-roof-repair-chicago)",
+        },
+        {
+          type: "faq",
+          q: "Do you come to my neighborhood?",
+          a: "We work across the City of Chicago.",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Stop the leak before it spreads.",
     },
     {
       kind: "close",
-      heading: "Find the leak. Fix it once.",
-      blocks: [
-        {
-          type: "p",
-          text: "We'll trace the leak, show you photos and give you a written price. Water coming in now? Call us.",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Stop the leak before it spreads",
+      blocks: [{ type: "p", text: "Book a free roof check. We find the problem, show you photos and give you the price." }],
       buttons: [
-        {
-          label: "Book a free roof check",
-          href: "/free-roof-check",
-          kind: "link",
-        },
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
+        { label: "Get a free roof check", href: "/free-roof-check", kind: "link" },
+        { label: "Call (773) 987-1693", kind: "call" },
       ],
     },
   ],

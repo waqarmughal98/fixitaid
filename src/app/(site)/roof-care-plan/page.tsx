@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/roof-care-plan";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /roof-care-plan. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/roof-care-plan",
   slug: "roof-care-plan",
@@ -12,230 +11,166 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Roof Care Plan for Chicago Homes",
     buttons: [
-      {
-        label: "Join the Roof Care plan",
-        href: "/contact",
-        kind: "link",
-      },
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
+      { label: "Join the Roof Care Plan", href: "#lead-form", kind: "form" },
+      { label: "Call (773) 987-1693", kind: "call" },
     ],
-    trust: [
-      "Illinois roofing licence 104.021107",
-      "Photo report after every visit",
-      "[Plan price] a year",
-    ],
-    eyebrow: "Catch roof problems before they leak",
-    sub: "Once a year a licensed roofer checks your roof, fixes the small stuff and sends you photos. One set price of [plan price] a year.",
-    bridge: "Most people only think about the roof when it's already leaking.",
+    trust: ["Illinois roofing licence 104.021107", "Chicago general contractor licence TGC144939", "[Google rating and review count]"],
+    eyebrow: "Yearly roof check + small fixes, one price",
+    sub: "A cracked shingle costs far less to fix than a section of rotten decking. The Roof Care Plan catches the small problems before they become big ones. One yearly price, no surprises.",
+    bridge: "One check a year prevents most of this.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "I didn't know anything was wrong until the ceiling stained.",
+      heading: "Chicago weather does not wait for your schedule",
       blocks: [
         {
           type: "p",
-          text: "That's how most roof calls start. Nobody climbs on their roof to look. Then a winter storm hits, an ice dam forms, and water shows up in the bedroom, or in a tenant's kitchen.",
+          text: "Spring storms rip shingles. Summer sun bakes flat roofs. Fall leaves clog gutters and trap water. Winter ice dams push water under the shingles and into the attic.",
         },
         {
           type: "p",
-          text: "By then it's an emergency call, a bigger repair, and maybe wet insulation and drywall on top. And Chicago gives a roof a hard year: freeze and thaw opens cracks, snow sits on flat roofs for weeks, spring storms bring heavy rain, wind and sometimes hail.",
+          text: "Most homeowners do not climb up and check. They find out about a problem when water drips through the ceiling. By then the repair is bigger and the cost is higher.",
+        },
+        {
+          type: "p",
+          text: "On a flat roof it is worse. A lifted seam or a clogged drain can sit there for a full season before it leaks into the unit below.",
         },
       ],
-      bridge: "Here's the thing about those leaks.",
+      bridge: "One check a year prevents most of this.",
     },
     {
       kind: "turning",
-      heading: "Almost every big leak was a small fix first",
+      heading: "The cheapest roof repair is the one you never need",
       blocks: [
         {
           type: "p",
-          text: "A cracked vent boot. A clogged roof drain. A bit of flashing pulling loose. A few lifted shingles. Each one is a quick, cheap fix when someone spots it. Missed for a winter, it's a stained ceiling and a much bigger bill.",
+          text: "Every roofer will tell you: the problems that cost the most started small. A cracked pipe boot. A nail backing out. Flashing pulling away from a wall. These are five-minute fixes if you catch them. They are major repairs if you wait a year.",
         },
         {
           type: "p",
-          text: "The problem isn't the roof. It's that nobody is looking at it.",
+          text: "The Roof Care Plan is a yearly inspection and minor repair rolled into one visit. A licensed roofer (IL 104.021107) climbs up, checks everything and fixes small problems on the spot. You get a written report with photos.",
+        },
+        {
+          type: "p",
+          text: "If we find something bigger, we tell you the cost separately. You decide.",
         },
       ],
-      bridge: "So we look at it every year, and fix the small things while they're small.",
+      bridge: "What the plan includes.",
     },
     {
       kind: "solution",
-      heading: "What the Roof Care plan includes [Owner to confirm each item]",
+      heading: "What you get with the Roof Care Plan",
       blocks: [
         {
-          type: "p",
-          text: "**One yearly visit, [timing, for example in the fall before winter]**",
-        },
-        {
           type: "subhead",
-          text: "On the roof",
+          text: "Yearly visit includes",
         },
         {
           type: "ul",
           items: [
-            "Check shingles or flat roof membrane for damage, wear and lifted edges",
-            "Check and reseal flashing at chimneys, walls and skylights where needed",
-            "Check vent pipe boots, roof vents and flat roof seams",
-            "Clear roof drains, scuppers and debris, and check the gutters on the roof line",
-          ],
-        },
-        {
-          type: "subhead",
-          text: "Small fixes on the same visit, no extra charge",
-        },
-        {
-          type: "ul",
-          items: [
-            "Sealing small gaps and openings",
-            "Resetting or replacing [up to X] loose or missing shingles",
-            "Small patches on flat roofs [up to a set size]",
-          ],
-        },
-        {
-          type: "subhead",
-          text: "Inside",
-        },
-        {
-          type: "ul",
-          items: [
-            "A look in the attic, where we can get in, for damp insulation or daylight",
-            "A check of attic ventilation",
-          ],
-        },
-        {
-          type: "subhead",
-          text: "After the visit",
-        },
-        {
-          type: "ul",
-          items: [
-            "A short report with photos of what we found and fixed",
-            "A heads-up, with a written price, on anything that will need work in the next year or two",
+            "Full roof inspection: shingles or membrane, flashing, vents, pipe boots, valleys, eaves",
+            "Flat roof check: seams, drains, scuppers, ponding, parapet flashing",
+            "Gutter cleanout and downspout check",
+            "Minor repairs included: cracked sealant, a loose shingle, a small flashing fix",
+            "Written report with photos emailed to you",
+            "Priority scheduling if you need a repair between visits",
           ],
         },
         {
           type: "p",
-          text: "Plan extras: [Priority booking for plan members if a leak happens] [Discount on repairs outside the plan, for example X% off]",
+          text: "What is not included: major repairs, full replacements and storm damage are quoted separately. If you need a repair, plan members get priority scheduling.",
         },
         {
-          type: "subhead",
-          text: "How to join",
-        },
-        {
-          type: "ol",
-          items: [
-            "**Start with a free roof check** (link: /free-roof-check) so we know your roof's starting point.",
-            "**Sign up** by phone or form.",
-            "**Yearly visit** at a time that suits you.",
-            "**Photo report** in your inbox.",
-          ],
+          type: "p",
+          text: "Price: [Roof Care Plan price per year. Different tiers for house vs. 2-flat vs. 3-flat if applicable.]",
         },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "Why homeowners join.",
     },
     {
       kind: "benefits",
-      heading: "What you get",
+      heading: "Catch it early, fix it cheap",
       blocks: [
         {
           type: "ul",
           items: [
-            "**No more surprise leaks.** Small problems get fixed before winter turns them into big ones.",
-            "**No more remembering to call a roofer.** We put it on the calendar.",
-            "**A known cost.** [Plan price] a year covers the visit and the small fixes listed.",
-            "**A record.** Yearly photos are useful for your own files, for a future buyer, and for keeping up with roof warranty requirements.",
-            "**One team if something's already wrong.** If we find a wet ceiling, damp attic or mold from an old leak, we're licensed for water damage and mold too. (link: /water-damage-restoration-chicago)",
+            "**Small problems fixed on the spot.** Loose shingles, cracked sealant, clogged gutters. Handled during the visit at no extra charge.",
+            "**Written report with photos.** You see what your roof looks like. Useful for insurance records and for budgeting future work.",
+            "**Priority scheduling.** If a storm hits and you need a repair, plan members go to the front of the line.",
+            "**Keep your warranty valid.** Many roofing warranties require annual maintenance. This plan satisfies that requirement.",
+            "**One set price per year.** No service call fees, no per-visit charges.",
           ],
         },
       ],
-      bridge: "Here's who comes out.",
+      bridge: "Backed by a licensed roofing company.",
     },
     {
       kind: "proof",
-      heading: "A licensed roofer, not a handyman",
+      heading: "A licensed roofer checks your roof, not a salesperson",
       blocks: [
         {
           type: "ul",
           items: [
-            "Illinois roofing licence 104.021107",
-            "Chicago general contractor licence TGC144939",
-            "Roofing is where Fix It Aid started",
+            "Illinois roofing licence: 104.021107",
+            "City of Chicago general contractor: TGC144939",
+            "[Insured and bonded: yes or no]",
             "[Google rating and review count]",
-            "[Real review 1: Roof Care plan member or yearly check, with name and neighborhood]",
-            "[Sample photo report page]",
+            "[Real review from a Roof Care Plan member, name and neighborhood]",
+            "[Sample report photo or screenshot]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "How the Roof Care Plan works.",
     },
     {
       kind: "faq",
-      heading: "Roof Care plan questions",
+      heading: "Roof Care Plan questions",
       blocks: [
         {
           type: "faq",
-          q: "How much does roof maintenance cost?",
-          a: "[Plan price] a year per building [Owner to confirm: per house, per 2-flat, larger buildings priced separately]. Bigger repairs, storm damage and replacement aren't included. If we find any, you get photos and a written price, and you decide.",
+          q: "How much does the Roof Care Plan cost?",
+          a: "[Price per year. If tiered: \"Houses start at $X. 2-flats at $Y.\"]",
         },
         {
           type: "faq",
-          q: "Is a roof maintenance plan worth it?",
-          a: "If one visit catches a cracked vent boot or a clogged drain before it leaks, it has usually paid for itself.",
+          q: "What counts as a \"minor repair\" included in the visit?",
+          a: "Anything that takes less than about 30 minutes and does not require new materials beyond sealant, nails or a few shingles. Examples: resealing a pipe boot, renailing a lifted shingle, clearing a clogged scupper.",
         },
         {
           type: "faq",
-          q: "Does the plan cover insurance work?",
-          a: "No. We don't handle or promise anything on insurance claims. Your yearly photos are yours to keep and to share with your insurance company if you choose.",
+          q: "What if you find a bigger problem?",
+          a: "We document it with photos, explain what it is and give you a separate price. Plan members get priority scheduling. (link: /roof-repair-chicago)",
         },
         {
           type: "faq",
-          q: "When do you come, and do I need to be home?",
-          a: "Once a year, [timing]. You don't need to be home for the roof check. If we want to look in the attic, we'll arrange a time with you.",
+          q: "When do you do the yearly check?",
+          a: "[Best season, for example \"We schedule it in spring or early fall so we catch winter damage and prepare for the next season.\"] You pick the date.",
         },
         {
           type: "faq",
-          q: "Do you offer this for condo associations and small apartment buildings?",
-          a: "Yes. [Owner to confirm pricing for larger buildings.] Condo boards and property managers find the yearly photo report useful for their records.",
+          q: "Can I join if my roof is old?",
+          a: "Yes. We do an initial check. If the roof needs repair first, we tell you. Once the roof is in working condition, the plan keeps it there.",
         },
         {
           type: "faq",
-          q: "Can I cancel?",
-          a: "[Owner to confirm the cancellation terms.]",
+          q: "Do you cover flat roofs?",
+          a: "Yes. The check includes flat roof membrane, seams, drains and parapet flashing. (link: /flat-roof-repair-chicago)",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Lock in your yearly roof check.",
     },
     {
       kind: "close",
-      heading: "Catch it before it leaks",
-      blocks: [
-        {
-          type: "p",
-          text: "Join the Roof Care plan and let a licensed roofer check your roof every year. Not sure where your roof stands today? Start with a free roof check.",
-        },
-      ],
+      heading: "Lock in your yearly roof check",
+      blocks: [{ type: "p", text: "One price. One visit. Small problems fixed on the spot. Written report with photos." }],
       buttons: [
-        {
-          label: "Join the Roof Care plan",
-          href: "/contact",
-          kind: "link",
-        },
-        {
-          label: "Book a free roof check",
-          href: "/free-roof-check",
-          kind: "link",
-        },
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
+        { label: "Join the Roof Care Plan", href: "#lead-form", kind: "form" },
+        { label: "Call (773) 987-1693", kind: "call" },
       ],
     },
   ],
+  formButton: "Join the Roof Care Plan",
 };
 
 export default function Page() {

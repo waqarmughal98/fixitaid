@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/flat-roof-repair-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /flat-roof-repair-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/flat-roof-repair-chicago",
   slug: "flat-roof-repair-chicago",
@@ -12,190 +11,169 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Flat Roof Repair in Chicago",
     buttons: [
-      {
-        label: "Book a free roof check",
-        href: "/free-roof-check",
-        kind: "link",
-      },
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
+      { label: "Get a free roof check", href: "/free-roof-check", kind: "link" },
+      { label: "Call (773) 987-1693", kind: "call" },
     ],
-    trust: [
-      "Illinois roofing licence 104.021107",
-      "Free roof check with photos",
-      "Written price before work starts",
-    ],
-    eyebrow: "Water in the top-floor unit? Puddles that won't drain?",
-    sub: "We repair TPO, EPDM rubber and modified bitumen roofs on Chicago 2-flats, 3-flats and garages, starting with the drains, seams and edges where flat roofs really fail.",
-    bridge: "If you own a flat roof in Chicago, this will sound familiar.",
+    trust: ["Illinois roofing licence 104.021107", "Chicago general contractor licence TGC144939", "[Google rating and review count]"],
+    eyebrow: "Flat roof leaking or holding water?",
+    sub: "TPO, EPDM rubber and modified bitumen repair for Chicago 2-flats, 3-flats, garages and small commercial buildings. We find the leak, show you what failed and price the fix before we start.",
+    bridge: "Flat roof leaks follow a pattern. Once you know it, the repair is straightforward.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "My tenant called. There's water coming through the ceiling again.",
+      heading: "Flat roofs in Chicago take a beating",
       blocks: [
         {
           type: "p",
-          text: "Flat roof repair in Chicago is its own kind of headache. Water doesn't run off. Snow sits for weeks. And you often don't find out there's a problem until a tenant texts you a photo of a stained ceiling.",
+          text: "Water pools after every storm. Snow sits for weeks. The membrane expands and contracts with 100-degree temperature swings between summer and winter. Seams lift. Flashing pulls away from parapet walls.",
         },
         {
           type: "p",
-          text: "You might be seeing puddles still sitting there days after rain, bubbles in the surface, seams lifting at the edges, or rubber pulling away from the parapet wall.",
+          text: "In a 2-flat or 3-flat, a flat roof leak can drip through two floors before anyone sees it. By the time the ceiling stains, the insulation is soaked, the decking is soft and there may be mold growing in the space between.",
         },
         {
           type: "p",
-          text: "Every week it waits, more water gets under the membrane. Wet insulation under a flat roof stays wet. That's how a patch job turns into a new roof, and how a ceiling stain turns into a ceiling repair in someone's apartment.",
+          text: "Garages with flat roofs are just as exposed. The roof is lower, catches debris and often has no drainage slope at all.",
         },
       ],
-      bridge: "Most flat roof patches don't last for one reason.",
+      bridge: "Flat roof leaks follow a pattern. Once you know it, the repair is straightforward.",
     },
     {
       kind: "turning",
-      heading: "Flat roofs rarely fail in the middle",
+      heading: "Most flat roof leaks come from the same places",
       blocks: [
         {
           type: "p",
-          text: "Most flat roof leaks start at the edges and openings: the drain or scupper that's clogged, a seam that has opened, the spot where the roof turns up the parapet wall, or the flashing around a vent, skylight or roof hatch. Low spots that hold water slowly work their way in too.",
+          text: "Lifted seams. Cracked flashing where the roof meets a wall. Punctures from foot traffic or dropped tools. Failed patches from an old repair that did not hold. Ponding water that never drains because the slope is wrong.",
         },
         {
           type: "p",
-          text: "A quick coat of tar over the wet spot doesn't fix any of these. And the patch has to match the roof. Rubber on TPO, or tar on EPDM, doesn't bond properly and fails again.",
+          text: "These are repairs, not replacements. But flat roof work is different from shingle work. The materials are different, the tools are different, and a bad patch makes the next leak worse.",
+        },
+        {
+          type: "p",
+          text: "Fix It Aid repairs flat roofs across Chicago. TPO, EPDM rubber and modified bitumen. We know the flat roofs on 2-flats, 3-flats and commercial buildings because we see them every week.",
         },
       ],
-      bridge: "So we find the real entry point, and repair it with matching material.",
+      bridge: "How we fix a flat roof leak.",
     },
     {
       kind: "solution",
-      heading: "How we repair your flat roof",
+      heading: "Find the leak. Fix the leak. Check the rest.",
       blocks: [
-        {
-          type: "h3",
-          title: "TPO",
-          text: "White single-ply membrane with heat-welded seams. We weld in new material over punctures and failed seams.",
-        },
-        {
-          type: "h3",
-          title: "EPDM (rubber roof)",
-          text: "Common on Chicago 2-flats and garages. We clean, prime and patch, and reseal seams and edges where the rubber has shrunk.",
-        },
-        {
-          type: "h3",
-          title: "Modified bitumen",
-          text: "Rolled roofing that cracks and blisters with age. We cut out the bad area and patch it with matching material.",
-        },
-        {
-          type: "h3",
-          title: "Older tar and gravel",
-          text: "We patch these, and tell you honestly if it's at the end of its life.",
-          link: "/roof-replacement-chicago",
-        },
-        {
-          type: "subhead",
-          text: "The steps",
-        },
         {
           type: "ol",
           items: [
-            "**Free roof check.** We walk the roof, test the drains, check seams and edges, and look at the ceiling inside. Photos of everything.",
-            "**Written price,** and a straight answer if the roof is past repair.",
-            "**The repair,** using material that matches your roof.",
-            "**Photos when done,** so you can show your tenants or your condo board.",
+            "**Free roof check.** We walk the entire membrane, check every seam, drain, flashing and penetration. (link: /free-roof-check)",
+            "**Photos and findings.** You see exactly what failed and where the water is getting in.",
+            "**Price before work.** You approve the repair price. No surprises.",
+            "**Repair with the right material.** TPO seams get heat-welded. EPDM gets bonded. Modified bitumen gets torched or cold-applied. We match the material on your roof.",
           ],
         },
+        {
+          type: "subhead",
+          text: "What we repair",
+        },
+        {
+          type: "ul",
+          items: [
+            "TPO and PVC membrane: lifted seams, punctures, flashing failures",
+            "EPDM rubber roofs: seam separations, shrinkage, edge pulling",
+            "Modified bitumen: blisters, splits, cap sheet failures",
+            "Parapet wall flashing and coping",
+            "Drain and scupper blockages causing ponding",
+            "Roof-to-wall transitions on 2-flats and 3-flats",
+          ],
+        },
+        {
+          type: "p",
+          text: "If the membrane is failing across the board, we give you a replacement price alongside the repair price. You compare and decide. (link: /roof-replacement-chicago)",
+        },
       ],
-      bridge: "Here's what that means for you as an owner.",
+      bridge: "Why flat roof owners choose us.",
     },
     {
       kind: "benefits",
-      heading: "What you get with Fix It Aid",
+      heading: "We do flat roofs every week. We know what holds.",
       blocks: [
         {
           type: "ul",
           items: [
-            "**Tired of the same leak?** We fix the drain, seam or edge where it starts.",
-            "**Don't want to coordinate two contractors?** We fix the roof, then the ceiling in the unit below. We're licensed for roofing, general contracting, water damage and mold. (link: /water-damage-restoration-chicago)",
-            "**Not sure if it's patch or replace?** Patching a roof that needs replacing wastes money. Replacing one that needs a patch wastes more. We tell you which one you have.",
-            "**Need it on paper?** Written price before work, photos after.",
+            "**Material-matched repair.** We use the same material as your existing roof. A mismatched patch fails faster.",
+            "**We check the whole roof, not just the leak.** Other problems show up when you look. We tell you about them now so you can plan.",
+            "**Water got inside?** Our water damage team handles the ceiling, walls and insulation. One company, one call. (link: /water-damage-restoration-chicago)",
+            "**Roof too far gone?** We give you both prices: repair and full replacement. You choose. (link: /roof-replacement-chicago)",
+            "**Yearly maintenance option.** The Roof Care Plan catches flat roof problems before they leak. (link: /roof-care-plan)",
           ],
         },
       ],
-      bridge: "Here's who's working on your building.",
+      bridge: "We back flat roof work in writing.",
     },
     {
       kind: "proof",
-      heading: "Licensed and used to Chicago flat roofs",
+      heading: "Licensed for roofing. Licensed for the rest.",
       blocks: [
         {
           type: "ul",
           items: [
-            "Illinois roofing licence 104.021107",
-            "Chicago general contractor licence TGC144939",
-            "Brick 2-flats, 3-flats, garages and small apartment buildings make up a big part of our roofing work",
+            "Illinois roofing licence: 104.021107",
+            "City of Chicago general contractor: TGC144939",
+            "[Insured and bonded: yes or no]",
+            "[Warranty on work]",
             "[Google rating and review count]",
-            "[Real review 1: flat roof job on a 2-flat or garage, with name and neighborhood]",
+            "[Real review 1: flat roof repair on a 2-flat, name and neighborhood]",
+            "[Real review 2: commercial or garage flat roof, name and neighborhood]",
             "[Real job photos: flat roof before and after]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "Flat roof questions we hear often.",
     },
     {
       kind: "faq",
-      heading: "Flat roof questions",
+      heading: "Flat roof repair questions",
       blocks: [
         {
           type: "faq",
-          q: "What does flat roof repair cost?",
-          a: "Most repairs cost [price range]. Larger work, like rebuilding around a drain or redoing a parapet edge, runs [price range]. It depends on the material, the size of the damage, whether the insulation underneath is wet, and access.",
+          q: "How much does flat roof repair cost in Chicago?",
+          a: "It depends on the membrane type, the size of the repair and what caused the leak. A seam repair is a different job than replacing failed flashing along a full parapet wall. We check the roof for free and give you the price before we start.",
         },
         {
           type: "faq",
-          q: "Can you work with my insurance company on a flat roof leak?",
-          a: "We don't handle or promise anything on insurance claims. We give you clear photos of the damage and the repair, which you can share with your insurance company if you choose.",
+          q: "My flat roof holds water after rain. Is that a problem?",
+          a: "If water sits for more than 48 hours, it is called ponding. Ponding breaks down every membrane type over time and adds weight the structure was not designed for. We check the drains, scuppers and slope and tell you what will fix it.",
         },
         {
           type: "faq",
-          q: "Is water sitting on my flat roof a problem?",
-          a: "Water that dries within a day or two is normal. Water still there after 48 hours is called ponding, and over time it wears the roof down and finds a way in. It usually means a clogged drain or a low spot, and both can be fixed.",
+          q: "Can a flat roof be repaired or does it need replacing?",
+          a: "If the membrane is solid overall and the leak is in one area, repair works. If the membrane is brittle, cracked in multiple spots or past its expected life, replacement usually costs less over time. We give you both prices.",
         },
         {
           type: "faq",
-          q: "Will you need to get into my tenant's unit?",
-          a: "Only if there's interior damage to look at or repair. We'll schedule it with you so you can give your tenant notice.",
+          q: "What flat roof materials do you work with?",
+          a: "TPO, EPDM rubber, modified bitumen, PVC and built-up roofing. Most 2-flats and 3-flats in Chicago have modified bitumen or EPDM. Newer buildings often have TPO.",
         },
         {
           type: "faq",
-          q: "Can a rubber roof be repaired, or does it need replacing?",
-          a: "Most EPDM roofs can be repaired if the damage is in one area. If it has shrunk badly or the seams are failing everywhere, replacement is usually the better spend. A yearly check helps you get more years out of it. (link: /roof-care-plan)",
+          q: "Do you work on garage roofs?",
+          a: "Yes. Garage flat roofs in Chicago are common. Same materials, same process.",
+        },
+        {
+          type: "faq",
+          q: "Do you come to my neighborhood?",
+          a: "We work across the City of Chicago.",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Get your flat roof checked for free.",
     },
     {
       kind: "close",
-      heading: "Stop the leak before the next tenant call",
-      blocks: [
-        {
-          type: "p",
-          text: "We'll walk the roof, check the drains and seams, take photos and give you a written price. Water coming into a unit now? Call us.",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Get your flat roof checked for free",
+      blocks: [{ type: "p", text: "We walk the whole roof, find what is leaking and give you the price. No charge. No obligation." }],
       buttons: [
-        {
-          label: "Book a free roof check",
-          href: "/free-roof-check",
-          kind: "link",
-        },
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
+        { label: "Get a free roof check", href: "/free-roof-check", kind: "link" },
+        { label: "Call (773) 987-1693", kind: "call" },
       ],
     },
   ],

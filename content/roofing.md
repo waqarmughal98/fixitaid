@@ -1,566 +1,628 @@
-# 5c. Roofing page content (Fix It Aid, Chicago)
+# Fix It Aid page content: Roofing pages
 
-Written 15 October 2026, rewritten the same day to follow the 8-step page story in `8-competitor-copy-study-and-page-story-2026-10-15.md`.
+Written 15 October 2026 (version 2). Rewritten 17 October 2026 (version 3 — SEO content rewrite). Final copy for five pages: /roofing-chicago, /roof-repair-chicago, /flat-roof-repair-chicago, /roof-replacement-chicago and /roof-care-plan.
 
-**How to read this file**
-- Title tag, meta description and H1 are copied exactly from `4-seo-meta-tags-2026-10-15.csv`. The H1 stays fixed for SEO. The customer-first hook sits in the eyebrow line above it and in the subheadline.
-- Every page follows the same story: 1 Hook, 2 Pain and stakes, 3 Turning point, 4 Solution, 5 Benefits, 6 Proof, 7 Objections (cost, insurance, timing, disruption), 8 Close. The step number is shown in brackets after each section name for the designer. Do not publish it.
-- The line in *italics* at the end of each section is the bridge into the next one. Publish it as the last line of the section, styled a little larger than body text.
-- Anything in [square brackets] is a placeholder. Fill it in or delete the line before the page goes live. Never publish brackets.
+**How to use this file**
+
+- Each page follows the 8-step page story: hook, pain and stakes, turning point, solution, benefits, proof, objections, close.
+- Bridge lines lead the reader into the next section. Show the sentence only (no "Bridge:" label).
+- Titles, meta descriptions and H1s match `seo-meta.csv`.
+- Facts come only from `0-facts-and-voice-guide-2026-10-15.md`. Anything in [square brackets] is a placeholder. Fill it or delete the line before launch.
 - (link: /url) marks an internal link. Put it on the words just before it.
-- Every "Book a free roof check" button goes to (link: /free-roof-check). Every "Call" button is a tap-to-call link to (773) 987-1693.
-- Licence 105.012092 is left out on purpose until the owner confirms it. Add it next to 104.021107 once confirmed.
-- Insurance (815 ILCS 513/18): we never offer to handle, help with or promise anything about a claim. The only insurance wording used is that the photos are yours "to share with your insurance company if you choose".
-- Headings are marked H2 and H3 so the developer knows the tag to use.
+- Notes in *italics starting with "Note:"* are for Waqar and the developer, not for the page.
 
 ---
 
-## Page 1. Main roofing page
+## Page 1: /roofing-chicago (main roofing page)
 
 - **URL:** /roofing-chicago
 - **Title tag:** Chicago Roofing Company | Repairs, Flat Roofs | Fix It Aid
 - **Meta description:** Illinois licensed roofer 104.021107. Roof repair, flat roofs and replacement across Chicago. Start with a free roof check with photos.
 - **H1:** Chicago Roofing Company
-- **Main keyword:** roofing company chicago
+- **Primary keyword:** roofing company chicago. Secondaries used: roofer chicago, roofing contractor chicago, licensed roofer chicago, roofing companies near me chicago, chicago roofing company, roof inspection chicago, roof leak repair chicago, flat roof chicago.
 
-### Hero (1. Hook)
+### 1. Hook (hero)
 
-**Eyebrow:** Stain on the ceiling? Old roof? Storm last night?
+**Eyebrow:** Illinois licensed roofer 104.021107
 
 **H1:** Chicago Roofing Company
 
-**Subheadline:** Find out exactly what your roof needs, with photos, before you spend a dollar. Repair if it can be repaired. Replace only if it can't.
+**Subheadline:** Leaking roof, missing shingles or a flat roof that holds water. We find the problem, show you photos and give you the price before we touch anything.
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
-**Trust line:** Illinois roofing licence 104.021107 · Chicago general contractor licence TGC144939 · Free roof check with photos · [Google rating and review count]
+**Trust line:** IL roofing licence 104.021107 · Chicago GC licence TGC144939 · [Google rating and review count]
 
-*Here's what's usually going on when people call us.*
+### 2. Pain and stakes
 
-### H2: "I don't know how bad it is, and I don't know who to believe." (2. Pain and stakes)
+**Heading:** A roof leak does not wait for a good time
 
-You've seen a brown ring spreading on the ceiling. Or the roof is 20-something years old and you keep hearing it "should be done." Or the wind took a few shingles and now every roofing company in Chicago wants to sell you a new roof.
+A water stain on the ceiling means water is already inside the house. It soaks the decking, runs down the walls and sits in the insulation. In a Chicago winter, that wet wood freezes and thaws until the damage spreads.
 
-Here's the worry we hear most: "Is this a small fix or a whole new roof, and how do I know they're telling me the truth?"
+Most homeowners call when they see the stain. By then the leak has been there for weeks. The longer it sits, the more it costs.
 
-Waiting doesn't make the answer cheaper. Chicago's freeze and thaw opens small gaps wider every winter. Ice dams push water under the shingles at the edge. A slow leak soaks the insulation, rots the roof boards and, left long enough, can lead to mold in the attic or ceiling.
+On a flat roof the problem is different. Water pools after every rain. The membrane lifts at the seams. In a 2-flat or 3-flat, a flat roof leak can reach two units before anyone notices.
 
-*So why do so many roof jobs still leave people with the same leak, or a bill they didn't need?*
+**Bridge:** The fix starts with knowing exactly what is wrong.
 
-### H2: The stain is not where the leak is. And most roofers sell what they install. (3. Turning point)
+### 3. Turning point
 
-Water gets in at one spot, then runs along a rafter or roof board for several feet before it shows up on your ceiling. Patch the shingles above the stain and the leak comes back with the next storm.
+**Heading:** Most roof problems are fixable once you find them
 
-The second problem is how roofing is sold. A company that makes its money on new roofs will tend to find you need a new roof. That's not always wrong, but you should see the proof.
+A missing shingle, cracked flashing, a failed pipe boot, a lifted seam on a flat roof. These are repairs, not full replacements.
 
-*So we do it the other way round: find the real entry point first, then show you the proof.*
+The trouble is that some roofing companies in Chicago skip the inspection and jump to a quote for a new roof. A new roof costs ten times more than a repair. If you do not know what actually failed, you cannot tell which one you need.
 
-### H2: Roofing services in Chicago, starting with the right diagnosis (4. Solution)
+Fix It Aid is an Illinois licensed roofer (104.021107) and a City of Chicago general contractor (TGC144939). We start with a free roof check (link: /free-roof-check). We climb up, take photos, and show you what we find. If a repair fixes it, we repair it.
 
-As a roofing company in Chicago, we work on bungalows, frame houses, brick 2-flats and 3-flats, garages and small buildings.
+**Bridge:** Here is what a free roof check looks like.
 
-**H3: Roof repair and leak repair.** We trace the leak to the flashing, vent, seam or shingle where it starts. (link: /roof-repair-chicago)
+### 4. Solution
 
-**H3: Flat roof repair.** TPO, EPDM rubber and modified bitumen, on the flat roofs found on most Chicago 2-flats and garages. (link: /flat-roof-repair-chicago)
+**Heading:** Free roof check, photos, then your decision
 
-**H3: Roof replacement.** Full tear-off, deck check, new roof and permit, only when repair no longer makes sense. (link: /roof-replacement-chicago)
+1. **Book a free roof check.** Call or book online. We come to you. Free roof check (link: /free-roof-check)
+2. **We climb up and check everything.** Shingles, flashing, vents, flat membrane, gutters. We take photos of what we find.
+3. **You see the photos and the price.** We show you the photos, explain what needs work, and give you the price. If nothing needs work, we tell you that too.
+4. **You decide.** We only start when you say yes.
 
-**H3: Roof Care plan.** One yearly check and small fixes for a set price. (link: /roof-care-plan)
+**What we do:**
 
-How it works:
-1. **Free roof check.** We go on the roof and, where we can, into the attic. We photograph everything, including attic ventilation, which is behind a lot of Chicago ice dams.
-2. **A straight answer.** We show you the photos and explain repair versus replacement in plain words.
-3. **Written price.** Itemized, before any work starts. If a City of Chicago permit is needed, we pull it.
-4. **Work and walkthrough.** We do the job, clean up, and go over it with you. Warranty in writing. [Warranty on work]
+- **Roof repair.** Leaks, missing shingles, storm damage, flashing, pipe boots. Roof repair (link: /roof-repair-chicago)
+- **Flat roof repair.** TPO, EPDM rubber, modified bitumen. 2-flats, 3-flats, garages. Flat roof repair (link: /flat-roof-repair-chicago)
+- **Roof replacement.** When repair is no longer worth it. Shingle and flat roofs. Roof replacement (link: /roof-replacement-chicago)
+- **Roof Care Plan.** Yearly inspection and small fixes for one price. Catches problems early. Roof Care Plan (link: /roof-care-plan)
 
-*Here's what that means for you.*
+**Bridge:** What changes when you hire a licensed roofer.
 
-### H2: What you get when you call Fix It Aid (5. Benefits)
+### 5. Benefits
 
-- **Worried about paying for a roof you don't need?** You see the photos before you see a price. If a repair will do, we say so.
-- **Worried the leak will come back?** We fix where the water gets in, not where it shows up.
-- **Worried about the damage inside?** Most roofers stop at the roof. We're also licensed for water damage restoration and mold remediation, so the wet ceiling, insulation and any mold get handled by the same team. (link: /water-damage-restoration-chicago)
-- **Worried about surprise costs?** The price is in writing before we start.
+**Heading:** You know the price. You see the photos. You decide.
 
-*You shouldn't have to take our word for any of that.*
+- **No surprise bills.** You approve the price before we pick up a tool.
+- **No pressure to replace.** If a repair works, we repair it. We bring up replacement only when the numbers say so, and then we show you both prices.
+- **One company for the whole problem.** If a roof leak caused water damage inside, our water damage team (link: /water-damage-restoration-chicago) handles it. If there is mold, our mold team (link: /mold-removal-chicago) handles it. One schedule, not three contractors.
+- **Licensed and insured.** IL roofing licence 104.021107. Chicago GC licence TGC144939. [Insured and bonded: yes or no]
 
-### H2: Licensed, local, and on the record (6. Proof)
+**Bridge:** Check our credentials yourself.
 
-- Illinois roofing licence 104.021107
-- Chicago general contractor licence TGC144939
-- Licensed for mold remediation and water damage restoration
-- Roofing is where Fix It Aid started
-- [Google rating and review count]
-- [Real review 1: roof leak or repair, with name and neighborhood]
-- [Real review 2: roof replacement, with name and neighborhood]
-- [Real job photos]
+### 6. Proof
 
-*You probably still have a few questions.*
+**Heading:** Licensed in Illinois, registered in Chicago
 
-### H2: Roofing questions (7. Objections)
+- Illinois roofing licence: 104.021107
+- City of Chicago general contractor: TGC144939
+- [Insured and bonded: yes or no]
+- [Warranty on work]
 
-**What does a roofer cost in Chicago?**
-Small repairs usually run [price range]. Flat roof repairs [price range]. A full replacement [price range]. The real number depends on the roof's size and pitch, the material, how many layers come off, the condition of the wood deck, and chimneys or skylights that need flashing. You get it in writing first. [Financing: yes or no]
+[Google rating and review count]
 
-**Can you deal with my insurance company?**
-No. Illinois law limits what roofing contractors can do on insurance claims, so we don't handle claims or promise coverage. What you do get is clear photos of everything we find, which are yours to share with your insurance company if you choose.
+[Real review 1: roof repair, name and neighborhood]
+[Real review 2: flat roof, name and neighborhood]
+[Real review 3: roof replacement, name and neighborhood]
 
-**How soon can you come out?**
-[Response time, for example "within 48 hours for a roof check"]. Leaking right now? Call instead of using the form.
+[Real job photos: before and after]
 
-**Will the work make a mess of my house and yard?**
-We cover landscaping and siding, keep the work area tidy each day, and do a full cleanup at the end, including a magnet sweep for nails.
+**Bridge:** Common questions about roofing in Chicago.
 
-**How do I check a roofing company is licensed?**
-Ask for the licence number and look it up with the state of Illinois. Ours is 104.021107.
+### 7. Objections (FAQ)
 
-*The first step is simple.*
+**How much does roof repair cost in Chicago?**
+It depends on what failed. A simple flashing repair is different from replacing a section of decking. We check the roof for free (link: /free-roof-check), show you photos and give you the price before we start.
 
-### Close (8. Close)
+**Do you repair flat roofs?**
+Yes. TPO, EPDM rubber and modified bitumen on 2-flats, 3-flats and garages across Chicago. Flat roof repair (link: /flat-roof-repair-chicago)
 
-**H2: Find out what your roof really needs**
+**Are you a licensed roofer?**
+Yes. Illinois roofing licence 104.021107 and City of Chicago general contractor licence TGC144939. Look them up.
 
-A free roof check, photos of what we find, and a straight answer on repair versus replacement. No pressure to book.
+**Do you work in my neighborhood?**
+We work across the City of Chicago. See the list (link: /areas-we-serve).
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**What if the roof caused water damage or mold inside?**
+We handle that too. Our water damage team (link: /water-damage-restoration-chicago) dries and repairs the inside. Our mold team (link: /mold-removal-chicago) tests and removes mold. One company, one call.
+
+**How do I know if I need a repair or a new roof?**
+We check the roof for free and tell you. If a repair makes sense, we give you a repair price. If replacement makes more sense, we give you both prices and explain why. Roof replacement (link: /roof-replacement-chicago)
+
+### 8. Close
+
+**Headline:** Start with a free roof check.
+
+**Text:** We climb up, take photos and tell you what we find. No charge. No obligation.
+
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
 ---
 
-## Page 2. Roof repair
+## Page 2: /roof-repair-chicago
 
 - **URL:** /roof-repair-chicago
 - **Title tag:** Roof Repair & Leak Repair in Chicago | Fix It Aid
 - **Meta description:** Roof leaking? We find where the water gets in and fix it. Shingle and flat roofs. Illinois licensed roofer 104.021107. Free roof check.
 - **H1:** Roof Repair in Chicago
-- **Main keyword:** roof repair chicago
+- **Primary keyword:** roof repair chicago. Secondaries used: roof leak repair chicago, emergency roof repair chicago, fix roof leak chicago, roof repair cost chicago, storm damage roof repair chicago, shingle repair chicago, flashing repair.
 
-### Hero (1. Hook)
+### 1. Hook (hero)
 
-**Eyebrow:** Roof leaking again?
+**Eyebrow:** Leaking roof? Storm damage? Missing shingles?
 
 **H1:** Roof Repair in Chicago
 
-**Subheadline:** We find where the water actually gets in and fix it there, so you're not calling a roofer again after the next storm. Shingle roofs, flat roofs and garages.
+**Subheadline:** We find where the water gets in and fix it. Shingle roofs and flat roofs. You see the photos and the price before we start. Illinois licensed roofer 104.021107.
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
-**Trust line:** Illinois roofing licence 104.021107 · Free roof check with photos · Written price before work starts · [Response time]
+**Trust line:** IL roofing licence 104.021107 · Chicago GC licence TGC144939 · [Google rating and review count]
 
-*If you're reading this, you've probably already got a bucket out.*
+### 2. Pain and stakes
 
-### H2: "It's leaking again, and the last guy said he fixed it." (2. Pain and stakes)
+**Heading:** Water stain on the ceiling? The leak started weeks ago.
 
-Most roof repair calls in Chicago sound like this. A brown spot on the ceiling after heavy rain. A drip that only shows up when the snow melts. A leak someone already "fixed" that came right back.
+You see a brown circle on the ceiling after a heavy rain. That means water got past the roof, soaked through the decking and sat there long enough to stain drywall.
 
-Every rain, the same questions: How much water is going into the attic? Is the drywall going to come down? Is something growing up there?
+The longer it sits, the worse it gets. Wet decking rots. Wet insulation loses its R-value. In a Chicago winter, trapped moisture freezes, expands and cracks the wood around it.
 
-Those worries are fair. A small leak left for a season can soak insulation, rot the roof boards and stain every ceiling it runs across. And Chicago winters make it worse. Water gets into a gap, freezes, expands, and the gap gets bigger.
+And if you wait through storm season, a small leak turns into a section of decking that needs replacing. That is a bigger job and a bigger bill.
 
-*Most repeat leaks happen for one reason.*
+**Bridge:** Most of the time, the actual fix is smaller than you think.
 
-### H2: The stain on your ceiling is not where the leak is (3. Turning point)
+### 3. Turning point
 
-Water gets in at one spot and runs along the wood until it finds a way down. The stain can be several feet from the real entry point. Patch the roof above the stain and you've fixed the wrong spot.
+**Heading:** A roof leak usually comes from one spot
 
-The places that actually leak on Chicago roofs:
-- **Flashing** around chimneys, skylights and walls, cracked or pulled loose
-- **Vent pipe boots**, where the rubber collar dries out and splits
-- **Missing or lifted shingles** after wind or hail
-- **The roof edge**, where ice dams push water up under the shingles
-- **Flat roof seams and drains** on 2-flats, 3-flats and garages (link: /flat-roof-repair-chicago)
+Cracked flashing around a chimney. A pipe boot with a split rubber collar. Missing shingles from a wind storm. A nail that backed out. These are repairs, not replacements.
 
-*So we trace it first, then repair it.*
+The problem is knowing which one. Some roofing contractors in Chicago quote a full replacement without climbing up. Others give a price over the phone without seeing the roof.
 
-### H2: How we repair your roof (4. Solution)
+We do it the other way. We climb up, check the whole roof, take photos and show you exactly what failed. If a repair fixes it, we price the repair. If the damage is too far gone, we tell you and give you a replacement price too (link: /roof-replacement-chicago).
 
-1. **Free roof check.** We go on the roof and into the attic where we can, and follow the water back to where it starts. Photos of everything.
-2. **Clear price.** We show you the cause and give you a written price before we start.
-3. **The repair.** Leak repair, shingle repair, flashing repair, vent boot replacement, hail and wind damage repair, fascia repair, flat roof patching, garage roof repairs. Most repairs are done in one visit. [Confirm typical repair time]
-4. **Photos when done.** You see the finished work and know what to keep an eye on.
+**Bridge:** Here is how a roof repair works with us.
 
-**Leaking right now?** Call (773) 987-1693. If the full repair can't be done that day, we put on a temporary cover to keep the water out, then come back for the permanent fix. [Response time] [24/7 phone: yes or no]
+### 4. Solution
 
-*Here's what that means for you.*
+**Heading:** From leak to fixed roof, step by step
 
-### H2: What you get with Fix It Aid (5. Benefits)
+1. **Free roof check.** We climb up and check the entire roof, not just the spot you pointed to. Free roof check (link: /free-roof-check)
+2. **Photos and findings.** We show you photos of what we found. You see the problem.
+3. **Price before work.** You approve the price. No price, no work.
+4. **We fix it.** The repair is done and we check the area again before we leave.
 
-- **Afraid it'll leak again?** We fix the entry point, not the stain.
-- **Afraid of being talked into a new roof?** Plenty of leaking roofs have years left. If yours does, we repair it and say so.
-- **Afraid of what the water already did?** We're also licensed for water damage restoration and mold remediation, so we can dry out and repair the ceiling, insulation and walls too. One team, one job. (link: /water-damage-restoration-chicago)
-- **Afraid of the bill?** Written price before work starts.
+**What we repair:**
+- Missing, cracked or lifted shingles
+- Flashing around chimneys, walls and valleys
+- Pipe boots and roof vents
+- Storm damage from wind, hail or fallen branches
+- Ice dam damage along eaves
+- Flat roof leaks: TPO, EPDM, modified bitumen (link: /flat-roof-repair-chicago)
+- Gutter repairs tied to roof leaks
 
-*Here's who you're letting on your roof.*
+**Bridge:** What you get with this repair.
 
-### H2: Licensed, and you see everything we see (6. Proof)
+### 5. Benefits
 
-- Illinois roofing licence 104.021107
-- Chicago general contractor licence TGC144939
-- Photos before and after every repair
-- [Google rating and review count]
-- [Real review 1: roof leak repair, with name and neighborhood]
-- [Real job photos: before and after of a leak repair]
+**Heading:** No guessing. No upselling. Just the fix.
 
-*You probably still have a few questions.*
+- **You see the problem.** Photos from the roof, not a verbal description.
+- **You approve the price first.** If the price does not work for you, we do not start.
+- **Repair when repair makes sense.** We do not push replacement unless the repair would cost more than the roof is worth. Then we show you both prices.
+- **Leak caused inside damage?** If water got into the ceiling, walls or attic, our water damage team (link: /water-damage-restoration-chicago) dries and repairs it. If mold started, our mold team (link: /mold-removal-chicago) removes it. One company.
 
-### H2: Roof repair questions (7. Objections)
+**Bridge:** Our licence numbers are public.
+
+### 6. Proof
+
+**Heading:** A licensed Illinois roofer, not a handyman
+
+- Illinois roofing licence: 104.021107
+- City of Chicago general contractor: TGC144939
+- [Insured and bonded: yes or no]
+- [Warranty on work]
+
+[Google rating and review count]
+
+[Real review 1: leak repair, name and neighborhood]
+[Real review 2: storm damage repair, name and neighborhood]
+
+[Real job photos: before and after roof repairs]
+
+**Bridge:** What homeowners ask about roof repairs.
+
+### 7. Objections (FAQ)
 
 **How much does roof repair cost in Chicago?**
-Most repairs cost [price range]. Bigger ones, like re-flashing a chimney or replacing a section, run [price range]. It depends on what's causing the leak, how easy it is to reach, the roof type and pitch, and whether the wood underneath is wet or rotted.
+It depends on what failed and how much area is affected. A pipe boot replacement is a different price than a valley reflash. We check the roof for free, show you what we find, and give you the price before any work starts.
 
-**Will my insurance pay for this?**
-That's between you and your insurance company, and we don't handle or promise anything on claims. We do give you clear photos of the damage and the repair, which you can share with your insurance company if you choose.
+**Can you fix a roof leak in the rain?**
+We can do a temporary patch to stop active water entry. The full repair happens when the roof is dry enough to work safely.
 
-**Is it worth repairing an old roof?**
-Often, yes. If the leak is from one spot and the rest of the roof is in fair shape, a repair can buy you years. If it's worn out everywhere or the deck is soft, replacement usually makes more sense. (link: /roof-replacement-chicago)
+**My roof was damaged in a storm. What do I do?**
+Call us for a free roof check (link: /free-roof-check). We document the damage with photos and a written report you can share with your insurer.
 
-**Can you repair a roof in winter?**
-Yes, most repairs. Some materials need warmer weather to seal properly, so in deep cold we may do a temporary repair and finish when the weather allows. We'll tell you up front.
+**How do I know if I need a repair or a full replacement?**
+We check the whole roof, not just the leak. If the rest of the roof is in good shape, a repair is the right call. If the shingles are worn across the board or the decking is soft in multiple spots, replacement saves money long term. We give you both prices and explain the difference. Roof replacement (link: /roof-replacement-chicago)
 
-**How do I find where my roof is leaking?**
-On a rainy day, check the attic with a flashlight for wet wood or damp insulation and follow it uphill. Can't get up there? That's what the free roof check is for.
+**Do you repair flat roofs?**
+Yes. TPO, EPDM rubber and modified bitumen. See flat roof repair (link: /flat-roof-repair-chicago).
 
-*The first step is simple.*
+**Do you come to my neighborhood?**
+We work across the City of Chicago. See neighborhoods (link: /areas-we-serve).
 
-### Close (8. Close)
+### 8. Close
 
-**H2: Find the leak. Fix it once.**
+**Headline:** Stop the leak before it spreads.
 
-We'll trace the leak, show you photos and give you a written price. Water coming in now? Call us.
+**Text:** Book a free roof check. We find the problem, show you photos and give you the price.
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
 ---
 
-## Page 3. Flat roof repair
+## Page 3: /flat-roof-repair-chicago
 
 - **URL:** /flat-roof-repair-chicago
 - **Title tag:** Flat Roof Repair in Chicago | TPO & Rubber | Fix It Aid
 - **Meta description:** Flat roof leaking or holding water? TPO, EPDM rubber and modified bitumen repair for Chicago 2-flats, 3-flats and garages. Free roof check.
 - **H1:** Flat Roof Repair in Chicago
-- **Main keyword:** flat roof repair chicago
+- **Primary keyword:** flat roof repair chicago. Secondaries used: flat roof leak repair chicago, TPO roof repair chicago, EPDM roof repair, rubber roof repair chicago, flat roof replacement chicago, modified bitumen repair, ponding water flat roof, flat roof coating chicago.
 
-### Hero (1. Hook)
+### 1. Hook (hero)
 
-**Eyebrow:** Water in the top-floor unit? Puddles that won't drain?
+**Eyebrow:** Flat roof leaking or holding water?
 
 **H1:** Flat Roof Repair in Chicago
 
-**Subheadline:** We repair TPO, EPDM rubber and modified bitumen roofs on Chicago 2-flats, 3-flats and garages, starting with the drains, seams and edges where flat roofs really fail.
+**Subheadline:** TPO, EPDM rubber and modified bitumen repair for Chicago 2-flats, 3-flats, garages and small commercial buildings. We find the leak, show you what failed and price the fix before we start.
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
-**Trust line:** Illinois roofing licence 104.021107 · Free roof check with photos · Written price before work starts
+**Trust line:** IL roofing licence 104.021107 · Chicago GC licence TGC144939 · [Google rating and review count]
 
-*If you own a flat roof in Chicago, this will sound familiar.*
+### 2. Pain and stakes
 
-### H2: "My tenant called. There's water coming through the ceiling again." (2. Pain and stakes)
+**Heading:** Flat roofs in Chicago take a beating
 
-Flat roof repair in Chicago is its own kind of headache. Water doesn't run off. Snow sits for weeks. And you often don't find out there's a problem until a tenant texts you a photo of a stained ceiling.
+Water pools after every storm. Snow sits for weeks. The membrane expands and contracts with 100-degree temperature swings between summer and winter. Seams lift. Flashing pulls away from parapet walls.
 
-You might be seeing puddles still sitting there days after rain, bubbles in the surface, seams lifting at the edges, or rubber pulling away from the parapet wall.
+In a 2-flat or 3-flat, a flat roof leak can drip through two floors before anyone sees it. By the time the ceiling stains, the insulation is soaked, the decking is soft and there may be mold growing in the space between.
 
-Every week it waits, more water gets under the membrane. Wet insulation under a flat roof stays wet. That's how a patch job turns into a new roof, and how a ceiling stain turns into a ceiling repair in someone's apartment.
+Garages with flat roofs are just as exposed. The roof is lower, catches debris and often has no drainage slope at all.
 
-*Most flat roof patches don't last for one reason.*
+**Bridge:** Flat roof leaks follow a pattern. Once you know it, the repair is straightforward.
 
-### H2: Flat roofs rarely fail in the middle (3. Turning point)
+### 3. Turning point
 
-Most flat roof leaks start at the edges and openings: the drain or scupper that's clogged, a seam that has opened, the spot where the roof turns up the parapet wall, or the flashing around a vent, skylight or roof hatch. Low spots that hold water slowly work their way in too.
+**Heading:** Most flat roof leaks come from the same places
 
-A quick coat of tar over the wet spot doesn't fix any of these. And the patch has to match the roof. Rubber on TPO, or tar on EPDM, doesn't bond properly and fails again.
+Lifted seams. Cracked flashing where the roof meets a wall. Punctures from foot traffic or dropped tools. Failed patches from an old repair that did not hold. Ponding water that never drains because the slope is wrong.
 
-*So we find the real entry point, and repair it with matching material.*
+These are repairs, not replacements. But flat roof work is different from shingle work. The materials are different, the tools are different, and a bad patch makes the next leak worse.
 
-### H2: How we repair your flat roof (4. Solution)
+Fix It Aid repairs flat roofs across Chicago. TPO, EPDM rubber and modified bitumen. We know the flat roofs on 2-flats, 3-flats and commercial buildings because we see them every week.
 
-**H3: TPO.** White single-ply membrane with heat-welded seams. We weld in new material over punctures and failed seams.
+**Bridge:** How we fix a flat roof leak.
 
-**H3: EPDM (rubber roof).** Common on Chicago 2-flats and garages. We clean, prime and patch, and reseal seams and edges where the rubber has shrunk.
+### 4. Solution
 
-**H3: Modified bitumen.** Rolled roofing that cracks and blisters with age. We cut out the bad area and patch it with matching material.
+**Heading:** Find the leak. Fix the leak. Check the rest.
 
-**H3: Older tar and gravel.** We patch these, and tell you honestly if it's at the end of its life. (link: /roof-replacement-chicago)
+1. **Free roof check.** We walk the entire membrane, check every seam, drain, flashing and penetration. Free roof check (link: /free-roof-check)
+2. **Photos and findings.** You see exactly what failed and where the water is getting in.
+3. **Price before work.** You approve the repair price. No surprises.
+4. **Repair with the right material.** TPO seams get heat-welded. EPDM gets bonded. Modified bitumen gets torched or cold-applied. We match the material on your roof.
 
-The steps:
-1. **Free roof check.** We walk the roof, test the drains, check seams and edges, and look at the ceiling inside. Photos of everything.
-2. **Written price,** and a straight answer if the roof is past repair.
-3. **The repair,** using material that matches your roof.
-4. **Photos when done,** so you can show your tenants or your condo board.
+**What we repair:**
+- TPO and PVC membrane: lifted seams, punctures, flashing failures
+- EPDM rubber roofs: seam separations, shrinkage, edge pulling
+- Modified bitumen: blisters, splits, cap sheet failures
+- Parapet wall flashing and coping
+- Drain and scupper blockages causing ponding
+- Roof-to-wall transitions on 2-flats and 3-flats
 
-*Here's what that means for you as an owner.*
+**When repair is not enough:** If the membrane is failing across the board, we give you a replacement price alongside the repair price. You compare and decide. Roof replacement (link: /roof-replacement-chicago)
 
-### H2: What you get with Fix It Aid (5. Benefits)
+**Bridge:** Why flat roof owners choose us.
 
-- **Tired of the same leak?** We fix the drain, seam or edge where it starts.
-- **Don't want to coordinate two contractors?** We fix the roof, then the ceiling in the unit below. We're licensed for roofing, general contracting, water damage and mold. (link: /water-damage-restoration-chicago)
-- **Not sure if it's patch or replace?** Patching a roof that needs replacing wastes money. Replacing one that needs a patch wastes more. We tell you which one you have.
-- **Need it on paper?** Written price before work, photos after.
+### 5. Benefits
 
-*Here's who's working on your building.*
+**Heading:** We do flat roofs every week. We know what holds.
 
-### H2: Licensed and used to Chicago flat roofs (6. Proof)
+- **Material-matched repair.** We use the same material as your existing roof. A mismatched patch fails faster.
+- **We check the whole roof, not just the leak.** Other problems show up when you look. We tell you about them now so you can plan.
+- **Water got inside?** Our water damage team (link: /water-damage-restoration-chicago) handles the ceiling, walls and insulation. One company, one call.
+- **Roof too far gone?** We give you both prices: repair and full replacement (link: /roof-replacement-chicago). You choose.
+- **Yearly maintenance option.** The Roof Care Plan (link: /roof-care-plan) catches flat roof problems before they leak.
 
-- Illinois roofing licence 104.021107
-- Chicago general contractor licence TGC144939
-- Brick 2-flats, 3-flats, garages and small apartment buildings make up a big part of our roofing work
-- [Google rating and review count]
-- [Real review 1: flat roof job on a 2-flat or garage, with name and neighborhood]
-- [Real job photos: flat roof before and after]
+**Bridge:** We back flat roof work in writing.
 
-*You probably still have a few questions.*
+### 6. Proof
 
-### H2: Flat roof questions (7. Objections)
+**Heading:** Licensed for roofing. Licensed for the rest.
 
-**What does flat roof repair cost?**
-Most repairs cost [price range]. Larger work, like rebuilding around a drain or redoing a parapet edge, runs [price range]. It depends on the material, the size of the damage, whether the insulation underneath is wet, and access.
+- Illinois roofing licence: 104.021107
+- City of Chicago general contractor: TGC144939
+- [Insured and bonded: yes or no]
+- [Warranty on work]
 
-**Can you work with my insurance company on a flat roof leak?**
-We don't handle or promise anything on insurance claims. We give you clear photos of the damage and the repair, which you can share with your insurance company if you choose.
+[Google rating and review count]
 
-**Is water sitting on my flat roof a problem?**
-Water that dries within a day or two is normal. Water still there after 48 hours is called ponding, and over time it wears the roof down and finds a way in. It usually means a clogged drain or a low spot, and both can be fixed.
+[Real review 1: flat roof repair on a 2-flat, name and neighborhood]
+[Real review 2: commercial or garage flat roof, name and neighborhood]
 
-**Will you need to get into my tenant's unit?**
-Only if there's interior damage to look at or repair. We'll schedule it with you so you can give your tenant notice.
+[Real job photos: flat roof before and after]
 
-**Can a rubber roof be repaired, or does it need replacing?**
-Most EPDM roofs can be repaired if the damage is in one area. If it has shrunk badly or the seams are failing everywhere, replacement is usually the better spend. A yearly check helps you get more years out of it. (link: /roof-care-plan)
+**Bridge:** Flat roof questions we hear often.
 
-*The first step is simple.*
+### 7. Objections (FAQ)
 
-### Close (8. Close)
+**How much does flat roof repair cost in Chicago?**
+It depends on the membrane type, the size of the repair and what caused the leak. A seam repair is a different job than replacing failed flashing along a full parapet wall. We check the roof for free and give you the price before we start.
 
-**H2: Stop the leak before the next tenant call**
+**My flat roof holds water after rain. Is that a problem?**
+If water sits for more than 48 hours, it is called ponding. Ponding breaks down every membrane type over time and adds weight the structure was not designed for. We check the drains, scuppers and slope and tell you what will fix it.
 
-We'll walk the roof, check the drains and seams, take photos and give you a written price. Water coming into a unit now? Call us.
+**Can a flat roof be repaired or does it need replacing?**
+If the membrane is solid overall and the leak is in one area, repair works. If the membrane is brittle, cracked in multiple spots or past its expected life, replacement usually costs less over time. We give you both prices. Roof replacement (link: /roof-replacement-chicago)
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**What flat roof materials do you work with?**
+TPO, EPDM rubber, modified bitumen, PVC and built-up roofing (BUR). Most 2-flats and 3-flats in Chicago have modified bitumen or EPDM. Newer buildings often have TPO.
+
+**Do you work on garage roofs?**
+Yes. Garage flat roofs in Chicago are common. Same materials, same process.
+
+**Do you come to my neighborhood?**
+We work across the City of Chicago. See the list (link: /areas-we-serve).
+
+### 8. Close
+
+**Headline:** Get your flat roof checked for free.
+
+**Text:** We walk the whole roof, find what is leaking and give you the price. No charge. No obligation.
+
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
 ---
 
-## Page 4. Roof replacement
+## Page 4: /roof-replacement-chicago
 
 - **URL:** /roof-replacement-chicago
 - **Title tag:** Roof Replacement in Chicago | New Roofs | Fix It Aid
 - **Meta description:** When repair is no longer worth it, we replace the roof right. Shingle and flat roofs in Chicago. Clear written price. Illinois licence 104.021107.
 - **H1:** Roof Replacement in Chicago
-- **Main keyword:** roof replacement chicago
+- **Primary keyword:** roof replacement chicago. Secondaries used: new roof chicago, roof replacement cost chicago, reroof chicago, how much does a new roof cost chicago, shingle replacement chicago, flat roof replacement chicago.
 
-### Hero (1. Hook)
+### 1. Hook (hero)
 
-**Eyebrow:** Told you need a new roof? Get a second look first.
+**Eyebrow:** Shingle and flat roof replacement across Chicago
 
 **H1:** Roof Replacement in Chicago
 
-**Subheadline:** We show you photos and tell you straight whether your roof needs replacing. If it does, you get a full tear-off, a sound deck, a new roof and the permit, with the price in writing first.
+**Subheadline:** When fixing the old roof costs more than replacing it, you need a straight answer and a written price. We tear off the old roof, replace the decking where needed and install a new one. Illinois licensed roofer 104.021107.
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
-**Trust line:** Illinois roofing licence 104.021107 · Chicago general contractor licence TGC144939 · Written price before work starts · [Warranty on work]
+**Trust line:** IL roofing licence 104.021107 · Chicago GC licence TGC144939 · [Google rating and review count]
 
-*A new roof is one of the biggest bills a homeowner pays, so it's worth getting this right.*
+### 2. Pain and stakes
 
-### H2: "Do I really need a new roof, or is someone trying to sell me one?" (2. Pain and stakes)
+**Heading:** "The roofer said it needs replacing. Does it?"
 
-Maybe one roofer said repair and another said replace. Maybe the leaks keep coming back and you're tired of paying for patches. Maybe you're selling, buying, or just looking at a 25-year-old roof and wondering how many winters it has left.
+You had a leak fixed last year. Now there is another one on the other side. The shingles are curling. The granules are in the gutters. A roofer told you it is time for a new roof, but that is a big check to write.
 
-The fear runs both ways. Replace too early and you've spent thousands you didn't need to. Wait too long and the next storm sends water through a rotted deck into the attic, the insulation and the ceilings, and the job gets bigger and more expensive.
+Or you have a flat roof on a 2-flat. The patches are layered on top of each other. Every spring there is a new leak in a new spot.
 
-*The answer depends on something most roof quotes never show you.*
+The real question is not whether the roof is old. It is whether repair still makes financial sense. If you are paying for a repair every year, a new roof may cost less over the next ten years. But only if someone actually runs the numbers.
 
-### H2: Most roofers sell what they install. The deck tells the truth. (3. Turning point)
+**Bridge:** That is the first thing we do.
 
-A company that earns its money on new roofs will tend to find a reason you need one. The honest way to decide is to look at three things: the roof's age, how much of it is damaged, and the condition of the wood deck underneath.
+### 4. Turning point
 
-One bad area on a solid deck is usually worth repairing. (link: /roof-repair-chicago) Worn shingles everywhere, leaks in several places, soft spots or a sagging roof line usually mean replacement, because you'll keep paying for repairs that don't last.
+**Heading:** We tell you whether replacement actually makes sense
 
-*So we show you the photos, and if it's time, we replace it properly.*
+Some roofs need replacing. Some do not. A 15-year-old roof with one bad area is a repair. A 25-year-old roof with curling shingles and soft decking in two spots is a replacement.
 
-### H2: What a Fix It Aid roof replacement includes (4. Solution)
+We do both. We are a roofing company, not just an installer. So we give you the honest answer: repair price and replacement price, side by side. If the repair works, take the repair. Roof repair (link: /roof-repair-chicago)
 
-1. **Free roof check and photos,** roof and attic.
-2. **Itemized written price** listing materials, work, permit and timeline.
-3. **Permit.** Most roof replacements in Chicago need a city permit. We pull it.
-4. **Protection.** We cover landscaping, siding and windows before tear-off.
-5. **Full tear-off** down to the deck, not a new layer over old problems.
-6. **Deck repair.** Rotted or soft wood replaced before anything new goes on.
-7. **Ice and water protection** along edges and valleys, where Chicago winters do the most damage, plus new underlayment and flashing.
-8. **Ventilation check,** so the new roof lasts and ice dams are less likely.
-9. **The new roof.** Asphalt shingles on pitched roofs. TPO, EPDM or modified bitumen on flat roofs. (link: /flat-roof-repair-chicago)
-10. **Cleanup and walkthrough,** including a magnet sweep for nails, and the warranty in writing. [Warranty on work]
+We do not push one over the other. The numbers speak for themselves.
 
-*Here's what that means for you.*
+**Bridge:** Here is what a roof replacement looks like.
 
-### H2: What you get with Fix It Aid (5. Benefits)
+### 4. Solution
 
-- **Afraid of replacing too soon?** You see the photos first. If a repair will do, we quote the repair.
-- **Afraid of hidden rot?** Full tear-off means we see the deck and fix it before the new roof covers it.
-- **Afraid of the damage the old roof already did?** We're also licensed for water damage and mold, so the attic, insulation and ceilings get repaired by the same team. (link: /mold-removal-chicago)
-- **Afraid of a bill that grows?** Itemized written price before work starts. [Confirm: how deck repair beyond the estimate is priced, for example per sheet]
+**Heading:** From old roof to new roof, step by step
 
-*Here's who's doing the work.*
+1. **Free roof check.** We inspect the full roof and the decking underneath. Free roof check (link: /free-roof-check)
+2. **Written price.** Materials, labor, permits, dumpster and timeline. In writing. No verbal estimates.
+3. **Tear-off.** We strip the old roof down to the decking. If decking is rotten, we replace it.
+4. **Install.** New underlayment, new shingles or membrane, new flashing, new vents. Everything by code.
+5. **Final walk.** We walk the roof with you (or show you photos) and clean up the property.
 
-### H2: Licensed roofer and general contractor (6. Proof)
+**What we install:**
+- **Shingle roofs.** Architectural shingles on houses, bungalows and pitched garages.
+- **Flat roofs.** TPO, EPDM rubber and modified bitumen on 2-flats, 3-flats, garages and small commercial buildings. Flat roof repair (link: /flat-roof-repair-chicago)
+- **Mixed roofs.** Pitched in the front, flat in the back. Common in Chicago. We handle both.
 
-- Illinois roofing licence 104.021107
-- Chicago general contractor licence TGC144939
-- We pull the permit ourselves. [Confirm: own crew or subcontractors]
+**Bridge:** What makes this quote different from the others.
+
+### 5. Benefits
+
+**Heading:** A written price that does not change halfway through
+
+- **Repair vs. replace, side by side.** We show you both prices so you can compare.
+- **Written price, not a verbal estimate.** Materials, labor, permits and dumpster are included. The price on paper is the price you pay.
+- **Decking replaced where needed.** We do not shingle over soft wood. We are a general contractor (TGC144939), so we handle the carpentry ourselves.
+- **Permits pulled.** Where the city requires them, we handle permits.
+- **Roof Care Plan after.** Once the new roof is on, a yearly check (link: /roof-care-plan) keeps the warranty valid and catches small problems early.
+
+**Bridge:** Check our credentials yourself.
+
+### 6. Proof
+
+**Heading:** Licensed to roof and licensed to build
+
+- Illinois roofing licence: 104.021107
+- City of Chicago general contractor: TGC144939
+- [Insured and bonded: yes or no]
 - [Warranty on work]
-- [Google rating and review count]
-- [Real review 1: roof replacement, with name and neighborhood]
-- [Real job photos: tear-off, deck repair, finished roof]
 
-*You probably still have a few questions.*
+[Google rating and review count]
 
-### H2: Roof replacement questions (7. Objections)
+[Real review 1: shingle roof replacement, name and neighborhood]
+[Real review 2: flat roof replacement on a 2-flat, name and neighborhood]
+
+[Real job photos: full replacement before and after]
+
+**Bridge:** What to know before replacing your roof.
+
+### 7. Objections (FAQ)
 
 **How much does a new roof cost in Chicago?**
-A typical Chicago house or 2-flat roof replacement runs [price range]. Flat roofs [price range]. It depends on size and pitch, material, how many layers come off, how much deck needs replacing, chimneys and skylights, access for the dumpster, and the permit. [Financing: yes or no]
+It depends on size, pitch, material, how many layers come off and how much decking needs replacing. What moves the price: steep vs. flat, shingles vs. TPO, one story vs. three, easy access vs. tight lot. We check the roof for free and give you a written price. [Typical price ranges: add only once confirmed.]
 
-**Will my insurance cover a new roof?**
-That's a question for your insurance company. We don't handle claims or promise coverage. You will get clear photos of the roof's condition, which you can share with your insurance company if you choose.
+**How long does a roof replacement take?**
+[Typical timeline, for example "Most shingle roofs take two to three days. Flat roofs with insulation can take longer."]
 
-**How long does it take?**
-Most homes take [typical days] once work starts, weather permitting. We give you the timeline in the written price.
+**Do you pull permits?**
+Where the City of Chicago requires a permit, we pull it. The permit number is on the final invoice.
 
-**Do I need to be home, and how messy is it?**
-You don't need to be home for most of the work. Tear-off is loud for a day or so. We protect the yard and clean up daily.
+**Will my new roof come with a warranty?**
+[Warranty details: workmanship warranty length and manufacturer warranty length.]
 
-**How long does a shingle roof last in Chicago?**
-It depends on the shingle, the install and the attic ventilation. Freeze and thaw, ice dams and summer heat all shorten a roof's life here. A free roof check tells you where yours stands.
+**Can I stay in the house during the work?**
+Yes. It is noisy, but you do not have to leave.
 
-*The first step is simple.*
+**What if you find rotten decking?**
+We replace it. The cost is in the written price if we found it during the inspection. If we find more during tear-off, we call you with the additional cost before we proceed.
 
-### Close (8. Close)
+**My roof leaked and there is water damage inside. Can you fix that too?**
+Yes. Our water damage team (link: /water-damage-restoration-chicago) handles the inside. If mold started, our mold team (link: /mold-removal-chicago) removes it. One company.
 
-**H2: Find out if you really need a new roof**
+### 8. Close
 
-A free roof check, photos of the deck and shingles, and a straight answer on repair versus replacement. If it's time, a written price.
+**Headline:** Find out what a new roof costs.
 
-**Buttons:** [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**Text:** Book a free roof check. We inspect the roof, run the numbers and give you a written price. Repair price included if repair is an option.
+
+**Buttons:** [Get a free roof check] [Call (773) 987-1693]
 
 ---
 
-## Page 5. Roof Care plan
+## Page 5: /roof-care-plan
 
 - **URL:** /roof-care-plan
 - **Title tag:** Roof Care Plan: Yearly Roof Maintenance Chicago | Fix It Aid
 - **Meta description:** A yearly roof check and small fixes for one set price, so leaks are caught early. For Chicago homes, 2-flats and small buildings.
 - **H1:** Roof Care Plan for Chicago Homes
-- **Main keyword:** roof maintenance chicago
+- **Primary keyword:** roof maintenance chicago. Secondaries used: roof maintenance plan, annual roof inspection, preventive roof care, roof care plan chicago, roof tune-up, gutter cleaning with roof check.
 
-**Note for the owner:** what's included, the price, the visit timing and the plan extras are proposals. Confirm or change each item marked [Owner to confirm] before launch.
+### 1. Hook (hero)
 
-### Hero (1. Hook)
-
-**Eyebrow:** Catch roof problems before they leak
+**Eyebrow:** Yearly roof check + small fixes, one price
 
 **H1:** Roof Care Plan for Chicago Homes
 
-**Subheadline:** Once a year a licensed roofer checks your roof, fixes the small stuff and sends you photos. One set price of [plan price] a year.
+**Subheadline:** A cracked shingle costs [repair price example]. A section of rotten decking costs ten times more. The Roof Care Plan catches the small problems before they become big ones. One yearly price, no surprises.
 
-**Buttons:** [Join the Roof Care plan] (link: /contact) · [Call (773) 987-1693]
+**Buttons:** [Join the Roof Care Plan] [Call (773) 987-1693]
 
-**Trust line:** Illinois roofing licence 104.021107 · Photo report after every visit · [Plan price] a year
+**Trust line:** IL roofing licence 104.021107 · Chicago GC licence TGC144939 · [Google rating and review count]
 
-*Most people only think about the roof when it's already leaking.*
+### 2. Pain and stakes
 
-### H2: "I didn't know anything was wrong until the ceiling stained." (2. Pain and stakes)
+**Heading:** Chicago weather does not wait for your schedule
 
-That's how most roof calls start. Nobody climbs on their roof to look. Then a winter storm hits, an ice dam forms, and water shows up in the bedroom, or in a tenant's kitchen.
+Spring storms rip shingles. Summer sun bakes flat roofs. Fall leaves clog gutters and trap water. Winter ice dams push water under the shingles and into the attic.
 
-By then it's an emergency call, a bigger repair, and maybe wet insulation and drywall on top. And Chicago gives a roof a hard year: freeze and thaw opens cracks, snow sits on flat roofs for weeks, spring storms bring heavy rain, wind and sometimes hail.
+Most homeowners do not climb up and check. They find out about a problem when water drips through the ceiling. By then the repair is bigger and the cost is higher.
 
-*Here's the thing about those leaks.*
+On a flat roof it is worse. A lifted seam or a clogged drain can sit there for a full season before it leaks into the unit below.
 
-### H2: Almost every big leak was a small fix first (3. Turning point)
+**Bridge:** One check a year prevents most of this.
 
-A cracked vent boot. A clogged roof drain. A bit of flashing pulling loose. A few lifted shingles. Each one is a quick, cheap fix when someone spots it. Missed for a winter, it's a stained ceiling and a much bigger bill.
+### 3. Turning point
 
-The problem isn't the roof. It's that nobody is looking at it.
+**Heading:** The cheapest roof repair is the one you never need
 
-*So we look at it every year, and fix the small things while they're small.*
+Every roofer will tell you: the problems that cost the most started small. A cracked pipe boot. A nail backing out. Flashing pulling away from a wall. These are five-minute fixes if you catch them. They are major repairs if you wait a year.
 
-### H2: What the Roof Care plan includes [Owner to confirm each item] (4. Solution)
+The Roof Care Plan is a yearly inspection and minor repair rolled into one visit. A licensed roofer (IL 104.021107) climbs up, checks everything and fixes small problems on the spot. You get a written report with photos.
 
-**One yearly visit, [timing, for example in the fall before winter]**
+If we find something bigger, we tell you the cost separately. You decide.
 
-On the roof:
-- Check shingles or flat roof membrane for damage, wear and lifted edges
-- Check and reseal flashing at chimneys, walls and skylights where needed
-- Check vent pipe boots, roof vents and flat roof seams
-- Clear roof drains, scuppers and debris, and check the gutters on the roof line
+**Bridge:** What the plan includes.
 
-Small fixes on the same visit, no extra charge:
-- Sealing small gaps and openings
-- Resetting or replacing [up to X] loose or missing shingles
-- Small patches on flat roofs [up to a set size]
+### 4. Solution
 
-Inside:
-- A look in the attic, where we can get in, for damp insulation or daylight
-- A check of attic ventilation
+**Heading:** What you get with the Roof Care Plan
 
-After the visit:
-- A short report with photos of what we found and fixed
-- A heads-up, with a written price, on anything that will need work in the next year or two
+**Yearly visit includes:**
+- Full roof inspection: shingles or membrane, flashing, vents, pipe boots, valleys, eaves
+- Flat roof check: seams, drains, scuppers, ponding, parapet flashing
+- Gutter cleanout and downspout check
+- Minor repairs included: cracked sealant, a loose shingle, a small flashing fix
+- Written report with photos emailed to you
+- Priority scheduling if you need a repair between visits
 
-Plan extras: [Priority booking for plan members if a leak happens] [Discount on repairs outside the plan, for example X% off]
+**What is not included:** Major repairs, full replacements and storm damage are quoted separately. If you need a repair, plan members get priority scheduling and [discount: confirm percentage or remove].
 
-How to join:
-1. **Start with a free roof check** (link: /free-roof-check) so we know your roof's starting point.
-2. **Sign up** by phone or form.
-3. **Yearly visit** at a time that suits you.
-4. **Photo report** in your inbox.
+**Price:** [Roof Care Plan price per year. Different tiers for house vs. 2-flat vs. 3-flat if applicable.]
 
-*Here's what that means for you.*
+**Bridge:** Why homeowners join.
 
-### H2: What you get (5. Benefits)
+### 5. Benefits
 
-- **No more surprise leaks.** Small problems get fixed before winter turns them into big ones.
-- **No more remembering to call a roofer.** We put it on the calendar.
-- **A known cost.** [Plan price] a year covers the visit and the small fixes listed.
-- **A record.** Yearly photos are useful for your own files, for a future buyer, and for keeping up with roof warranty requirements.
-- **One team if something's already wrong.** If we find a wet ceiling, damp attic or mold from an old leak, we're licensed for water damage and mold too. (link: /water-damage-restoration-chicago)
+**Heading:** Catch it early, fix it cheap
 
-*Here's who comes out.*
+- **Small problems fixed on the spot.** Loose shingles, cracked sealant, clogged gutters. Handled during the visit at no extra charge.
+- **Written report with photos.** You see what your roof looks like. Useful for insurance records and for budgeting future work.
+- **Priority scheduling.** If a storm hits and you need a repair, plan members go to the front of the line.
+- **Keep your warranty valid.** Many roofing warranties require annual maintenance. This plan satisfies that requirement.
+- **One set price per year.** No service call fees, no per-visit charges.
 
-### H2: A licensed roofer, not a handyman (6. Proof)
+**Bridge:** Backed by a licensed roofing company.
 
-- Illinois roofing licence 104.021107
-- Chicago general contractor licence TGC144939
-- Roofing is where Fix It Aid started
-- [Google rating and review count]
-- [Real review 1: Roof Care plan member or yearly check, with name and neighborhood]
-- [Sample photo report page]
+### 6. Proof
 
-*You probably still have a few questions.*
+**Heading:** A licensed roofer checks your roof, not a salesperson
 
-### H2: Roof Care plan questions (7. Objections)
+- Illinois roofing licence: 104.021107
+- City of Chicago general contractor: TGC144939
+- [Insured and bonded: yes or no]
 
-**How much does roof maintenance cost?**
-[Plan price] a year per building [Owner to confirm: per house, per 2-flat, larger buildings priced separately]. Bigger repairs, storm damage and replacement aren't included. If we find any, you get photos and a written price, and you decide.
+[Google rating and review count]
 
-**Is a roof maintenance plan worth it?**
-If one visit catches a cracked vent boot or a clogged drain before it leaks, it has usually paid for itself.
+[Real review from a Roof Care Plan member, name and neighborhood]
 
-**Does the plan cover insurance work?**
-No. We don't handle or promise anything on insurance claims. Your yearly photos are yours to keep and to share with your insurance company if you choose.
+[Sample report photo or screenshot]
 
-**When do you come, and do I need to be home?**
-Once a year, [timing]. You don't need to be home for the roof check. If we want to look in the attic, we'll arrange a time with you.
+See our roofing work (link: /roofing-chicago). See all services (link: /about).
 
-**Do you offer this for condo associations and small apartment buildings?**
-Yes. [Owner to confirm pricing for larger buildings.] Condo boards and property managers find the yearly photo report useful for their records.
+**Bridge:** How the Roof Care Plan works.
 
-**Can I cancel?**
-[Owner to confirm the cancellation terms.]
+### 7. Objections (FAQ)
 
-*The first step is simple.*
+**How much does the Roof Care Plan cost?**
+[Price per year. If tiered: "Houses start at $X. 2-flats at $Y."]
 
-### Close (8. Close)
+**What counts as a "minor repair" included in the visit?**
+Anything that takes less than [time threshold, for example "30 minutes"] and does not require new materials beyond sealant, nails or a few shingles. Examples: resealing a pipe boot, renailing a lifted shingle, clearing a clogged scupper.
 
-**H2: Catch it before it leaks**
+**What if you find a bigger problem?**
+We document it with photos, explain what it is and give you a separate price. Plan members get priority scheduling and [discount if applicable]. Roof repair (link: /roof-repair-chicago)
 
-Join the Roof Care plan and let a licensed roofer check your roof every year. Not sure where your roof stands today? Start with a free roof check.
+**When do you do the yearly check?**
+We schedule it in [best season, for example "spring or early fall"] so we catch winter damage and prepare for the next season. You pick the date.
 
-**Buttons:** [Join the Roof Care plan] (link: /contact) · [Book a free roof check] (link: /free-roof-check) · [Call (773) 987-1693]
+**Can I join if my roof is old?**
+Yes. We do an initial check. If the roof needs repair first, we tell you. Once the roof is in working condition, the plan keeps it there.
+
+**Do you cover flat roofs?**
+Yes. The check includes flat roof membrane, seams, drains and parapet flashing. Flat roof repair (link: /flat-roof-repair-chicago)
+
+### 8. Close
+
+**Headline:** Lock in your yearly roof check.
+
+**Text:** One price. One visit. Small problems fixed on the spot. Written report with photos.
+
+**Buttons:** [Join the Roof Care Plan] [Call (773) 987-1693]

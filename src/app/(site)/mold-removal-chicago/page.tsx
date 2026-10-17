@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/mold-removal-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /mold-removal-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/mold-removal-chicago",
   slug: "mold-removal-chicago",
@@ -12,121 +11,123 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Mold Removal in Chicago",
     buttons: [
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
-      {
-        label: "Get a mold removal quote",
-        href: "#lead-form",
-        kind: "form",
-      },
+      { label: "Book a mold inspection", href: "#lead-form", kind: "form" },
+      { label: "Call (773) 987-1693", kind: "call" },
     ],
-    trust: [
-      "Licensed for mold remediation [Mold licence number]",
-      "Chicago GC license TGC144939",
-      "Licensed Illinois roofer",
-      "[Warranty on work]",
-    ],
-    eyebrow: "Mold came back after you cleaned it?",
-    sub: "We remove the mold and fix the leak that's feeding it, so you pay for this once. Basements, attics, bathrooms and behind walls, with a written price before we start.",
-    bridge: "If you've already tried to get rid of it, you know how this goes.",
+    trust: ["[Mold licence number]", "Chicago general contractor licence TGC144939", "[Google rating and review count]"],
+    eyebrow: "Mold in the basement, bathroom or attic?",
+    sub: "We contain the area, remove the mold and fix the moisture source so it does not come back. Clear price before we start.",
+    bridge: "Removal that works has two parts: remove the mold and stop the water.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "You cleaned it. It came back. Now it's bigger.",
+      heading: "Cleaning the surface does not fix the problem",
       blocks: [
         {
           type: "p",
-          text: "\"I bleached it twice and it's back.\" \"The ceiling in the top-floor bedroom keeps going gray.\" \"The finished basement smells, and the drywall is spotted at the bottom.\" That's what we hear.",
+          text: "You scrub the mold off the bathroom wall. It comes back in three months. You bleach the basement floor. It comes back after the next rain. Every time it returns, it is a little bigger.",
         },
         {
           type: "p",
-          text: "Bleach clears what you can see. It doesn't reach mold that has grown into drywall, wood or insulation. Every month it sits, more material has to come out, and a small job turns into a wall, a ceiling or a whole basement. If you're selling or renting, it turns into a disclosure problem too.",
+          text: "Surface cleaning removes what you can see. It does not reach what is behind the drywall, inside the insulation or under the subfloor. And it does not stop the moisture that caused the growth in the first place.",
         },
         {
-          type: "subhead",
-          text: "Where it shows up in Chicago homes",
-        },
-        {
-          type: "ul",
-          items: [
-            "**Basements:** foundation walls, carpet and drywall after a flood or sewer backup. Basement mold removal is a big part of our work.",
-            "**Attics:** roof leaks, ice dams and bath fans that blow into the attic. Attic mold removal often means new insulation.",
-            "**Bathrooms, kitchens and windows:** behind tile, under sinks, and on sills soaked by winter condensation.",
-          ],
+          type: "p",
+          text: "In a Chicago basement, the conditions never really change. Concrete holds moisture. Humidity stays high. A slow leak can run for months before anyone notices. That is why mold keeps coming back.",
         },
       ],
-      bridge: "Most mold jobs fail for one reason.",
+      bridge: "Remove the mold. Then fix why it grew.",
     },
     {
       kind: "turning",
-      heading: "The mold isn't the problem. The water is.",
+      heading: "Remove the mold. Then fix why it grew.",
       blocks: [
         {
           type: "p",
-          text: "Mold can't grow without moisture. A mold company can clean the wall perfectly, but if the roof above it still leaks, the mold is back next season and you're paying twice. That's the step most companies skip, because they can't do it. They're mold cleaners, not roofers or contractors.",
+          text: "Most mold companies remove what is in front of them and leave. If the moisture source is a roof leak, a pipe leak or a drainage problem, the mold comes back.",
         },
         {
           type: "p",
-          text: "Fix It Aid is both. We're licensed for mold remediation, licensed as a Chicago general contractor and licensed as an Illinois roofer. Roofing is where we started.",
+          text: "Fix It Aid is a mold company and a general contractor. We remove the mold and fix the cause. If the moisture came from the roof, our roofing team repairs it (link: /roofing-chicago). If a pipe burst or a drain backed up, our water damage team handles the water (link: /water-damage-restoration-chicago). If the basement flooded, our basement cleanup team dries and disinfects it (link: /flooded-basement-cleanup-chicago).",
+        },
+        {
+          type: "p",
+          text: "One company. The mold gets removed and the source gets fixed in the same project.",
         },
       ],
-      bridge: "So we fix both: the mold and the water behind it.",
+      bridge: "Here is how mold removal works.",
     },
     {
       kind: "solution",
-      heading: "How our mold remediation works",
+      heading: "Contained removal, source repair, clearance test",
       blocks: [
         {
           type: "ol",
           items: [
-            "**Inspect.** We find all of the mold and the moisture behind it. You get photos and readings. Not sure yet? Start with a mold inspection (link: /mold-inspection-chicago).",
-            "**Contain.** We seal the area with plastic and control the air [Confirm: negative air and HEPA air scrubbers], so spores stay out of the rest of your home.",
-            "**Remove.** Moldy drywall and insulation come out. Wood and surfaces we can save get HEPA-vacuumed, cleaned and treated.",
-            "**Fix the source.** Roof, flashing, gutters or venting, repaired by our own licensed crew (link: /roof-repair-chicago). If a pipe is the cause, we show you exactly where.",
-            "**Rebuild and check.** New drywall, paint and finishes, then a final check.",
+            "**Inspection and testing.** Air samples, surface samples and moisture readings. We find the mold and the moisture source. (link: /mold-inspection-chicago)",
+            "**Containment.** We seal the work area with plastic sheeting and run negative air pressure so spores do not spread to other rooms.",
+            "**Removal.** HEPA vacuuming, antimicrobial treatment, removal of affected drywall, insulation or wood where needed.",
+            "**Source repair.** We fix what caused the moisture. Roof leak, pipe, drain, ventilation, whatever it is.",
+            "**Clearance testing.** After removal, we test the air again. You get a written clearance report showing the levels are back to normal.",
+            "**Rebuild.** New drywall, insulation and paint where we removed material. We are a general contractor, so we close it up ourselves.",
+          ],
+        },
+        {
+          type: "subhead",
+          text: "What we remove mold from",
+        },
+        {
+          type: "ul",
+          items: [
+            "Basements and crawl spaces",
+            "Attics, often caused by roof leaks or poor ventilation",
+            "Bathrooms and kitchens",
+            "Behind walls and under floors",
+            "2-flats, condos and multi-unit buildings",
+            "Small commercial spaces",
           ],
         },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "What makes this different from a surface cleaning.",
     },
     {
       kind: "benefits",
-      heading: "What you don't have to worry about",
+      heading: "The mold is gone. The cause is fixed. The air is tested.",
       blocks: [
         {
           type: "ul",
           items: [
-            "**Paying for it twice.** We stop the moisture, not just the stain.",
-            "**Juggling three contractors.** One crew handles the mold, the roof leak and the drywall. One schedule, one written price.",
-            "**A surprise bill.** You get the price in writing before work starts. If we find more behind the wall, we show you and ask before we go further.",
-            "**Being upsold.** If a small area is something you can clean yourself, we tell you.",
+            "**Contained removal.** Sealed work area, HEPA filtration, negative air pressure. Spores do not spread to the rest of the house.",
+            "**Moisture source fixed.** We do not just remove mold. We fix the leak, the drain, the ventilation problem or whatever fed the growth.",
+            "**Clearance test included.** Air sampling after removal confirms the levels are back to normal. Written report.",
+            "**We rebuild what we remove.** Drywall, insulation, paint. Chicago GC licence TGC144939.",
+            "**One company from start to finish.** Inspection, removal, source repair and rebuild. No subcontractors to coordinate.",
           ],
         },
       ],
-      bridge: "Don't just take our word for it.",
+      bridge: "Licensed for every part of the job.",
     },
     {
       kind: "proof",
-      heading: "Check our licenses, then read what customers say",
+      heading: "Licensed for mold. Licensed to build.",
       blocks: [
         {
           type: "ul",
           items: [
-            "Licensed for mold remediation [Mold licence number]",
-            "Chicago general contractor license TGC144939 · Illinois roofing license 104.021107",
-            "[Mold certification, for example IICRC]",
+            "Mold remediation licence: [Mold licence number]",
+            "City of Chicago general contractor: TGC144939",
+            "Illinois roofing licence: 104.021107 (when the cause is a roof leak)",
+            "[Insured and bonded: yes or no]",
             "[Warranty on work]",
             "[Google rating and review count]",
-            "[Real review 1, about mold removal, with name and neighborhood]",
-            "[Real review 2, with name and neighborhood]",
-            "[Real job photos: containment set up, wall opened, finished room]",
+            "[Real review 1: basement mold removal, name and neighborhood]",
+            "[Real review 2: attic or bathroom mold, name and neighborhood]",
+            "[Real job photos: containment setup, removal in progress, after clearance]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "What homeowners ask about mold removal.",
     },
     {
       kind: "faq",
@@ -135,63 +136,51 @@ export const content: StoryPageContent = {
         {
           type: "faq",
           q: "How much does mold removal cost in Chicago?",
-          a: "Most jobs fall between [price range]. The price depends on how big the area is, where it is (an open basement wall is quicker than a tight attic), what has to come out, how much the source needs repairing, and how much rebuilding you want. You get it in writing after the inspection.",
+          a: "It depends on the size of the affected area, what materials are involved (drywall, wood, concrete) and how much needs to be removed and rebuilt. We inspect first, then give you a written price. (link: /mold-inspection-chicago)",
         },
         {
           type: "faq",
-          q: "Does insurance cover mold removal?",
-          a: "That depends on your policy and on what caused the mold. Your insurance company decides that. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.",
+          q: "Can I remove mold myself?",
+          a: "On a hard surface smaller than about 10 square feet, yes, with proper protection. Larger areas, mold behind walls, mold in HVAC ducts or mold in a multi-unit building should be handled by a licensed company with containment and HEPA filtration.",
         },
         {
           type: "faq",
-          q: "How long does it take? Can we stay home?",
-          a: "Many jobs take [Confirm typical number of days]. Because the work area is sealed off, most families stay home while we work in the basement or attic. We'll tell you up front if a job is big enough that you should plan around it.",
+          q: "How long does mold removal take?",
+          a: "[Typical timeline, for example \"A small bathroom job may take one to two days. A full basement can take three to five days.\"]",
         },
         {
           type: "faq",
-          q: "Can I clean the mold myself?",
-          a: "Small spots on a hard surface, yes. The EPA suggests a professional when the area is larger than about 10 square feet, when mold is inside walls or ductwork, or when it came from sewage or flood water.",
+          q: "Will the mold come back?",
+          a: "Not if the moisture source is fixed. That is why we identify and repair the cause as part of every job. The clearance test confirms the air is clean after removal.",
         },
         {
           type: "faq",
-          q: "What causes mold in a basement?",
-          a: "In Chicago, usually water through foundation cracks or window wells, a sewer backup, a failed sump pump, or damp air with no airflow. A dehumidifier helps. It won't close a crack.",
+          q: "Do you test before and after?",
+          a: "Yes. Air samples before removal give us a baseline. Air samples after removal confirm the job is done. Both are in your written report.",
         },
         {
           type: "faq",
-          q: "Do you do black mold removal?",
-          a: "Yes. Black mold removal in Chicago follows the same process: contain, remove, fix the cause. Color doesn't change the job.",
+          q: "My landlord will not fix the mold. What can I do?",
+          a: "The written inspection report and lab results document the problem. Chicago tenants have rights regarding habitability. The report gives you documented evidence.",
+        },
+        {
+          type: "faq",
+          q: "What if the mold came from a roof leak or flooding?",
+          a: "We fix the roof, handle the water damage and remove the mold, all in one project. (link: /roofing-chicago)",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Get the mold out. Fix why it grew.",
     },
     {
       kind: "close",
-      heading: "Get rid of the mold and the reason it's there",
-      blocks: [
-        {
-          type: "p",
-          text: "Send us a few details or a photo. We'll call you back, inspect, and give you a written price to remove the mold and stop the water. Then you pay for it once.",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Get the mold out. Fix why it grew.",
+      blocks: [{ type: "p", text: "Book a mold inspection. We test, give you the results and price the removal. You decide." }],
       buttons: [
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
-        {
-          label: "Get a mold removal quote",
-          href: "#lead-form",
-          kind: "form",
-        },
+        { label: "Book a mold inspection", href: "#lead-form", kind: "form" },
+        { label: "Call (773) 987-1693", kind: "call" },
       ],
     },
   ],
-  formButton: "Get my mold removal quote",
 };
 
 export default function Page() {

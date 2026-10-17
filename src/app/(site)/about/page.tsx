@@ -8,7 +8,8 @@ import { Hero } from "@/components/sections/Hero";
 import { Rows, Rating, Reviews, CloseCta, Statement } from "@/components/sections/Sections";
 import { CallBar } from "@/components/layout/CallBar";
 
-// Copy: 2-page-content/5d, "Page 5: /about".
+// Copy: 2-page-content/5d, "Page 5: /about". Rewritten 17 Oct 2026 (SEO content rewrite):
+// removed invented founding year and AI-sounding bio, removed suburb claim (City of Chicago only).
 const URL = "/about";
 export const metadata = metadataFor(URL);
 
@@ -67,13 +68,8 @@ export default function AboutPage() {
               Why we built Fix It Aid this way
             </h2>
             <p className="muted">
-              Fix It Aid was founded in 2015 by a team of experienced professionals who recognized the need for a more efficient and reliable way to handle roofing and construction projects in Chicago. The company was started with a vision to provide a comprehensive solution for all roofing and construction needs, from small repairs to large-scale projects.
-
-Today, Fix It Aid is a leading roofing and construction company in Chicago, known for its commitment to quality, customer service, and innovation. The company has grown to become a trusted name in the industry, with a team of experienced professionals who are dedicated to providing the best possible service to their clients.
-
-At Fix It Aid, we believe that every project is unique, and we are dedicated to providing a customized solution for each and every one of our clients. We are committed to using the latest technology and materials to ensure that each project is completed to the highest standards of quality and efficiency.
-
-Whether you are looking for a new roof, a repair, or a complete renovation, Fix It Aid is here to help. We are dedicated to providing a comprehensive solution for all your roofing and construction needs, and we are committed to using the latest technology and materials to ensure that each project is completed to the highest standards of quality and efficiency.
+              Fix It Aid started in roofing. [Owner story: two or three sentences in the owner&apos;s own words. Who started the
+              company, when, and why.]
             </p>
             <p className="muted">
               We got licensed for the rest of the job. Today Fix It Aid is a licensed roofer, a City of Chicago general contractor, a mold and
@@ -84,7 +80,6 @@ Whether you are looking for a new roof, a repair, or a complete renovation, Fix 
             <div className="frame" data-parallax style={{ aspectRatio: "4 / 4.6" }}>
               <Photo name="brickFlat" ratio={4 / 4.6} sizes="(max-width: 960px) 100vw, 600px" />
             </div>
-            {/* <p className="caption">Example photo. Team and truck photos are on their way.</p> */}
           </div>
         </div>
       </section>
@@ -111,7 +106,9 @@ Whether you are looking for a new roof, a repair, or a complete renovation, Fix 
                 {
                   worry: "We work in Chicago",
                   answer: (
-                    "We work in Chicago and the surrounding areas, including the City of Chicago, Cook County, and the surrounding suburbs."
+                    <>
+                      City of Chicago only. See <Link href={routes.areas.href}>areas we serve</Link>.
+                    </>
                   ),
                 },
               ]}
@@ -127,7 +124,6 @@ Whether you are looking for a new roof, a repair, or a complete renovation, Fix 
               Our licences
             </h2>
             <p className="lead" style={{ marginTop: 20 }}>
-              We have been in business since 2015.{" "}
               <Rating />
             </p>
           </div>

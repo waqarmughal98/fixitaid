@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/mold-inspection-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /mold-inspection-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/mold-inspection-chicago",
   slug: "mold-inspection-chicago",
@@ -12,120 +11,119 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Mold Inspection and Testing in Chicago",
     buttons: [
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
-      {
-        label: "Book a mold inspection",
-        href: "#lead-form",
-        kind: "form",
-      },
+      { label: "Book an inspection", href: "#lead-form", kind: "form" },
+      { label: "Call (773) 987-1693", kind: "call" },
     ],
-    trust: [
-      "Chicago GC license TGC144939",
-      "Licensed for mold remediation [Mold licence number]",
-      "[Mold certification, for example IICRC]",
-      "[Google rating and review count]",
-    ],
-    eyebrow: "Musty smell that won't go away?",
-    sub: "You'll know what's growing, where it's coming from and what it takes to fix it. Our mold inspection ends with a written report and a straight answer, even if that answer is \"you don't need us\".",
-    bridge: "Here's what most people are dealing with when they call.",
+    trust: ["[Mold licence number]", "Chicago general contractor licence TGC144939", "[Google rating and review count]"],
+    eyebrow: "Musty smell? Dark spots on the wall or ceiling?",
+    sub: "We test the air and surfaces, find the moisture source and give you a written report with photos. You know what you are dealing with before spending a dollar on removal.",
+    bridge: "The answer starts with testing, not cleaning.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "You can smell it. You just can't find it.",
+      heading: "You can smell it but you cannot find it",
       blocks: [
         {
           type: "p",
-          text: "\"The basement smells like a wet towel.\" \"There's a gray spot behind the dresser.\" \"We bought a vintage 2-flat and I want to know what's in the walls.\" That's how most mold calls start. Not with certainty. With a feeling that something is off.",
+          text: "A musty smell in the basement. Dark spots behind the bathroom vanity. A stain on the ceiling that came back after it was painted over. The question is always the same: is it mold, and how bad is it?",
         },
         {
           type: "p",
-          text: "The hard part is the waiting. You scrub a spot and it comes back. You run a dehumidifier and the smell is still there. You read online and get ten different answers. Meanwhile, if there is mold, it keeps growing in the places you can't see: behind drywall, under carpet, above a ceiling stain.",
+          text: "Guessing does not help. Bleaching the surface does not kill what is behind the wall. Ignoring it does not make it stop. Mold keeps growing as long as the moisture is there.",
         },
         {
-          type: "subhead",
-          text: "Signs worth checking",
-        },
-        {
-          type: "ul",
-          items: [
-            "A musty, earthy smell, often worse after rain",
-            "Dark, green or white spots on walls, ceilings or inside closets",
-            "Peeling paint, or drywall that feels soft",
-            "A leak, flood or burst pipe in the past year, even one that \"dried out\"",
-            "Spots that come back after you clean them",
-          ],
+          type: "p",
+          text: "In Chicago basements, garden units and older 2-flats, the conditions are right all year. Humidity from concrete walls, condensation on cold pipes, slow leaks from the roof or a bathroom above.",
         },
       ],
-      bridge: "Most inspections stop at \"yes, you have mold\". That misses the part that matters.",
+      bridge: "Test first. Then you know what to do.",
     },
     {
       kind: "turning",
-      heading: "The mold isn't the real problem. The water is.",
+      heading: "Test first. Then you know what to do.",
       blocks: [
         {
           type: "p",
-          text: "Mold only grows where there's moisture. Find mold without finding the water, and you're paying for half an answer. In Chicago, the water usually comes from the same few places: a roof or flashing leak, a foundation crack opened by freeze and thaw, a basement that takes on water in spring storms, a bathroom fan that vents nowhere, or a pipe leaking inside a wall.",
+          text: "Mold removal without testing is guesswork. You do not know what is in the air, how far it spread or where the moisture is coming from. That means you might clean the wrong area, miss what is behind the wall, or spend money on removal while the source keeps feeding new growth.",
         },
         {
           type: "p",
-          text: "Most mold companies can tell you there's mold. Most can't tell you exactly where the water gets in, and can't fix it if they do.",
+          text: "A proper mold inspection gives you facts: air samples, surface samples, moisture readings and a written report. You know what is there, where it is, and what caused it.",
+        },
+        {
+          type: "p",
+          text: "Fix It Aid does mold inspections across Chicago. We test, document and explain the results. If removal is needed, we do that too (link: /mold-removal-chicago). If the source is a roof leak, our roofing team fixes it (link: /roofing-chicago). If it is water damage, our restoration team handles it (link: /water-damage-restoration-chicago).",
         },
       ],
-      bridge: "So our inspection looks for both.",
+      bridge: "Here is what happens during an inspection.",
     },
     {
       kind: "solution",
-      heading: "What happens during your mold inspection",
+      heading: "What a mold inspection covers",
       blocks: [
         {
           type: "ol",
           items: [
-            "**You call or book online.** Tell us what you're seeing or smelling. We set a time that suits you. [Response time, for example \"on site within 2 hours\"]",
-            "**We walk the whole property.** Basement, attic, bathrooms, kitchen, windows, and every spot you're worried about.",
-            "**We measure moisture.** Meter readings show if a wall or floor is wet right now, even when it looks dry. [Confirm: thermal camera] This is how we detect mold risk inside walls without cutting holes.",
-            "**We test, if it helps.** Air and surface samples, compared with an outdoor sample, sent to [Mold testing: in-house or third-party lab]. If testing won't change the plan, we tell you and you don't pay for it.",
-            "**You get a written report.** Photos, readings, what we found, the likely source and what we recommend, in plain words.",
+            "**Visual inspection.** We check the area you are concerned about plus common problem spots: basement walls, bathroom ceilings, window frames, attic, crawl space.",
+            "**Air sampling.** We test the air to find out what is floating in the space and compare it to outdoor baseline levels.",
+            "**Surface sampling.** We swab or tape-lift visible growth and send it to the lab.",
+            "**Moisture readings.** We use a moisture meter on walls, floors and ceilings to find the water source.",
+            "**Written report.** Lab results, photos, moisture map and our recommendation. Yours to keep.",
+          ],
+        },
+        {
+          type: "subhead",
+          text: "What we inspect",
+        },
+        {
+          type: "ul",
+          items: [
+            "Basements, crawl spaces and garden units",
+            "Bathrooms, kitchens and laundry rooms",
+            "Attics and roof lines, often tied to roof leaks (link: /roofing-chicago)",
+            "Behind walls where there is a musty smell but nothing visible",
+            "2-flats and condos",
           ],
         },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "What the inspection gives you.",
     },
     {
       kind: "benefits",
-      heading: "What you get that most inspections don't give you",
+      heading: "Facts, not guesses",
       blocks: [
         {
           type: "ul",
           items: [
-            "**No scare tactics.** If it's a small patch you can clean yourself, we say so.",
-            "**No tests you don't need.** We only take samples when the result will change what you do.",
-            "**The cause, not just the mold.** You leave knowing where the water comes from. If it's the roof or flashing, we can fix it ourselves. If a pipe is the cause, we show you exactly where.",
-            "**One contractor if you need work.** We're licensed for mold remediation, licensed as a Chicago general contractor and as an Illinois roofer. No handing you off.",
+            "**Lab-tested results.** Air and surface samples analyzed by an independent lab. You see the numbers.",
+            "**Moisture source identified.** The report tells you where the water is coming from, not just where the mold is.",
+            "**Written report with photos.** Use it to plan removal, share with a landlord, or give to your insurer.",
+            "**No pressure to remove.** If the results come back clean, we tell you. If removal is needed, we give you a price for mold removal and you decide. (link: /mold-removal-chicago)",
+            "**Cause gets fixed too.** Roof leak? Our roofing team. Water damage? Our restoration team. One company. (link: /water-damage-restoration-chicago)",
           ],
         },
       ],
-      bridge: "Don't just take our word for it.",
+      bridge: "Licensed and documented.",
     },
     {
       kind: "proof",
-      heading: "Licensed in Chicago, and you can check it",
+      heading: "Licensed for mold work in Chicago",
       blocks: [
         {
           type: "ul",
           items: [
-            "Chicago general contractor license TGC144939",
-            "Illinois roofing license 104.021107",
-            "Licensed for mold remediation and water damage restoration [Mold licence number]",
-            "Illinois roofing license 104.021107",
-            "100+ Satisfied customers",
+            "Mold remediation licence: [Mold licence number]",
+            "City of Chicago general contractor: TGC144939",
+            "[Insured and bonded: yes or no]",
+            "[Google rating and review count]",
+            "[Real review 1: mold inspection, name and neighborhood]",
+            "[Real review 2: basement mold concern, name and neighborhood]",
+            "[Real job photos: inspection equipment, lab report sample]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "What people ask before booking an inspection.",
     },
     {
       kind: "faq",
@@ -133,64 +131,47 @@ export const content: StoryPageContent = {
       blocks: [
         {
           type: "faq",
-          q: "What does a mold inspection cost in Chicago?",
-          a: "Our inspection: [Free mold inspection: yes or no, or a price]. Mold testing, if you need it: [price range]. The price depends on how many samples you need, the size of the home, and whether it's one unit or a 2-flat. You get the price before we come out.",
+          q: "How much does a mold inspection cost in Chicago?",
+          a: "[Inspection price or price range.] The price covers the visual check, air samples, surface samples, moisture readings and the written report.",
         },
         {
           type: "faq",
-          q: "Do I need mold testing, or just an inspection?",
-          a: "Often just an inspection. If the mold is visible and the cause is clear, testing adds cost without changing the plan. The EPA's own guidance says the same. Mold testing in Chicago is most useful when there's a smell but nothing visible, after water damage, before a sale, or to confirm a cleanup worked.",
+          q: "Do I need a mold inspection or can I just clean it?",
+          a: "If you can see mold on a small area, about 10 square feet or less on a hard surface, surface cleaning may be enough. If the area is larger, if the mold is behind a wall, or if you smell mold but cannot see it, an inspection tells you what you are dealing with before you spend money on removal.",
         },
         {
           type: "faq",
-          q: "Is black mold worse than other kinds?",
-          a: "Color won't tell you the type. Many common molds look black. Black mold testing in a lab can name it. Either way, the fix is the same: remove it properly and stop the moisture.",
+          q: "How long does a mold inspection take?",
+          a: "[Typical time, for example \"One to two hours on site. Lab results come back in a few days.\"]",
         },
         {
           type: "faq",
-          q: "Will insurance pay for this?",
-          a: "That depends on your policy, and your insurance company decides. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.",
+          q: "Can mold be behind a wall even if I cannot see it?",
+          a: "Yes. Mold grows where moisture is. A slow pipe leak or condensation inside a wall creates the right conditions. The moisture meter and air samples help us find it without tearing the wall open.",
         },
         {
           type: "faq",
-          q: "How long does it take, and will you make a mess?",
-          a: "[Confirm typical visit length] for most homes. We don't open walls without asking you first. Lab results take [Confirm lab turnaround time].",
+          q: "What happens if you find mold?",
+          a: "We give you the lab results, explain what they mean and give you a price for removal if needed. You decide. (link: /mold-removal-chicago)",
         },
         {
           type: "faq",
-          q: "Why is mold inspection important in Chicago?",
-          a: "Older homes, basements, brick that holds water, humid summers and winters with every window shut. Damp spots are easy to miss here. An inspection catches them while the fix is small.",
+          q: "Do you work in condos and 2-flats?",
+          a: "Yes. Multi-unit buildings are a large part of our mold work in Chicago. We coordinate with building managers when needed.",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Find out what is in the air.",
     },
     {
       kind: "close",
-      heading: "Stop guessing about that smell",
-      blocks: [
-        {
-          type: "p",
-          text: "Tell us where you're seeing or smelling it. We'll call you back, set a time, and you'll have a real answer and a written report. Already know it's mold? Go straight to mold removal (link: /mold-removal-chicago). Water coming in right now? See water damage help (link: /water-damage-restoration-chicago).",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Find out what is in the air",
+      blocks: [{ type: "p", text: "Book a mold inspection. We test, document and give you a written report. You know what you are dealing with." }],
       buttons: [
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
-        {
-          label: "Book a mold inspection",
-          href: "#lead-form",
-          kind: "form",
-        },
+        { label: "Book an inspection", href: "#lead-form", kind: "form" },
+        { label: "Call (773) 987-1693", kind: "call" },
       ],
     },
   ],
-  formButton: "Request my mold inspection",
 };
 
 export default function Page() {

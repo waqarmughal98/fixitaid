@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/flooded-basement-cleanup-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /flooded-basement-cleanup-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/flooded-basement-cleanup-chicago",
   slug: "flooded-basement-cleanup-chicago",
@@ -12,106 +11,121 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Flooded Basement Cleanup in Chicago",
     buttons: [
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
-      {
-        label: "Get basement cleanup help",
-        href: "#lead-form",
-        kind: "form",
-      },
+      { label: "Call (773) 987-1693", kind: "call" },
+      { label: "Book a visit online", href: "#lead-form", kind: "form" },
     ],
-    trust: [
-      "24/7 phone: Yes",
-      "Response time: within one business hour",
-      "Licensed for water damage restoration",
-      "Chicago GC license TGC144939",
-    ],
-    eyebrow: "Water in the basement after last night's storm?",
-    sub: "We pump it out, clean and disinfect, dry it properly so mold doesn't start, and show you why it happened. Rain water or sewer backup.",
-    bridge: "Then here's what you're dealing with.",
+    trust: ["Chicago general contractor licence TGC144939", "[Mold licence number]", "[Google rating and review count]"],
+    eyebrow: "Water or sewage in your basement?",
+    sub: "Heavy rain, sewer backup or a failed sump pump. We pump out the water, disinfect the space and dry it so mold does not start.",
+    bridge: "The first step is getting the water out, fast.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "It's not just water. It's your stuff, your space and the smell.",
+      heading: "Chicago basements flood. That is not the worst part.",
       blocks: [
         {
           type: "p",
-          text: "\"Three inches of water and the carpet's floating.\" \"It came up through the floor drain and it smells like sewage.\" \"This is the second time this year.\" Basement flooding in Chicago hits the things people keep downstairs: boxes of photos, the washer and dryer, the furnace, the garden unit a tenant lives in.",
+          text: "The worst part is what happens after. Standing water soaks into concrete, wood framing and drywall. Furniture, boxes and anything on the floor absorbs it. If it was a sewer backup, everything the water touched is contaminated.",
         },
         {
           type: "p",
-          text: "Waiting makes it worse. Carpet pad and drywall wick water up the wall. After a sewer backup, anything soft it touched usually can't be saved. Leave it a few days and the musty smell sets in, and mold is next.",
+          text: "In a garden unit, the damage hits a living space. In a 2-flat, water in the basement can affect the building's mechanicals: furnace, water heater, electrical panel.",
+        },
+        {
+          type: "p",
+          text: "And the clock is ticking. Mold can start growing on wet materials within 24 to 48 hours. A flooded basement that is not dried properly becomes a mold problem within a week.",
         },
       ],
-      bridge: "And the cleanup is only half of it.",
+      bridge: "A shop vac and fans will not dry a flooded basement.",
     },
     {
       kind: "turning",
-      heading: "If you only clean it up, it floods again",
+      heading: "A shop vac and fans will not dry a flooded basement",
       blocks: [
         {
           type: "p",
-          text: "Many Chicago neighborhoods have older sewers that carry rain and wastewater in the same pipes. In a heavy storm they fill and push water back up through basement floor drains. Add foundation cracks from years of freeze and thaw, window wells that fill with rain, downspouts that empty against the house, and a sump pump that quits when you need it.",
+          text: "Standing water gets pumped out easily enough. But the moisture that soaked into the concrete, the framing and the drywall does not come out with a mop. Without commercial dehumidifiers and air movers, the space stays damp for weeks.",
         },
         {
           type: "p",
-          text: "If you're thinking \"my basement keeps flooding when it rains\", one of those is the reason. A cleanup crew dries the floor and leaves. The water finds the same way in next time.",
+          text: "And if the water was from a sewer backup, surface cleaning is not safe. Sewage water contains bacteria. Everything it touched needs to be cleaned and disinfected properly, and contaminated materials like carpet and drywall need to come out.",
+        },
+        {
+          type: "p",
+          text: "Fix It Aid handles flooded basement cleanup across Chicago. We pump, clean, disinfect and dry. If the flooding came from a sewer backup, we follow contamination protocols. If mold started, our mold team removes it (link: /mold-removal-chicago). If the sump pump failed, we tell you what it needs.",
         },
       ],
-      bridge: "So we clean it up and find the way in.",
+      bridge: "How we clean up a flooded basement.",
     },
     {
       kind: "solution",
-      heading: "How we clean up your basement",
+      heading: "Pump. Clean. Disinfect. Dry.",
       blocks: [
         {
           type: "ol",
           items: [
-            "**Basement water removal.** Pumps and extractors get standing water out fast.",
-            "**Tear-out.** Wet carpet, pad, drywall and insulation that can't be saved go out. With clean water from a sump pump failure, we can often dry more in place if we get there quickly.",
-            "**Clean and disinfect.** Floors, walls and anything that stays. A sewage backup cleanup is not a mop and a fan job.",
-            "**Dry and measure.** Dehumidifiers and air movers, with moisture readings until it's dry, so mold doesn't start (link: /mold-removal-chicago).",
-            "**Find the cause, then rebuild.** We check the foundation, window wells, downspouts, drains and sump pit and show you what let the water in. If a pipe or the sewer line is the cause, we show you exactly where. Then drywall and finishes go back in.",
+            "**Water removal.** Submersible pumps and extractors get the water out.",
+            "**Contamination check.** If the water is from a sewer backup, we follow contamination protocols. Contaminated materials (carpet, pad, lower drywall) come out.",
+            "**Cleaning and disinfection.** Floors, walls and remaining surfaces cleaned and treated with antimicrobial agents.",
+            "**Structural drying.** Commercial dehumidifiers and air movers dry the space. We monitor moisture levels daily.",
+            "**Mold check.** After drying, we inspect for mold. If we find it, our mold team handles removal. (link: /mold-removal-chicago)",
+            "**Rebuild.** New drywall, flooring and paint where needed. Chicago GC licence TGC144939.",
+          ],
+        },
+        {
+          type: "subhead",
+          text: "What we clean up",
+        },
+        {
+          type: "ul",
+          items: [
+            "Heavy rain flooding through basement walls or floor",
+            "Combined sewer backup, common in older Chicago neighborhoods",
+            "Sump pump failure",
+            "Drain tile backup",
+            "Garden unit flooding",
+            "Furnace room and utility area flooding",
           ],
         },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "Why this matters more than you think.",
     },
     {
       kind: "benefits",
-      heading: "What you get",
+      heading: "Pumped, disinfected, dried, checked for mold",
       blocks: [
         {
           type: "ul",
           items: [
-            "**A basement you can use again,** finished room or garden unit, not a bare concrete floor.",
-            "**No mold in a month.** We dry to the readings, not to the touch.",
-            "**An answer about next time.** You know why it flooded and what would help stop it.",
-            "**A clear record.** We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.",
+            "**Fast response.** Water damage gets worse by the hour. We start extraction as soon as we arrive.",
+            "**Sewer backup handled safely.** Contaminated water is a health risk. We remove affected materials and disinfect with proper agents, not household bleach.",
+            "**Documented for insurance.** We photograph the damage and take moisture readings. We document the damage with photos and a written report you can share with your insurer.",
+            "**Mold prevention.** We dry the space with commercial equipment and check for mold after. If it started, we remove it. (link: /mold-removal-chicago)",
+            "**Rebuild included.** Drywall, flooring, paint. One company from pump-out to finished wall.",
           ],
         },
       ],
-      bridge: "Don't just take our word for it.",
+      bridge: "A licensed contractor, not a cleanup crew.",
     },
     {
       kind: "proof",
-      heading: "Licensed in Chicago and easy to check",
+      heading: "Licensed and equipped for basement flooding",
       blocks: [
         {
           type: "ul",
           items: [
-            "Licensed for water damage restoration",
-            "Chicago general contractor license TGC144939",
-            "Illinois roofing licence: 104.021107",
-            "1-year workmanship warranty",
-            "100+ Satisfied customers",
+            "City of Chicago general contractor: TGC144939",
+            "Mold remediation licence: [Mold licence number]",
+            "[Insured and bonded: yes or no]",
+            "[Google rating and review count]",
+            "[Real review 1: basement flooding after heavy rain, name and neighborhood]",
+            "[Real review 2: sewer backup cleanup, name and neighborhood]",
+            "[Real job photos: pump-out, drying equipment, before and after]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "Questions people ask when their basement floods.",
     },
     {
       kind: "faq",
@@ -119,63 +133,47 @@ export const content: StoryPageContent = {
       blocks: [
         {
           type: "faq",
-          q: "What does flooded basement cleanup cost?",
-          a: "The price depends on how much water, how many square feet, finished or unfinished, and how long it sat. You get a written price before repair work starts.",
+          q: "How much does flooded basement cleanup cost?",
+          a: "It depends on how deep the water is, how large the area is and whether it is a sewer backup (contamination adds cleaning and disposal steps). We assess the damage and give you a price before repair work starts.",
         },
         {
           type: "faq",
-          q: "Will insurance pay for it?",
-          a: "That depends on your policy and the cause of the water. Your insurance company decides. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.",
+          q: "Is sewer backup water dangerous?",
+          a: "Yes. It contains bacteria and should not be cleaned with household products. We remove contaminated materials, disinfect with professional-grade agents and dry the space with commercial equipment.",
         },
         {
           type: "faq",
-          q: "How fast do I need to start?",
-          a: "As soon as you can. The EPA says wet materials should be dried within 24 to 48 hours to help prevent mold.",
+          q: "Will my insurance cover a flooded basement?",
+          a: "Standard homeowner policies often do not cover sewer backup unless you have a rider. We document the damage with photos and a written report you can share with your insurer. Check your policy or ask your agent.",
         },
         {
           type: "faq",
-          q: "Can I clean up a sewage backup myself?",
-          a: "A little on bare concrete, maybe, with gloves, boots and disinfectant. If it soaked into carpet, drywall or a finished room, those materials usually need to come out.",
+          q: "How long does cleanup take?",
+          a: "[Typical timeline, for example \"Water removal is usually same-day. Drying takes three to five days with commercial equipment. Rebuild time depends on what was damaged.\"]",
         },
         {
           type: "faq",
-          q: "How do I prevent basement flooding in Chicago?",
-          a: "It depends on how the water gets in. Common fixes are sealing foundation cracks, covering window wells, moving downspouts away from the house, a sump pump with a backup, and for sewer backups, a backflow valve or overhead sewer installed by a licensed plumber. We'll show you which ones fit your house.",
+          q: "Should I worry about mold after a flood?",
+          a: "Yes. Mold can start within 24 to 48 hours on wet materials. We dry the space properly and check for mold after. If it started, our mold team removes it. (link: /mold-removal-chicago)",
         },
         {
-          type: "p",
-          text: "**Do I have to leave? I have a tenant downstairs.** Usually no one upstairs has to move out. We work around tenants in 2-flats and 3-flats and tell you how long the garden unit will be out of use.",
+          type: "faq",
+          q: "Can you help with a flooded garden unit?",
+          a: "Yes. Garden units in Chicago are below grade and flood frequently. Same process: pump, clean, disinfect, dry.",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Get the water out of your basement now.",
     },
     {
       kind: "close",
-      heading: "Water in the basement? Let's get it out today.",
-      blocks: [
-        {
-          type: "p",
-          text: "Call (773) 987-1693 now, or send a few details and we'll call you back. We'll clean it up, dry it properly and show you how it got in. Water elsewhere in the house? See water damage restoration (link: /water-damage-restoration-chicago).",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Get the water out of your basement now",
+      blocks: [{ type: "p", text: "Call us. We pump, disinfect, dry and check for mold. You know the price before we rebuild." }],
       buttons: [
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
-        {
-          label: "Get basement cleanup help",
-          href: "#lead-form",
-          kind: "form",
-        },
+        { label: "Call (773) 987-1693", kind: "call" },
+        { label: "Book a visit online", href: "#lead-form", kind: "form" },
       ],
     },
   ],
-  formButton: "Get help with my basement",
 };
 
 export default function Page() {
