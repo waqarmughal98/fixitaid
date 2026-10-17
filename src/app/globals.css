@@ -184,9 +184,10 @@
   .sec-cta.center { justify-content: center; }
   .stack > .sec-cta { margin-top: 28px; }
   .stack > .notes { margin-top: 36px; }
-  .statement-split { align-items: center; }
-  .statement-split .statement { font-size: clamp(28px, 3.1vw, 48px); max-width: 24ch; }
-  .statement-aside { margin-top: 24px; max-width: 54ch; }
+  .statement-split .statement { font-size: clamp(30px, 3.8vw, 58px); max-width: 26ch; }
+  .statement-row { margin-top: clamp(36px, 5vw, 64px); align-items: center; }
+  .statement-side .statement-aside { max-width: 46ch; }
+  .statement-side .sec-cta { margin-top: 28px; }
   .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: var(--ink-3); border: 1px solid var(--line-2); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7); }
   .video-frame video, .video-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
   .video-frame.is-empty > img { filter: brightness(0.55); }
@@ -194,7 +195,8 @@
   .video-frame .play > span { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--ink); box-shadow: 0 0 0 10px rgba(217, 169, 78, 0.22); }
   .video-frame .play svg { width: 30px; height: 30px; margin-left: 4px; }
   .video-frame .video-tag { position: absolute; left: 16px; bottom: 16px; right: 16px; z-index: 2; }
-  .video-frame .video-sound { position: absolute; left: 16px; bottom: 16px; z-index: 3; min-height: 44px; padding: 10px 20px 10px 16px; font-size: 15px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45); }
+  .video-frame .video-ui { position: absolute; inset: 0; z-index: 3; display: flex; align-items: flex-end; justify-content: flex-start; padding: 16px; pointer-events: none; }
+  .video-frame .video-sound { pointer-events: auto; min-height: 44px; padding: 10px 20px 10px 16px; font-size: 15px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45); }
   .video-cap { margin-top: 14px; font-size: 14px; color: var(--muted); }
   .rail-cta { position: relative; z-index: 2; margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
   .rail-cta .btn { min-height: 48px; padding: 11px 22px; font-size: 15px; }

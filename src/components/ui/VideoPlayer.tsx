@@ -43,14 +43,15 @@ export function VideoPlayer({ src, poster, label }: { src: string; poster?: stri
         <source src={src} type="video/mp4" />
       </video>
       {muted && (
-        <button type="button" className="btn btn-gold video-sound" onClick={unmute} aria-label="Unmute and play the video from the start">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-            <path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z" opacity=".35" />
-            <path d="M3 9v6h4l5 4V5L7 9H3z" />
-            <path d="m16 9.5 5 5m0-5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-          </svg>
-          Unmute
-        </button>
+        <div className="video-ui">
+          <button type="button" className="btn btn-gold video-sound" onClick={unmute} aria-label="Unmute and play the video from the start">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M3 9v6h4l5 4V5L7 9H3z" />
+              <path d="m16 9.5 5 5m0-5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+            </svg>
+            Unmute
+          </button>
+        </div>
       )}
     </>
   );

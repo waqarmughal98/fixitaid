@@ -65,7 +65,7 @@ export default function FreeRoofCheckPage() {
                 Book a Free Inspection
               </a>
               <a className="btn btn-white" href={site.phoneHref}>
-                Call Now
+                Call {site.phone}
               </a>
             </>
           }

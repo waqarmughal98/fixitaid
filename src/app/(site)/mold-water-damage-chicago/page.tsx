@@ -57,7 +57,7 @@ export default function MoldWaterPage() {
           actions={
             <>
               <a className="btn btn-white" href={site.phoneHref}>
-                Call Now
+                Call {site.phone}
               </a>
               <a className="btn btn-gold" href="#mold-form">
                 Book a Free Inspection

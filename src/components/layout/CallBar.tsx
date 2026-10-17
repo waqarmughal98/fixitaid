@@ -5,7 +5,7 @@ export function CallBar({ formHref, formLabel }: { formHref: string; formLabel: 
   return (
     <div className="callbar">
       <a className="btn btn-white" href={site.phoneHref}>
-        Call Now
+        Call {site.phone}
       </a>
       <a className="btn btn-gold" href={formHref}>
         Book a Free Inspection

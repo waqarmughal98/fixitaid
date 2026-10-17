@@ -36,7 +36,7 @@ export default function AboutPage() {
         actions={
           <>
             <a className="btn btn-white" href={site.phoneHref}>
-              Call Now
+              Call {site.phone}
             </a>
             <Link className="btn btn-gold" href={routes.contact.href}>
               Book a Free Inspection

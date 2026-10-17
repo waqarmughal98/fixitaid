@@ -380,7 +380,7 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
                 </a>
               ))}
             <a className="btn btn-white" href={site.phoneHref}>
-              Call Now
+              Call {site.phone}
             </a>
           </>
         }

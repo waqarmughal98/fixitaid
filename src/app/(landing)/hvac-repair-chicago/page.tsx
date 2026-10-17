@@ -44,7 +44,7 @@ export default function HvacRepairPage() {
           actions={
             <>
               <a className="btn btn-white" href={site.phoneHref}>
-                Call Now
+                Call {site.phone}
               </a>
               <a className="btn btn-gold" href="#hvac-form">
                 Book a Free Inspection

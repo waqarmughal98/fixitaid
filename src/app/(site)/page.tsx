@@ -47,7 +47,7 @@ export default function HomePage() {
               Book a Free Inspection
             </a>
             <a className="btn btn-white" href={site.phoneHref}>
-              Call Now
+              Call {site.phone}
             </a>
           </>
         }

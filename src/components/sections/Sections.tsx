@@ -89,7 +89,7 @@ export function SectionCta({ href = "#lead-form", call = true, align }: { href?:
       </a>
       {call && (
         <a className="btn btn-white" href={site.phoneHref}>
-          Call Now
+          Call {site.phone}
         </a>
       )}
     </div>
@@ -200,15 +200,17 @@ export function Statement({ children, aside, media, cta }: { children: React.Rea
   if (media) {
     return (
       <section className="section">
-        <div className="wrap grid-12 statement-split">
-          <div className="span-6">
-            <p className="statement" data-words>
-              {children}
-            </p>
-            {aside && <div className="statement-aside">{aside}</div>}
-            {cta}
+        <div className="wrap statement-split">
+          <p className="statement" data-words>
+            {children}
+          </p>
+          <div className="grid-12 statement-row">
+            <div className="span-7">{media}</div>
+            <div className="span-5 statement-side">
+              {aside && <div className="statement-aside">{aside}</div>}
+              {cta}
+            </div>
           </div>
-          <div className="span-6">{media}</div>
         </div>
       </section>
     );

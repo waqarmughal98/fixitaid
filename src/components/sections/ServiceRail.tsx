@@ -59,7 +59,7 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
                   Book a Free Inspection
                 </a>
                 <a className="btn btn-white" href={site.phoneHref}>
-                  Call Now
+                  Call {site.phone}
                 </a>
               </div>
             </div>
