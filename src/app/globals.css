@@ -675,3 +675,11 @@
   .rail-nav-count { min-width: 56px; text-align: center; font-size: 15px; letter-spacing: 0.04em; color: rgba(242, 238, 230, 0.85); }
   .rail-track { padding-bottom: calc(var(--section) * 0.5); }
 }
+
+/* Mobile: tighter space under the intro video, and more room around the card controls */
+@media (max-width: 960px) {
+  .svideo { padding-bottom: 0; }
+  .svideo .statement-media { margin-top: 28px; }
+  .rail-nav { padding-top: 28px; padding-bottom: 8px; }
+  .rail-track { padding-bottom: 0; }
+}

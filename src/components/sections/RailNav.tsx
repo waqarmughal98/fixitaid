@@ -40,24 +40,8 @@ export function RailNav({ count }: { count: number }) {
     if (!target) return;
     setActive(Math.max(0, Math.min(count - 1, i)));
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const from = vp.scrollLeft;
-    const to = from + target.getBoundingClientRect().left - vp.getBoundingClientRect().left;
-    if (reduce) {
-      vp.scrollLeft = to;
-      return;
-    }
-    // Animate by hand with snapping paused, so the glide never fights the scroll-snap points.
-    const start = performance.now();
-    const dur = 420;
-    vp.style.scrollSnapType = "none";
-    const step = (now: number) => {
-      const t = Math.min(1, (now - start) / dur);
-      const e = 1 - Math.pow(1 - t, 3);
-      vp.scrollLeft = from + (to - from) * e;
-      if (t < 1) requestAnimationFrame(step);
-      else vp.style.scrollSnapType = "";
-    };
-    requestAnimationFrame(step);
+    const left = vp.scrollLeft + target.getBoundingClientRect().left - vp.getBoundingClientRect().left;
+    vp.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
   };
 
   return (
