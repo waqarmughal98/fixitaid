@@ -244,8 +244,8 @@ function StorySection({
 }) {
   const { kind } = section;
   const surface = index % 2 === 1;
-  // Every content section ends with a CTA. Call joins the booking button on the high-intent ones.
-  const cta = <SectionCta href="#lead-form" call={kind === "proof" || kind === "turning"} />;
+  // Only the turning-point and proof sections carry a CTA; the rest stay clean.
+  const cta = kind === "turning" ? <SectionCta href="#lead-form" call={false} /> : kind === "proof" ? <SectionCta href="#lead-form" /> : null;
 
   if (kind === "faq") {
     const items = section.blocks
@@ -380,7 +380,7 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
                 </a>
               ))}
             <a className="btn btn-white" href={site.phoneHref}>
-              Call {site.phone}
+              Call Now
             </a>
           </>
         }

@@ -1,5 +1,6 @@
 import { site } from "@/config/site";
 import { Photo } from "@/components/ui/Photo";
+import { VideoPlayer } from "@/components/ui/VideoPlayer";
 
 // The video slot beside the home page statement. With a real file it is a normal player.
 // Without one it shows a clearly marked placeholder (only while placeholders are on).
@@ -27,9 +28,7 @@ export function VideoFrame() {
   return (
     <figure style={{ margin: 0 }}>
       <div className="video-frame">
-        <video controls playsInline preload="metadata" poster={poster ?? undefined} aria-label={caption ?? "Fix It Aid video"}>
-          <source src={src} type="video/mp4" />
-        </video>
+        <VideoPlayer src={src} poster={poster ?? undefined} label={caption ?? "Fix It Aid intro video"} />
       </div>
       {caption && <figcaption className="video-cap">{caption}</figcaption>}
     </figure>

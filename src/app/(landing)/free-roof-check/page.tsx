@@ -65,7 +65,7 @@ export default function FreeRoofCheckPage() {
                 Book a Free Inspection
               </a>
               <a className="btn btn-white" href={site.phoneHref}>
-                Call {site.phone}
+                Call Now
               </a>
             </>
           }
@@ -114,7 +114,6 @@ export default function FreeRoofCheckPage() {
                   ]}
                 />
               </div>
-              <SectionCta href="#roof-form" />
             </div>
             <div className="span-6">
               <div className="frame" data-parallax style={{ aspectRatio: "4 / 4.4" }}>
@@ -166,7 +165,6 @@ export default function FreeRoofCheckPage() {
                   { worry: "The damage inside", answer: "Wet drywall, stained ceilings and mold from the leak, handled by our own licensed crew." },
                 ]}
               />
-              <SectionCta href="#roof-form" />
             </div>
           </div>
           {reviewsReady && (
@@ -177,7 +175,6 @@ export default function FreeRoofCheckPage() {
         </section>
 
         <FaqSection
-          ctaHref="#roof-form"
           title="Roof questions"
           items={[
             ...faqs.slice(0, 3),

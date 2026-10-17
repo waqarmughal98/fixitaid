@@ -46,7 +46,7 @@ export const site = {
 
   // Home page video. Put the file in /public/video and set `src`, e.g. "/video/how-we-work.mp4".
   // Until then the video slot only shows while placeholders are on, never on the live site.
-  video: { src: null as string | null, poster: null as string | null, caption: null as string | null },
+  video: { src: "/video/fixitaid-intro.mp4" as string | null, poster: "/video/fixitaid-intro-poster.jpg" as string | null, caption: null as string | null },
 
   // Certifications and memberships we can prove with paperwork. Add one only after the owner
   // confirms it, and use the logo the issuer supplies for members (put it in /public/certs).

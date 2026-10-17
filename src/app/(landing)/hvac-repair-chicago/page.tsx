@@ -44,7 +44,7 @@ export default function HvacRepairPage() {
           actions={
             <>
               <a className="btn btn-white" href={site.phoneHref}>
-                Call {site.phone}
+                Call Now
               </a>
               <a className="btn btn-gold" href="#hvac-form">
                 Book a Free Inspection
@@ -120,7 +120,6 @@ export default function HvacRepairPage() {
                   ]}
                 />
               </div>
-              <SectionCta href="#hvac-form" />
             </div>
           </div>
         </section>
@@ -164,7 +163,6 @@ export default function HvacRepairPage() {
                   { worry: "A call center", answer: "You talk to our Chicago team, and our own tech comes to the house." },
                 ]}
               />
-              <SectionCta href="#hvac-form" />
             </div>
           </div>
           {reviewsReady && (
@@ -175,7 +173,6 @@ export default function HvacRepairPage() {
         </section>
 
         <FaqSection
-          ctaHref="#hvac-form"
           title="Heating questions"
           items={[
             {

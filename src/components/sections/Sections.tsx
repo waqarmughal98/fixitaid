@@ -89,7 +89,7 @@ export function SectionCta({ href = "#lead-form", call = true, align }: { href?:
       </a>
       {call && (
         <a className="btn btn-white" href={site.phoneHref}>
-          Call {site.phone}
+          Call Now
         </a>
       )}
     </div>
@@ -150,7 +150,7 @@ export function Faq({ items }: { items: { q: string; a: React.ReactNode }[] }) {
 }
 
 /** FAQ block with its heading on the left. */
-export function FaqSection({ title, items, surface, ctaHref = "#lead-form" }: { title: string; items: { q: string; a: React.ReactNode }[]; surface?: boolean; ctaHref?: string }) {
+export function FaqSection({ title, items, surface }: { title: string; items: { q: string; a: React.ReactNode }[]; surface?: boolean }) {
   return (
     <section className={`section${surface ? " surface" : ""}`}>
       <div className="wrap grid-12">
@@ -158,10 +158,6 @@ export function FaqSection({ title, items, surface, ctaHref = "#lead-form" }: { 
           <h2 className="h2" data-split>
             {title}
           </h2>
-          <p className="muted" style={{ marginTop: 16 }}>
-            Still have a question? Talk to a real person.
-          </p>
-          <SectionCta href={ctaHref} />
         </div>
         <div className="span-8">
           <Faq items={items} />
@@ -190,7 +186,7 @@ export function CloseCta({ title, text, primary, secondary }: { title: string; t
           </a>
           {secondary && (
             <a className="btn btn-white" href={site.phoneHref}>
-              Call {site.phone}
+              Call Now
             </a>
           )}
         </div>
@@ -205,14 +201,14 @@ export function Statement({ children, aside, media, cta }: { children: React.Rea
     return (
       <section className="section">
         <div className="wrap grid-12 statement-split">
-          <div className="span-7">
+          <div className="span-6">
             <p className="statement" data-words>
               {children}
             </p>
             {aside && <div className="statement-aside">{aside}</div>}
             {cta}
           </div>
-          <div className="span-5">{media}</div>
+          <div className="span-6">{media}</div>
         </div>
       </section>
     );

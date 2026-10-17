@@ -31,7 +31,7 @@ export default function ThankYouPage() {
           </p>
           <div className="actions" style={{ marginTop: 28 }}>
             <a className="btn btn-white" href={site.phoneHref}>
-              Call {site.phone}
+              Call Now
             </a>
             <Link className="btn btn-ghost" href={routes.home.href}>
               Back to the home page

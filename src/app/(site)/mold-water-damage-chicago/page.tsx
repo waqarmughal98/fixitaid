@@ -57,7 +57,7 @@ export default function MoldWaterPage() {
           actions={
             <>
               <a className="btn btn-white" href={site.phoneHref}>
-                Call {site.phone}
+                Call Now
               </a>
               <a className="btn btn-gold" href="#mold-form">
                 Book a Free Inspection
@@ -113,7 +113,6 @@ export default function MoldWaterPage() {
                 <p>Now it&apos;s drywall, insulation and sometimes framing. A cleaning job has become a rebuild.</p>
               </div>
             </div>
-            <SectionCta href="#mold-form" />
           </div>
         </section>
 
@@ -202,7 +201,6 @@ export default function MoldWaterPage() {
                   },
                 ]}
               />
-              <SectionCta href="#mold-form" />
             </div>
           </div>
         </section>
@@ -234,12 +232,10 @@ export default function MoldWaterPage() {
                 <p className="muted">Depends on the size of the area, what has to come out and what caused it. Your exact price comes in writing.</p>
               </div>
             </div>
-            <SectionCta href="#mold-form" />
           </div>
         </section>
 
         <FaqSection
-          ctaHref="#mold-form"
           title="Mold and water questions"
           items={[
             {

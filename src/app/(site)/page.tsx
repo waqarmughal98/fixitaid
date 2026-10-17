@@ -47,7 +47,7 @@ export default function HomePage() {
               Book a Free Inspection
             </a>
             <a className="btn btn-white" href={site.phoneHref}>
-              Call {site.phone}
+              Call Now
             </a>
           </>
         }
@@ -182,7 +182,6 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
                 { worry: "Not knowing what's actually wrong", answer: "You see what we see: the roof deck, the attic, the wall cavity, the part that failed. We explain it in plain words and you keep every photo." },
               ]}
             />
-            <SectionCta href="#home-form" />
           </div>
         </div>
       </section>
@@ -200,7 +199,6 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
             <p className="lic-stat">
               <Rating />
             </p>
-            <SectionCta href="#home-form" />
           </div>
           <div className="span-7">
             <Licences
@@ -223,7 +221,6 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
       </section>
 
       <FaqSection
-        ctaHref="#home-form"
         title="Before you call"
         items={[
           {

@@ -36,7 +36,7 @@ export default function AboutPage() {
         actions={
           <>
             <a className="btn btn-white" href={site.phoneHref}>
-              Call {site.phone}
+              Call Now
             </a>
             <Link className="btn btn-gold" href={routes.contact.href}>
               Book a Free Inspection
@@ -114,7 +114,6 @@ export default function AboutPage() {
                 },
               ]}
             />
-            <SectionCta href={routes.contact.href} />
           </div>
         </div>
       </section>
@@ -162,7 +161,6 @@ export default function AboutPage() {
                 )}
               </tbody>
             </table>
-            <SectionCta href={routes.contact.href} />
           </div>
         </div>
         <div className="wrap">
