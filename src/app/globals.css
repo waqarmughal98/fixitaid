@@ -659,3 +659,19 @@
     min-height: 44px;
   }
 }
+
+/* Previous / Next controls for the service cards (phones and tablets only) */
+.rail-nav { display: none; }
+@media (max-width: 960px) {
+  .rail-nav { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 var(--gutter) var(--section); }
+  .rail-nav-btn {
+    width: 48px; height: 48px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(16, 18, 20, 0.85); color: var(--gold-hi); border: 1px solid var(--gold); cursor: pointer;
+    transition: background .2s, color .2s, opacity .2s, transform .2s;
+  }
+  .rail-nav-btn:hover:not(:disabled), .rail-nav-btn:focus-visible { background: var(--gold); color: var(--ink); }
+  .rail-nav-btn:active:not(:disabled) { transform: scale(0.94); }
+  .rail-nav-btn:disabled { opacity: 0.35; cursor: default; }
+  .rail-nav-count { min-width: 56px; text-align: center; font-size: 15px; letter-spacing: 0.04em; color: rgba(242, 238, 230, 0.85); }
+  .rail-track { padding-bottom: calc(var(--section) * 0.5); }
+}

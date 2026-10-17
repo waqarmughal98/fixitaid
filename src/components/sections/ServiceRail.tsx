@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Photo } from "@/components/ui/Photo";
 import type { PhotoKey } from "@/lib/photos";
 import { site } from "@/config/site";
+import { RailNav } from "./RailNav";
 
 export type RailItem = {
   photo: PhotoKey;
@@ -66,6 +67,7 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
           </article>
         </div>
       </div>
+      <RailNav count={items.length + 1} />
       <div className="rail-progress" aria-hidden="true">
         <span data-rail-progress />
       </div>
