@@ -27,7 +27,7 @@ export function VideoFrame() {
   }
   return (
     <figure style={{ margin: 0 }}>
-      <div className="video-frame">
+      <div className="video-frame" style={poster ? ({ "--poster": `url(${poster})` } as React.CSSProperties) : undefined}>
         <VideoPlayer src={src} poster={poster ?? undefined} label={caption ?? "Fix It Aid intro video"} />
       </div>
       {caption && <figcaption className="video-cap">{caption}</figcaption>}

@@ -184,12 +184,18 @@
   .sec-cta.center { justify-content: center; }
   .stack > .sec-cta { margin-top: 28px; }
   .stack > .notes { margin-top: 36px; }
-  .statement-split .statement { font-size: clamp(30px, 3.8vw, 58px); max-width: 26ch; }
-  .statement-row { margin-top: clamp(36px, 5vw, 64px); align-items: center; }
-  .statement-side .statement-aside { max-width: 46ch; }
-  .statement-side .sec-cta { margin-top: 28px; }
+  .statement-split { align-items: stretch; }
+  .statement-split .statement { font-size: clamp(26px, 2.6vw, 40px); max-width: none; }
+  .statement-text { display: flex; flex-direction: column; justify-content: center; }
+  .statement-aside { margin-top: 24px; max-width: 54ch; }
+  .statement-media { display: flex; }
+  .statement-media > figure { flex: 1; display: flex; flex-direction: column; }
+  /* the frame grows to the height of the text beside it; the video stays uncropped on a blurred backdrop of its own poster */
+  .statement-media .video-frame { flex: 1 1 auto; }
   .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: var(--ink-3); border: 1px solid var(--line-2); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7); }
-  .video-frame video, .video-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video-frame::before { content: ""; position: absolute; inset: -24px; background: var(--poster, none) center / cover; filter: blur(28px) brightness(0.65); }
+  .video-frame video, .video-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+  .video-frame > img { object-fit: cover; }
   .video-frame.is-empty > img { filter: brightness(0.55); }
   .video-frame .play { position: absolute; inset: 0; display: grid; place-items: center; }
   .video-frame .play > span { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--ink); box-shadow: 0 0 0 10px rgba(217, 169, 78, 0.22); }

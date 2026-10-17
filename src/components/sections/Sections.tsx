@@ -200,17 +200,15 @@ export function Statement({ children, aside, media, cta }: { children: React.Rea
   if (media) {
     return (
       <section className="section">
-        <div className="wrap statement-split">
-          <p className="statement" data-words>
-            {children}
-          </p>
-          <div className="grid-12 statement-row">
-            <div className="span-7">{media}</div>
-            <div className="span-5 statement-side">
-              {aside && <div className="statement-aside">{aside}</div>}
-              {cta}
-            </div>
+        <div className="wrap grid-12 statement-split">
+          <div className="span-6 statement-text">
+            <p className="statement" data-words>
+              {children}
+            </p>
+            {aside && <div className="statement-aside">{aside}</div>}
+            {cta}
           </div>
+          <div className="span-6 statement-media">{media}</div>
         </div>
       </section>
     );
