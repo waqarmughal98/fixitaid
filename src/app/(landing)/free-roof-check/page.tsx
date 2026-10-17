@@ -70,7 +70,7 @@ export default function FreeRoofCheckPage() {
             </>
           }
           facts={[
-            { big: "$0", small: "Roof check and photo report" },
+            { big: "$0", small: "Roof inspection report with photos" },
             { big: licences.illinoisRoofing, small: "Illinois roofing licence" },
             { big: licences.chicagoGc, small: "Chicago GC, for permits" },
           ]}

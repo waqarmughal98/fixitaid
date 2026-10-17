@@ -50,7 +50,7 @@ export const content: StoryPageContent = {
         },
         {
           type: "p",
-          text: "Fix It Aid is a Chicago contractor. We find why your AC is not cooling, show you, and price that repair.",
+          text: "Fix It Aid does AC repair and air conditioning repair in Chicago. We find why your air conditioning is not cooling, show you, and price that repair.",
         },
       ],
       bridge: "Here is how a visit goes.",

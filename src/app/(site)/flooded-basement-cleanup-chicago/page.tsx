@@ -139,7 +139,7 @@ export const content: StoryPageContent = {
         {
           type: "faq",
           q: "Is sewer backup water dangerous?",
-          a: "Yes. It contains bacteria and should not be cleaned with household products. We remove contaminated materials, disinfect with professional-grade agents and dry the space with commercial equipment.",
+          a: "Yes. It contains bacteria and should not be cleaned with household products. Sewage backup cleanup means removing contaminated materials, disinfecting with professional-grade agents and drying the space with commercial equipment.",
         },
         {
           type: "faq",
@@ -155,6 +155,11 @@ export const content: StoryPageContent = {
           type: "faq",
           q: "Should I worry about mold after a flood?",
           a: "Yes. Mold can start within 24 to 48 hours on wet materials. We dry the space properly and check for mold after. If it started, our mold team removes it. (link: /mold-removal-chicago)",
+        },
+        {
+          type: "faq",
+          q: "I get water in my basement after every rain. Can you help?",
+          a: "Yes. Water in the basement after rain usually points to grading, a failed sump pump or a crack letting water in. We handle the basement water removal and drying, find where the water is getting in, and tell you what will stop it.",
         },
         {
           type: "faq",

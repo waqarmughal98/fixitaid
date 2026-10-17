@@ -53,7 +53,7 @@ export const content: StoryPageContent = {
         },
         {
           type: "p",
-          text: "Fix It Aid does mold inspections across Chicago. We test, document and explain the results. If removal is needed, we do that too (link: /mold-removal-chicago). If the source is a roof leak, our roofing team fixes it (link: /roofing-chicago). If it is water damage, our restoration team handles it (link: /water-damage-restoration-chicago).",
+          text: "Fix It Aid does mold inspection in Chicago, including mold testing and indoor air quality testing. We test, document and explain the results. If removal is needed, we do that too (link: /mold-removal-chicago). If the source is a roof leak, our roofing team fixes it (link: /roofing-chicago). If it is water damage, our restoration team handles it (link: /water-damage-restoration-chicago).",
         },
       ],
       bridge: "Here is what happens during an inspection.",
@@ -143,6 +143,11 @@ export const content: StoryPageContent = {
           type: "faq",
           q: "How long does a mold inspection take?",
           a: "[Typical time, for example \"One to two hours on site. Lab results come back in a few days.\"]",
+        },
+        {
+          type: "faq",
+          q: "Do you test for black mold?",
+          a: "Yes. Our mold inspector takes air and surface samples and sends them to a lab, which identifies the mold type, including black mold (stachybotrys). You get the lab result in writing. Testing is the only way to know what you are actually dealing with.",
         },
         {
           type: "faq",

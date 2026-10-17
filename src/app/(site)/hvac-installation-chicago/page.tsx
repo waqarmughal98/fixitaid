@@ -63,7 +63,7 @@ export const content: StoryPageContent = {
           items: [
             "**We visit and measure.** We look at the current system, the space and the ducts or pipes, and ask how the house feels in winter and summer.",
             "**You get a written price.** Equipment, labor, permits and timeline, in writing.",
-            "**We install it.** We remove the old unit, install the new one and pull permits where the city requires them.",
+            "**We install it.** Furnace installation, AC installation or a mini split: we remove the old unit, install the new one and pull permits where the city requires them.",
             "**We start it up with you.** We test it together and show you the thermostat and filter.",
           ],
         },

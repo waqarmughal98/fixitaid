@@ -153,6 +153,16 @@ export const content: StoryPageContent = {
         },
         {
           type: "faq",
+          q: "Should I repair or replace my roof?",
+          a: "It comes down to the numbers. If the roof is mostly sound and the damage is in one area, repair is the right call. If you are paying for a repair every year, or the decking is soft in several spots, a replacement usually costs less over ten years. We check the roof for free and give you the repair price and the replacement price side by side, so the choice between repair or replace is yours, not ours.",
+        },
+        {
+          type: "faq",
+          q: "Do you offer roof replacement financing?",
+          a: "[Financing: yes or no. If yes, name the lender and the terms, for example \"monthly payment plans through X\".] Either way, you get a clear written price first, with no pressure.",
+        },
+        {
+          type: "faq",
           q: "Can I stay in the house during the work?",
           a: "Yes. It is noisy, but you do not have to leave.",
         },

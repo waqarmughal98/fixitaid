@@ -156,6 +156,11 @@ export const content: StoryPageContent = {
         },
         {
           type: "faq",
+          q: "Do you do furnace replacement too?",
+          a: "Yes. If the furnace is too old or too far gone to repair safely, we quote a furnace replacement alongside the repair price so you can compare. We size the new unit for your home and give you the price in writing.",
+        },
+        {
+          type: "faq",
           q: "Do you offer emergency furnace repair?",
           a: "[24/7 phone: yes or no]",
         },

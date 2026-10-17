@@ -49,7 +49,7 @@ export const content: StoryPageContent = {
         },
         {
           type: "p",
-          text: "Fix It Aid is a mold company and a general contractor. We remove the mold and fix the cause. If the moisture came from the roof, our roofing team repairs it (link: /roofing-chicago). If a pipe burst or a drain backed up, our water damage team handles the water (link: /water-damage-restoration-chicago). If the basement flooded, our basement cleanup team dries and disinfects it (link: /flooded-basement-cleanup-chicago).",
+          text: "Fix It Aid does mold removal in Chicago as a licensed mold company and general contractor. We remove the mold and fix the cause. If the moisture came from the roof, our roofing team repairs it (link: /roofing-chicago). If a pipe burst or a drain backed up, our water damage team handles the water (link: /water-damage-restoration-chicago). If the basement flooded, our basement cleanup team dries and disinfects it (link: /flooded-basement-cleanup-chicago).",
         },
         {
           type: "p",
@@ -137,6 +137,11 @@ export const content: StoryPageContent = {
           type: "faq",
           q: "How much does mold removal cost in Chicago?",
           a: "It depends on the size of the affected area, what materials are involved (drywall, wood, concrete) and how much needs to be removed and rebuilt. We inspect first, then give you a written price. (link: /mold-inspection-chicago)",
+        },
+        {
+          type: "faq",
+          q: "Do you remove black mold from basements and attics?",
+          a: "Yes. Black mold removal, basement mold removal and attic mold removal are everyday work for us. We contain the area, remove the affected materials, HEPA-clean the space and treat what is left. Full mold abatement, not a surface wipe.",
         },
         {
           type: "faq",

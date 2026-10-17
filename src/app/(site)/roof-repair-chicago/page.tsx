@@ -53,7 +53,7 @@ export const content: StoryPageContent = {
         },
         {
           type: "p",
-          text: "We do it the other way. We climb up, check the whole roof, take photos and show you exactly what failed. If a repair fixes it, we price the repair. If the damage is too far gone, we tell you and give you a replacement price too. (link: /roof-replacement-chicago)",
+          text: "We do it the other way. For roof repair Chicago homeowners can trust, we climb up, check the whole roof, take photos and show you exactly what failed. If a repair fixes it, we price the repair. If the damage is too far gone, we tell you and give you a replacement price too. (link: /roof-replacement-chicago)",
         },
       ],
       bridge: "Here is how a roof repair works with us.",
@@ -86,6 +86,36 @@ export const content: StoryPageContent = {
             "Flat roof leaks: TPO, EPDM, modified bitumen (link: /flat-roof-repair-chicago)",
             "Gutter repairs tied to roof leaks",
           ],
+        },
+      ],
+      bridge: "What you get with this repair.",
+    },
+    {
+      kind: "solution",
+      heading: "Emergency roof repair in Chicago",
+      blocks: [
+        {
+          type: "p",
+          text: "Storm last night? Water coming in right now? We do emergency roof repair across Chicago. If the roof cannot be fully repaired until it dries out, we tarp it first to stop the water, then come back for the permanent fix.",
+        },
+        {
+          type: "subhead",
+          text: "Storm and emergency work we handle",
+        },
+        {
+          type: "ul",
+          items: [
+            "Emergency roof tarping to stop active leaks fast",
+            "Wind damage: lifted, torn or missing shingles after a storm",
+            "Hail damage, with a photo report you can share with your insurer",
+            "Storm damage roof inspection and a written record of what we find",
+            "Ice dam removal and ice dam damage repair along the eaves",
+            "Roof leak after a storm or heavy snow",
+          ],
+        },
+        {
+          type: "p",
+          text: "Water coming in now? Call (773) 987-1693. We document all storm damage with photos and moisture readings, so you have a clear record to share with your insurance company if you choose to.",
         },
       ],
       bridge: "What you get with this repair.",

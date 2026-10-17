@@ -64,6 +64,10 @@ export const content: StoryPageContent = {
       heading: "What happens when you call",
       blocks: [
         {
+          type: "p",
+          text: "Fix It Aid handles HVAC repair in Chicago and full heating and cooling service across the city: furnaces, boilers, radiators and AC for homes, 2-flats and small commercial buildings.",
+        },
+        {
           type: "ol",
           items: [
             "**You talk to a real person.** Tell us what the system is doing. We set a time.",
@@ -95,6 +99,16 @@ export const content: StoryPageContent = {
           title: "New systems",
           text: "Sized for your home.",
           link: "/hvac-installation-chicago",
+        },
+        {
+          type: "h3",
+          title: "Tune-ups and maintenance",
+          text: "AC tune-up and furnace tune-up in Chicago, plus duct cleaning and an HVAC maintenance plan that keeps the system under warranty and catches small problems before they stop the heat.",
+        },
+        {
+          type: "h3",
+          title: "Commercial HVAC",
+          text: "Commercial HVAC in Chicago: rooftop unit repair, restaurant HVAC and heating and cooling for multi-unit buildings.",
         },
         {
           type: "p",
@@ -174,6 +188,16 @@ export const content: StoryPageContent = {
           type: "faq",
           q: "Do you come to my neighborhood?",
           a: "We work across the City of Chicago.",
+        },
+        {
+          type: "faq",
+          q: "Do you do HVAC maintenance plans and tune-ups?",
+          a: "Yes. We offer a furnace tune-up and an AC tune-up, duct cleaning and an HVAC maintenance plan. Regular HVAC maintenance in Chicago keeps the system running efficiently and is required to keep many manufacturer warranties valid.",
+        },
+        {
+          type: "faq",
+          q: "Do you do commercial HVAC in Chicago?",
+          a: "Yes. We handle commercial HVAC and rooftop unit (RTU) repair for small commercial buildings and restaurants across Chicago. As a roofing and general contractor, rooftop equipment is a natural fit for us.",
         },
         {
           type: "faq",

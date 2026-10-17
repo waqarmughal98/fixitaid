@@ -144,6 +144,11 @@ export const content: StoryPageContent = {
         },
         {
           type: "faq",
+          q: "Is water mitigation the same as water damage restoration?",
+          a: "Water mitigation is the first step: water removal and drying to stop the damage from spreading. Water damage restoration is the full job, including the repair that puts your home back together. We do both, from emergency water removal through to water damage repair.",
+        },
+        {
+          type: "faq",
           q: "Will you help with my insurance claim?",
           a: "We document the damage with photos, moisture readings and a written report you can share with your insurer. We do not file claims or negotiate with insurance companies.",
         },

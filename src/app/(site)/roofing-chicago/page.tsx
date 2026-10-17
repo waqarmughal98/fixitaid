@@ -65,7 +65,7 @@ export const content: StoryPageContent = {
         },
         {
           type: "p",
-          text: "Fix It Aid is an Illinois licensed roofer (104.021107) and a City of Chicago general contractor (TGC144939). We start with a free roof check (link: /free-roof-check). We climb up, take photos, and show you what we find. If a repair fixes it, we repair it.",
+          text: "Fix It Aid is a roofing company in Chicago, an Illinois licensed roofer (104.021107) and a City of Chicago general contractor (TGC144939). We start with a free roof check (link: /free-roof-check). We climb up, take photos, and show you what we find. If a repair fixes it, we repair it.",
         },
       ],
       bridge: "Here is what a free roof check looks like.",

@@ -49,7 +49,7 @@ export const content: StoryPageContent = {
         },
         {
           type: "p",
-          text: "The Roof Care Plan is a yearly inspection and minor repair rolled into one visit. A licensed roofer (IL 104.021107) climbs up, checks everything and fixes small problems on the spot. You get a written report with photos.",
+          text: "The Roof Care Plan is annual roof maintenance in Chicago: a yearly inspection and minor repair rolled into one visit. A licensed roofer (IL 104.021107) climbs up, checks everything and fixes small problems on the spot. You get a written report with photos.",
         },
         {
           type: "p",
@@ -101,6 +101,30 @@ export const content: StoryPageContent = {
             "**Keep your warranty valid.** Many roofing warranties require annual maintenance. This plan satisfies that requirement.",
             "**One set price per year.** No service call fees, no per-visit charges.",
           ],
+        },
+      ],
+      bridge: "Backed by a licensed roofing company.",
+    },
+    {
+      kind: "solution",
+      heading: "For 2-flats, condos and landlords",
+      blocks: [
+        {
+          type: "p",
+          text: "If you own or manage a building, a plan turns roof care from a surprise into a line item. We cover 2-flat and 3-flat roof repair, condo and apartment building roofs, and landlord roof maintenance across Chicago.",
+        },
+        {
+          type: "ul",
+          items: [
+            "Landlord roof repair and maintenance on one schedule, one invoice",
+            "Condo and HOA roof maintenance, with a written report for the board",
+            "Multi-family and small apartment building roofs, flat or pitched",
+            "Property manager roof maintenance programs for several buildings",
+          ],
+        },
+        {
+          type: "p",
+          text: "Managing more than one building? Tell us the addresses and we price the program together.",
         },
       ],
       bridge: "Backed by a licensed roofing company.",
