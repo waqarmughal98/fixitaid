@@ -158,9 +158,16 @@
   }
   .btn-gold { background: var(--gold); color: var(--ink); --shine: rgba(255, 255, 255, 0.55); }
   .btn-gold::before { background: var(--gold-hi); }
-  .btn-white { background: #fff; color: var(--ink); --shine: rgba(217, 169, 78, 0.48); }
-  .btn-white::before { background: var(--gold); }
-  .btn-white:hover, .btn-white:focus-visible { color: var(--ink); }
+  /* White (Call) button: no gold fill on hover. It lifts, warms slightly and glows instead. */
+  .btn-white, .btn-ghost {
+    background: #fff; color: var(--ink); --shine: rgba(16, 18, 20, 0.10); border-color: rgba(217, 169, 78, 0.55);
+    transition: color var(--t-med) var(--ease), border-color var(--t-fast), background-color var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), transform var(--t-fast) var(--ease);
+  }
+  .btn-white::before, .btn-ghost::before { display: none; }
+  .btn-white:hover, .btn-white:focus-visible, .btn-ghost:hover, .btn-ghost:focus-visible {
+    background: #f6f1e4; color: var(--ink); border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 10px 26px -8px rgba(217, 169, 78, 0.55);
+  }
+  .btn-white:active, .btn-ghost:active { transform: translateY(0) scale(0.97); box-shadow: none; }
   .btn-gold::after, .btn-white::after, .btn-ghost::after {
     content: ""; position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none;
     width: 42%; height: 100%;
@@ -168,12 +175,40 @@
     animation: ctaShine 3s linear infinite;
   }
   /* legacy alias kept so any stray usage still renders as one of the two types */
-  .btn-ghost { background: #fff; color: var(--ink); --shine: rgba(217, 169, 78, 0.48); }
-  .btn-ghost::before { background: var(--gold); }
-  .btn-ghost:hover, .btn-ghost:focus-visible { color: var(--ink); }
   .btn-dark { background: var(--ink); color: var(--text); }
   .btn-dark::before { background: var(--ink-4); }
   .btn[disabled] { opacity: 0.7; cursor: progress; }
+
+  /* section CTAs: the same two buttons, spaced the same way everywhere */
+  .sec-cta { margin-top: clamp(28px, 3.5vw, 44px); }
+  .sec-cta.center { justify-content: center; }
+  .stack > .sec-cta { margin-top: 28px; }
+  .stack > .notes { margin-top: 36px; }
+  .statement-split { align-items: center; }
+  .statement-split .statement { font-size: clamp(28px, 3.1vw, 48px); max-width: 24ch; }
+  .statement-aside { margin-top: 24px; max-width: 54ch; }
+  .video-frame { position: relative; aspect-ratio: 16 / 10; border-radius: 16px; overflow: hidden; background: var(--ink-3); border: 1px solid var(--line-2); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7); }
+  .video-frame video, .video-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video-frame.is-empty > img { filter: brightness(0.55); }
+  .video-frame .play { position: absolute; inset: 0; display: grid; place-items: center; }
+  .video-frame .play > span { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--ink); box-shadow: 0 0 0 10px rgba(217, 169, 78, 0.22); }
+  .video-frame .play svg { width: 30px; height: 30px; margin-left: 4px; }
+  .video-frame .video-tag { position: absolute; left: 16px; bottom: 16px; right: 16px; z-index: 2; }
+  .video-cap { margin-top: 14px; font-size: 14px; color: var(--muted); }
+  .rail-cta { position: relative; z-index: 2; margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .rail-cta .btn { min-height: 48px; padding: 11px 22px; font-size: 15px; }
+  .lic-stat { display: inline-flex; margin-top: 24px; padding: 10px 18px; border: 1px solid var(--line-2); border-radius: 999px; background: rgba(217, 169, 78, 0.1); color: var(--text); font-weight: 600; }
+  .lic-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .lic-card { padding: 26px 24px 24px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--ink-3); }
+  .lic-card .ico { width: 36px; height: 36px; margin-bottom: 18px; border-radius: 50%; display: grid; place-items: center; background: rgba(217, 169, 78, 0.14); color: var(--gold-hi); }
+  .lic-card .ico svg { width: 18px; height: 18px; }
+  .lic-card .num { display: block; font-family: var(--f-display); font-weight: 500; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.1; color: var(--gold-hi); overflow-wrap: anywhere; }
+  .lic-card .lbl { display: block; margin-top: 10px; font-size: 14.5px; color: var(--muted); }
+  .certs { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line-2); }
+  .certs-title { font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  .certs ul { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
+  .certs img { display: block; height: 48px; width: auto; }
+  .certs small { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; }
   .actions { display: flex; flex-wrap: wrap; gap: 12px; }
   .spinner { width: 18px; height: 18px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: spin 0.7s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }

@@ -10,7 +10,7 @@ import { LandingFooter } from "@/components/layout/SiteFooter";
 import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
-import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head } from "@/components/sections/Sections";
+import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head, SectionCta } from "@/components/sections/Sections";
 
 // Ad page, noindex (the SEO version is /hvac-chicago). Heating first in the cold months;
 // switch the hook to AC around May.
@@ -72,6 +72,7 @@ export default function HvacRepairPage() {
             Not a dead furnace. A flame sensor, an igniter, a pressure switch, a thermostat, or a low-water cutoff on a boiler. Those are
             repairs, not replacements. We find the part, show it to you, and give you the price.
           </p>
+          <SectionCta href="#hvac-form" call={false} />
         </Report>
 
         <section className="section surface">
@@ -119,6 +120,7 @@ export default function HvacRepairPage() {
                   ]}
                 />
               </div>
+              <SectionCta href="#hvac-form" />
             </div>
           </div>
         </section>
@@ -139,6 +141,7 @@ export default function HvacRepairPage() {
                 { title: "Fix and test", text: "We repair it, test it, and check the vent and gas safety before we leave." },
               ]}
             />
+            <SectionCta href="#hvac-form" align="center" />
           </div>
         </section>
 
@@ -161,6 +164,7 @@ export default function HvacRepairPage() {
                   { worry: "A call center", answer: "You talk to our Chicago team, and our own tech comes to the house." },
                 ]}
               />
+              <SectionCta href="#hvac-form" />
             </div>
           </div>
           {reviewsReady && (
@@ -171,6 +175,7 @@ export default function HvacRepairPage() {
         </section>
 
         <FaqSection
+          ctaHref="#hvac-form"
           title="Heating questions"
           items={[
             {

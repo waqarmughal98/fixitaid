@@ -12,7 +12,7 @@ import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
 import { Marquee } from "@/components/sections/Marquee";
-import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head, Checks } from "@/components/sections/Sections";
+import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head, Checks, SectionCta } from "@/components/sections/Sections";
 
 // Google Ads landing page for the roof funnel. No menu.
 const URL = "/free-roof-check";
@@ -93,6 +93,7 @@ export default function FreeRoofCheckPage() {
             dozens of times a winter, and water travels along the rafters before it shows up on a ceiling. These are the spots we check
             first.
           </p>
+          <SectionCta href="#roof-form" call={false} />
         </Report>
 
         <section className="section surface">
@@ -113,6 +114,7 @@ export default function FreeRoofCheckPage() {
                   ]}
                 />
               </div>
+              <SectionCta href="#roof-form" />
             </div>
             <div className="span-6">
               <div className="frame" data-parallax style={{ aspectRatio: "4 / 4.4" }}>
@@ -141,6 +143,7 @@ export default function FreeRoofCheckPage() {
                 },
               ]}
             />
+            <SectionCta href="#roof-form" align="center" />
           </div>
         </section>
 
@@ -163,6 +166,7 @@ export default function FreeRoofCheckPage() {
                   { worry: "The damage inside", answer: "Wet drywall, stained ceilings and mold from the leak, handled by our own licensed crew." },
                 ]}
               />
+              <SectionCta href="#roof-form" />
             </div>
           </div>
           {reviewsReady && (
@@ -173,6 +177,7 @@ export default function FreeRoofCheckPage() {
         </section>
 
         <FaqSection
+          ctaHref="#roof-form"
           title="Roof questions"
           items={[
             ...faqs.slice(0, 3),

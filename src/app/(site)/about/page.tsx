@@ -5,7 +5,7 @@ import { metadataFor, seoFor } from "@/lib/seo/meta";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Photo } from "@/components/ui/Photo";
 import { Hero } from "@/components/sections/Hero";
-import { Rows, Rating, Reviews, CloseCta, Statement } from "@/components/sections/Sections";
+import { Rows, Rating, Reviews, CloseCta, Statement, SectionCta } from "@/components/sections/Sections";
 import { CallBar } from "@/components/layout/CallBar";
 
 // Copy: 2-page-content/5d, "Page 5: /about". Rewritten 17 Oct 2026 (SEO content rewrite):
@@ -75,6 +75,7 @@ export default function AboutPage() {
               We got licensed for the rest of the job. Today Fix It Aid is a licensed roofing contractor in Illinois, a City of Chicago general contractor, a mold and
               water damage company and an HVAC contractor. One team, so the job doesn&apos;t get passed between contractors. We put the price and the warranty on our work in writing before we start.
             </p>
+            <SectionCta href={routes.contact.href} call={false} />
           </div>
           <div className="span-6">
             <div className="frame" data-parallax style={{ aspectRatio: "4 / 4.6" }}>
@@ -113,6 +114,7 @@ export default function AboutPage() {
                 },
               ]}
             />
+            <SectionCta href={routes.contact.href} />
           </div>
         </div>
       </section>
@@ -160,6 +162,7 @@ export default function AboutPage() {
                 )}
               </tbody>
             </table>
+            <SectionCta href={routes.contact.href} />
           </div>
         </div>
         <div className="wrap">

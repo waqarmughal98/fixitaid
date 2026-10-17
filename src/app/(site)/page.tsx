@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { site } from "@/config/site";
+import { site, showVideo, showPlaceholders } from "@/config/site";
+import { VideoFrame } from "@/components/ui/VideoFrame";
 import { routes } from "@/lib/routes";
 import { metadataFor, seoFor } from "@/lib/seo/meta";
 import { website } from "@/lib/seo/schema";
@@ -13,7 +14,7 @@ import { Marquee } from "@/components/sections/Marquee";
 import { ServiceRail } from "@/components/sections/ServiceRail";
 import { LeakStory } from "@/components/sections/LeakStory";
 import { Report } from "@/components/sections/Report";
-import { Steps, Rows, Licences, Rating, Reviews, FaqSection, CloseCta, Statement, Head } from "@/components/sections/Sections";
+import { Steps, Rows, Licences, Certifications, Rating, Reviews, FaqSection, CloseCta, Statement, Head, SectionCta } from "@/components/sections/Sections";
 
 export const metadata = metadataFor("/");
 
@@ -69,6 +70,8 @@ export default function HomePage() {
       <Marquee items={["Roof leaks", "Flat roofs", "Ice dams", "Mold removal", "Flooded basements", "Water damage", "Furnaces", "Steam boilers", "Radiators", "AC repair"]} />
 
       <Statement
+        media={showVideo || showPlaceholders ? <VideoFrame /> : undefined}
+        cta={<SectionCta href="#home-form" />}
         aside={
           <p className="muted">
             We hold a roofing licence, a Chicago general contractor licence and a mold and water licence, so one team owns the
@@ -136,11 +139,7 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
           Every inspection ends with a photo report like this one: each problem marked and explained in plain language, so you
           see exactly what we see before anyone talks about price.
         </p>
-        <div className="actions" style={{ marginTop: 24 }}>
-          <a className="btn btn-gold" href="#home-form">
-            Book a Free Inspection
-          </a>
-        </div>
+        <SectionCta href="#home-form" call={false} />
       </Report>
 
       <section className="section surface">
@@ -159,6 +158,7 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
               },
             ]}
           />
+          <SectionCta href="#home-form" align="center" />
         </div>
       </section>
 
@@ -182,26 +182,48 @@ A roof leak becomes a ceiling stain. The stain becomes mold. Most people call a 
                 { worry: "Not knowing what's actually wrong", answer: "You see what we see: the roof deck, the attic, the wall cavity, the part that failed. We explain it in plain words and you keep every photo." },
               ]}
             />
+            <SectionCta href="#home-form" />
           </div>
         </div>
       </section>
 
       <section className="section surface">
+        <div className="wrap grid-12" style={{ alignItems: "center" }}>
+          <div className="span-5">
+            <h2 className="h2" data-split>
+              Licensed for every job we do
+            </h2>
+            <p className="lead" style={{ marginTop: 20 }}>
+              Roofing, general contracting, mold and water damage, and HVAC. You can check any licence number with the issuing
+              office before you hire us.
+            </p>
+            <p className="lic-stat">
+              <Rating />
+            </p>
+            <SectionCta href="#home-form" />
+          </div>
+          <div className="span-7">
+            <Licences
+              items={[
+                { value: licences.chicagoGc, label: "City of Chicago general contractor" },
+                {
+                  value: licences.illinoisRoofing,
+                  label: licences.illinoisRoofing2Confirmed ? `Illinois roofing contractor. Also licence ${licences.illinoisRoofing2}` : "Illinois roofing contractor",
+                },
+                { value: licences.mold, fallback: "Licensed", label: "Mold and water damage. Licence number on request" },
+                { value: licences.hvac, fallback: "Licensed", label: "HVAC. Licence number on request" },
+              ]}
+            />
+            <Certifications />
+          </div>
+        </div>
         <div className="wrap">
-          <Head title="Licensed for every job we do" intro={<Rating />} />
-          <Licences
-            items={[
-              { value: licences.chicagoGc, label: "City of Chicago general contractor" },
-              { value: licences.illinoisRoofing, label: "Illinois roofing contractor" },
-              { value: licences.mold, label: "Mold and water damage" },
-              { value: licences.hvac, label: "HVAC" },
-            ]}
-          />
           <Reviews />
         </div>
       </section>
 
       <FaqSection
+        ctaHref="#home-form"
         title="Before you call"
         items={[
           {

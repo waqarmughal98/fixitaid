@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={showPlaceholders ? undefined : "no-ph"}>
+      <body suppressHydrationWarning className={showPlaceholders ? undefined : "no-ph"}>
         <a className="skip" href="#main">
           Skip to content
         </a>

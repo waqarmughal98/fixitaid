@@ -31,20 +31,67 @@ export function Rows({ items }: { items: { worry: string; answer: React.ReactNod
   );
 }
 
-/** Licence numbers. Confirmed ones "decode" into place on scroll. Skip rows with no value. */
-export function Licences({ items }: { items: { value: string | null; label: string; missing?: string }[] }) {
-  const shown = items.filter((l) => l.value);
+/** Licence cards. Confirmed numbers "decode" into place on scroll. Rows with no value and no fallback are skipped. */
+export function Licences({ items }: { items: { value: string | null; label: string; fallback?: string }[] }) {
+  const shown = items.filter((l) => l.value || l.fallback);
   if (!shown.length) return null;
   return (
-    <div className="licences">
+    <div className="lic-cards">
       {shown.map((l) => (
-        <div key={l.label}>
-          <b className="num" data-scramble={l.value!}>
-            {l.value}
-          </b>
+        <div className="lic-card" key={l.label}>
+          <span className="ico" aria-hidden="true">
+            <Icon name="check" />
+          </span>
+          {l.value ? (
+            <b className="num" data-scramble={l.value}>
+              {l.value}
+            </b>
+          ) : (
+            <b className="num">{l.fallback}</b>
+          )}
           <span className="lbl">{l.label}</span>
         </div>
       ))}
+    </div>
+  );
+}
+
+/** Certifications and memberships the owner has confirmed. Renders nothing while the list is empty. */
+export function Certifications() {
+  const list = site.certifications;
+  if (!list.length) return null;
+  return (
+    <div className="certs">
+      <p className="certs-title">Certifications and memberships</p>
+      <ul>
+        {list.map((c) => (
+          <li key={c.name}>
+            {c.logo ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={c.logo} alt={c.name} loading="lazy" />
+            ) : (
+              <b>{c.name}</b>
+            )}
+            {c.note && <small>{c.note}</small>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/** The two CTA types, in one place: gold Book a Free Inspection, plus the white Call button. */
+export function SectionCta({ href = "#lead-form", call = true, align }: { href?: string; call?: boolean; align?: "center" }) {
+  return (
+    <div className={`actions sec-cta${align === "center" ? " center" : ""}`}>
+      <a className="btn btn-gold" href={href}>
+        Book a Free Inspection
+      </a>
+      {call && (
+        <a className="btn btn-white" href={site.phoneHref}>
+          Call {site.phone}
+        </a>
+      )}
     </div>
   );
 }
@@ -103,7 +150,7 @@ export function Faq({ items }: { items: { q: string; a: React.ReactNode }[] }) {
 }
 
 /** FAQ block with its heading on the left. */
-export function FaqSection({ title, items, surface }: { title: string; items: { q: string; a: React.ReactNode }[]; surface?: boolean }) {
+export function FaqSection({ title, items, surface, ctaHref = "#lead-form" }: { title: string; items: { q: string; a: React.ReactNode }[]; surface?: boolean; ctaHref?: string }) {
   return (
     <section className={`section${surface ? " surface" : ""}`}>
       <div className="wrap grid-12">
@@ -111,6 +158,10 @@ export function FaqSection({ title, items, surface }: { title: string; items: { 
           <h2 className="h2" data-split>
             {title}
           </h2>
+          <p className="muted" style={{ marginTop: 16 }}>
+            Still have a question? Talk to a real person.
+          </p>
+          <SectionCta href={ctaHref} />
         </div>
         <div className="span-8">
           <Faq items={items} />
@@ -148,8 +199,24 @@ export function CloseCta({ title, text, primary, secondary }: { title: string; t
   );
 }
 
-/** A big statement whose words light up as you scroll past it. */
-export function Statement({ children, aside }: { children: React.ReactNode; aside?: React.ReactNode }) {
+/** A big statement whose words light up as you scroll past it. With `media`, the video or photo sits on the right. */
+export function Statement({ children, aside, media, cta }: { children: React.ReactNode; aside?: React.ReactNode; media?: React.ReactNode; cta?: React.ReactNode }) {
+  if (media) {
+    return (
+      <section className="section">
+        <div className="wrap grid-12 statement-split">
+          <div className="span-7">
+            <p className="statement" data-words>
+              {children}
+            </p>
+            {aside && <div className="statement-aside">{aside}</div>}
+            {cta}
+          </div>
+          <div className="span-5">{media}</div>
+        </div>
+      </section>
+    );
+  }
   return (
     <section className="section">
       <div className="wrap grid-12" style={{ alignItems: "end" }}>

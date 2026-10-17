@@ -42,6 +42,11 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
                   </li>
                 ))}
               </ul>
+              <div className="rail-cta">
+                <a className="btn btn-gold" href={cta.href}>
+                  Book a Free Inspection
+                </a>
+              </div>
             </article>
           ))}
           <article className="rail-panel cta">

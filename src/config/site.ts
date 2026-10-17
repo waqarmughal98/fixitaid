@@ -43,9 +43,20 @@ export const site = {
   // Real Google reviews only, word for word, with permission.
   // Review cards stay hidden until there are at least 3.
   reviews: [] as { text: string; name: string; neighborhood: string; job: string; service: "roof" | "mold" | "hvac" }[],
+
+  // Home page video. Put the file in /public/video and set `src`, e.g. "/video/how-we-work.mp4".
+  // Until then the video slot only shows while placeholders are on, never on the live site.
+  video: { src: null as string | null, poster: null as string | null, caption: null as string | null },
+
+  // Certifications and memberships we can prove with paperwork. Add one only after the owner
+  // confirms it, and use the logo the issuer supplies for members (put it in /public/certs).
+  certifications: [] as { name: string; note?: string; logo?: string }[],
 } as const;
 
 export const reviewsReady = site.reviews.length >= 3;
+
+// Show the video slot on the live site only when there is a real video.
+export const showVideo = site.video.src !== null;
 
 // Where the lead forms post. /api/lead emails leads via nodemailer (Google SMTP).
 export const leadEndpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT ?? "/api/lead";
