@@ -199,16 +199,22 @@ export function CloseCta({ title, text, primary, secondary }: { title: string; t
 export function Statement({ children, aside, media, cta }: { children: React.ReactNode; aside?: React.ReactNode; media?: React.ReactNode; cta?: React.ReactNode }) {
   if (media) {
     return (
-      <section className="section">
-        <div className="wrap grid-12 statement-split">
-          <div className="span-6 statement-text">
-            <p className="statement" data-words>
-              {children}
-            </p>
-            {aside && <div className="statement-aside">{aside}</div>}
-            {cta}
+      <section className="section svideo" data-svideo>
+        <div className="svideo-pin">
+          <div className="wrap grid-12 statement-split">
+            <div className="span-7 statement-text">
+              <p className="statement" data-words>
+                {children}
+              </p>
+              {aside && <div className="statement-aside">{aside}</div>}
+              {cta}
+            </div>
+            <div className="span-5 statement-media">
+              <div className="svideo-slot" data-svideo-slot>
+                {media}
+              </div>
+            </div>
           </div>
-          <div className="span-6 statement-media">{media}</div>
         </div>
       </section>
     );

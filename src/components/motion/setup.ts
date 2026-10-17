@@ -121,6 +121,33 @@ export function startMotion(el: HTMLElement): gsap.Context {
             ctx.add(() => () => story.classList.remove("is-pinning"));
           });
 
+          // ---------- statement + video: the words light up, then the video grows to fill the screen ----------
+          $$("[data-svideo]").forEach((sec) => {
+            const pin = sec.querySelector<HTMLElement>(".svideo-pin");
+            const slot = sec.querySelector<HTMLElement>("[data-svideo-slot]");
+            const frame = slot?.querySelector<HTMLElement>(".video-frame");
+            const text = sec.querySelector<HTMLElement>(".statement-text");
+            const p = sec.querySelector<HTMLElement>("[data-words]");
+            if (!desktop || !pin || !slot || !frame || !text || !p) return;
+            sec.classList.add("is-pinning");
+            ctx.add(() => () => sec.classList.remove("is-pinning"));
+            const split = SplitText.create(p, { type: "words" });
+            // where the video sits now, relative to the pinned box
+            const rect = () => {
+              const a = slot.getBoundingClientRect();
+              const b = pin.getBoundingClientRect();
+              return { left: a.left - b.left, top: a.top - b.top, width: a.width, height: a.height };
+            };
+            const tl = gsap.timeline({
+              defaults: { ease: "none" },
+              scrollTrigger: { trigger: sec, start: "top top", end: "+=260%", pin, scrub: 0.6, invalidateOnRefresh: true, anticipatePin: 1 },
+            });
+            tl.fromTo(split.words, { opacity: 0.16 }, { opacity: 1, stagger: 2 / split.words.length, duration: 1 }, 0);
+            tl.fromTo(frame, { left: () => rect().left, top: () => rect().top, width: () => rect().width, height: () => rect().height }, { left: 0, top: 0, width: () => pin.offsetWidth, height: () => pin.offsetHeight, borderRadius: 0, duration: 1.6, ease: "power2.inOut" }, 3.2);
+            tl.to(text, { autoAlpha: 0, x: -60, duration: 1, ease: "power2.in" }, 3.2);
+            tl.to({}, { duration: 0.7 });
+          });
+
           // ---------- section headings rise line by line ----------
           $$("[data-split]").forEach((h) => {
             if (h.closest("[data-hero], .page-top") || !offscreen(h)) return;
@@ -138,6 +165,7 @@ export function startMotion(el: HTMLElement): gsap.Context {
 
           // ---------- statement: words light up with the scroll ----------
           $$("[data-words]").forEach((p) => {
+            if (p.closest("[data-svideo].is-pinning")) return;
             const split = SplitText.create(p, { type: "words" });
             gsap.fromTo(
               split.words,
