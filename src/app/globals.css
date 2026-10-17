@@ -150,7 +150,12 @@
   }
   .btn:hover::before, .btn:focus-visible::before { transform: translateY(0); }
   .btn:active { transform: scale(0.97); }
-  .btn-gold { background: var(--gold); color: var(--ink); }
+  @keyframes ctaGlow {
+    0%, 100% { box-shadow: 0 2px 12px rgba(217, 169, 78, 0.25); }
+    50%      { box-shadow: 0 4px 26px rgba(217, 169, 78, 0.60); }
+  }
+  .btn-gold { background: var(--gold); color: var(--ink); animation: ctaGlow 2.4s ease-in-out infinite; }
+  .btn-gold:hover, .btn-gold:focus-visible { animation-play-state: paused; }
   .btn-gold::before { background: var(--gold-hi); }
   .btn-ghost { border-color: var(--line-2); color: var(--text); background: transparent; }
   .btn-ghost::before { background: var(--text); }
