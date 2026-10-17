@@ -50,7 +50,9 @@ export const site = {
 
   // Certifications and memberships we can prove with paperwork. Add one only after the owner
   // confirms it, and use the logo the issuer supplies for members (put it in /public/certs).
-  certifications: [] as { name: string; note?: string; logo?: string }[],
+  certifications: [
+    { name: "IICRC Certified Technician", note: "Water Damage Restoration" },
+  ] as { name: string; note?: string; logo?: string }[],
 } as const;
 
 export const reviewsReady = site.reviews.length >= 3;
