@@ -597,7 +597,15 @@
     .rail-viewport { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
     .rail-viewport::-webkit-scrollbar { display: none; }
     .rail-track { padding-bottom: var(--section); }
-    .rail-panel { width: 84vw; height: 70svh; max-height: 600px; scroll-snap-align: start; }
+    .rail-panel { width: 84vw; height: auto; min-height: 70svh; scroll-snap-align: start; }
+    /* phones: a darker, even overlay so the card text never sits on a bright part of the photo */
+    .rail-panel::before { background: linear-gradient(180deg, rgba(16, 18, 20, 0.62) 0%, rgba(16, 18, 20, 0.86) 38%, rgba(16, 18, 20, 0.97) 100%); }
+    .rail-panel h3, .rail-panel p, .rail-panel .idx { text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55); }
+    .rail-panel p { color: rgba(242, 238, 230, 0.94); }
+    .rail-links a { background: rgba(16, 18, 20, 0.78); border-color: rgba(242, 238, 230, 0.28); }
+    .rail-panel.cta::before { display: none; }
+    .rail-panel { padding-top: 64px; }
+    .rail-panel .idx { top: 22px; }
     .rail-progress { display: none; }
     .story-pin { min-height: 0; padding-block: var(--section); }
     .story-media { display: none; }
@@ -614,6 +622,9 @@
     .header .wrap { min-height: 72px; gap: 12px; }
     .logo-img, .header.is-scrolled .logo-img { height: 48px; }
     .header-tel .t { display: none; }
+    /* buttons are centred on phones; stacked ones share one width */
+    .actions, .rail-cta, .sec-cta { justify-content: center; }
+    .actions .btn, .rail-cta .btn { flex: 0 1 auto; min-width: min(100%, 280px); }
     .hero-facts li { padding: 14px 16px 0 0; margin-right: 16px; }
     .hero-facts li + li { padding-left: 16px; }
     .hero-facts strong { font-size: 21px; }
@@ -628,7 +639,7 @@
       background: rgba(16, 18, 20, 0.94); backdrop-filter: blur(12px); border-top: 1px solid var(--line);
       padding: 10px max(12px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
     }
-    .callbar .btn { min-height: 50px; padding: 10px 8px; }
+    .callbar .btn { min-height: 50px; padding: 10px 6px; font-size: clamp(13.5px, 3.9vw, 15.5px); white-space: nowrap; }
     .motion-root { padding-bottom: 72px; }
   }
 
