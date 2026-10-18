@@ -8,7 +8,7 @@ import { LeadForm } from "@/components/lead/LeadForm";
 import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
-import { Steps, Rows, Licences, Rating, Reviews, FaqSection, CloseCta, Head } from "@/components/sections/Sections";
+import { Steps, Rows, Licences, Rating, Reviews, FaqSection, CloseCta, Head, SectionCta } from "@/components/sections/Sections";
 
 // Main mold & water page (also used for ads). Site header + footer from (site)/layout.
 const URL = "/mold-water-damage-chicago";
@@ -56,11 +56,11 @@ export default function MoldWaterPage() {
           }
           actions={
             <>
-              <a className="btn btn-gold" href={site.phoneHref}>
+              <a className="btn btn-white" href={site.phoneHref}>
                 Call {site.phone}
               </a>
-              <a className="btn btn-ghost" href="#mold-form">
-                Book an inspection
+              <a className="btn btn-gold" href="#mold-form">
+                Book a Free Inspection
               </a>
             </>
           }
@@ -80,7 +80,7 @@ export default function MoldWaterPage() {
                 </>
               }
               options={["Mold or a musty smell", "Water damage or a leak", "Flooded basement", "Sewage backup"]}
-              submitLabel="Book my inspection"
+              submitLabel="Book a Free Inspection"
             />
           }
         />
@@ -88,8 +88,9 @@ export default function MoldWaterPage() {
         <Report heading="The mold is not the problem. The water is." photo="moldWall2" notes={notes}>
           <p className="lead">
             Clean the mold without stopping the water and it grows back. Most mold companies can clean. Very few can climb on the roof and
-            fix the flashing that&apos;s letting the water in. We can, because we&apos;re also a licensed roofer and general contractor.
+            fix the flashing that&apos;s letting the water in. As a Chicago mold remediation and water damage restoration company, we can, because we&apos;re also a licensed roofer and general contractor.
           </p>
+          <SectionCta href="#mold-form" call={false} />
         </Report>
 
         <section className="section surface">
@@ -147,6 +148,7 @@ export default function MoldWaterPage() {
                 </tbody>
               </table>
             </div>
+            <SectionCta href="#mold-form" />
           </div>
         </section>
 
@@ -169,6 +171,7 @@ export default function MoldWaterPage() {
                 },
               ]}
             />
+            <SectionCta href="#mold-form" align="center" />
           </div>
         </section>
 
@@ -207,7 +210,7 @@ export default function MoldWaterPage() {
             <Head title={reviewsReady ? "From Chicago homeowners" : "Licensed for the whole job"} intro={<Rating />} />
             <Licences
               items={[
-                { value: licences.mold, label: "Mold and water damage licence" },
+                { value: licences.mold, fallback: "Licensed", label: "Mold and water damage. Licence number on request" },
                 { value: licences.illinoisRoofing, label: "Illinois roofing licence" },
                 { value: licences.chicagoGc, label: "Chicago general contractor" },
               ]}

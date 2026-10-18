@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/water-damage-restoration-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /water-damage-restoration-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/water-damage-restoration-chicago",
   slug: "water-damage-restoration-chicago",
@@ -12,123 +11,127 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Water Damage Restoration in Chicago",
     buttons: [
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
-      {
-        label: "Request water damage help",
-        href: "#lead-form",
-        kind: "form",
-      },
+      { label: "Call (773) 987-1693", kind: "call" },
+      { label: "Book a visit online", href: "#lead-form", kind: "form" },
     ],
-    trust: [
-      "[24/7 phone: yes or no]",
-      "[Response time, for example \"on site within 2 hours\"]",
-      "Licensed for water damage restoration",
-      "Chicago GC license TGC144939",
-    ],
-    eyebrow: "Water coming through the ceiling?",
-    sub: "We get the water out, dry your home properly, check for mold and stop the leak where it starts. One team from the first call to the last coat of paint.",
-    bridge: "Then here's what you're really up against.",
+    trust: ["Chicago general contractor licence TGC144939", "[Mold licence number]", "[Google rating and review count]"],
+    eyebrow: "Burst pipe? Ceiling leak? Water on the floor?",
+    sub: "We remove the water, dry the structure and repair what got damaged. Photos and moisture readings of everything we find. You know the price before we start.",
+    bridge: "The faster the water comes out, the less there is to repair.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "The water you can see is the easy part",
+      heading: "Water inside a house does damage by the hour",
       blocks: [
         {
           type: "p",
-          text: "\"A pipe burst in the cold snap and the kitchen ceiling came down.\" \"The tenant upstairs let the tub overflow.\" \"After the storm there's a brown ring on the bedroom ceiling and it's getting bigger.\" Every call is different, and every one feels urgent.",
+          text: "A burst pipe soaks the floor and the walls. A roof leak drips into the ceiling for weeks before anyone sees the stain. An overflow from a washing machine or water heater floods the basement. Every hour the water sits, the damage spreads.",
         },
         {
           type: "p",
-          text: "The puddle gets mopped. The water that soaked into drywall, subfloor and insulation stays. Surfaces feel dry in a day while the inside stays wet. That's what turns into warped floors, sagging ceilings and mold weeks later. The EPA says wet materials should be dried within 24 to 48 hours to help prevent mold.",
+          text: "Drywall absorbs water and starts to crumble. Wood subfloors swell and buckle. Insulation inside the walls holds moisture like a sponge. And within 24 to 48 hours, mold can start growing in any of those materials.",
         },
         {
-          type: "subhead",
-          text: "Signs of water damage in walls and ceilings",
-        },
-        {
-          type: "ul",
-          items: [
-            "Brown or yellow stains that keep spreading",
-            "Paint that bubbles or peels",
-            "Drywall that feels soft or swollen at the bottom",
-            "Floors that cup, buckle or feel spongy",
-            "A musty smell that wasn't there before",
-          ],
+          type: "p",
+          text: "In a Chicago 2-flat or condo, water from one unit reaches the unit below. The ceiling, walls and floor of a unit you do not even live in can be soaked.",
         },
       ],
-      bridge: "Most water jobs go wrong for one reason.",
+      bridge: "Drying the floor is not enough.",
     },
     {
       kind: "turning",
-      heading: "Drying the room doesn't stop the water",
+      heading: "Drying the floor is not enough",
       blocks: [
         {
           type: "p",
-          text: "Most restoration companies dry things out and leave. If the water came from the roof, the next storm brings it right back, and now you're calling a roofer, then a drywall crew, then a painter.",
+          text: "Mopping up the visible water is the first instinct. But water travels. It wicks up drywall, seeps under baseboards, and sits inside wall cavities where you cannot see it. A floor that looks dry can have a soaked subfloor underneath.",
         },
         {
           type: "p",
-          text: "The damage is only half the job. The other half is the leak. Fix It Aid is a licensed roofer, a licensed Chicago general contractor and licensed for water damage restoration, so we can deal with both.",
+          text: "If the structure is not dried properly with commercial equipment, the moisture stays. Then you have a mold problem on top of a water problem.",
+        },
+        {
+          type: "p",
+          text: "Fix It Aid does water damage restoration across Chicago. We extract the water, set up commercial drying equipment, monitor the moisture until the structure is dry, and check for mold. If the water came from a roof leak, our roofing team fixes the roof (link: /roofing-chicago). If mold has started, our mold team removes it (link: /mold-removal-chicago). One company handles all of it.",
         },
       ],
-      bridge: "So we handle the whole thing.",
+      bridge: "Here is how we dry and repair a water-damaged home.",
     },
     {
       kind: "solution",
-      heading: "How we restore your home",
+      heading: "Extract. Dry. Check for mold. Repair.",
       blocks: [
         {
           type: "ol",
           items: [
-            "**You call.** Tell us what happened and where the water is. Response time: within one business hour",
-            "**Water out.** We pump out standing water and do water extraction from carpet and pads. Wet materials that can't be saved come out.",
-            "**Dry and measure.** Dehumidifiers and air movers run until the structure is dry. We take moisture readings on every visit and stop only when the numbers say dry. [Confirm equipment and typical drying days]",
-            "**Check for mold and stop the leak.** We look for mold before anything is closed up (link: /mold-removal-chicago). If the roof or flashing is the cause, we fix it ourselves (link: /roof-repair-chicago). If a pipe is the cause, we show you exactly where.",
-            "**Put it back.** Ceilings, walls, paint and finishes, so the room is usable again.",
+            "**Water extraction.** We remove standing water with pumps and extractors. Same day when possible.",
+            "**Damage assessment.** Moisture readings on every wall, floor and ceiling in the affected area. Photos and a written scope of damage.",
+            "**Structural drying.** Commercial dehumidifiers and air movers placed throughout the space. We monitor moisture levels daily until the structure is dry.",
+            "**Mold check.** Once dry, we inspect for mold. If we find it, our mold team handles removal and clearance testing. (link: /mold-removal-chicago)",
+            "**Source repair.** We fix the cause: burst pipe, leaking supply line, failed water heater, roof leak. (link: /roofing-chicago)",
+            "**Rebuild.** Drywall, insulation, flooring, paint. Chicago GC licence TGC144939.",
           ],
         },
+        {
+          type: "subhead",
+          text: "What we handle",
+        },
+        {
+          type: "ul",
+          items: [
+            "Burst pipes and supply line failures",
+            "Roof leaks that damaged ceilings and walls",
+            "Water heater failures",
+            "Washing machine and dishwasher overflows",
+            "AC drain line leaks (link: /ac-repair-chicago)",
+            "Toilet overflows and supply line breaks",
+          ],
+        },
+        {
+          type: "p",
+          text: "For flooded basements from heavy rain or sewer backup, see flooded basement cleanup. (link: /flooded-basement-cleanup-chicago)",
+        },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "What you get when you call us instead of doing it yourself.",
     },
     {
       kind: "benefits",
-      heading: "What you get by calling one company",
+      heading: "Dried right, checked for mold, repaired by a GC",
       blocks: [
         {
           type: "ul",
           items: [
-            "**No mold surprise in a month.** We dry to the numbers, not to the touch.",
-            "**No chasing contractors.** Ceiling water damage repair, the roof leak above it and the paint all go under one written price.",
-            "**No guessing about cost.** You get a written price for the repairs before they start.",
-            "**A clear record.** We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.",
+            "**Documented damage.** Moisture readings and photos of everything. We document the damage with photos and a written report you can share with your insurer.",
+            "**Commercial drying.** Fans and a bucket are not enough. Our dehumidifiers and air movers dry the structure, not just the surface.",
+            "**Mold prevention.** We check for mold after drying. If it started, we remove it. (link: /mold-removal-chicago)",
+            "**Source fixed.** We repair the pipe, the drain, the water heater or the roof leak that caused the damage.",
+            "**Rebuild included.** We are a general contractor. Drywall, flooring, insulation, paint. One company from water extraction to final coat.",
           ],
         },
       ],
-      bridge: "Don't just take our word for it.",
+      bridge: "A general contractor who handles water damage.",
     },
     {
       kind: "proof",
-      heading: "Licensed, local and easy to check",
+      heading: "Licensed in Chicago for every part of the job",
       blocks: [
         {
           type: "ul",
           items: [
-            "Licensed for water damage restoration",
-            "Chicago general contractor license TGC144939 · Illinois roofing license 104.021107",
-            "[Mold certification, for example IICRC]",
+            "City of Chicago general contractor: TGC144939",
+            "Mold remediation licence: [Mold licence number]",
+            "Illinois roofing licence: 104.021107 (when a roof leak is the cause)",
+            "[Insured and bonded: yes or no]",
             "[Warranty on work]",
             "[Google rating and review count]",
-            "[Real review 1, about water damage, with name and neighborhood]",
-            "[Real review 2, with name and neighborhood]",
-            "[Real job photos: ceiling before and after, drying equipment set up]",
+            "[Real review 1: burst pipe or ceiling leak, name and neighborhood]",
+            "[Real review 2: water damage and mold, name and neighborhood]",
+            "[Real job photos: extraction, drying equipment, before and after]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "Questions we hear from homeowners with water damage.",
     },
     {
       kind: "faq",
@@ -136,64 +139,52 @@ export const content: StoryPageContent = {
       blocks: [
         {
           type: "faq",
-          q: "What does water damage restoration cost in Chicago?",
-          a: "Usually [price range]. It depends on how much got wet and for how long, whether the water was clean or dirty, what has to come out, how many days of drying it takes, and how much rebuilding you need.",
+          q: "How much does water damage restoration cost in Chicago?",
+          a: "It depends on how much area is affected, what materials are damaged and whether mold is present. A single room with wet drywall is a different job than a flooded basement with saturated subfloors. We assess the damage, give you moisture readings and photos, and price the job before we start.",
         },
         {
           type: "faq",
-          q: "Does homeowners insurance cover water damage?",
-          a: "It depends on your policy and on what caused the water. Your insurance company decides that. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.",
+          q: "Is water mitigation the same as water damage restoration?",
+          a: "Water mitigation is the first step: water removal and drying to stop the damage from spreading. Water damage restoration is the full job, including the repair that puts your home back together. We do both, from emergency water removal through to water damage repair.",
         },
         {
           type: "faq",
-          q: "How long does water damage restoration take?",
-          a: "Repairs come after. A small leak can be done in about a week. A flooded floor with new drywall and flooring takes longer. You get a timeline at the first visit.",
+          q: "Will you help with my insurance claim?",
+          a: "We document the damage with photos, moisture readings and a written report you can share with your insurer. We do not file claims or negotiate with insurance companies.",
         },
         {
           type: "faq",
-          q: "Can I get same-day water damage service in Chicago?",
-          a: "[24/7 phone: yes or no]. [Response time, for example \"on site within 2 hours\"]. Call and we'll tell you honestly when we can be there.",
+          q: "How long does it take to dry a house?",
+          a: "[Typical drying time, for example \"Most spaces take three to five days with commercial equipment. We monitor moisture levels daily and pull the equipment when the structure is dry.\"]",
         },
         {
           type: "faq",
-          q: "Do we have to move out?",
-          a: "Usually not. The drying equipment is noisy for a few days, and we keep work to the rooms that got wet.",
+          q: "Can water damage cause mold?",
+          a: "Yes. Mold can start growing within 24 to 48 hours on wet materials. That is why we check for mold after drying and remove it if needed. (link: /mold-removal-chicago)",
         },
         {
           type: "faq",
-          q: "Is it water damage or a flooded basement?",
-          a: "If it came in through the floor drain or the foundation, see flooded basement cleanup (link: /flooded-basement-cleanup-chicago). Same team, different cleanup.",
+          q: "My ceiling is leaking from a roof leak. Can you fix the roof too?",
+          a: "Yes. Our roofing team repairs the roof. Our restoration team dries and repairs the inside. One company. (link: /roofing-chicago)",
+        },
+        {
+          type: "faq",
+          q: "My basement flooded from rain or a sewer backup. Is that the same service?",
+          a: "Sewer backup and storm flooding are a different category. See flooded basement cleanup. (link: /flooded-basement-cleanup-chicago)",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Get the water out before the damage spreads.",
     },
     {
       kind: "close",
-      heading: "Every hour wet materials sit, the job gets bigger",
-      blocks: [
-        {
-          type: "p",
-          text: "Call (773) 987-1693 now, or send a few details and we'll call you right back. We'll get the water out, dry it properly and stop it where it starts.",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Get the water out before the damage spreads",
+      blocks: [{ type: "p", text: "Call now. We extract the water, set up drying equipment and document the damage. You know the price before repair work starts." }],
       buttons: [
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
-        {
-          label: "Request water damage help",
-          href: "#lead-form",
-          kind: "form",
-        },
+        { label: "Call (773) 987-1693", kind: "call" },
+        { label: "Book a visit online", href: "#lead-form", kind: "form" },
       ],
     },
   ],
-  formButton: "Get help with water damage",
 };
 
 export default function Page() {

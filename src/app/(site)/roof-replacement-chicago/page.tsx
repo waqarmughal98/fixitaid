@@ -4,7 +4,6 @@ import { StoryRoute, storyMetadata } from "@/components/content/StoryRoute";
 const URL = "/roof-replacement-chicago";
 export const metadata = storyMetadata(URL);
 
-/** Page copy for /roof-replacement-chicago. Edit the content object below. */
 export const content: StoryPageContent = {
   url: "/roof-replacement-chicago",
   slug: "roof-replacement-chicago",
@@ -12,113 +11,121 @@ export const content: StoryPageContent = {
   hero: {
     h1: "Roof Replacement in Chicago",
     buttons: [
-      {
-        label: "Book a free roof check",
-        href: "/free-roof-check",
-        kind: "link",
-      },
-      {
-        label: "Call (773) 987-1693",
-        kind: "call",
-      },
+      { label: "Get a free roof check", href: "/free-roof-check", kind: "link" },
+      { label: "Call (773) 987-1693", kind: "call" },
     ],
-    trust: [
-      "Illinois roofing licence 104.021107",
-      "Chicago general contractor licence TGC144939",
-      "Written price before work starts",
-      "[Warranty on work]",
-    ],
-    eyebrow: "Told you need a new roof? Get a second look first.",
-    sub: "We show you photos and tell you straight whether your roof needs replacing. If it does, you get a full tear-off, a sound deck, a new roof and the permit, with the price in writing first.",
-    bridge: "A new roof is one of the biggest bills a homeowner pays, so it's worth getting this right.",
+    trust: ["Illinois roofing licence 104.021107", "Chicago general contractor licence TGC144939", "[Google rating and review count]"],
+    eyebrow: "Shingle and flat roof replacement across Chicago",
+    sub: "When fixing the old roof costs more than replacing it, you need a straight answer and a written price. We tear off the old roof, replace the decking where needed and install a new one.",
+    bridge: "That is the first thing we do.",
   },
   sections: [
     {
       kind: "pain",
-      heading: "Do I really need a new roof, or is someone trying to sell me one?",
+      heading: "\"The roofer said it needs replacing. Does it?\"",
       blocks: [
         {
           type: "p",
-          text: "Maybe one roofer said repair and another said replace. Maybe the leaks keep coming back and you're tired of paying for patches. Maybe you're selling, buying, or just looking at a 25-year-old roof and wondering how many winters it has left.",
+          text: "You had a leak fixed last year. Now there is another one on the other side. The shingles are curling. The granules are in the gutters. A roofer told you it is time for a new roof, but that is a big check to write.",
         },
         {
           type: "p",
-          text: "The fear runs both ways. Replace too early and you've spent thousands you didn't need to. Wait too long and the next storm sends water through a rotted deck into the attic, the insulation and the ceilings, and the job gets bigger and more expensive.",
+          text: "Or you have a flat roof on a 2-flat. The patches are layered on top of each other. Every spring there is a new leak in a new spot.",
+        },
+        {
+          type: "p",
+          text: "The real question is not whether the roof is old. It is whether repair still makes financial sense. If you are paying for a repair every year, a new roof may cost less over the next ten years. But only if someone actually runs the numbers.",
         },
       ],
-      bridge: "The answer depends on something most roof quotes never show you.",
+      bridge: "That is the first thing we do.",
     },
     {
       kind: "turning",
-      heading: "Most roofers sell what they install. The deck tells the truth.",
+      heading: "We tell you whether replacement actually makes sense",
       blocks: [
         {
           type: "p",
-          text: "A company that earns its money on new roofs will tend to find a reason you need one. The honest way to decide is to look at three things: the roof's age, how much of it is damaged, and the condition of the wood deck underneath.",
+          text: "Some roofs need replacing. Some do not. A 15-year-old roof with one bad area is a repair. A 25-year-old roof with curling shingles and soft decking in two spots is a replacement.",
         },
         {
           type: "p",
-          text: "One bad area on a solid deck is usually worth repairing. (link: /roof-repair-chicago) Worn shingles everywhere, leaks in several places, soft spots or a sagging roof line usually mean replacement, because you'll keep paying for repairs that don't last.",
+          text: "We do both. We are a roofing company, not just an installer. So we give you the honest answer: repair price and replacement price, side by side. If the repair works, take the repair. (link: /roof-repair-chicago)",
+        },
+        {
+          type: "p",
+          text: "We do not push one over the other. The numbers speak for themselves.",
         },
       ],
-      bridge: "So we show you the photos, and if it's time, we replace it properly.",
+      bridge: "Here is what a roof replacement looks like.",
     },
     {
       kind: "solution",
-      heading: "What a Fix It Aid roof replacement includes",
+      heading: "From old roof to new roof, step by step",
       blocks: [
         {
           type: "ol",
           items: [
-            "**Free roof check and photos,** roof and attic.",
-            "**Itemized written price** listing materials, work, permit and timeline.",
-            "**Permit.** Most roof replacements in Chicago need a city permit. We pull it.",
-            "**Protection.** We cover landscaping, siding and windows before tear-off.",
-            "**Full tear-off** down to the deck, not a new layer over old problems.",
-            "**Deck repair.** Rotted or soft wood replaced before anything new goes on.",
-            "**Ice and water protection** along edges and valleys, where Chicago winters do the most damage, plus new underlayment and flashing.",
-            "**Ventilation check,** so the new roof lasts and ice dams are less likely.",
-            "**The new roof.** Asphalt shingles on pitched roofs. TPO, EPDM or modified bitumen on flat roofs. (link: /flat-roof-repair-chicago)",
-            "**Cleanup and walkthrough,** including a magnet sweep for nails, and the warranty in writing. [Warranty on work]",
+            "**Free roof check.** We inspect the full roof and the decking underneath. (link: /free-roof-check)",
+            "**Written price.** Materials, labor, permits, dumpster and timeline. In writing. No verbal estimates.",
+            "**Tear-off.** We strip the old roof down to the decking. If decking is rotten, we replace it.",
+            "**Install.** New underlayment, new shingles or membrane, new flashing, new vents. Everything by code.",
+            "**Final walk.** We walk the roof with you (or show you photos) and clean up the property.",
           ],
         },
+        {
+          type: "h3",
+          title: "Shingle roofs",
+          text: "Architectural shingles on houses, bungalows and pitched garages.",
+        },
+        {
+          type: "h3",
+          title: "Flat roofs",
+          text: "TPO, EPDM rubber and modified bitumen on 2-flats, 3-flats, garages and small commercial buildings.",
+          link: "/flat-roof-repair-chicago",
+        },
+        {
+          type: "p",
+          text: "**Mixed roofs.** Pitched in the front, flat in the back. Common in Chicago. We handle both.",
+        },
       ],
-      bridge: "Here's what that means for you.",
+      bridge: "What makes this quote different from the others.",
     },
     {
       kind: "benefits",
-      heading: "What you get with Fix It Aid",
+      heading: "A written price that does not change halfway through",
       blocks: [
         {
           type: "ul",
           items: [
-            "**Afraid of replacing too soon?** You see the photos first. If a repair will do, we quote the repair.",
-            "**Afraid of hidden rot?** Full tear-off means we see the deck and fix it before the new roof covers it.",
-            "**Afraid of the damage the old roof already did?** We're also licensed for water damage and mold, so the attic, insulation and ceilings get repaired by the same team. (link: /mold-removal-chicago)",
-            "**Afraid of a bill that grows?** Itemized written price before work starts. [Confirm: how deck repair beyond the estimate is priced, for example per sheet]",
+            "**Repair vs. replace, side by side.** We show you both prices so you can compare.",
+            "**Written price, not a verbal estimate.** Materials, labor, permits and dumpster are included. The price on paper is the price you pay.",
+            "**Decking replaced where needed.** We do not shingle over soft wood. We are a general contractor (TGC144939), so we handle the carpentry ourselves.",
+            "**Permits pulled.** Where the city requires them, we handle permits.",
+            "**Roof Care Plan after.** Once the new roof is on, a yearly check keeps the warranty valid and catches small problems early. (link: /roof-care-plan)",
           ],
         },
       ],
-      bridge: "Here's who's doing the work.",
+      bridge: "Check our credentials yourself.",
     },
     {
       kind: "proof",
-      heading: "Licensed roofer and general contractor",
+      heading: "Licensed to roof and licensed to build",
       blocks: [
         {
           type: "ul",
           items: [
-            "Illinois roofing licence 104.021107",
-            "Chicago general contractor licence TGC144939",
-            "We pull the permit ourselves. [Confirm: own crew or subcontractors]",
+            "Illinois roofing licence: 104.021107",
+            "City of Chicago general contractor: TGC144939",
+            "[Insured and bonded: yes or no]",
             "[Warranty on work]",
             "[Google rating and review count]",
-            "[Real review 1: roof replacement, with name and neighborhood]",
-            "[Real job photos: tear-off, deck repair, finished roof]",
+            "[Real review 1: shingle roof replacement, name and neighborhood]",
+            "[Real review 2: flat roof replacement on a 2-flat, name and neighborhood]",
+            "[Real job photos: full replacement before and after]",
           ],
         },
       ],
-      bridge: "You probably still have a few questions.",
+      bridge: "What to know before replacing your roof.",
     },
     {
       kind: "faq",
@@ -127,54 +134,58 @@ export const content: StoryPageContent = {
         {
           type: "faq",
           q: "How much does a new roof cost in Chicago?",
-          a: "A typical Chicago house or 2-flat roof replacement runs [price range]. Flat roofs [price range]. It depends on size and pitch, material, how many layers come off, how much deck needs replacing, chimneys and skylights, access for the dumpster, and the permit. [Financing: yes or no]",
+          a: "It depends on size, pitch, material, how many layers come off and how much decking needs replacing. What moves the price: steep vs. flat, shingles vs. TPO, one story vs. three, easy access vs. tight lot. We check the roof for free and give you a written price.",
         },
         {
           type: "faq",
-          q: "Will my insurance cover a new roof?",
-          a: "That's a question for your insurance company. We don't handle claims or promise coverage. You will get clear photos of the roof's condition, which you can share with your insurance company if you choose.",
+          q: "How long does a roof replacement take?",
+          a: "[Typical timeline, for example \"Most shingle roofs take two to three days. Flat roofs with insulation can take longer.\"]",
         },
         {
           type: "faq",
-          q: "How long does it take?",
-          a: "Most homes take [typical days] once work starts, weather permitting. We give you the timeline in the written price.",
+          q: "Do you pull permits?",
+          a: "Where the City of Chicago requires a permit, we pull it with the Chicago Department of Buildings. The permit number is on the final invoice.",
         },
         {
           type: "faq",
-          q: "Do I need to be home, and how messy is it?",
-          a: "You don't need to be home for most of the work. Tear-off is loud for a day or so. We protect the yard and clean up daily.",
+          q: "Will my new roof come with a warranty?",
+          a: "[Warranty details: workmanship warranty length and manufacturer warranty length.]",
         },
         {
           type: "faq",
-          q: "How long does a shingle roof last in Chicago?",
-          a: "It depends on the shingle, the install and the attic ventilation. Freeze and thaw, ice dams and summer heat all shorten a roof's life here. A free roof check tells you where yours stands.",
+          q: "Should I repair or replace my roof?",
+          a: "It comes down to the numbers. If the roof is mostly sound and the damage is in one area, repair is the right call. If you are paying for a repair every year, or the decking is soft in several spots, a replacement usually costs less over ten years. We check the roof for free and give you the repair price and the replacement price side by side, so the choice between repair or replace is yours, not ours.",
+        },
+        {
+          type: "faq",
+          q: "Do you offer roof replacement financing?",
+          a: "[Financing: yes or no. If yes, name the lender and the terms, for example \"monthly payment plans through X\".] Either way, you get a clear written price first, with no pressure.",
+        },
+        {
+          type: "faq",
+          q: "Can I stay in the house during the work?",
+          a: "Yes. It is noisy, but you do not have to leave.",
+        },
+        {
+          type: "faq",
+          q: "What if you find rotten decking?",
+          a: "We replace it. The cost is in the written price if we found it during the inspection. If we find more during tear-off, we call you with the additional cost before we proceed.",
+        },
+        {
+          type: "faq",
+          q: "My roof leaked and there is water damage inside. Can you fix that too?",
+          a: "Yes. Our water damage team handles the inside. If mold started, our mold team removes it. One company.",
         },
       ],
-      bridge: "The first step is simple.",
+      bridge: "Find out what a new roof costs.",
     },
     {
       kind: "close",
-      heading: "Find out if you really need a new roof",
-      blocks: [
-        {
-          type: "p",
-          text: "A free roof check, photos of the deck and shingles, and a straight answer on repair versus replacement. If it's time, a written price.",
-        },
-        {
-          type: "p",
-          text: "---",
-        },
-      ],
+      heading: "Find out what a new roof costs",
+      blocks: [{ type: "p", text: "Book a free roof check. We inspect the roof, run the numbers and give you a written price. Repair price included if repair is an option." }],
       buttons: [
-        {
-          label: "Book a free roof check",
-          href: "/free-roof-check",
-          kind: "link",
-        },
-        {
-          label: "Call (773) 987-1693",
-          kind: "call",
-        },
+        { label: "Get a free roof check", href: "/free-roof-check", kind: "link" },
+        { label: "Call (773) 987-1693", kind: "call" },
       ],
     },
   ],

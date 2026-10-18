@@ -12,7 +12,7 @@ import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
 import { Marquee } from "@/components/sections/Marquee";
-import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head, Checks } from "@/components/sections/Sections";
+import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head, Checks, SectionCta } from "@/components/sections/Sections";
 
 // Google Ads landing page for the roof funnel. No menu.
 const URL = "/free-roof-check";
@@ -62,15 +62,15 @@ export default function FreeRoofCheckPage() {
           actions={
             <>
               <a className="btn btn-gold" href="#roof-form">
-                Book my free roof check
+                Book a Free Inspection
               </a>
-              <a className="btn btn-ghost" href={site.phoneHref}>
+              <a className="btn btn-white" href={site.phoneHref}>
                 Call {site.phone}
               </a>
             </>
           }
           facts={[
-            { big: "$0", small: "Roof check and photo report" },
+            { big: "$0", small: "Roof inspection report with photos" },
             { big: licences.illinoisRoofing, small: "Illinois roofing licence" },
             { big: licences.chicagoGc, small: "Chicago GC, for permits" },
           ]}
@@ -80,7 +80,7 @@ export default function FreeRoofCheckPage() {
               title="Book your free roof check"
               intro="Takes a minute. We call to set a time that works for you."
               options={["A leak or a ceiling stain", "Missing or damaged shingles", "Flat roof problem or ponding water", "Old roof, just want a check", "Buying or selling a home"]}
-              submitLabel="Book my free roof check"
+              submitLabel="Book a Free Inspection"
             />
           }
         />
@@ -93,6 +93,7 @@ export default function FreeRoofCheckPage() {
             dozens of times a winter, and water travels along the rafters before it shows up on a ceiling. These are the spots we check
             first.
           </p>
+          <SectionCta href="#roof-form" call={false} />
         </Report>
 
         <section className="section surface">
@@ -141,6 +142,7 @@ export default function FreeRoofCheckPage() {
                 },
               ]}
             />
+            <SectionCta href="#roof-form" align="center" />
           </div>
         </section>
 

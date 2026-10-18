@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Photo } from "@/components/ui/Photo";
 import type { PhotoKey } from "@/lib/photos";
 import { site } from "@/config/site";
+import { RailNav } from "./RailNav";
 
 export type RailItem = {
   photo: PhotoKey;
@@ -9,6 +10,7 @@ export type RailItem = {
   text: string;
   href: string;
   links: { href: string; label: string }[];
+  ctaLabel?: string;
 };
 
 // Services as large photo panels. On desktop the section pins and the panels slide
@@ -41,6 +43,11 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
                   </li>
                 ))}
               </ul>
+              <div className="rail-cta">
+                <a className="btn btn-gold" href={cta.href}>
+                  Book a Free Inspection
+                </a>
+              </div>
             </article>
           ))}
           <article className="rail-panel cta">
@@ -49,10 +56,10 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
               <h3>{cta.title}</h3>
               <p>{cta.text}</p>
               <div className="actions" style={{ marginTop: 24 }}>
-                <a className="btn btn-dark" href={cta.href}>
-                  {cta.label}
+                <a className="btn btn-gold" href={cta.href}>
+                  Book a Free Inspection
                 </a>
-                <a className="btn btn-dark" href={site.phoneHref}>
+                <a className="btn btn-white" href={site.phoneHref}>
                   Call {site.phone}
                 </a>
               </div>
@@ -60,6 +67,7 @@ export function ServiceRail({ heading, intro, items, cta }: { heading: string; i
           </article>
         </div>
       </div>
+      <RailNav count={items.length + 1} />
       <div className="rail-progress" aria-hidden="true">
         <span data-rail-progress />
       </div>

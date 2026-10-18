@@ -1,583 +1,608 @@
-# Fix It Aid: final page copy for the mold, water and areas pages
+# Fix It Aid page content: Mold, water damage and areas pages
 
-Written 15 October 2026 (version 2, rewritten to the 8-step page story in 8-competitor-copy-study-and-page-story-2026-10-15.md). Five pages, ready for the developer.
+Written 15 October 2026 (version 2). Rewritten 17 October 2026 (version 3 — SEO content rewrite). Final copy for five pages: /mold-inspection-chicago, /mold-removal-chicago, /water-damage-restoration-chicago, /flooded-basement-cleanup-chicago and /areas-we-serve.
 
-**How to read this file**
-- Every page follows the same story: 1 Hook, 2 Pain and stakes, 3 Turning point, 4 Solution, 5 Benefits, 6 Proof, 7 Objections (cost, insurance, timing, disruption), 8 Close. The step number is shown next to each section heading for the team. It does not go on the page.
-- The *italic line* at the end of each section is the bridge into the next section. It goes on the page, as the last line of that section.
-- Everything in [square brackets] is a fact the owner still has to confirm. Fill it in or delete the line before launch. Never publish a bracket.
-- (link: /url) means "make the words just before this a link to that page".
-- Titles, meta descriptions and H1s are copied exactly from 4-seo-meta-tags-2026-10-15.csv. Primary keywords come from 2-seo-keywords-final-2026-10-15.csv.
-- Facts come only from 0-facts-and-voice-guide-2026-10-15.md. No years in business, no "insured and bonded", no 24/7 and no response time until the owner confirms them.
-- Insurance: the only wording used is the sentence the guide allows. No page promises help with a claim.
-- Scope: mold, water damage and flooded basements, roofing, HVAC. We do not do plumbing. When a pipe is the cause, we show the customer exactly where.
-- Lines marked "Owner note" are for the team only. They do not go on the page.
+**How to use this file**
 
-**What every page shares (build once, reuse)**
-- Header: logo, menu, tap-to-call button "Call (773) 987-1693". On phones, a sticky call bar at the bottom.
-- Short form in the hero, 4 fields: Name, Phone, ZIP code, "What's going on?" (one line). Send button text is given per page.
-- Footer: Fix It Aid LLC · (773) 987-1693 · info@fixitaid.com · Chicago GC license TGC144939 · Illinois roofing licenses 104.021107 / [confirm 105.012092] · [Mold licence number] · [HVAC licence number] · Serving the City of Chicago · [Address to show]
+- Each service page follows the 8-step page story: hook, pain and stakes, turning point, solution, benefits, proof, objections, close.
+- Bridge lines lead the reader into the next section. Show the sentence only (no "Bridge:" label).
+- Titles, meta descriptions and H1s match `seo-meta.csv`.
+- Facts come only from `0-facts-and-voice-guide-2026-10-15.md`. Anything in [square brackets] is a placeholder. Fill it or delete the line before launch.
+- (link: /url) marks an internal link. Put it on the words just before it.
+- Notes in *italics starting with "Note:"* are for Waqar and the developer, not for the page.
 
 ---
 
-## Page 1: Mold inspection
+## Page 1: /mold-inspection-chicago
 
-| Field | Value |
-|---|---|
-| URL | /mold-inspection-chicago |
-| Title tag | Mold Inspection & Testing in Chicago \| Fix It Aid |
-| Meta description | Musty smell or spots on the wall? We test the air and surfaces, find the cause and give you a written report. Chicago homes, condos and 2-flats. |
-| H1 | Mold Inspection and Testing in Chicago |
-| Primary keyword | mold inspection chicago |
-| Secondary keywords used | mold testing chicago, mold inspector chicago, free mold inspection chicago, black mold testing chicago, mold inspection cost chicago, detect mold in walls, why is mold and mildew inspection important in chicago |
-| Schema | Service + FAQPage + BreadcrumbList |
+- **URL:** /mold-inspection-chicago
+- **Title tag:** Mold Inspection & Testing in Chicago | Fix It Aid
+- **Meta description:** Musty smell or spots on the wall? We test the air and surfaces, find the cause and give you a written report. Chicago homes, condos and 2-flats.
+- **H1:** Mold Inspection and Testing in Chicago
+- **Primary keyword:** mold inspection chicago. Secondaries used: mold testing chicago, mold inspection cost chicago, air quality testing mold chicago, mold inspector near me chicago, mold assessment chicago, moisture testing chicago, mold in basement chicago.
 
-### 1 Hook: Hero
+### 1. Hook (hero)
 
-**Eyebrow:** Musty smell that won't go away?
+**Eyebrow:** Musty smell? Dark spots on the wall or ceiling?
 
 **H1:** Mold Inspection and Testing in Chicago
 
-**Subheadline:** You'll know what's growing, where it's coming from and what it takes to fix it. Our mold inspection ends with a written report and a straight answer, even if that answer is "you don't need us".
+**Subheadline:** We test the air and surfaces, find the moisture source and give you a written report with photos. You know what you are dealing with before spending a dollar on removal.
 
-**Buttons:** [Call (773) 987-1693] [Book a mold inspection]
+**Buttons:** [Book an inspection] [Call (773) 987-1693]
 
-**Trust line:** Chicago GC license TGC144939 · Licensed for mold remediation [Mold licence number] · [Mold certification, for example IICRC] · [Google rating and review count]
+**Trust line:** Mold licence [Mold licence number] · Chicago GC licence TGC144939 · [Google rating and review count]
 
-*Here's what most people are dealing with when they call.*
+### 2. Pain and stakes
 
-### 2 Pain and stakes: H2: You can smell it. You just can't find it.
+**Heading:** You can smell it but you cannot find it
 
-"The basement smells like a wet towel." "There's a gray spot behind the dresser." "We bought a vintage 2-flat and I want to know what's in the walls." That's how most mold calls start. Not with certainty. With a feeling that something is off.
+A musty smell in the basement. Dark spots behind the bathroom vanity. A stain on the ceiling that came back after it was painted over. The question is always the same: is it mold, and how bad is it?
 
-The hard part is the waiting. You scrub a spot and it comes back. You run a dehumidifier and the smell is still there. You read online and get ten different answers. Meanwhile, if there is mold, it keeps growing in the places you can't see: behind drywall, under carpet, above a ceiling stain.
+Guessing does not help. Bleaching the surface does not kill what is behind the wall. Ignoring it does not make it stop. Mold keeps growing as long as the moisture is there.
 
-Signs worth checking:
-- A musty, earthy smell, often worse after rain
-- Dark, green or white spots on walls, ceilings or inside closets
-- Peeling paint, or drywall that feels soft
-- A leak, flood or burst pipe in the past year, even one that "dried out"
-- Spots that come back after you clean them
+In Chicago basements, garden units and older 2-flats, the conditions are right all year. Humidity from concrete walls, condensation on cold pipes, slow leaks from the roof or a bathroom above.
 
-*Most inspections stop at "yes, you have mold". That misses the part that matters.*
+**Bridge:** The answer starts with testing, not cleaning.
 
-### 3 Turning point: H2: The mold isn't the real problem. The water is.
+### 3. Turning point
 
-Mold only grows where there's moisture. Find mold without finding the water, and you're paying for half an answer. In Chicago, the water usually comes from the same few places: a roof or flashing leak, a foundation crack opened by freeze and thaw, a basement that takes on water in spring storms, a bathroom fan that vents nowhere, or a pipe leaking inside a wall.
+**Heading:** Test first. Then you know what to do.
 
-Most mold companies can tell you there's mold. Most can't tell you exactly where the water gets in, and can't fix it if they do.
+Mold removal without testing is guesswork. You do not know what is in the air, how far it spread or where the moisture is coming from. That means you might clean the wrong area, miss what is behind the wall or spend money on removal while the source keeps feeding new growth.
 
-*So our inspection looks for both.*
+A proper mold inspection gives you facts: air samples, surface samples, moisture readings and a written report. You know what is there, where it is and what caused it.
 
-### 4 Solution: H2: What happens during your mold inspection
+Fix It Aid does mold inspections across Chicago. We test, document and explain the results. If removal is needed, we do that too (link: /mold-removal-chicago). If the source is a roof leak, our roofing team (link: /roofing-chicago) fixes it. If it is water damage, our restoration team (link: /water-damage-restoration-chicago) handles it.
 
-1. **You call or book online.** Tell us what you're seeing or smelling. We set a time that suits you. [Response time, for example "on site within 2 hours"]
-2. **We walk the whole property.** Basement, attic, bathrooms, kitchen, windows, and every spot you're worried about.
-3. **We measure moisture.** Meter readings show if a wall or floor is wet right now, even when it looks dry. [Confirm: thermal camera] This is how we detect mold risk inside walls without cutting holes.
-4. **We test, if it helps.** Air and surface samples, compared with an outdoor sample, sent to [Mold testing: in-house or third-party lab]. If testing won't change the plan, we tell you and you don't pay for it.
-5. **You get a written report.** Photos, readings, what we found, the likely source and what we recommend, in plain words.
+**Bridge:** Here is what happens during an inspection.
 
-*Here's what that means for you.*
+### 4. Solution
 
-### 5 Benefits: H2: What you get that most inspections don't give you
+**Heading:** What a mold inspection covers
 
-- **No scare tactics.** If it's a small patch you can clean yourself, we say so.
-- **No tests you don't need.** We only take samples when the result will change what you do.
-- **The cause, not just the mold.** You leave knowing where the water comes from. If it's the roof or flashing, we can fix it ourselves. If a pipe is the cause, we show you exactly where.
-- **One contractor if you need work.** We're licensed for mold remediation, licensed as a Chicago general contractor and as an Illinois roofer. No handing you off.
+1. **Visual inspection.** We check the area you are concerned about plus common problem spots: basement walls, bathroom ceilings, window frames, attic, crawl space.
+2. **Air sampling.** We test the air to find out what is floating in the space and compare it to outdoor baseline levels.
+3. **Surface sampling.** We swab or tape-lift visible growth and send it to the lab.
+4. **Moisture readings.** We use a moisture meter on walls, floors and ceilings to find the water source.
+5. **Written report.** Lab results, photos, moisture map and our recommendation. Yours to keep.
 
-*Don't just take our word for it.*
+**What we inspect:**
+- Basements, crawl spaces and garden units
+- Bathrooms, kitchens and laundry rooms
+- Attics and roof lines (often tied to roof leaks)
+- Behind walls where there is a musty smell but nothing visible
+- 2-flats and condos (multi-unit requires careful isolation)
 
-### 6 Proof: H2: Licensed in Chicago, and you can check it
+**Bridge:** What the inspection gives you.
 
-- Chicago general contractor license TGC144939
-- Illinois roofing license 104.021107
-- Licensed for mold remediation and water damage restoration [Mold licence number]
-- [Mold certification, for example IICRC]
-- [Google rating and review count]
-- [Real review 1, about a mold inspection, with name and neighborhood]
-- [Real review 2, with name and neighborhood]
-- [Real job photos: before and after, a moisture reading, a sample report page]
+### 5. Benefits
 
-*You probably still have a few questions.*
+**Heading:** Facts, not guesses
 
-### 7 Objections: H2: Mold inspection questions
+- **Lab-tested results.** Air and surface samples analyzed by an independent lab. You see the numbers.
+- **Moisture source identified.** The report tells you where the water is coming from, not just where the mold is.
+- **Written report with photos.** Use it to plan removal, share with a landlord, or give to your insurer.
+- **No pressure to remove.** If the results come back clean, we tell you. If removal is needed, we give you a price for mold removal (link: /mold-removal-chicago) and you decide.
+- **Cause gets fixed too.** Roof leak? Our roofing team (link: /roofing-chicago). Water damage? Our restoration team (link: /water-damage-restoration-chicago). One company.
 
-**What does a mold inspection cost in Chicago?**
-Our inspection: [Free mold inspection: yes or no, or a price]. Mold testing, if you need it: [price range]. The price depends on how many samples you need, the size of the home, and whether it's one unit or a 2-flat. You get the price before we come out.
+**Bridge:** Licensed and documented.
 
-**Do I need mold testing, or just an inspection?**
-Often just an inspection. If the mold is visible and the cause is clear, testing adds cost without changing the plan. The EPA's own guidance says the same. Mold testing in Chicago is most useful when there's a smell but nothing visible, after water damage, before a sale, or to confirm a cleanup worked.
+### 6. Proof
 
-**Is black mold worse than other kinds?**
-Color won't tell you the type. Many common molds look black. Black mold testing in a lab can name it. Either way, the fix is the same: remove it properly and stop the moisture.
+**Heading:** Licensed for mold work in Chicago
 
-**Will insurance pay for this?**
-That depends on your policy, and your insurance company decides. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.
+- Mold remediation licence: [Mold licence number]
+- City of Chicago general contractor: TGC144939
+- [Insured and bonded: yes or no]
 
-**How long does it take, and will you make a mess?**
-[Confirm typical visit length] for most homes. We don't open walls without asking you first. Lab results take [Confirm lab turnaround time].
+[Google rating and review count]
 
-**Why is mold inspection important in Chicago?**
-Older homes, basements, brick that holds water, humid summers and winters with every window shut. Damp spots are easy to miss here. An inspection catches them while the fix is small.
+[Real review 1: mold inspection, name and neighborhood]
+[Real review 2: basement mold concern, name and neighborhood]
 
-Owner note: Moldman's Chicago page shows $300 to $350 for an inspection with 2 indoor samples and 1 outdoor sample (checked 15 Oct 2026). Benchmark only. Do not name Moldman on the page.
+[Real job photos: inspection equipment, lab report sample]
 
-*The first step is simple.*
+**Bridge:** What people ask before booking an inspection.
 
-### 8 Close: H2: Stop guessing about that smell
+### 7. Objections (FAQ)
 
-Tell us where you're seeing or smelling it. We'll call you back, set a time, and you'll have a real answer and a written report. Already know it's mold? Go straight to mold removal (link: /mold-removal-chicago). Water coming in right now? See water damage help (link: /water-damage-restoration-chicago).
+**How much does a mold inspection cost in Chicago?**
+[Inspection price or price range.] The price covers the visual check, air samples, surface samples, moisture readings and the written report.
 
-**Buttons:** [Call (773) 987-1693] [Book a mold inspection]
-**Form send button:** Request my mold inspection
+**Do I need a mold inspection or can I just clean it?**
+If you can see mold on a small area (less than about 10 square feet on a hard surface), surface cleaning may be enough. If the area is larger, if the mold is behind a wall, or if you smell mold but cannot see it, an inspection tells you what you are dealing with before you spend money on removal.
+
+**How long does a mold inspection take?**
+[Typical time, for example "One to two hours on site. Lab results come back in [turnaround time]."]
+
+**Can mold be behind a wall even if I cannot see it?**
+Yes. Mold grows where moisture is. A slow pipe leak or condensation inside a wall creates the right conditions. The moisture meter and air samples help us find it without tearing the wall open.
+
+**What happens if you find mold?**
+We give you the lab results, explain what they mean and give you a price for removal (link: /mold-removal-chicago) if needed. You decide.
+
+**Do you work in condos and 2-flats?**
+Yes. Multi-unit buildings are a large part of our mold work in Chicago. We coordinate with building managers when needed.
+
+### 8. Close
+
+**Headline:** Find out what is in the air.
+
+**Text:** Book a mold inspection. We test, document and give you a written report. You know what you are dealing with.
+
+**Buttons:** [Book an inspection] [Call (773) 987-1693]
 
 ---
 
-## Page 2: Mold removal
+## Page 2: /mold-removal-chicago
 
-| Field | Value |
-|---|---|
-| URL | /mold-removal-chicago |
-| Title tag | Mold Removal & Remediation in Chicago \| Fix It Aid |
-| Meta description | Safe, contained mold removal in Chicago basements, attics and bathrooms. We fix the moisture cause so it does not come back. Clear price first. |
-| H1 | Mold Removal in Chicago |
-| Primary keyword | mold removal chicago |
-| Secondary keywords used | mold remediation chicago, basement mold removal chicago, attic mold removal chicago, black mold removal chicago, mold removal company chicago, mold abatement chicago, mold removal cost chicago, does insurance cover mold removal, what causes mold in basement |
-| Schema | Service + FAQPage + BreadcrumbList |
+- **URL:** /mold-removal-chicago
+- **Title tag:** Mold Removal & Remediation in Chicago | Fix It Aid
+- **Meta description:** Safe, contained mold removal in Chicago basements, attics and bathrooms. We fix the moisture cause so it does not come back. Clear price first.
+- **H1:** Mold Removal in Chicago
+- **Primary keyword:** mold removal chicago. Secondaries used: mold remediation chicago, mold removal cost chicago, black mold removal chicago, basement mold removal chicago, attic mold removal chicago, bathroom mold removal, crawl space mold removal.
 
-### 1 Hook: Hero
+### 1. Hook (hero)
 
-**Eyebrow:** Mold came back after you cleaned it?
+**Eyebrow:** Mold in the basement, bathroom or attic?
 
 **H1:** Mold Removal in Chicago
 
-**Subheadline:** We remove the mold and fix the leak that's feeding it, so you pay for this once. Basements, attics, bathrooms and behind walls, with a written price before we start.
+**Subheadline:** We contain the area, remove the mold and fix the moisture source so it does not come back. Clear price before we start. Licensed for mold remediation in Chicago.
 
-**Buttons:** [Call (773) 987-1693] [Get a mold removal quote]
+**Buttons:** [Book a mold inspection] [Call (773) 987-1693]
 
-**Trust line:** Licensed for mold remediation [Mold licence number] · Chicago GC license TGC144939 · Licensed Illinois roofer · [Warranty on work]
+**Trust line:** Mold licence [Mold licence number] · Chicago GC licence TGC144939 · [Google rating and review count]
 
-*If you've already tried to get rid of it, you know how this goes.*
+### 2. Pain and stakes
 
-### 2 Pain and stakes: H2: You cleaned it. It came back. Now it's bigger.
+**Heading:** Cleaning the surface does not fix the problem
 
-"I bleached it twice and it's back." "The ceiling in the top-floor bedroom keeps going gray." "The finished basement smells, and the drywall is spotted at the bottom." That's what we hear.
+You scrub the mold off the bathroom wall. It comes back in three months. You bleach the basement floor. It comes back after the next rain. Every time it returns, it is a little bigger.
 
-Bleach clears what you can see. It doesn't reach mold that has grown into drywall, wood or insulation. Every month it sits, more material has to come out, and a small job turns into a wall, a ceiling or a whole basement. If you're selling or renting, it turns into a disclosure problem too.
+Surface cleaning removes what you can see. It does not reach what is behind the drywall, inside the insulation or under the subfloor. And it does not stop the moisture that caused the growth in the first place.
 
-Where it shows up in Chicago homes:
-- **Basements:** foundation walls, carpet and drywall after a flood or sewer backup. Basement mold removal is a big part of our work.
-- **Attics:** roof leaks, ice dams and bath fans that blow into the attic. Attic mold removal often means new insulation.
-- **Bathrooms, kitchens and windows:** behind tile, under sinks, and on sills soaked by winter condensation.
+In a Chicago basement, the conditions never really change. Concrete holds moisture. Humidity stays high. A slow leak can run for months before anyone notices. That is why mold keeps coming back.
 
-*Most mold jobs fail for one reason.*
+**Bridge:** Removal that works has two parts: remove the mold and stop the water.
 
-### 3 Turning point: H2: The mold isn't the problem. The water is.
+### 3. Turning point
 
-Mold can't grow without moisture. A mold company can clean the wall perfectly, but if the roof above it still leaks, the mold is back next season and you're paying twice. That's the step most companies skip, because they can't do it. They're mold cleaners, not roofers or contractors.
+**Heading:** Remove the mold. Then fix why it grew.
 
-Fix It Aid is both. We're licensed for mold remediation, licensed as a Chicago general contractor and licensed as an Illinois roofer. Roofing is where we started.
+Most mold companies remove what is in front of them and leave. If the moisture source is a roof leak, a pipe leak or a drainage problem, the mold comes back.
 
-*So we fix both: the mold and the water behind it.*
+Fix It Aid is a mold company and a general contractor. We remove the mold and fix the cause. If the moisture came from the roof, our roofing team (link: /roofing-chicago) repairs it. If a pipe burst or a drain backed up, our water damage team (link: /water-damage-restoration-chicago) handles the water. If the basement flooded, our basement cleanup team (link: /flooded-basement-cleanup-chicago) dries and disinfects it.
 
-### 4 Solution: H2: How our mold remediation works
+One company. The mold gets removed and the source gets fixed in the same project.
 
-1. **Inspect.** We find all of the mold and the moisture behind it. You get photos and readings. Not sure yet? Start with a mold inspection (link: /mold-inspection-chicago).
-2. **Contain.** We seal the area with plastic and control the air [Confirm: negative air and HEPA air scrubbers], so spores stay out of the rest of your home.
-3. **Remove.** Moldy drywall and insulation come out. Wood and surfaces we can save get HEPA-vacuumed, cleaned and treated.
-4. **Fix the source.** Roof, flashing, gutters or venting, repaired by our own licensed crew (link: /roof-repair-chicago). If a pipe is the cause, we show you exactly where.
-5. **Rebuild and check.** New drywall, paint and finishes, then a final check: [Clearance testing after removal: yes or no].
+**Bridge:** Here is how mold removal works.
 
-*Here's what that means for you.*
+### 4. Solution
 
-### 5 Benefits: H2: What you don't have to worry about
+**Heading:** Contained removal, source repair, clearance test
 
-- **Paying for it twice.** We stop the moisture, not just the stain.
-- **Juggling three contractors.** One crew handles the mold, the roof leak and the drywall. One schedule, one written price.
-- **A surprise bill.** You get the price in writing before work starts. If we find more behind the wall, we show you and ask before we go further.
-- **Being upsold.** If a small area is something you can clean yourself, we tell you.
+1. **Inspection and testing.** Air samples, surface samples and moisture readings. Mold inspection (link: /mold-inspection-chicago) We find the mold and the moisture source.
+2. **Containment.** We seal the work area with plastic sheeting and run negative air pressure so spores do not spread to other rooms.
+3. **Removal.** HEPA vacuuming, antimicrobial treatment, removal of affected drywall, insulation or wood where needed.
+4. **Source repair.** We fix what caused the moisture. Roof leak, pipe, drain, ventilation, whatever it is.
+5. **Clearance testing.** After removal, we test the air again. You get a written clearance report showing the levels are back to normal.
+6. **Rebuild.** New drywall, insulation and paint where we removed material. We are a general contractor, so we close it up ourselves.
 
-*Don't just take our word for it.*
+**What we remove mold from:**
+- Basements and crawl spaces
+- Attics (often caused by roof leaks or poor ventilation)
+- Bathrooms and kitchens
+- Behind walls and under floors
+- 2-flats, condos and multi-unit buildings
+- Small commercial spaces
 
-### 6 Proof: H2: Check our licenses, then read what customers say
+**Bridge:** What makes this different from a surface cleaning.
 
-- Licensed for mold remediation [Mold licence number]
-- Chicago general contractor license TGC144939 · Illinois roofing license 104.021107
-- [Mold certification, for example IICRC]
+### 5. Benefits
+
+**Heading:** The mold is gone. The cause is fixed. The air is tested.
+
+- **Contained removal.** Sealed work area, HEPA filtration, negative air pressure. Spores do not spread to the rest of the house.
+- **Moisture source fixed.** We do not just remove mold. We fix the leak, the drain, the ventilation problem or whatever fed the growth.
+- **Clearance test included.** Air sampling after removal confirms the levels are back to normal. Written report.
+- **We rebuild what we remove.** Drywall, insulation, paint. GC licence TGC144939.
+- **One company from start to finish.** Inspection, removal, source repair and rebuild. No subcontractors to coordinate.
+
+**Bridge:** Licensed for every part of the job.
+
+### 6. Proof
+
+**Heading:** Licensed for mold. Licensed to build.
+
+- Mold remediation licence: [Mold licence number]
+- City of Chicago general contractor: TGC144939
+- Illinois roofing licence: 104.021107 (when the cause is a roof leak)
+- [Insured and bonded: yes or no]
 - [Warranty on work]
-- [Google rating and review count]
-- [Real review 1, about mold removal, with name and neighborhood]
-- [Real review 2, with name and neighborhood]
-- [Real job photos: containment set up, wall opened, finished room]
 
-*You probably still have a few questions.*
+[Google rating and review count]
 
-### 7 Objections: H2: Mold removal questions
+[Real review 1: basement mold removal, name and neighborhood]
+[Real review 2: attic or bathroom mold, name and neighborhood]
+
+[Real job photos: containment setup, removal in progress, after clearance]
+
+**Bridge:** What homeowners ask about mold removal.
+
+### 7. Objections (FAQ)
 
 **How much does mold removal cost in Chicago?**
-Most jobs fall between [price range]. The price depends on how big the area is, where it is (an open basement wall is quicker than a tight attic), what has to come out, how much the source needs repairing, and how much rebuilding you want. You get it in writing after the inspection.
+It depends on the size of the affected area, what materials are involved (drywall, wood, concrete) and how much needs to be removed and rebuilt. We inspect first (link: /mold-inspection-chicago), then give you a written price.
 
-**Does insurance cover mold removal?**
-That depends on your policy and on what caused the mold. Your insurance company decides that. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.
+**Can I remove mold myself?**
+On a hard surface smaller than about 10 square feet, yes, with proper protection. Larger areas, mold behind walls, mold in HVAC ducts or mold in a multi-unit building should be handled by a licensed company with containment and HEPA filtration.
 
-**How long does it take? Can we stay home?**
-Many jobs take [Confirm typical number of days]. Because the work area is sealed off, most families stay home while we work in the basement or attic. We'll tell you up front if a job is big enough that you should plan around it.
+**How long does mold removal take?**
+[Typical timeline, for example "A small bathroom job may take one to two days. A full basement can take three to five days."]
 
-**Can I clean the mold myself?**
-Small spots on a hard surface, yes. The EPA suggests a professional when the area is larger than about 10 square feet, when mold is inside walls or ductwork, or when it came from sewage or flood water.
+**Will the mold come back?**
+Not if the moisture source is fixed. That is why we identify and repair the cause as part of every job. The clearance test confirms the air is clean after removal.
 
-**What causes mold in a basement?**
-In Chicago, usually water through foundation cracks or window wells, a sewer backup, a failed sump pump, or damp air with no airflow. A dehumidifier helps. It won't close a crack.
+**Do you test before and after?**
+Yes. Air samples before removal give us a baseline. Air samples after removal confirm the job is done. Both are in your written report. Mold inspection (link: /mold-inspection-chicago)
 
-**Do you do black mold removal?**
-Yes. Black mold removal in Chicago follows the same process: contain, remove, fix the cause. Color doesn't change the job.
+**My landlord will not fix the mold. What can I do?**
+The written inspection report and lab results document the problem. Chicago tenants have rights regarding habitability. The report gives you documented evidence.
 
-Owner note: Moldman's Chicago page says "on average, our jobs range from $500 to $2,000+" (checked 15 Oct 2026). Fill in our range from real past jobs.
+**What if the mold came from a roof leak or flooding?**
+We fix the roof (link: /roofing-chicago), handle the water damage (link: /water-damage-restoration-chicago) and remove the mold, all in one project.
 
-*The first step is simple.*
+### 8. Close
 
-### 8 Close: H2: Get rid of the mold and the reason it's there
+**Headline:** Get the mold out. Fix why it grew.
 
-Send us a few details or a photo. We'll call you back, inspect, and give you a written price to remove the mold and stop the water. Then you pay for it once.
+**Text:** Book a mold inspection. We test, give you the results and price the removal. You decide.
 
-**Buttons:** [Call (773) 987-1693] [Get a mold removal quote]
-**Form send button:** Get my mold removal quote
+**Buttons:** [Book a mold inspection] [Call (773) 987-1693]
 
 ---
 
-## Page 3: Water damage restoration
+## Page 3: /water-damage-restoration-chicago
 
-| Field | Value |
-|---|---|
-| URL | /water-damage-restoration-chicago |
-| Title tag | Water Damage Restoration in Chicago \| Fix It Aid |
-| Meta description | Burst pipe, leak or overflow? We remove the water, dry your home and check for mold. Photos and moisture readings of all damage. Chicago. |
-| H1 | Water Damage Restoration in Chicago |
-| Primary keyword | water damage restoration chicago |
-| Secondary keywords used | water damage repair chicago, water extraction chicago, water mitigation chicago, burst pipe water damage chicago, ceiling water damage repair chicago, storm damage restoration chicago, emergency water damage chicago, how long does water damage restoration take, water damage restoration cost chicago, does homeowners insurance cover water damage, signs of water damage in walls |
-| Schema | Service + FAQPage + BreadcrumbList |
+- **URL:** /water-damage-restoration-chicago
+- **Title tag:** Water Damage Restoration in Chicago | Fix It Aid
+- **Meta description:** Burst pipe, leak or overflow? We remove the water, dry your home and check for mold. Photos and moisture readings of all damage. Chicago.
+- **H1:** Water Damage Restoration in Chicago
+- **Primary keyword:** water damage restoration chicago. Secondaries used: water damage repair chicago, water damage cleanup chicago, burst pipe cleanup chicago, water extraction chicago, ceiling water damage, wall water damage, pipe burst chicago.
 
-### 1 Hook: Hero
+### 1. Hook (hero)
 
-**Eyebrow:** Water coming through the ceiling?
+**Eyebrow:** Burst pipe? Ceiling leak? Water on the floor?
 
 **H1:** Water Damage Restoration in Chicago
 
-**Subheadline:** We get the water out, dry your home properly, check for mold and stop the leak where it starts. One team from the first call to the last coat of paint.
+**Subheadline:** We remove the water, dry the structure and repair what got damaged. Photos and moisture readings of everything we find. You know the price before we start.
 
-**Buttons:** [Call (773) 987-1693] [Request water damage help]
+**Buttons:** [Call (773) 987-1693] [Book a visit online]
 
-**Trust line:** [24/7 phone: yes or no] · [Response time, for example "on site within 2 hours"] · Licensed for water damage restoration · Chicago GC license TGC144939
+**Trust line:** Chicago GC licence TGC144939 · Mold licence [Mold licence number] · [Google rating and review count]
 
-**Box under the hero: Water coming in right now? Do this first**
-1. Shut off the water at the main valve, usually in the basement near the front wall.
-2. Stay out of water near outlets, cords or the electrical panel.
-3. Move rugs, electronics and valuables off wet floors.
-4. Take photos and video before anything is moved.
-5. Call (773) 987-1693.
+### 2. Pain and stakes
 
-*Then here's what you're really up against.*
+**Heading:** Water inside a house does damage by the hour
 
-### 2 Pain and stakes: H2: The water you can see is the easy part
+A burst pipe soaks the floor and the walls. A roof leak drips into the ceiling for weeks before anyone sees the stain. An overflow from a washing machine or water heater floods the basement. Every hour the water sits, the damage spreads.
 
-"A pipe burst in the cold snap and the kitchen ceiling came down." "The tenant upstairs let the tub overflow." "After the storm there's a brown ring on the bedroom ceiling and it's getting bigger." Every call is different, and every one feels urgent.
+Drywall absorbs water and starts to crumble. Wood subfloors swell and buckle. Insulation inside the walls holds moisture like a sponge. And within 24 to 48 hours, mold can start growing in any of those materials.
 
-The puddle gets mopped. The water that soaked into drywall, subfloor and insulation stays. Surfaces feel dry in a day while the inside stays wet. That's what turns into warped floors, sagging ceilings and mold weeks later. The EPA says wet materials should be dried within 24 to 48 hours to help prevent mold.
+In a Chicago 2-flat or condo, water from one unit reaches the unit below. The ceiling, walls and floor of a unit you do not even live in can be soaked.
 
-Signs of water damage in walls and ceilings:
-- Brown or yellow stains that keep spreading
-- Paint that bubbles or peels
-- Drywall that feels soft or swollen at the bottom
-- Floors that cup, buckle or feel spongy
-- A musty smell that wasn't there before
+**Bridge:** The faster the water comes out, the less there is to repair.
 
-*Most water jobs go wrong for one reason.*
+### 3. Turning point
 
-### 3 Turning point: H2: Drying the room doesn't stop the water
+**Heading:** Drying the floor is not enough
 
-Most restoration companies dry things out and leave. If the water came from the roof, the next storm brings it right back, and now you're calling a roofer, then a drywall crew, then a painter.
+Mopping up the visible water is the first instinct. But water travels. It wicks up drywall, seeps under baseboards, and sits inside wall cavities where you cannot see it. A floor that looks dry can have a soaked subfloor underneath.
 
-The damage is only half the job. The other half is the leak. Fix It Aid is a licensed roofer, a licensed Chicago general contractor and licensed for water damage restoration, so we can deal with both.
+If the structure is not dried properly with commercial equipment, the moisture stays. Then you have a mold problem on top of a water problem.
 
-*So we handle the whole thing.*
+Fix It Aid does water damage restoration across Chicago. We extract the water, set up commercial drying equipment, monitor the moisture until the structure is dry, and check for mold. If the water came from a roof leak, our roofing team (link: /roofing-chicago) fixes the roof. If mold has started, our mold team (link: /mold-removal-chicago) removes it. One company handles all of it.
 
-### 4 Solution: H2: How we restore your home
+**Bridge:** Here is how we dry and repair a water-damaged home.
 
-1. **You call.** Tell us what happened and where the water is. [Response time, for example "on site within 2 hours"]
-2. **Water out.** We pump out standing water and do water extraction from carpet and pads. Wet materials that can't be saved come out.
-3. **Dry and measure.** Dehumidifiers and air movers run until the structure is dry. We take moisture readings on every visit and stop only when the numbers say dry. [Confirm equipment and typical drying days]
-4. **Check for mold and stop the leak.** We look for mold before anything is closed up (link: /mold-removal-chicago). If the roof or flashing is the cause, we fix it ourselves (link: /roof-repair-chicago). If a pipe is the cause, we show you exactly where.
-5. **Put it back.** Ceilings, walls, paint and finishes, so the room is usable again.
+### 4. Solution
 
-*Here's what that means for you.*
+**Heading:** Extract. Dry. Check for mold. Repair.
 
-### 5 Benefits: H2: What you get by calling one company
+1. **Water extraction.** We remove standing water with pumps and extractors. Same day when possible.
+2. **Damage assessment.** Moisture readings on every wall, floor and ceiling in the affected area. Photos and a written scope of damage.
+3. **Structural drying.** Commercial dehumidifiers and air movers placed throughout the space. We monitor moisture levels daily until the structure is dry.
+4. **Mold check.** Once dry, we inspect for mold. If we find it, our mold team (link: /mold-removal-chicago) handles removal and clearance testing.
+5. **Source repair.** We fix the cause: burst pipe, leaking supply line, failed water heater, roof leak (link: /roofing-chicago).
+6. **Rebuild.** Drywall, insulation, flooring, paint. GC licence TGC144939.
 
-- **No mold surprise in a month.** We dry to the numbers, not to the touch.
-- **No chasing contractors.** Ceiling water damage repair, the roof leak above it and the paint all go under one written price.
-- **No guessing about cost.** You get a written price for the repairs before they start.
-- **A clear record.** We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.
+**What we handle:**
+- Burst pipes and supply line failures
+- Roof leaks that damaged ceilings and walls
+- Water heater failures
+- Washing machine and dishwasher overflows
+- AC drain line leaks (link: /ac-repair-chicago)
+- Toilet overflows and supply line breaks
 
-*Don't just take our word for it.*
+*Note: for flooded basements from heavy rain or sewer backup, see flooded basement cleanup (link: /flooded-basement-cleanup-chicago).*
 
-### 6 Proof: H2: Licensed, local and easy to check
+**Bridge:** What you get when you call us instead of doing it yourself.
 
-- Licensed for water damage restoration
-- Chicago general contractor license TGC144939 · Illinois roofing license 104.021107
-- [Mold certification, for example IICRC]
+### 5. Benefits
+
+**Heading:** Dried right, checked for mold, repaired by a GC
+
+- **Documented damage.** Moisture readings and photos of everything. Useful for insurance: we document the damage with photos and a written report you can share with your insurer.
+- **Commercial drying.** Fans and a bucket are not enough. Our dehumidifiers and air movers dry the structure, not just the surface.
+- **Mold prevention.** We check for mold after drying. If it started, we remove it (link: /mold-removal-chicago).
+- **Source fixed.** We repair the pipe, the drain, the water heater or the roof leak that caused the damage.
+- **Rebuild included.** We are a general contractor. Drywall, flooring, insulation, paint. One company from water extraction to final coat.
+
+**Bridge:** A general contractor who handles water damage.
+
+### 6. Proof
+
+**Heading:** Licensed in Chicago for every part of the job
+
+- City of Chicago general contractor: TGC144939
+- Mold remediation licence: [Mold licence number]
+- Illinois roofing licence: 104.021107 (when a roof leak is the cause)
+- [Insured and bonded: yes or no]
 - [Warranty on work]
-- [Google rating and review count]
-- [Real review 1, about water damage, with name and neighborhood]
-- [Real review 2, with name and neighborhood]
-- [Real job photos: ceiling before and after, drying equipment set up]
 
-*You probably still have a few questions.*
+[Google rating and review count]
 
-### 7 Objections: H2: Water damage questions
+[Real review 1: burst pipe or ceiling leak, name and neighborhood]
+[Real review 2: water damage and mold, name and neighborhood]
 
-**What does water damage restoration cost in Chicago?**
-Usually [price range]. It depends on how much got wet and for how long, whether the water was clean or dirty, what has to come out, how many days of drying it takes, and how much rebuilding you need.
+[Real job photos: extraction, drying equipment, before and after]
 
-**Does homeowners insurance cover water damage?**
-It depends on your policy and on what caused the water. Your insurance company decides that. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.
+**Bridge:** Questions we hear from homeowners with water damage.
 
-**How long does water damage restoration take?**
-Drying usually takes [Confirm typical drying days]. Repairs come after. A small leak can be done in about a week. A flooded floor with new drywall and flooring takes longer. You get a timeline at the first visit.
+### 7. Objections (FAQ)
 
-**Can I get same-day water damage service in Chicago?**
-[24/7 phone: yes or no]. [Response time, for example "on site within 2 hours"]. Call and we'll tell you honestly when we can be there.
+**How much does water damage restoration cost in Chicago?**
+It depends on how much area is affected, what materials are damaged and whether mold is present. A single room with wet drywall is a different job than a flooded basement with saturated subfloors. We assess the damage, give you moisture readings and photos, and price the job before we start.
 
-**Do we have to move out?**
-Usually not. The drying equipment is noisy for a few days, and we keep work to the rooms that got wet.
+**Will you help with my insurance claim?**
+We document the damage with photos, moisture readings and a written report you can share with your insurer. We do not file claims or negotiate with insurance companies.
 
-**Is it water damage or a flooded basement?**
-If it came in through the floor drain or the foundation, see flooded basement cleanup (link: /flooded-basement-cleanup-chicago). Same team, different cleanup.
+**How long does it take to dry a house?**
+[Typical drying time, for example "Most spaces take three to five days with commercial equipment. We monitor moisture levels daily and pull the equipment when the structure is dry."]
 
-*The first step is simple.*
+**Can water damage cause mold?**
+Yes. Mold can start growing within 24 to 48 hours on wet materials. That is why we check for mold after drying and remove it (link: /mold-removal-chicago) if needed.
 
-### 8 Close: H2: Every hour wet materials sit, the job gets bigger
+**My ceiling is leaking from a roof leak. Can you fix the roof too?**
+Yes. Our roofing team (link: /roofing-chicago) repairs the roof. Our restoration team dries and repairs the inside. One company.
 
-Call (773) 987-1693 now, or send a few details and we'll call you right back. We'll get the water out, dry it properly and stop it where it starts.
+**My basement flooded from rain or a sewer backup. Is that the same service?**
+Sewer backup and storm flooding are a different category. See flooded basement cleanup (link: /flooded-basement-cleanup-chicago).
 
-**Buttons:** [Call (773) 987-1693] [Request water damage help]
-**Form send button:** Get help with water damage
+### 8. Close
+
+**Headline:** Get the water out before the damage spreads.
+
+**Text:** Call now. We extract the water, set up drying equipment and document the damage. You know the price before repair work starts.
+
+**Buttons:** [Call (773) 987-1693] [Book a visit online]
 
 ---
 
-## Page 4: Flooded basement cleanup
+## Page 4: /flooded-basement-cleanup-chicago
 
-| Field | Value |
-|---|---|
-| URL | /flooded-basement-cleanup-chicago |
-| Title tag | Flooded Basement & Sewage Cleanup in Chicago \| Fix It Aid |
-| Meta description | Water in the basement after heavy rain or a sewer backup? We pump it out, clean, disinfect and dry it so mold does not start. Chicago. |
-| H1 | Flooded Basement Cleanup in Chicago |
-| Primary keyword | flooded basement cleanup chicago |
-| Secondary keywords used | sewage backup cleanup chicago, basement water removal chicago, basement flood cleanup chicago, basement flooding chicago, my basement keeps flooding when it rains, sump pump failure water damage, what to do when basement floods, sewage backup cleanup cost, how to prevent basement flooding chicago, city of chicago basement flooding |
-| Schema | Service + FAQPage + BreadcrumbList |
+- **URL:** /flooded-basement-cleanup-chicago
+- **Title tag:** Flooded Basement & Sewage Cleanup in Chicago | Fix It Aid
+- **Meta description:** Water in the basement after heavy rain or a sewer backup? We pump it out, clean, disinfect and dry it so mold does not start. Chicago.
+- **H1:** Flooded Basement Cleanup in Chicago
+- **Primary keyword:** flooded basement cleanup chicago. Secondaries used: basement flooding chicago, sewer backup cleanup chicago, basement water removal chicago, flooded basement repair chicago, sewage cleanup chicago, sump pump failure chicago.
 
-### 1 Hook: Hero
+### 1. Hook (hero)
 
-**Eyebrow:** Water in the basement after last night's storm?
+**Eyebrow:** Water or sewage in your basement?
 
 **H1:** Flooded Basement Cleanup in Chicago
 
-**Subheadline:** We pump it out, clean and disinfect, dry it properly so mold doesn't start, and show you why it happened. Rain water or sewer backup.
+**Subheadline:** Heavy rain, sewer backup or a failed sump pump. We pump out the water, disinfect the space and dry it so mold does not start. Chicago homes, 2-flats and garden units.
 
-**Buttons:** [Call (773) 987-1693] [Get basement cleanup help]
+**Buttons:** [Call (773) 987-1693] [Book a visit online]
 
-**Trust line:** [24/7 phone: yes or no] · [Response time, for example "on site within 2 hours"] · Licensed for water damage restoration · Chicago GC license TGC144939
+**Trust line:** Chicago GC licence TGC144939 · Mold licence [Mold licence number] · [Google rating and review count]
 
-**Box under the hero: What to do when your basement floods**
-1. Don't step into water near outlets, cords, the furnace or the electrical panel.
-2. If it's sewage, keep kids and pets out and stop using sinks, toilets and the washer.
-3. Take photos and video before you move anything.
-4. Call (773) 987-1693. If the backup is from the city sewer, report it through Chicago 311 too.
+### 2. Pain and stakes
 
-*Then here's what you're dealing with.*
+**Heading:** Chicago basements flood. That is not the worst part.
 
-### 2 Pain and stakes: H2: It's not just water. It's your stuff, your space and the smell.
+The worst part is what happens after. Standing water soaks into concrete, wood framing and drywall. Furniture, boxes and anything on the floor absorbs it. If it was a sewer backup, everything the water touched is contaminated.
 
-"Three inches of water and the carpet's floating." "It came up through the floor drain and it smells like sewage." "This is the second time this year." Basement flooding in Chicago hits the things people keep downstairs: boxes of photos, the washer and dryer, the furnace, the garden unit a tenant lives in.
+In a garden unit, the damage hits a living space. In a 2-flat, water in the basement can affect the building's mechanicals: furnace, water heater, electrical panel.
 
-Waiting makes it worse. Carpet pad and drywall wick water up the wall. After a sewer backup, anything soft it touched usually can't be saved. Leave it a few days and the musty smell sets in, and mold is next.
+And the clock is ticking. Mold can start growing on wet materials within 24 to 48 hours. A flooded basement that is not dried properly becomes a mold problem within a week.
 
-*And the cleanup is only half of it.*
+**Bridge:** The first step is getting the water out, fast.
 
-### 3 Turning point: H2: If you only clean it up, it floods again
+### 3. Turning point
 
-Many Chicago neighborhoods have older sewers that carry rain and wastewater in the same pipes. In a heavy storm they fill and push water back up through basement floor drains. Add foundation cracks from years of freeze and thaw, window wells that fill with rain, downspouts that empty against the house, and a sump pump that quits when you need it.
+**Heading:** A shop vac and fans will not dry a flooded basement
 
-If you're thinking "my basement keeps flooding when it rains", one of those is the reason. A cleanup crew dries the floor and leaves. The water finds the same way in next time.
+Standing water gets pumped out easily enough. But the moisture that soaked into the concrete, the framing and the drywall does not come out with a mop. Without commercial dehumidifiers and air movers, the space stays damp for weeks.
 
-*So we clean it up and find the way in.*
+And if the water was from a sewer backup, surface cleaning is not safe. Sewage water contains bacteria. Everything it touched needs to be cleaned and disinfected properly, and contaminated materials like carpet and drywall need to come out.
 
-### 4 Solution: H2: How we clean up your basement
+Fix It Aid handles flooded basement cleanup across Chicago. We pump, clean, disinfect and dry. If the flooding came from a sewer backup, we follow contamination protocols. If mold started, our mold team (link: /mold-removal-chicago) removes it. If the sump pump failed, we tell you what it needs.
 
-1. **Basement water removal.** Pumps and extractors get standing water out fast.
-2. **Tear-out.** Wet carpet, pad, drywall and insulation that can't be saved go out. With clean water from a sump pump failure, we can often dry more in place if we get there quickly.
-3. **Clean and disinfect.** Floors, walls and anything that stays. A sewage backup cleanup is not a mop and a fan job.
-4. **Dry and measure.** Dehumidifiers and air movers, with moisture readings until it's dry, so mold doesn't start (link: /mold-removal-chicago).
-5. **Find the cause, then rebuild.** We check the foundation, window wells, downspouts, drains and sump pit and show you what let the water in. If a pipe or the sewer line is the cause, we show you exactly where. [Confirm which prevention repairs you do, for example foundation cracks, window wells, downspouts] Then drywall and finishes go back in.
+**Bridge:** How we clean up a flooded basement.
 
-*Here's what that means for you.*
+### 4. Solution
 
-### 5 Benefits: H2: What you get
+**Heading:** Pump. Clean. Disinfect. Dry.
 
-- **A basement you can use again,** finished room or garden unit, not a bare concrete floor.
-- **No mold in a month.** We dry to the readings, not to the touch.
-- **An answer about next time.** You know why it flooded and what would help stop it.
-- **A clear record.** We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.
+1. **Water removal.** Submersible pumps and extractors get the water out.
+2. **Contamination check.** If the water is from a sewer backup, we follow contamination protocols. Contaminated materials (carpet, pad, lower drywall) come out.
+3. **Cleaning and disinfection.** Floors, walls and remaining surfaces cleaned and treated with antimicrobial agents.
+4. **Structural drying.** Commercial dehumidifiers and air movers dry the space. We monitor moisture levels daily.
+5. **Mold check.** After drying, we inspect for mold. If we find it, our mold team handles removal (link: /mold-removal-chicago).
+6. **Rebuild.** New drywall, flooring and paint where needed. GC licence TGC144939.
 
-*Don't just take our word for it.*
+**What we clean up:**
+- Heavy rain flooding through basement walls or floor
+- Combined sewer backup (common in older Chicago neighborhoods)
+- Sump pump failure
+- Drain tile backup
+- Garden unit flooding
+- Furnace room and utility area flooding
 
-### 6 Proof: H2: Licensed in Chicago and easy to check
+**Bridge:** Why this matters more than you think.
 
-- Licensed for water damage restoration
-- Chicago general contractor license TGC144939
-- [Mold certification, for example IICRC]
-- [Warranty on work]
-- [Google rating and review count]
-- [Real review 1, about a flooded basement, with name and neighborhood]
-- [Real review 2, with name and neighborhood]
-- [Real job photos: basement during and after cleanup]
+### 5. Benefits
 
-*You probably still have a few questions.*
+**Heading:** Pumped, disinfected, dried, checked for mold
 
-### 7 Objections: H2: Flooded basement questions
+- **Fast response.** Water damage gets worse by the hour. We start extraction as soon as we arrive.
+- **Sewer backup handled safely.** Contaminated water is a health risk. We remove affected materials and disinfect with proper agents, not household bleach.
+- **Documented for insurance.** We photograph the damage and take moisture readings. We document the damage with photos and a written report you can share with your insurer.
+- **Mold prevention.** We dry the space with commercial equipment and check for mold after. If it started, we remove it (link: /mold-removal-chicago).
+- **Rebuild included.** Drywall, flooring, paint. One company from pump-out to finished wall.
 
-**What does flooded basement cleanup cost?**
-Basement flood cleanup usually runs [price range]. Sewage backup cleanup costs more because of the extra tear-out and disinfecting. The price depends on how much water, how many square feet, finished or unfinished, and how long it sat. You get a written price before repair work starts.
+**Bridge:** A licensed contractor, not a cleanup crew.
 
-**Will insurance pay for it?**
-That depends on your policy and the cause of the water. Your insurance company decides. We take photos and moisture readings of all damage, so you have a clear record to share with your insurance company if you choose to.
+### 6. Proof
 
-**How fast do I need to start?**
-As soon as you can. The EPA says wet materials should be dried within 24 to 48 hours to help prevent mold. Drying usually takes [Confirm typical drying days].
+**Heading:** Licensed and equipped for basement flooding
 
-**Can I clean up a sewage backup myself?**
-A little on bare concrete, maybe, with gloves, boots and disinfectant. If it soaked into carpet, drywall or a finished room, those materials usually need to come out.
+- City of Chicago general contractor: TGC144939
+- Mold remediation licence: [Mold licence number]
+- [Insured and bonded: yes or no]
 
-**How do I prevent basement flooding in Chicago?**
-It depends on how the water gets in. Common fixes are sealing foundation cracks, covering window wells, moving downspouts away from the house, a sump pump with a backup, and for sewer backups, a backflow valve or overhead sewer installed by a licensed plumber. We'll show you which ones fit your house.
+[Google rating and review count]
 
-**Do I have to leave? I have a tenant downstairs.**
-Usually no one upstairs has to move out. We work around tenants in 2-flats and 3-flats and tell you how long the garden unit will be out of use.
+[Real review 1: basement flooding after heavy rain, name and neighborhood]
+[Real review 2: sewer backup cleanup, name and neighborhood]
 
-*The first step is simple.*
+[Real job photos: pump-out, drying equipment, before and after]
 
-### 8 Close: H2: Water in the basement? Let's get it out today.
+**Bridge:** Questions people ask when their basement floods.
 
-Call (773) 987-1693 now, or send a few details and we'll call you back. We'll clean it up, dry it properly and show you how it got in. Water elsewhere in the house? See water damage restoration (link: /water-damage-restoration-chicago).
+### 7. Objections (FAQ)
 
-**Buttons:** [Call (773) 987-1693] [Get basement cleanup help]
-**Form send button:** Get help with my basement
+**How much does flooded basement cleanup cost?**
+It depends on how deep the water is, how large the area is and whether it is a sewer backup (contamination adds cleaning and disposal steps). We assess the damage and give you a price before repair work starts.
+
+**Is sewer backup water dangerous?**
+Yes. It contains bacteria and should not be cleaned with household products. We remove contaminated materials, disinfect with professional-grade agents and dry the space with commercial equipment.
+
+**Will my insurance cover a flooded basement?**
+Standard homeowner policies often do not cover sewer backup unless you have a rider. We document the damage with photos and a written report you can share with your insurer. Check your policy or ask your agent.
+
+**How long does cleanup take?**
+[Typical timeline, for example "Water removal is usually same-day. Drying takes three to five days with commercial equipment. Rebuild time depends on what was damaged."]
+
+**Should I worry about mold after a flood?**
+Yes. Mold can start within 24 to 48 hours on wet materials. We dry the space properly and check for mold after. If it started, our mold team (link: /mold-removal-chicago) removes it.
+
+**My sump pump failed. Can you fix it?**
+We can tell you what the pump needs. [Confirm if Fix It Aid installs sump pumps. If not: "We'll refer you to a plumber for the pump and handle the water damage and cleanup."]
+
+**Can you help with a flooded garden unit?**
+Yes. Garden units in Chicago are below grade and flood frequently. Same process: pump, clean, disinfect, dry.
+
+### 8. Close
+
+**Headline:** Get the water out of your basement now.
+
+**Text:** Call us. We pump, disinfect, dry and check for mold. You know the price before we rebuild.
+
+**Buttons:** [Call (773) 987-1693] [Book a visit online]
 
 ---
 
-## Page 5: Areas we serve
+## Page 5: /areas-we-serve
 
-| Field | Value |
-|---|---|
-| URL | /areas-we-serve |
-| Title tag | Chicago Neighborhoods We Serve \| Fix It Aid |
-| Meta description | Mold, water damage, roofing and HVAC help across Chicago, from Rogers Park to Beverly. See the neighborhoods we cover and call our local team. |
-| H1 | Chicago Neighborhoods We Serve |
-| Main keywords | roofer, furnace and AC repair plus neighborhood (SEO csv, "areas-we-serve (neighborhood section)") |
-| Neighborhood phrases used | roofer Logan Square, roof repair Edgewater, roof repair Rogers Park, roofer Avondale, AC repair Lincoln Park, AC repair Lakeview, furnace repair Portage Park, roofer West Town, roofer Humboldt Park, roofer Austin, roofer Pilsen, roofer Little Village, roof repair Beverly, roof repair Bridgeport, roofer Mount Greenwood |
-| Schema | LocalBusiness areaServed + BreadcrumbList |
+- **URL:** /areas-we-serve
+- **Title tag:** Chicago Neighborhoods We Serve | Fix It Aid
+- **Meta description:** Mold, water damage, roofing and HVAC help across Chicago, from Rogers Park to Beverly. See the neighborhoods we cover and call our local team.
+- **H1:** Chicago Neighborhoods We Serve
+- **Primary keyword:** varies by neighborhood. This page targets geographic long-tail searches: "roofer [neighborhood]", "mold removal [neighborhood]", "furnace repair [neighborhood]".
 
-Owner note: the neighborhood list is a placeholder built from the neighborhoods in our SEO keyword research. The owner must confirm [Neighborhoods served] before launch. Do not create a separate page per neighborhood with the same text swapped. That is thin content. One page with real groups is better.
-
-### 1 Hook: Hero
-
-**Eyebrow:** Need a contractor who actually works in your part of the city?
+### Hero
 
 **H1:** Chicago Neighborhoods We Serve
 
-**Subheadline:** Fix It Aid works inside the City of Chicago, from Rogers Park to Beverly and Mount Greenwood. Mold, water damage, roofing, heating and cooling, from one licensed local team.
+**Subheadline:** Fix It Aid works across the City of Chicago. Roofing, mold removal, water damage restoration and heating and cooling. Find your neighborhood below.
 
-**Buttons:** [Call (773) 987-1693] [Check if we cover your street]
+**Buttons:** [Call (773) 987-1693] [Contact us (link: /contact)]
 
-**Trust line:** Chicago GC license TGC144939 · Illinois roofing license 104.021107 · Licensed for mold, water damage and HVAC · [Google rating and review count]
+### Service summary
 
-*Here's why that matters.*
+Fix It Aid is a licensed Chicago contractor. Here is what we do:
 
-### 2 Pain and stakes: H2: The company that answers isn't always local
+- **Roofing.** Repair, flat roofs, replacement and the Roof Care Plan. Illinois licence 104.021107. Roofing (link: /roofing-chicago)
+- **Mold.** Inspection, testing and removal. Mold licence [Mold licence number]. Mold inspection (link: /mold-inspection-chicago) · Mold removal (link: /mold-removal-chicago)
+- **Water damage.** Burst pipes, leaks and ceiling damage. Water damage (link: /water-damage-restoration-chicago)
+- **Flooded basements.** Rain, sewer backup and sump pump failure. Basement cleanup (link: /flooded-basement-cleanup-chicago)
+- **HVAC.** Furnace, boiler, AC repair and installation. HVAC (link: /hvac-chicago)
 
-You search for help in Chicago and call the first number. It turns out to be a lead service, or a crew an hour away in the suburbs. They can't come until Thursday. When they do, they don't know a 2-flat's flat roof or a boiler from 1950, and the quote reflects it.
+### Neighborhood list
 
-*The real issue isn't distance. It's who handles what.*
+*Note: list every Chicago neighborhood. Each neighborhood name should be an anchor or heading so it can be linked to directly. For neighborhoods where we have done work, add one line about the common job type (for example: "Lots of flat roofs on 2-flats here. We do a lot of TPO and modified bitumen repair in this area."). For SEO, each neighborhood line should mention one or two services naturally.*
 
-### 3 Turning point: H2: Chicago problems rarely stay in one trade
+**North Side**
+- Rogers Park — Older buildings with flat roofs and boiler heat. We repair flat roofs (link: /flat-roof-repair-chicago) and boilers (link: /furnace-repair-chicago) here regularly.
+- Edgewater — Multi-unit buildings with aging roofs. Roof repair (link: /roof-repair-chicago) and mold inspection (link: /mold-inspection-chicago) in basements.
+- Uptown — Mix of old and new. Flat roof repair (link: /flat-roof-repair-chicago), water damage (link: /water-damage-restoration-chicago) and furnace repair (link: /furnace-repair-chicago).
+- Lincoln Square — Bungalows and 2-flats. Shingle roofs, basement mold and furnace work.
+- North Center — Older homes with original boilers and radiators.
+- Lakeview — Condos and 3-flats. Flat roof leaks and AC repair (link: /ac-repair-chicago).
+- Lincoln Park — Greystones and rowhouses. Roof repair, basement waterproofing and mold.
+- Albany Park — 2-flats with flat roofs. Roof repair and HVAC.
+- Irving Park — Bungalows with shingle roofs and old furnaces.
+- Avondale — Mix of brick 2-flats. Flat roof work and furnace repair.
+- Logan Square — Greystones and frame houses. Roof repair, mold and water damage.
+- Hermosa — Smaller homes and 2-flats. Roofing and HVAC.
+- Portage Park — Bungalows. Shingle roof repair and furnace tune-ups.
+- Jefferson Park — Bungalows and brick ranches. Roofing and HVAC.
+- Norwood Park — Single-family homes with shingle roofs.
 
-A roof leak in a 2-flat becomes a ceiling stain, then wet drywall, then mold. A spring storm floods the basement and soaks the furnace. Most companies handle one piece and send you looking for the next.
+**West Side**
+- Humboldt Park — 2-flats and greystones. Flat roof repair and mold removal (link: /mold-removal-chicago).
+- West Town / Wicker Park / Bucktown — Older buildings with flat roofs. Water damage and mold common in basements.
+- Austin — Larger homes and multi-units. Roofing and furnace repair.
+- Garfield Park (East and West) — Multi-unit buildings. Flat roof repair and water damage.
+- North Lawndale — Brick multi-units. Roofing and HVAC.
+- South Lawndale / Little Village — 2-flats and small commercial. Flat roofs and HVAC.
+- Lower West Side / Pilsen — Older buildings. Roof repair, mold and water damage.
+- Near West Side — Mixed residential and commercial. All services.
 
-*So we cover the whole chain, in every neighborhood below.*
+**South Side**
+- Bridgeport — Bungalows and 2-flats. Roofing and furnace repair.
+- McKinley Park — Brick homes. Shingle and flat roof work.
+- Brighton Park — 2-flats with flat roofs. Roofing and HVAC.
+- Back of the Yards — Multi-unit buildings. Roof repair and water damage.
+- Englewood — Residential homes. All services.
+- Chatham — Brick bungalows. Shingle roofs and HVAC.
+- Auburn Gresham — Single-family and 2-flats. Roofing and mold.
+- Beverly — Larger homes with steep roofs. Roof replacement (link: /roof-replacement-chicago) and HVAC installation (link: /hvac-installation-chicago).
+- Hyde Park — Mix of large homes and condos. All services.
+- South Shore — Multi-unit buildings. Flat roofs and water damage.
+- Woodlawn — Residential. Roofing, mold and HVAC.
+- Pullman — Historic homes. Roofing and HVAC.
 
-### 4 Solution: H2: Where we work
+**Downtown and Near North/South**
+- Loop / Near North / Streeterville / River North / Gold Coast — Condo buildings. AC repair (link: /ac-repair-chicago), mold inspection and water damage.
+- South Loop — Newer condos with flat roofs and AC systems.
+- Near South Side — Mixed. All services.
 
-**North Side and lakefront:** Rogers Park, Edgewater, Uptown, Lake View, Lincoln Park [confirm list]
-Courtyard buildings, vintage 2-flats and condos. We do roof repair in Edgewater and Rogers Park, often on older flat roofs where a small flashing leak turns into a stain two floors down, and AC repair in Lincoln Park and Lakeview when summer heat hits.
+*Note: this is not a complete list. Add or remove neighborhoods based on actual service area. The key is covering the City of Chicago. No suburbs.*
 
-**Northwest Side:** Logan Square, Avondale, Irving Park, Albany Park, Portage Park, Jefferson Park, Norwood Park [confirm list]
-Bungalows, brick 2-flats and finished basements. People call us as a roofer in Logan Square and Avondale, and for furnace repair in Portage Park and Jefferson Park once the cold arrives. Storm flooding is common here too (link: /flooded-basement-cleanup-chicago).
+### Close
 
-**West Side:** West Town, Humboldt Park, Austin [confirm list]
-Greystones, frame houses and a lot of rehab work. As a roofer in West Town, Humboldt Park and Austin, we see roofs patched many times over, and the damp and mold that follow (link: /mold-removal-chicago).
+**Headline:** We work in your neighborhood.
 
-**Southwest Side:** Pilsen, Little Village, Brighton Park, Garfield Ridge [confirm list]
-Workers' cottages, 2-flats and bungalows with garden units. We're a roofer in Pilsen and Little Village for leaks and replacements, and we clean up water damage in lower units (link: /water-damage-restoration-chicago).
+**Text:** Call or send a message and tell us what is going on. A real person from our Chicago team will get back to you.
 
-**South Side:** Bridgeport, Beverly, Mount Greenwood [confirm list]
-Larger homes in Beverly and Mount Greenwood, tight rows of frame and brick houses in Bridgeport. Roof repair in Beverly and Bridgeport, roof replacement when it's time (link: /roof-replacement-chicago), and heating work before winter.
+**Buttons:** [Call (773) 987-1693] [Contact us (link: /contact)]
 
-**What we do in every neighborhood:**
-- Mold inspection (link: /mold-inspection-chicago) and mold removal (link: /mold-removal-chicago)
-- Water damage restoration (link: /water-damage-restoration-chicago) and flooded basement cleanup (link: /flooded-basement-cleanup-chicago)
-- Roof repair (link: /roof-repair-chicago), flat roofs (link: /flat-roof-repair-chicago), replacement (link: /roof-replacement-chicago) and a free roof check (link: /free-roof-check)
-- Furnace and boiler repair (link: /furnace-repair-chicago), AC repair (link: /ac-repair-chicago) and new systems (link: /hvac-installation-chicago)
-
-*Here's what that means for you.*
-
-### 5 Benefits: H2: One number for the whole house
-
-- **One team from roof to basement.** We follow the problem wherever it goes.
-- **People who know Chicago housing.** 2-flats, flat roofs, old boilers, basements that take water.
-- **A written price before work starts,** for every job.
-
-*Don't just take our word for it.*
-
-### 6 Proof: H2: Licensed by the City of Chicago
-
-- Chicago general contractor license TGC144939
-- Illinois roofing license 104.021107
-- Licensed for mold remediation, water damage restoration and HVAC [Mold licence number] [HVAC licence number]
-- [Google rating and review count]
-- [Real review 1, 2 and 3, each naming the neighborhood and the job]
-
-*You probably still have a few questions.*
-
-### 7 Objections: H2: Area questions
-
-**My neighborhood isn't listed. Can you still help?**
-Probably. If you're inside the City of Chicago, call (773) 987-1693 and ask.
-
-**Do you work in the suburbs?**
-We focus on the City of Chicago. [Confirm suburbs served, if any]
-
-**Is there a travel charge?**
-[Confirm: travel or trip fee yes or no]
-
-**How fast can you get to me?**
-[Response time, for example "on site within 2 hours"]. For a roof leak or water in the basement, call instead of using the form.
-
-*The first step is simple.*
-
-### 8 Close: H2: In Chicago? We can help.
-
-Tell us your ZIP code and what's going on. We'll call you back and set a time.
-
-**Buttons:** [Call (773) 987-1693] [Book a visit]
-**Form send button:** Check my area
+City of Chicago general contractor: TGC144939 · Illinois roofing licence: 104.021107 · Mold licence: [Mold licence number] · HVAC licence: [HVAC licence number]

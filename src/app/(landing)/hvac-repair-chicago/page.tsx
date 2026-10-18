@@ -10,7 +10,7 @@ import { LandingFooter } from "@/components/layout/SiteFooter";
 import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
-import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head } from "@/components/sections/Sections";
+import { Steps, Rows, Rating, Reviews, FaqSection, CloseCta, Head, SectionCta } from "@/components/sections/Sections";
 
 // Ad page, noindex (the SEO version is /hvac-chicago). Heating first in the cold months;
 // switch the hook to AC around May.
@@ -43,11 +43,11 @@ export default function HvacRepairPage() {
           }
           actions={
             <>
-              <a className="btn btn-gold" href={site.phoneHref}>
+              <a className="btn btn-white" href={site.phoneHref}>
                 Call {site.phone}
               </a>
-              <a className="btn btn-ghost" href="#hvac-form">
-                Book a visit
+              <a className="btn btn-gold" href="#hvac-form">
+                Book a Free Inspection
               </a>
             </>
           }
@@ -62,7 +62,7 @@ export default function HvacRepairPage() {
               title="Book a heating repair"
               intro="Tell us what's happening. We call back to set a time."
               options={["No heat at all", "Furnace keeps shutting off", "Boiler or radiators not heating", "Strange noise or smell", "Tune-up before winter", "AC problem"]}
-              submitLabel="Book my repair"
+              submitLabel="Book a Free Inspection"
             />
           }
         />
@@ -72,6 +72,7 @@ export default function HvacRepairPage() {
             Not a dead furnace. A flame sensor, an igniter, a pressure switch, a thermostat, or a low-water cutoff on a boiler. Those are
             repairs, not replacements. We find the part, show it to you, and give you the price.
           </p>
+          <SectionCta href="#hvac-form" call={false} />
         </Report>
 
         <section className="section surface">
@@ -139,6 +140,7 @@ export default function HvacRepairPage() {
                 { title: "Fix and test", text: "We repair it, test it, and check the vent and gas safety before we leave." },
               ]}
             />
+            <SectionCta href="#hvac-form" align="center" />
           </div>
         </section>
 

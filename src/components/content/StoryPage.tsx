@@ -9,7 +9,7 @@ import { LeadForm } from "@/components/lead/LeadForm";
 import { CallBar } from "@/components/layout/CallBar";
 import { Hero } from "@/components/sections/Hero";
 import { Report } from "@/components/sections/Report";
-import { Rows, Checks, Reviews, FaqSection, CloseCta, Rating } from "@/components/sections/Sections";
+import { Rows, Checks, Reviews, FaqSection, CloseCta, Rating, SectionCta } from "@/components/sections/Sections";
 import { Inline, hasPlaceholder } from "./Inline";
 import type { Block, CtaButton, Section, ServiceCategory, StoryPageContent } from "@/types/content.types";
 
@@ -244,6 +244,8 @@ function StorySection({
 }) {
   const { kind } = section;
   const surface = index % 2 === 1;
+  // Only the turning-point and proof sections carry a CTA; the rest stay clean.
+  const cta = kind === "turning" ? <SectionCta href="#lead-form" call={false} /> : kind === "proof" ? <SectionCta href="#lead-form" /> : null;
 
   if (kind === "faq") {
     const items = section.blocks
@@ -283,6 +285,7 @@ function StorySection({
         <Report heading={<Inline text={section.heading ?? ""} />} photo={report.photo} notes={report.notes} surface={surface}>
           <div>
             <Blocks blocks={section.blocks} kind={kind} />
+            {cta}
           </div>
         </Report>
       );
@@ -293,6 +296,7 @@ function StorySection({
           <div className="span-5">
             <Heading text={section.heading} />
             <Blocks blocks={section.blocks} kind={kind} />
+            {cta}
           </div>
           <div className="span-7 stick">
             <div className="frame" data-parallax style={{ aspectRatio: "3 / 2" }}>
@@ -323,6 +327,7 @@ function StorySection({
             <Blocks blocks={section.blocks} kind={kind} />
           </div>
           {kind === "proof" && <Reviews />}
+          {cta}
         </div>
       </section>
     );
@@ -335,6 +340,7 @@ function StorySection({
         </div>
         <div className="span-7">
           <Blocks blocks={section.blocks} kind={kind} />
+          {cta}
         </div>
       </div>
     </section>
@@ -366,14 +372,14 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
             {primary &&
               (primary.kind === "link" && primary.href ? (
                 <Link className="btn btn-gold" href={primary.href}>
-                  {primary.label}
+                  Book a Free Inspection
                 </Link>
               ) : (
                 <a className="btn btn-gold" href="#lead-form">
-                  {primary.label}
+                  Book a Free Inspection
                 </a>
               ))}
-            <a className="btn btn-ghost" href={site.phoneHref}>
+            <a className="btn btn-white" href={site.phoneHref}>
               Call {site.phone}
             </a>
           </>
@@ -385,7 +391,7 @@ export function StoryPage({ page, h1 }: { page: StoryPageContent; h1: string }) 
             title={form.title}
             intro={form.intro}
             options={form.options}
-            submitLabel={page.formButton ?? (category === "roof" ? "Book my free roof check" : "Send my request")}
+            submitLabel={page.formButton ?? "Book a Free Inspection"}
           />
         }
       />
